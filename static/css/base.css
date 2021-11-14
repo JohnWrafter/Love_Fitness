@@ -3,14 +3,6 @@ html {
     height: 100%;
 }
 
-/* Home page background image */
-body {
-    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    color: #555;
-}
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -30,6 +22,10 @@ body {
 
 .text-black {
     color: #000 !important;
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #ffffff !important;
 }
 
 
