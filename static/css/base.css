@@ -22,13 +22,12 @@ html {
 
 .text-black {
     color: #000 !important;
+    font-weight: bold;
 }
 
 .carousel-dark .carousel-indicators [data-bs-target] {
     background-color: #ffffff !important;
 }
-
-
 
 /* -------------------------------- Media Queries */
 
