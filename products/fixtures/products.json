@@ -10,6 +10,7 @@
       "rating": 4.6,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12767049-1184878561521970.jpg",
       "image": "12767049-1184878561521970.jpg"
+    }
 },
 {
     "pk": 2,
@@ -22,6 +23,7 @@
       "rating": 4.8,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12767304-1454873335170448.jpg",
       "image": "12767304-1454873335170448.jpg"
+    }
 },
 {
     "pk": 3,
@@ -34,6 +36,7 @@
       "rating": 4.3,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12773623-1854885506865365.jpg",
       "image": "12773623-1854885506865365.jpg"
+    }
 },
 {
     "pk": 4,
@@ -46,6 +49,7 @@
       "rating": 4.3,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12774859-2024885511057997.jpg",
       "image": "12774859-2024885511057997.jpg"
+    }
 },
 {
     "pk": 5,
@@ -58,6 +62,7 @@
       "rating": 4.0,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12774659-1174900585261902.jpg",
       "image": "12774659-1174900585261902.jpg"
+    }
 },
 {
     "pk": 6,
@@ -70,6 +75,8 @@
       "rating": 4.1,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12848045-1894875130343430.jpg",
       "image": "12848045-1894875130343430.jpg"
+
+    }
 },
 {
     "pk": 7,
@@ -82,6 +89,7 @@
       "rating": 3.9,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12767824-1474875123939924.jpg",
       "image": "12767824-1474875123939924.jpg"
+    }
 },
 {
     "pk": 8,
@@ -94,6 +102,7 @@
       "rating": 3.9,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12783002-7954882689816372.jpg",
       "image": "12783002-7954882689816372.jpg"
+    }
 },
 {
     "pk": 9,
@@ -106,6 +115,7 @@
       "rating": 3.9,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12698420-1484856546037234.jpg",
       "image": "12698420-1484856546037234.jpg"
+    }
 },
 {
     "pk": 9,
@@ -118,6 +128,7 @@
       "rating": 3.7,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12767616-6274878566301582.jpg",
       "image": "12767616-6274878566301582.jpg"
+    }
 },
 {
     "pk": 10,
@@ -130,6 +141,7 @@
       "rating": 3.8,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12767200-1324878562364238.jpg",
       "image": "12767200-1324878562364238.jpg"
+    }
 },
 {
     "pk": 11,
@@ -142,6 +154,7 @@
       "rating": 3.8,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12774867-1514863002562924.jpg",
       "image": "12774867-1514863002562924.jpg"
+    }
 },
 {
     "pk": 12,
@@ -154,6 +167,7 @@
       "rating": 4.5,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12783074-1584892025208176.jpg",
       "image": "12783074-1584892025208176.jpg"
+    }
 },
 {
     "pk": 13,
@@ -166,6 +180,7 @@
       "rating": 4.1,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12767736-1754875120748599.jpg",
       "image": "12767736-1754875120748599.jpg"
+    }
 },
 {
     "pk": 14,
@@ -178,6 +193,7 @@
       "rating": 4.1,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12767624-1854878566767503.jpg",
       "image": "12767624-1854878566767503.jpg"
+    }
 },
 {
     "pk": 15,
@@ -190,6 +206,7 @@
       "rating": 4.9,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12783010-5564882690117539.jpg",
       "image": "12783010-5564882690117539.jpg"
+    }
 },
 {
     "pk": 16,
@@ -202,6 +219,7 @@
       "rating": 4.2,
       "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12773439-2094862198106534.jpg",
       "image": "12773439-2094862198106534.jpg"
+    }
 },
 {
     "pk": 17,
@@ -214,6 +232,7 @@
       "rating": 4.1,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12775027-1544864017958686.jpg",
       "image": "12775027-1544864017958686.jpg"
+    }
 },
 {
     "pk": 18,
@@ -226,6 +245,7 @@
       "rating": 4.0,
       "image_url": "https://static.thcdn.com/images/xsmall/original//productimg/1600/1600/12645034-1634822261490835.jpg",
       "image": "12645034-1634822261490835.jpg"
+    }
 },
 {
     "pk": 19,
@@ -238,6 +258,7 @@
       "rating": 4.1,
       "image_url": "https://static.thcdn.com/images/xsmall/original/productimg/1600/1600/11871428-2074691360464800.jpg",
       "image": "11871428-2074691360464800.jpg"
+    }
 },
 {
     "pk": 20,
@@ -250,6 +271,7 @@
       "rating": 4.1,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12847877-1164850321743869.jpg",
       "image": "12847877-1164850321743869.jpg"
+    }
 },
 {
     "pk": 21,
@@ -262,6 +284,7 @@
       "rating": 4.1,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/https://static.thcdn.com/images/large/webp//productimg/1600/1600/12847893-8504850322407466.jpg",
       "image": "12847893-8504850322407466.jpg"
+    }
 },
 {
     "pk": 22,
@@ -274,6 +297,7 @@
       "rating": 4.1,
       "image_url": "https://static.thcdn.com/images/xsmall/original//productimg/original/12899396-1064900588297002.jpg",
       "image": "12899396-1064900588297002.jpg"
+    }
 },
 {
     "pk": 23,
@@ -286,6 +310,7 @@
       "rating": 4.0,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12767568-6274884220409022.jpg",
       "image": "12767568-6274884220409022.jpg"
+    }
 },
 {
     "pk": 24,
@@ -298,6 +323,7 @@
       "rating": 3.8,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12645130-7734831859172660.jpg",
       "image": "12645130-7734831859172660.jpg"
+    }
 },
 {
     "pk": 25,
@@ -310,6 +336,7 @@
       "rating": 3.1,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12773423-1634862205473046.jpg",
       "image": "12773423-1634862205473046.jpg"
+    }
 },
 {
     "pk": 26,
@@ -322,6 +349,7 @@
       "rating": 4.0,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12651599-1564850315017845.jpg",
       "image": "12651599-1564850315017845.jpg"
+    }
 },
 {
     "pk": 27,
@@ -334,6 +362,7 @@
       "rating": 4.0,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12644762-4884822582276902.jpg",
       "image": "12644762-4884822582276902.jpg"
+    }
 },
 {
     "pk": 28,
@@ -346,6 +375,7 @@
       "rating": 4.7,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12773455-1624862247465816.jpg",
       "image": "12773455-1624862247465816.jpg"
+    }
 },
 {
     "pk": 29,
@@ -358,6 +388,7 @@
       "rating": 4.0,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12782722-5224892025947541.jpg",
       "image": "12782722-5224892025947541.jpg"
+    }
 },
 {
     "pk": 30,
@@ -370,6 +401,7 @@
       "rating": 4.0,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12651719-7804851360026547.jpg",
       "image": "12651719-7804851360026547.jpg"
+    }
 },
 {
     "pk": 31,
@@ -382,6 +414,7 @@
       "rating": 3.8,
       "image_url": "https://static.thcdn.com/images/large/original//productimg/1600/1600/10530943-1224889444460882.jpg",
       "image": "10530943-1224889444460882.jpg"
+    }
 },
 {
     "pk": 32,
@@ -389,11 +422,12 @@
     "fields": {
       "name": "Clear Whey Isolate",
       "description": "Winner of ‘The Best Sports Nutrition Product’ in the European Specialist Sports Nutrition Awards 2019.",
-      "price": 24.06
+      "price": 24.06,
       "category": 3,
       "rating": 4.2,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12081396-1994792209042321.jpg",
       "image": "12081396-1994792209042321.jpg"
+    }
 },
 {
     "pk": 33,
@@ -406,7 +440,8 @@
       "rating": 4.3,
       "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/10530911-5884889444360331.jpg",
       "image": "10530911-5884889444360331.jpg"
-},
+    }
+}
 ]
 
 
