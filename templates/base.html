@@ -63,10 +63,10 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                    <a href="{% url 'manage_news_items' %}" class="dropdown-item">News Item Management</a>
+                                    <a href="" class="dropdown-item">Product Management</a>
+                                    <a href="" class="dropdown-item">News Item Management</a>
                                 {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    <a href="" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
                                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -193,10 +193,10 @@
           <ul class="list-unstyled mb-0">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                    <li class="mb-2"><a href="{% url 'add_product' %}" class="font-black">Product Management</a></li>
-                    <li class="mb-2"><a href="{% url 'manage_news_items' %}" class="font-black">News Item Management</a></li>
+                    <li class="mb-2"><a href="" class="font-black">Product Management</a></li>
+                    <li class="mb-2"><a href="" class="font-black">News Item Management</a></li>
                 {% endif %}
-                  <li class="mb-2"><a href="{% url 'profile' %}" class="font-black">My Profile</a></li>
+                  <li class="mb-2"><a href="" class="font-black">My Profile</a></li>
               {% else %}
                 <li class="mb-2"><a href="{% url 'account_signup' %}" class="font-black">Register</a></li>
                 <li class="mb-2"><a href="{% url 'account_login' %}" class="font-black">Login</a></li>
