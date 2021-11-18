@@ -80,9 +80,9 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        €{{ grand_total|floatformat:2 }}
+                                        £{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                        €0.00
+                                       £0.00
                                     {% endif %}
                                 </p>
                             </div>
@@ -107,7 +107,7 @@
                 <div class="mt-1 mb-1">
                     <span class="d-none d-lg-inline font-white">Fast dispatch - usually same day!</span>
                     <span class="d-none d-lg-inline ml-3 mr-3 font-white">-</span>
-                    <span class="font-white">Free delivery on orders over €{{ free_delivery_threshold }}!</span>
+                    <span class="font-white">Free delivery on orders over£{{ free_delivery_threshold }}!</span>
                     <span class="d-none d-lg-inline ml-3 mr-3 font-white">-</span>
                     <span class="d-none d-lg-inline font-white"> Professional packaging for EVERY order</span>
                 </div>
@@ -142,7 +142,7 @@
             <div class="row">
             <div class="col-lg-3">
                 <i class="fas fa-cart-plus font-white" aria-hidden=true></i>
-                <span class="font-white">Free delivery for orders of €{{ free_delivery_threshold }} or more</span>
+                <span class="font-white">Free delivery for orders of£{{ free_delivery_threshold }} or more</span>
             </div>
             <div class="col-lg-3">
                 <i class="fas fa-gifts font-white" aria-hidden=true></i>
