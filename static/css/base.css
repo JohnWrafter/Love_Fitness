@@ -75,6 +75,13 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+/* Keep shopping bag button outline */
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
 /* Back to top button */
 .btt-button {
     height: 42px;
