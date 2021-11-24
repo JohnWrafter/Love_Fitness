@@ -121,6 +121,15 @@ a.category-badge > span.badge:hover {
     font-size: 15px;
 }
 
+/* Bag notification wrapper */
+.bag-notification-wrapper {
+    height: 100px;  
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
