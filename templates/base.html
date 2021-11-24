@@ -18,7 +18,7 @@
     {% endblock %}
     {% block corejs %}
         <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         {% endblock %}
@@ -116,27 +116,28 @@
         </div>
     </header>
     <!-- Toast messages -->
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
-    {% endif %}
-    {% block page_header %}
-    {% endblock %}
-    {% block content %}
-    {% endblock %}
+     <!-- Toast messages -->
+     {% if messages %}
+     <div class="message-container">
+         {% for message in messages %}
+             {% with message.level as level %}
+                 {% if level == 40 %}
+                     {% include 'includes/toasts/toast_error.html' %}
+                 {% elif level == 30 %}
+                     {% include 'includes/toasts/toast_warning.html' %}
+                 {% elif level == 25 %}
+                     {% include 'includes/toasts/toast_success.html' %}
+                 {% else %}
+                     {% include 'includes/toasts/toast_info.html' %}
+                 {% endif %}
+             {% endwith %}
+         {% endfor %}
+     </div>
+ {% endif %}
+ {% block page_header %}
+ {% endblock %}
+ {% block content %}
+ {% endblock %}
     <!-- Four text areas -->
     <div class="container-fluid bg-dark-green pt-4 pb-4">
         <div class="container">
@@ -230,6 +231,18 @@
     </div>
   </footer>
   {% block postloadjs %}
-  {% endblock %}
+    <script type="text/javascript">
+       let toastElList = [].slice.call(document.querySelectorAll('.toast'));
+let toastList = toastElList.map(function (toastEl) {
+let option = {
+    animation: true,
+    autohide: true,
+    delay: 5000,
+};
+let bsToast = new bootstrap.Toast(toastEl, option);
+bsToast.show();
+});
+    </script>
+    {% endblock %}
   </body>
 </html>

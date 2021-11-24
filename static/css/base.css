@@ -3,8 +3,6 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
@@ -96,6 +94,31 @@ a.category-badge > span.badge:hover {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* ------------------------------- Toasts */
+
+/* Toast container positioning */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+/* Style custom toast class */
+.custom-toast {
+    overflow: visible;
+}
+
+/* Style toast capper */
+.toast-capper {
+    height: 5px;
+}
+
+/* Main toast body */
+.toast-body {
+    font-size: 15px;
 }
 
 /* -------------------------------- Media Queries */
