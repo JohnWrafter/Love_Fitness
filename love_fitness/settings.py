@@ -1,5 +1,5 @@
-
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -108,10 +108,14 @@ WSGI_APPLICATION = 'love_fitness.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+  'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+ }
+
+DATABASES = {
+    'default': dj_database_url.parse('postgres://piawagnhmrvfbu:4f543d5b29815acd62a9f92d9bfdf88c108979697046082a8af5fce9b0617898@ec2-52-211-158-144.eu-west-1.compute.amazonaws.com:5432/d3pfos21vkln7q')
 }
 
 
