@@ -45,7 +45,8 @@
                             Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
+                    <div class="d-grid gap-1">
+                    <a href="{% url 'view_bag' %}" class="btn btn-success rounded-0" type="button"></button>
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
@@ -53,6 +54,7 @@
                     </a>
                 </div>
             </div>
+        </div>
         {% endif %}
     </div>
 </div>
