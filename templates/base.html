@@ -12,7 +12,7 @@
     {% endblock %}
     {% block corecss %}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://ci-ms4-lovefitness.s3.eu-west-2.amazonaws.com/static/css/base.css" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
     {% endblock %}
     {% block extra_css %}
     {% endblock %}
@@ -41,9 +41,10 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
+                        
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site" />
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" value="submit" type="submit">
+                            <button class="form-control btn btn-success border border-black rounded-0" value="submit" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -95,8 +96,8 @@
             </div>
         </div>
         <!-- Mobile and main nav area -->
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-blue-yonder w-100">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -105,14 +106,12 @@
             </nav>
         </div>
         <!-- Banner -->
-        <div id="info-banner" class="row text-center bg-dark-green">
+        <div id="info-banner" class="row text-center bg-wild-blue-yonder">
             <div class="col">
-                <div class="mt-1 mb-1">
-                    <span class="d-none d-lg-inline font-white">Fast dispatch - usually same day!</span>
-                    <span class="d-none d-lg-inline ml-3 mr-3 font-white">-</span>
-                    <span class="font-white">Free delivery on orders over£{{ free_delivery_threshold }}!</span>
-                    <span class="d-none d-lg-inline ml-3 mr-3 font-white">-</span>
-                    <span class="d-none d-lg-inline font-white"> Professional packaging for EVERY order</span>
+                <div class="mt-1 mb-2">
+                    <span class="text-black">Free UK delivery on orders over£{{ free_delivery_threshold }}!</span>
+                    <span class="d-none d-lg-inline ml-3 mr-3 text-black">-</span>
+                    <span class="d-none d-lg-inline text-black">Next day delivery options available</span>
                 </div>
             </div>
         </div>
@@ -141,30 +140,30 @@
  {% block content %}
  {% endblock %}
     <!-- Four text areas -->
-    <div class="container-fluid bg-dark-green pt-4 pb-4">
+    <div class="container-fluid bg-wild-blue-yonder pt-4 pb-4">
         <div class="container">
             <div class="row">
             <div class="col-lg-3">
-                <i class="fas fa-cart-plus font-white" aria-hidden=true></i>
-                <span class="font-white">Free delivery for orders of£{{ free_delivery_threshold }} or more</span>
+                <i class="fas fa-cart-plus text-black" aria-hidden=true></i>
+                <span class="text-black">Free delivery for orders of£{{ free_delivery_threshold }} or more</span>
             </div>
             <div class="col-lg-3">
-                <i class="fas fa-gifts font-white" aria-hidden=true></i>
-                <span class="font-white">Professional packaging for EVERY order</span>
+                <i class="fas fa-gifts text-black" aria-hidden=true></i>
+                <span class="text-black">Add Text</span>
             </div>
             <div class="col-lg-3">
-                <i class="fas fa-shipping-fast font-white" aria-hidden=true></i>
-                <span class="font-white">Fast order dispatch time usually on the next day</span>
+                <i class="fas fa-shipping-fast text-black" aria-hidden=true></i>
+                <span class="text-black">Add Text</span>
             </div>
             <div class="col-lg-3">
-                <i class="fas fa-grin-hearts font-white" aria-hidden=true></i>
-                <span class="font-white">Professional and knowledgeable rugby fans</span>
+                <i class="fas fa-grin-hearts text-black" aria-hidden=true></i>
+                <span class="text-black">Add Text</span>
             </div>
         </div>    
       </div>
     </div>
   <!-- Footer -->
-  <footer class="bg-light">
+  <footer class="bg-blue-yonder">
     <div class="container pt-5">
       <div class="row">
         <!-- Logo and social media links -->
@@ -172,7 +171,7 @@
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
                 <h2 class="logo-font text-black my-0"><strong>Love</strong>Fitness</h2>
                 <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="" class="font-black">Text</a></li>
+            <li class="mb-2"><a href="" class="text-white">Text</a></li>
             
           </ul>
             </a>
@@ -185,39 +184,39 @@
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h2 class="text-uppercase font-weight-bold mb-4 footer-text">Products</h2>
+          <h2 class="text-uppercase font-weight-bold mb-4 text-white">Products</h2>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="" class="font-black">Text</a></li>
-            <li class="mb-2"><a href="" class="font-black">Text</a></li>
-            <li class="mb-2"><a href="" class="font-black">Text</a></li>
+            <li class="mb-2"><a href="" class="text-white">Text</a></li>
+            <li class="mb-2"><a href="" class="text-white">Text</a></li>
+            <li class="mb-2"><a href="" class="text-white">Text</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 col-xs-6 mb-4 mb-lg-0">
-          <h2 class="text-uppercase font-weight-bold mb-4 footer-text">Website</h2>
+          <h2 class="text-uppercase font-weight-bold mb-4 text-white">Website</h2>
           <ul class="list-unstyled mb-0">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                    <li class="mb-2"><a href="" class="font-black">Product Management</a></li>
-                    <li class="mb-2"><a href="" class="font-black">News Item Management</a></li>
+                    <li class="mb-2"><a href="" class="text-white">Product Management</a></li>
+                    <li class="mb-2"><a href="" class="text-white">News Item Management</a></li>
                 {% endif %}
-                  <li class="mb-2"><a href="" class="font-black">My Profile</a></li>
+                  <li class="mb-2"><a href="" class="text-white">My Profile</a></li>
               {% else %}
-                <li class="mb-2"><a href="{% url 'account_signup' %}" class="font-black">Register</a></li>
-                <li class="mb-2"><a href="{% url 'account_login' %}" class="font-black">Login</a></li>
+                <li class="mb-2"><a href="{% url 'account_signup' %}" class="text-white">Register</a></li>
+                <li class="mb-2"><a href="{% url 'account_login' %}" class="text-white">Login</a></li>
             {% endif %}
           </ul>
         </div>
         <div class="col-lg-4 col-md-12 mb-lg-0">
             <!-- Newsletter signup -->
-            <h2 class="text-uppercase font-weight-bold mb-4 footer-text">Newsletter</h2>
-            <p class="mb-4">Sign up for a weekly newsletter for exclusive discounts</p>
+            <h2 class="text-uppercase font-weight-bold mb-4 text-white">Newsletter</h2>
+            <p class="mb-4 text-white">Sign up for a weekly newsletter for exclusive discounts</p>
             <div class="p-1 rounded border" id="mailing-list">
               <form id="mailinglistform" onsubmit="return sendMail(this);">
                 <div class="input-group">
                   <label for="email_address" hidden>Email Address:</label>
                   <input type="email" placeholder="Enter your email address" id="email_address" name="email_address" aria-describedby="newsletter" class="form-control border-0 shadow-0">
                   <div class="input-group-append">
-                    <button id="newsletter" type="submit" value="newsletter" class="btn btn-link green-btn">Signup</button>
+                    <button id="newsletter" type="submit" value="newsletter" class="btn btn-link green-btn text-white">Signup</button>
                   </div>
                 </div>
               </form>
@@ -226,8 +225,8 @@
       </div>
     </div>
     <!-- Copyright information -->
-    <div class="bg-light py-1">
-      <div class="container text-center">
+    <div class="bg-blue-yonder-yonder py-1">
+      <div class="container text-center text-white">
         <p class="mb-0 py-2 footer-font">© 2021 All rights reserved.</p>
       </div>
     </div>

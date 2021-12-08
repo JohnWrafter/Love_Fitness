@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100&display=swap');
+
 html {
     height: 100%;
 }
@@ -5,7 +7,7 @@ html {
 body {
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    
 }
 
 /* from Bulma */
@@ -15,6 +17,14 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.bg-blue-yonder {
+    background-color: #4470AD !important;
+}
+
+.bg-wild-blue-yonder {
+    background-color:  #6888BE !important;
 }
 
 .logo-font {
@@ -46,8 +56,14 @@ body {
     color: white;
 }
 
+.text-white {
+    color: #fff !important;
+    font-weight: 900;
+}
+
 .text-black {
-    color: #000 !important;
+    color:#000 !important;
+    font-weight: 900;
 }
 
 .border-black {
