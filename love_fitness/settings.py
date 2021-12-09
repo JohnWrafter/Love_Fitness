@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'psycopg2',
 
     # Other
     'crispy_forms',
@@ -93,6 +94,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
+
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
