@@ -1,1 +1,1 @@
-web: gunicorn love_fitness.wsgi:application --bind 0.0.0.0:${PORT}
+web: unicorn lovefitness.wsgi:application
