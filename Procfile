@@ -1,1 +1,1 @@
-web: unicorn lovefitness.wsgi:application
+web: gunicorn lovefitness.wsgi:application
