@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100&display=swap');
+
 html {
     height: 100%;
 }
@@ -5,7 +7,7 @@ html {
 body {
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    
 }
 
 /* from Bulma */
@@ -17,8 +19,17 @@ body {
     width: 1.5rem;
 }
 
+.bg-blue-yonder {
+    background-color: #4470AD !important;
+}
+
+.bg-wild-blue-yonder {
+    background-color:  #6888BE !important;
+}
+
 .logo-font {
     text-transform: uppercase;
+    font-size: 23px;
 }
 
 .main-logo-link {
@@ -46,8 +57,14 @@ body {
     color: white;
 }
 
+.text-white {
+    color: #fff !important;
+    font-weight: 900;
+}
+
 .text-black {
-    color: #000 !important;
+    color:#000 !important;
+    font-weight: 900;
 }
 
 .border-black {
@@ -128,9 +145,14 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
-
-
-
+.sr-only{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+ }
 
 /* -------------------------------- Media Queries */
 
@@ -173,7 +195,6 @@ a.category-badge > span.badge:hover {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-      background-color: #000;
       border: 1px solid #000;
       padding: .375rem .75rem;
       font-size: 1rem;
