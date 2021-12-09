@@ -29,6 +29,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    font-size: 23px;
 }
 
 .main-logo-link {
@@ -144,9 +145,14 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
-
-
-
+.sr-only{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+ }
 
 /* -------------------------------- Media Queries */
 
@@ -189,7 +195,6 @@ a.category-badge > span.badge:hover {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-      background-color: #000;
       border: 1px solid #000;
       padding: .375rem .75rem;
       font-size: 1rem;
