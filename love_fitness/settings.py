@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'psycopg2',
+    'custom_storages',
 
     # Other
     'crispy_forms',
