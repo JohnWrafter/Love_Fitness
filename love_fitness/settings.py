@@ -27,7 +27,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 CSRF_TRUSTED_ORIGINS = ['https://emerald-marmoset-2gw0n1b8.ws-eu23.gitpod.io/']
 
 
-ALLOWED_HOSTS = ['ci-ms4-lovefitness.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['ci-ms4-lovefitness.herokuapp.com/', 'localhost']
 
 # Application definition
 
@@ -112,7 +112,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-WSGI_APPLICATION = 'lovefitness.wsgi.application'
+WSGI_APPLICATION = 'love_fitness.wsgi.application'
 
 
 # Database
