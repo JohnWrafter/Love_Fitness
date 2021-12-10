@@ -112,7 +112,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-WSGI_APPLICATION = 'love_fitness.wsgi.application'
+WSGI_APPLICATION = 'lovefitness.wsgi.application'
 
 
 # Database
