@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-"DEVELOPMENT" in os.environ
+DEBUG = 'DEVELOPMENT' in os.environ
 
 CSRF_TRUSTED_ORIGINS = ['https://blush-platypus-r2o2txnx.ws-eu23.gitpod.io']
 
