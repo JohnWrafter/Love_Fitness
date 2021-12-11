@@ -22,12 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://emerald-marmoset-2gw0n1b8.ws-eu23.gitpod.io/']
 
 
-ALLOWED_HOSTS = ['ci-ms4-lovefitness.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
