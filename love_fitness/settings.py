@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-blush-platypus-r2o2txnx.ws-eu23.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-white-parrotfish-ajxdikqu.ws-eu23.gitpod.io']
 
 
 ALLOWED_HOSTS = ['*']
