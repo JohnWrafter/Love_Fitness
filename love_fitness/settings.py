@@ -30,6 +30,8 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-salmon-rhinoceros-sxrne8ar.ws-eu23.gitpod.
 
 ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp.com', 'localhost']
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 # Application definition
 
