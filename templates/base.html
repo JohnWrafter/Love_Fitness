@@ -98,7 +98,7 @@
         </div>
         <!-- Mobile and main nav area -->
         <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light bg-blue-yonder w-100">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -164,7 +164,7 @@
       </div>
     </div>
   <!-- Footer -->
-  <footer class="bg-blue-yonder">
+  <footer class="bg-white">
     <div class="container pt-5">
       <div class="row">
         <!-- Logo and social media links -->
@@ -172,7 +172,7 @@
             <a href="{% url 'home' %}" aria-label="nav-link main-logo-link" class="nav-link main-logo-link">
                 <h2 class="logo-font text-black my-0"><strong>Love</strong>Fitness</h2>
                 <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="" class="text-white">Text</a></li>
+            <p class="text-black mt-4">Welcome to Love Fitness.</p>
             
           </ul>
             </a>
@@ -185,39 +185,41 @@
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h2 class="text-uppercase font-weight-bold mb-4 text-white">Products</h2>
+          <h2 class="logo-font text-uppercase font-weight-bold mb-4 text-black">Products</h2>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="" class="text-white">Text</a></li>
-            <li class="mb-2"><a href="" class="text-white">Text</a></li>
-            <li class="mb-2"><a href="" class="text-white">Text</a></li>
+            <li class="mb-2"><a href="{% url 'products' %}?category=leggings" class="text-black">Leggings</a></li>
+            <li class="mb-2"><a href="{% url 'products' %}?category=sports_nutrition" class="text-black">Nutrition</a></li>
+            <li class="mb-2"><a href="{% url 'products' %}?category=shorts" class="text-black">Shorts</a></li>
+            <li class="mb-2"><a href="{% url 'products' %}?category=sports_bra" class="text-black">Soprts Bra</a></li>
+            <li class="mb-2"><a href="{% url 'products' %}?category=tops_t-shirts" class="text-black">Tops &amp; T-Shirts</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 col-xs-6 mb-4 mb-lg-0">
-          <h2 class="text-uppercase font-weight-bold mb-4 text-white">Website</h2>
+          <h2 class="logo-font text-uppercase font-weight-bold mb-4 text-black">Website</h2>
           <ul class="list-unstyled mb-0">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                    <li class="mb-2"><a href="" class="text-white">Product Management</a></li>
-                    <li class="mb-2"><a href="" class="text-white">News Item Management</a></li>
+                    <li class="mb-2"><a href="" class="text-black">Product Management</a></li>
+                    <li class="mb-2"><a href="" class="text-black">News Item Management</a></li>
                 {% endif %}
-                  <li class="mb-2"><a href="" class="text-white">My Profile</a></li>
+                  <li class="mb-2"><a href="" class="text-black">My Profile</a></li>
               {% else %}
-                <li class="mb-2"><a href="{% url 'account_signup' %}" class="text-white">Register</a></li>
-                <li class="mb-2"><a href="{% url 'account_login' %}" class="text-white">Login</a></li>
+                <li class="mb-2"><a href="{% url 'account_signup' %}" class="text-black">Register</a></li>
+                <li class="mb-2"><a href="{% url 'account_login' %}" class="text-black">Login</a></li>
             {% endif %}
           </ul>
         </div>
         <div class="col-lg-4 col-md-12 mb-lg-0">
             <!-- Newsletter signup -->
-            <h2 class="text-uppercase font-weight-bold mb-4 text-white">Newsletter</h2>
-            <p class="mb-4 text-white">Sign up for a weekly newsletter for exclusive discounts</p>
+            <h2 class="logo-font text-uppercase font-weight-bold mb-4 text-black">Newsletter</h2>
+            <p class="mb-4 text-black">Sign up for a weekly newsletter for exclusive discounts</p>
             <div class="p-1 rounded border" id="mailing-list">
               <form id="mailinglistform" onsubmit="return sendMail(this);">
                 <div class="input-group">
                   <label for="email_address" hidden>Email Address:</label>
                   <input type="email" placeholder="Enter your email address" id="email_address" name="email_address" aria-describedby="newsletter" class="form-control border-0 shadow-0">
                   <div class="input-group-append">
-                    <button id="newsletter" type="submit" value="newsletter" class="btn btn-link green-btn text-white">Signup</button>
+                    <button id="newsletter" type="submit" value="newsletter" class="btn btn-link green-btn text-black">Signup</button>
                   </div>
                 </div>
               </form>
@@ -226,8 +228,8 @@
       </div>
     </div>
     <!-- Copyright information -->
-    <div class="bg-blue-yonder-yonder py-1">
-      <div class="container text-center text-white">
+    <div class="bg-white py-1">
+      <div class="container text-center text-black">
         <p class="mb-0 py-2 footer-font">© 2021 All rights reserved.</p>
       </div>
     </div>
