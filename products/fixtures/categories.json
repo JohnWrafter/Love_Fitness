@@ -60,7 +60,7 @@
     "model": "products.category",
     "fields": {
       "name": "fitness_equipment",
-      "friendly_name": "Fitness Equipment"
+      "friendly_name": "Women"
     }
   }
 ]
