@@ -1,3 +1,4 @@
+
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
@@ -20,13 +21,12 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
             </a>
+                    
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=sports_bra" class="dropdown-item">Sports Bra</a>
-                <a href="{% url 'products' %}?category=leggings" class="dropdown-item">Leggings</a>
-                <a href="{% url 'products' %}?category=shorts" class="dropdown-item">Shorts</a>
+                <a href="{% url 'products' %}?category=sports_bra,leggings" class="dropdown-item">Women</a>
+                <a href="{% url 'products' %}?category=shorts,tops_t-shirts" class="dropdown-item">Men</a>
                 <a href="{% url 'products' %}?category=fitness_equipment" class="dropdown-item">Fitness Equipment</a>
-                <a href="{% url 'products' %}?category=tops_t-shirts" class="dropdown-item">Tops &amp; T-Shirts</a>
-                <a href="{% url 'products' %}?category=sports_bra,leggings,shorts,tops_t-shirts" class="dropdown-item">All Shop</a>
+                <a href="{% url 'products' %}?category=sports_nutrition" class="dropdown-item">Nutrition</a>
             </div>
         </li>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
