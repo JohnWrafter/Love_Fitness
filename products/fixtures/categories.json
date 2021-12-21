@@ -62,5 +62,13 @@
       "name": "women",
       "friendly_name": "Women"
     }
-  }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "back_to_shop",
+      "friendly_name": "Back To Shop Menu"
+    }
+  },
 ]
