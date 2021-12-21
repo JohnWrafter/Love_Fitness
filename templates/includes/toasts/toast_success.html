@@ -1,13 +1,10 @@
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
-    <div class="arrow-up arrow-success"></div>
-    <div class="w-100 toast-capper bg-success"></div>
-    <div class="toast-header bg-white text-dark">
-        <strong class="mr-auto">Success!</strong>
-        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+<div class="toast show fade text-white bg-info" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-color="success" data-mdb-autohide="false">
+    <div class="toast-header text-white bg-info">
+      <i class="fas fa-check fa-lg me-2"></i>
+      <strong class="me-auto">Alert!</strong>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-    <div class="toast-body bg-white">
+    <div class="toast-body bg-white text-muted">
         <div class="row">
             <div class="col">
                 {{ message }}
@@ -15,7 +12,8 @@
             </div>
         </div>
         {% if grand_total and not on_profile_page %}
-            <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
+            <p class="bg-white text-black py-1 text-center">Your Shopping Bag ({{ product_count }})</p>
+            <hr class="mt-1 mb-3">
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
                     <div class="row">
