@@ -70,5 +70,21 @@
       "name": "back_to_shop",
       "friendly_name": "Back To Shop Menu"
     }
+  },
+  {
+    "pk": 7,
+    "model": "plans.exercise",
+    "fields": {
+      "name": "exercise",
+      "friendly_name": "Exercise"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "plans.nutrition",
+    "fields": {
+      "name": "nutrition",
+      "friendly_name": "Nutrition"
+    }
   }
 ]
