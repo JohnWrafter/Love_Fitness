@@ -72,7 +72,7 @@
     }
   },
   {
-    "pk": 7,
+    "pk": 8,
     "model": "plans.exercise",
     "fields": {
       "name": "exercise",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "pk": 7,
+    "pk": 9,
     "model": "plans.nutrition",
     "fields": {
       "name": "nutrition",
