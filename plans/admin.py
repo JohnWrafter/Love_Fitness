@@ -7,8 +7,8 @@ from .models import Exercise, Nutrition
 class ExerciseAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'plan',
         'friendly_name',
+        'plan',
         'price',
         'rating',
         'image',
@@ -19,8 +19,8 @@ class ExerciseAdmin(admin.ModelAdmin):
 class NutritionAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'plan',
         'friendly_name',
+        'plan',
         'price',
         'rating',
         'image',

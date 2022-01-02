@@ -1,0 +1,18 @@
+[
+  {
+     "pk": 1,
+     "model": "plans.exercise",
+     "fields": {
+        "name": "exercise",
+        "friendly_name": "Exercise"
+     }
+  },
+  {
+   "pk": 2,
+   "model": "plans.nutrition",
+   "fields": {
+      "name": "nutrition",
+      "friendly_name": "Nutrition"
+   }
+}
+]
