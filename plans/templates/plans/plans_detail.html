@@ -20,14 +20,14 @@
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                     </a>
                 {% endfor %}
-                <a class="category-badge text-decoration-none" href="{% url 'plans' %}?category=exercise,nutrition{{ c.name }}">
+                <a class="category-badge text-decoration-none" href="{% url 'plan' %}?category=exercise,nutrition{{ c.name }}">
                     <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">Show All Plans</span>
                 </a>
                 <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="row">
-            <div class="plans-container col-10 offset-1">
+            <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
@@ -47,23 +47,23 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'plans' %}">Plans Home</a> | </span>
+                                <span class="small"><a href="{% url 'plan' %}">Plans Home</a> | </span>
                             {% endif %}
-                            {{ plans|length }} plans{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {{ plans|length }} Plans{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
                     </div>
                 </div>
                 <div class="row">
-                    {% for plans in plans %}
+                    {% for plan in plans %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-1 rounded-1">
-                                {% if plans.image %}
+                                {% if product.image %}
                                 <a href="{% url 'plans_detail' plan.id %}">
-                                    <img class="card-img-top img-fluid border-5 rounded-0" src="{{ plans.image.url }}" alt="{{ plans.name }}">
+                                    <img class="card-img-top img-fluid border-5 rounded-0" src="{{ product.image.url }}" alt="{{ plan.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'plans_detail' plan.id %}">
-                                    <img class="card-img-top img-fluid rounded-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ plans.name }}">
+                                    <img class="card-img-top img-fluid rounded-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ plan.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body text-center">
@@ -73,14 +73,14 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead text-center font-weight-bold">£{{ plans.price }}</p>
-                                            {% if plans.category %}
+                                            {% if product.category %}
                                             <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'plans' %}?category={{ plans.category.name }}">
+                                                <a class="text-muted" href="{% url 'plans' %}?category={{ plan.category.name }}">
                                                     <i class="fas fa-tag mr-1"></i>{{ plans.category.friendly_name }}
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            {% if plans.rating %}
+                                            {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ plans.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
