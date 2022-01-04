@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block page_header %}
+<!--Main product container -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -10,7 +11,9 @@
 {% endblock %}
 
 {% block content %}
+<!-- Overlay white background -->
     <div class="overlay"></div>
+    <!-- Main Add Products Container -->
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 mx-auto">
@@ -20,7 +23,7 @@
                 <hr>
             </div>
         </div>
-
+        <!-- Add Products Form -->
         <div class="row">
             <div class="col-12 col-md-6 mx-auto">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
@@ -41,7 +44,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- Postload Javascipt -->
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
