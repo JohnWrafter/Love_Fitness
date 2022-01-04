@@ -10,7 +10,9 @@
 {% endblock %}
 
 {% block content %}
+<!-- Overlay white background -->
     <div class="overlay"></div>
+    <!-- Main Products Container -->
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
@@ -26,6 +28,7 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
+        <!-- Search and sorting -->
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
@@ -53,6 +56,7 @@
                         </p>
                     </div>
                 </div>
+                <!-- Product cards -->
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -128,6 +132,7 @@
     </div>
 {% endblock %}
 
+<!-- Javascript -->
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
