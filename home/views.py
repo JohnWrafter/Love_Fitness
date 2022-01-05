@@ -29,7 +29,7 @@ def contact(request):
                             please try again later.')
             return redirect('home')
     else:
-        form = ContactForm()
+        form = ContactForm(request.form)
 
     template = 'home/contact_us.html'
     context = {
