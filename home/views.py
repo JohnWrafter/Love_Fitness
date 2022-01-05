@@ -1,4 +1,3 @@
-""" Import Render function to render HTML pages """
 from django.shortcuts import render
 
 # Create your views here.
@@ -10,7 +9,9 @@ def index(request):
     return render(request, 'home/index.html')
 
 def contact(request):
-    """ A view that returns a contact us page """
+    '''This view returns contact page and
+       posts the contact form information to the db
+    '''
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid:
@@ -29,7 +30,7 @@ def contact(request):
                             please try again later.')
             return redirect('home')
     else:
-        form = ContactForm(request.form)
+        form = ContactForm()
 
     template = 'home/contact_us.html'
     context = {
