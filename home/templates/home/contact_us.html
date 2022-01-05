@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container hdr-container">
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container container-pad mt-2 mb-5">
+        <div class="row">
+            <!-- contact us header and message -->
+            <div class="col-8 offset-2">
+                <h2 class="fw-bold mb-4 display-6">Contact Us</h2>
+                <h6 class="text-muted">Fill in the form below to get in touch with the store.</h6>
+                <hr>
+            </div>
+        </div>
+
+        <!-- contact us form container -->
+        <div class="row">
+            <div class="col-8 offset-2">
+                <!-- Contact us form -->
+                <form method="POST" action="{% url 'contact' %}" class="form mb-3">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <!-- submit message button -->
+                    <button class="btn rounded-2 btn-text text-capitalize py-2 mt-2 btn-bg-col float-end" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
