@@ -1195,19 +1195,6 @@
     "image_url": "https://media.4rgos.it/i/Argos/8964739_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
     "image": "8964739_R_Z001A.jpg"
   }
-},
-{
-  "pk": 93,
-  "model": "products.product",
-  "fields": {
-    "name": "Opti Vinyl Barbell and Dumbbell Set - 35kg",
-    "description": "Enjoy a great, full body workout at home with this Opti Dumbbell and Barbell Set. The spinlock system makes this set ideal for both beginners and experts as the weight increments can be changed easily as you progress.",
-    "price": 44.99,
-    "category": 6,
-    "rating": 4.7,
-    "image_url": "https://media.4rgos.it/i/Argos/6044273_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
-    "image": "6044273_R_Z001A.jpg"
-  }
 }
 ]
 
