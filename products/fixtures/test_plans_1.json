@@ -1,0 +1,35 @@
+[
+{
+  "pk": 95,
+  "model": "products.product",
+  "fields": {
+    "name": "Test Plan",
+    "description": "Test Plan Description",
+    "price": 28.00,
+    "category": 101,
+    "rating": 4.6,
+    "image_url": "https://unsplash.com/photos/t1NEMSm1rgI",
+    "image": "dane-wetton-t1NEMSm1rgI-unsplash.jpg"
+  }
+},
+{
+  "pk": 96,
+  "model": "products.product",
+  "fields": {
+    "name": "Test Exercise",
+    "description": "Test",
+    "price": 44.99,
+    "category": 100,
+    "rating": 4.7,
+    "image_url": "https://unsplash.com/photos/eot-ka5dM7Q",
+    "image": "hayley-kim-design-eot-ka5dM7Q-unsplash.jpg"
+  }
+}
+]
+
+
+
+
+
+
+	
