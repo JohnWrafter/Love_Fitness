@@ -1,3 +1,4 @@
+""" URL Patterns for bag """
 from django.urls import path
 from . import views
 

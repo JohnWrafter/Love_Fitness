@@ -1,9 +1,12 @@
+""" Import from django and Order form from models """
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """ Order form layout """
     class Meta:
+        """ Address field for order form """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',

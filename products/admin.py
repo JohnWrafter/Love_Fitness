@@ -1,3 +1,4 @@
+""" Import Admin, Product and Category models """
 from django.contrib import admin
 from .models import Product, Category
 
@@ -5,6 +6,7 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """ List of fields to display in Django Admin """
     list_display = (
         'name',
         'category',
@@ -17,7 +19,8 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = (
+     """ List of fields to display in Django Admin """
+     list_display = (
         'friendly_name',
         'name',
     )

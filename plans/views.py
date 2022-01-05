@@ -5,7 +5,7 @@ from .models import Exercise, Nutrition
 # Create your views here.
 
 
-def index(request):
+def plans(request):
     """ A view to return the index page """
 
     return render(request, 'plans/plans.html')
@@ -20,4 +20,4 @@ def plans_detail(request, plan_id):
         'plan': plan,
     }
 
-    return render(request, 'plans/plans_detail.html', context)
+    return render(request, 'plans/templates/plans/plans_detail.html', context)

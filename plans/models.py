@@ -5,7 +5,7 @@ class Plan(models.Model):
     class Meta:
         verbose_name_plural = 'Plans'
 
-    plan = models.ForeignKey('Plan', null=True, blank=True, related_name='Plans', on_delete=models.SET_NULL)
+    plan = models.ForeignKey('Plan', null=True, blank=True, related_name='Plan', on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField(null=True)

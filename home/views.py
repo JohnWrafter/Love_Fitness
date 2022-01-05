@@ -1,3 +1,4 @@
+""" Import Render function to render HTML pages """
 from django.shortcuts import render
 
 # Create your views here.
