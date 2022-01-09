@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<!-- Overlay white background -->
+    <div class="overlay"></div>
+    <!-- Main Products Container -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Fitness Hub</h2>
+                <ul>
+                    {% for post in post_list %}
+                    <li>{{ post.text }}</li>
+                    {% endfor %}
+                    </ul>
+{% endblock %}
