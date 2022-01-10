@@ -1,0 +1,19 @@
+<script>
+    //Toggles showing and hiding comments when comments heading is clicked
+    $(document).ready(function() {
+        $('#comments').click(function () {
+            $('#comment-info').toggle();
+            $('#comments').toggleClass('bottom-border');
+            $('#add-comment').removeClass('bottom-border');
+            $('#add-comment-info').hide();
+        });
+
+    //Toggles showing and hiding add a comment form when add a comment heading is clicked
+        $('#add-comment').click(function () {
+            $('#add-comment-info').toggle();
+            $('#comment-info').hide();
+            $('#add-comment').toggleClass('bottom-border');
+            $('#comments').removeClass('bottom-border');
+        });
+    });
+</script>
