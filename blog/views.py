@@ -117,7 +117,7 @@ def delete_blog_post(request, post_id):
     """ deletes a blog post on the site """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     blog_post = get_object_or_404(Post, pk=post_id)
     blog_post.delete()
