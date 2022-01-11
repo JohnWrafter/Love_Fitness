@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container hdr-container">
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <!-- edit review container -->
+        <div class="container container-pad mt-3 mb-5">
+            <div class="row">
+                <!-- edit review form -->
+                <form action="." method="POST">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <!-- edit review and cancel btns -->
+                    <div class="inline-flex-pos float-end">
+                        <a class="btn rounded-2 btn-outline-dark btn-text-size mt-4 py-2" href="{% url 'products' %}">Cancel</a>
+                        <input type="submit" class="btn rounded-2 py-2 text-capitalize mt-4 btn-text btn-bg-col" value="Edit Review">
+                    </div>
+                </form>
+            </div>
+        </div>
+{% endblock %}
