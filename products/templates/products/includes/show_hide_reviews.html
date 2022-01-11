@@ -1,0 +1,20 @@
+<script>
+    // jshint esversion: 6
+    //Toggles showing and hiding reviews when review heading is clicked
+    $(document).ready(function() {
+        $('#review').click(function () {
+            $('#review-info').toggle();
+            $('#review').toggleClass('bottom-border');
+            $('#add-review').removeClass('bottom-border');
+            $('#add-review-form').hide();
+        });
+
+    //Toggles showing and hiding add review form when add a review heading is clicked
+        $('#add-review').click(function () {
+            $('#add-review-form').toggle();
+            $('#review-info').hide();
+            $('#add-review').toggleClass('bottom-border');
+            $('#review').removeClass('bottom-border');
+        });
+    });
+</script>
