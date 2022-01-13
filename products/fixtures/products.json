@@ -1195,6 +1195,19 @@
     "image_url": "https://media.4rgos.it/i/Argos/8964739_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
     "image": "8964739_R_Z001A.jpg"
   }
+},
+{
+  "pk": 93,
+  "model": "products.product",
+  "fields": {
+    "name": "Test",
+    "description": "Test",
+    "price": 59.99,
+    "category": 10,
+    "rating": 4.9,
+    "image_url": "https://www.houseoffraser.co.uk/brand/usa-pro/x-courtney-black-hiit-sports-bra-420979#colcode=42097915",
+    "image": "42097915_4pl.webp"
+  }
 }
 ]
 
