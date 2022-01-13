@@ -1,30 +1,33 @@
 {% extends "base.html" %}
+{% block title %}Add A New Blog Entry{% endblock %}
 {% load static %}
 
 {% block page_header %}
     <div class="container hdr-container">
         <div class="row">
             <div class="col">
-
             </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col text-center mt-5">
-            <h2 class="logo-font text-black mt-5">Add Blog</h2>
-            <ul class="mt-5">
-                {% for post in object_list %}
-                <li><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a> - {{ post.author.first_name }} {{ post.author.last_name }}<br/>
-                    {{ post.body }}
-                {% endfor %}
-                </li>
-            </ul>
-        </div>
+        <div class="col-12 col-md-6 mx-auto">
+            <hr>
+            <h2 class="fw-bold mb-4 display-6 text-center">Add Blog</h2>
+            <div class="form-group">
+                <form method="POST" action="{% url 'add_blog' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-danger rounded-0" href="{% url 'blog' %}">Cancel Blog</a>
+                        <button class="btn btn-success rounded-0 mb-5" type="submit">Add Blog</button>
+                    </div>
+                </form>
+            </div>
+        </div>    
     </div>
 </div>
 {% endblock %}

@@ -1,21 +1,25 @@
 from django import forms
-
-from .models import Post, Comment
+from .models import Post
 
 class PostForm(forms.ModelForm):
-    # Post Form
     class Meta:
         model = Post
-        fields = ['title', 'intro', 'image', 'body']
+        fields = ('title', 'title_tag', 'author', 'body')
 
-    image = forms.ImageField(
-        label="Image",
-        required=False,
-        )
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
+            'author': forms.Select(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
 
-
-class CommentForm(forms.ModelForm):
-    # Comment Form
+class EditForm(forms.ModelForm):
     class Meta:
-        model = Comment
-        fields = ['body']
+        model = Post
+        fields = ('title', 'title_tag', 'body')
+
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }

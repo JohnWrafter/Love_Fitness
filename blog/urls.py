@@ -1,14 +1,9 @@
 from django.urls import path
-from . import views
-
+from .views import BlogView, BlogDetailView, AddBlogView, UpdateBlogView, DeleteBlogView
 urlpatterns = [
-    path('', views.blog, name="blog"),
-    path('blog_post/<slug:slug>/', views.blog_post, name="blog_post"),
-    path('add_post/', views.add_blog_post, name="add_blog_post"),
-    path('edit_post/<int:post_id>/',
-         views.edit_blog_post, name="edit_blog_post"),
-    path('delete_post/<int:post_id>/',
-         views.delete_blog_post, name="delete_blog_post"),
-    path('delete_comment/<int:comment_id>/',
-         views.delete_comment, name="delete_comment"),
+    path('', BlogView.as_view(), name="blog"),
+    path('blog_detail/<int:pk>', BlogDetailView.as_view(), name='blog_detail'),
+    path('add_blog/', AddBlogView.as_view(), name='add_blog'),
+    path('blog_detail/edit/<int:pk>', UpdateBlogView.as_view(), name='update_blog'),
+    path('blog_detail/<int:pk>/remove', DeleteBlogView.as_view(), name='delete_blog'),
 ]

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title_tag }}{% endblock %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container hdr-container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<!-- Overlay white background -->
+<div class="overlay"></div>
+<!-- Main Blog Detail Container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 mx-auto">
+            <hr>
+            <!-- Blog Page Heading -->
+            <h2 class="fw-bold mb-4 display-6 text-center">View Added Blog</h2>
+            <!-- Bootstrap card -->
+            <div class="card text-center">
+                <!-- Main card header -->
+                <div class="card-header">
+                  {{ post.title }}
+                </div>
+                 <!-- Main card body -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ post.title_tag }}</h5>
+                  <p class="card-text">{{ post.body }}</p>
+                  <p class="card-text">{{ post.author.first_name }} {{ post.author.last_name }}</p>
+                  <!-- Edit and Delete Buttons -->
+                      {% if user.is_authenticated %}
+                          {% if user.id == post.author.id %}
+                          <div class="ml-3 mb-2 text-center">
+                            <a class="text-info text-decoration-none" href="{% url 'update_blog' post.pk %}">Edit</a> |
+                            <a class="text-danger text-decoration-none" data-toggle="modal" data-target="#modal-overlay" href="{% url 'delete_blog' post.pk %}">Delete</a>
+                        </div>
+                </div>
+                          {% endif %}
+                      {% endif %}
+                      <!-- Card footer displaying blog post date -->
+                <div class="card-footer text-muted">
+                  {{ post.post_date }}
+                </div>
+              </div>
+    <div class="text-center">
+        <a href="{% url 'blog' %}" class="btn btn-secondary mt-5" role="button">Back To Blog Listing</a>
+    </div>
+    <h1>Comments...</h1>
+<br/>
+{% if not post.comments.all %}
+	No Comments Yet...<a href="{% url 'add_comment' post.pk %}">Be the first to comment</a>
+{% else %}
+
+<!--<a href="{% url 'add_comment' post.pk %}">Add Comment</a>-->
+<br/><br/>
+
+	{% for comment in post.comments.all %}
+		<strong>
+			{{ comment.name }} - 
+			{{ comment.date_added }}
+		</strong>
+		<br/>
+		{{ comment.body }}
+		<br/><br/>
+		
+	
+	{% endfor %}
+		<a href="{% url 'add_comment' post.pk %}">Add Comment</a>
+{% endif %}
+<br/>
+</div>
+{% endblock %}
