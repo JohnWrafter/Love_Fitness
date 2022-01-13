@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'l!=^3@c!++dqm10@#v1cz8_@1u^i(a-r@x0-)
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-azure-lion-dg053vmb.ws-eu25.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-azure-lion-dg053vmb.ws-eu27.gitpod.io']
 
 ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp.com', 'localhost']
 
@@ -51,11 +51,13 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
-    'plans',
+    'blog',
+    'reviews',
 
     # Other
     'crispy_forms',
     'storages',
+    
 ]
 
 MIDDLEWARE = [
