@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link text-info"><button type="button" class="btn btn-outline-info btn-sm mt-1">Update</button></a>
+                            <a class="update-link text-info"><button type="button" class="btn btn-outline-success btn-sm mt-1">Update</button></a>
                             <a class="remove-item text-danger float-end mt-1" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><button type="button" class="btn btn-outline-danger btn-sm">Remove</button></a>
                         </td>
                         <td class="py-3">
@@ -132,7 +132,11 @@
         </div>
     </div>
 </div>
-{% endblock %} {% block postloadjs %} {{ block.super }} {% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}
+
+{% block postloadjs %} 
+{{ block.super }} 
+{% include 'products/includes/quantity_input.html' %}
 
 <script type="text/javascript">
     // Update quantity on click
