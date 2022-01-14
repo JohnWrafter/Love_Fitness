@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}Error 500 Page{% endblock %}
+{% block page_header %}
+<!--Main header block -->
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Overlay white background -->
+<div class="overlay"></div>
+<!-- Main Error 400 Container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Error 500</h2>
+            <p class="font-black-bg">An error has occured, click <a href="{% url 'home' %}">here</a> to go to the home page.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
