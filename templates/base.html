@@ -14,6 +14,7 @@
         {% block corecss %}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
         <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
+        <link rel="icon" href="{% static '/favicon.ico' %}" />
         {% endblock %}
         {% block extra_css %}
         {% endblock %}
@@ -70,16 +71,35 @@
                                 {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 <a href="" class="dropdown-item">News Item Management</a>
-                                <a href="" class="dropdown-item">Community</a>
+                                <a href="{% url 'blog' %}" class="dropdown-item">Fitness Hub</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'home' %}" class="dropdown-item">Calculate your BMI</a>
                                 {% endif %}
                             </div>
                         </li>
+                        <!-- favourites -->
+                     <li class="list-inline-item">
+                        <a class="{% if favourites_count %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_product_favourites' %}">
+                            <div class="text-center">
+                                {% if favourites_count %}
+                                    <div><i class="fas fa-heart"></i></div>
+                                    <p class="my-0">
+                                        Wishlist ({{ favourites_items }})
+                                    </p>
+                                {% else %}
+                                   <div><i class="fas fa-heart"></i></div>
+                                    <p class="my-0">
+                                        Wishlist (0)
+                                    </p>
+                                {% endif %}
+                            </div>
+                        </a>
+                    </li>
                         <li class="list-inline-item">
                             <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center">
@@ -106,7 +126,7 @@
             <div id="info-banner" class="row text-center bg-wild-blue-yonder">
                 <div class="col">
                     <div class="mt-1 mb-2">
-                        <span class="text-black">Free UK delivery on orders over£{{ free_delivery_threshold }}!</span>
+                        <span class="text-black text-center">Free worldwide delivery on orders over £{{ free_delivery_threshold }}!</span>
                         <span class="d-none d-lg-inline ml-3 mr-3 text-black">-</span>
                         <span class="d-none d-lg-inline text-black">Next day delivery options available</span>
                     </div>
@@ -134,25 +154,13 @@
         {% endblock %}
         {% block content %}
         {% endblock %}
-        <!-- Four text areas -->
-        <div class="container-fluid bg-wild-blue-yonder pt-4 pb-4">
+        <!-- Footer info banner -->
+        <div class="container-fluid bg-wild-blue-yonder pt-4 pb-4 text-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col">
                         <i class="fas fa-cart-plus text-black" aria-hidden="true"></i>
-                        <span class="text-black">Free delivery for orders of£{{ free_delivery_threshold }} or more</span>
-                    </div>
-                    <div class="col-lg-3">
-                        <i class="fas fa-gifts text-black" aria-hidden="true"></i>
-                        <span class="text-black">Add Text</span>
-                    </div>
-                    <div class="col-lg-3">
-                        <i class="fas fa-shipping-fast text-black" aria-hidden="true"></i>
-                        <span class="text-black">Add Text</span>
-                    </div>
-                    <div class="col-lg-3">
-                        <i class="fas fa-grin-hearts text-black" aria-hidden="true"></i>
-                        <span class="text-black">Add Text</span>
+                        <span class="text-black text-center">Free worldwide delivery over £{{ free_delivery_threshold }}</span> 
                     </div>
                 </div>
             </div>
