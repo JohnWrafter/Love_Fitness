@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container hdr-container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 mx-auto">
+                    <hr>
+                    <h2 class="fw-normal logo-font mb-4 text-center text-black display-6">Contact Us</h2>
+                    <h5 class="text-muted text-center">We'd love to hear from you</h5>
+                    <hr>
+                </div>
+            </div>
+
+        <!-- contact us form container -->
+        <div class="row">
+            <div class="col-8 offset-2">
+                <!-- Contact us form -->
+                <form method="POST" action="/contact/" class="form mb-3">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <!-- submit message button -->
+                    <button class="btn btn-success rounded-0 text-capitalize py-2 mb-4 btn-bg-col float-end" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
