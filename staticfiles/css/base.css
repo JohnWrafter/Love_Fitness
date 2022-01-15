@@ -7,7 +7,7 @@ html {
 body {
     height: calc(100vh - 164px);
     color: #555;
-    
+
 }
 
 /* from Bulma */
@@ -62,10 +62,15 @@ body {
     font-weight: 900;
 }
 
+
+  
+  
+
+
+/* Rename */
 .text-black {
     color:#000 !important;
-    font-weight: 900;
-}
+}   
 
 .border-black {
     border: 1px solid black !important;
@@ -113,12 +118,51 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* ------------------------------- Font Awesome */
+/* Overall font size if icons */
+.fab {
+    font-size: 25px;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    font-size:30px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-youtube {
+    color: #FF0000;
+}
+
+/* ------------------------------- Contact Form */
+
+.display-6 {
+    margin-top: 168px;
+    font-size: 1.438rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+
+
+
+
 /* ------------------------------- Toasts */
 
 /* Toast container positioning */
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 175px;
     right: 15px;
     z-index: 99999999999;
 }
@@ -128,19 +172,15 @@ a.category-badge > span.badge:hover {
     overflow: visible;
 }
 
-/* Style toast capper */
-.toast-capper {
-    height: 5px;
-}
 
 /* Main toast body */
 .toast-body {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 /* Bag notification wrapper */
 .bag-notification-wrapper {
-    height: 100px;  
+    height: 200px;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -162,27 +202,27 @@ a.category-badge > span.badge:hover {
       max-width: 80%;
     }
   }
-  
+
   /* Allauth form formatting */
-  
+
   .allauth-form-inner-content p {
       margin-top: 1.5rem; /* mt-4 */
       color: #6c757d; /* text-secondary */
   }
-  
+
   .allauth-form-inner-content input {
       border-color: #000;
       border-radius: 0;
   }
-  
+
   .allauth-form-inner-content label:not([for='id_remember']) {
       display: none;
   }
-  
+
   .allauth-form-inner-content input::placeholder {
       color: #aab7c4;
   }
-  
+
   .allauth-form-inner-content button,
   .allauth-form-inner-content input[type='submit'] {
       /* btn */
@@ -200,18 +240,18 @@ a.category-badge > span.badge:hover {
       font-size: 1rem;
       line-height: 1.5;
       border-radius: 0;
-  
+
       /* standard bootstrap btn transitions */
       transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
-  
+
   .allauth-form-inner-content button:hover,
-  .allauth-form-inner-content input[type='submit']:hover {	
+  .allauth-form-inner-content input[type='submit']:hover {
       color: #fff;
       background-color: #222;
       border-color: #222;
   }
-  
+
   .allauth-form-inner-content a {
       color: #17a2b8; /* text-info */
   }
@@ -231,6 +271,7 @@ a.category-badge > span.badge:hover {
     min-height: 100%;
     opacity: 0;
     cursor: pointer;
+    
 }
 
 .custom-checkbox .custom-control-label::before {
@@ -243,7 +284,7 @@ a.category-badge > span.badge:hover {
     border-color: #dc3545;
     border-radius: 0;
 }
-  
+
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {
@@ -253,18 +294,18 @@ a.category-badge > span.badge:hover {
           left: 0;
           z-index: 1030;
       }
-  
+
       .header-container {
           padding-top: 164px;
       }
   }
-  
+
   /* pad the top a bit when navbar is collapsed on mobile */
   @media (max-width: 991px) {
       .header-container {
           padding-top: 116px;
       }
-  
+
       body {
           height: calc(100vh - 116px);
       }
