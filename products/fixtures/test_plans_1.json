@@ -42,7 +42,7 @@
   "pk": 99,
   "model": "products.product",
   "fields": {
-    "name": "Streching and Flexibilty",
+    "name": "Stretching and Flexibilty",
     "description": "Pre and Post workout stretches",
     "price": 22.99,
     "category": 100,
