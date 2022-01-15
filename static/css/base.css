@@ -62,16 +62,12 @@ body {
     font-weight: 900;
 }
 
-.carousel-item {
-    height: 100vh;
-    min-height: 350px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
 
+  
+  
+
+
+/* Rename */
 .text-black {
     color:#000 !important;
 }   
@@ -148,7 +144,14 @@ a.category-badge > span.badge:hover {
     color: #FF0000;
 }
 
+/* ------------------------------- Contact Form */
 
+.display-6 {
+    margin-top: 168px;
+    font-size: 1.438rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
 
 
 
@@ -268,6 +271,7 @@ a.category-badge > span.badge:hover {
     min-height: 100%;
     opacity: 0;
     cursor: pointer;
+    
 }
 
 .custom-checkbox .custom-control-label::before {
