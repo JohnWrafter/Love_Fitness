@@ -10,7 +10,7 @@
 {% endblock %} {% block content %}
 <!-- Overlay white background -->
 <div class="overlay"></div>
-<!-- Main Products Container -->
+<!-- Main Products Details Container -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -37,7 +37,7 @@
                     <a href="{% url 'add_product_to_favourites' product.id %}" aria-label="add product to favourites" class="favourite text-danger ml-3"><i class="far fa-heart"></i></a>
                     {% endif %}
                 </div>
-                <!-- Main Products Details Container -->
+                <!-- Main Products Container -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="product-details-container mb-5 mt-2">
                         {% if product.category %}
