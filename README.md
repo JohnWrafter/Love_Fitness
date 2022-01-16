@@ -44,17 +44,17 @@ The users I have used on this site are:
 The ideal target audience for Love Fitness are for those looking to get to in to fitness for the first time but also for experienced
 gym goers looking further their fitness goals.
 
-
 # The 5 Planes of UX - Change for MS4
 ## Strategy - Change for MS4
-## Project Goals - Change for MS4
+## Project Goals
 ---
 The primary business goals of this site are:
-> * To encourage people to add their own lyrics
-> * Create a site that is easy to navigate
+> * To encourage site visitors to accomplish their fitness goals.
+> * An e-commerce store with a wide range of fitness and nutrition products.
 
-The primary cusomter goals of this site are:
-> * Read and create user lyrics
+The primary customer goals of this site are:
+> * To be able to purchase fitness and nutrtional products, as well as fitness and nutrition plans.
+> * A community to interact with other users.
 
 ## Scope - Change for MS4
 ## User Stories - Change for MS4
