@@ -60,14 +60,14 @@
                 <div class="col-lg-4 col-sm-4 menu-top-right">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="all-user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="text-black nav-link" href="#" aria-labelledby="all-user user-options" id="all-user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
 
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options" id="user-options" >
                                 {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 <a href="" class="dropdown-item">News Item Management</a>
