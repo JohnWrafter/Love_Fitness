@@ -40,9 +40,9 @@ The users I have used on this site are:
 > 10. [Credits](#credits)
 > 11. [Acknowledgements](#acknowledgements)
 
-## Target Audience - Change for MS4
-The audience ideally targerted are music lovers who enjoy finding out the lyrics to their favourite songs. 
-On this site they will be view existing lyrics, as well as add and edit their own lyrics.
+## Target Audience
+The ideal target audience for Love Fitness are for those looking to get to in to fitness for the first time but also for experienced
+gym goers looking further their fitness goals.
 
 
 # The 5 Planes of UX - Change for MS4
