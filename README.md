@@ -1,5 +1,5 @@
-# Lyric Fnder - Change for MS4
-![Responsive Mockup](docs/Mockups/AmIResponsive.PNG)
+# Love Fitness - Change for MS4
+![Responsive Mockup](readme/amiresponsive/amiresponsive.PNG)
 
 [You can visit the live site here](https://lyric-finder-jw.herokuapp.com/)
 
