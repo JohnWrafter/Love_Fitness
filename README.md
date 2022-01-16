@@ -1,7 +1,7 @@
-# Love Fitness - Change for MS4
+# Love Fitness
 ![Responsive Mockup](readme/amiresponsive/amiresponsive.PNG)
 
-[You can visit the live site here](https://lyric-finder-jw.herokuapp.com/)
+[You can visit the live site here](https://ci-ms4-lovefitness.herokuapp.com/)
 
  I have created two user for this site for the accessors to use and the credentials are: 
 > username: AdminUser password: Password123
