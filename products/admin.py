@@ -19,8 +19,8 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-     """ List of fields to display in Django Admin """
-     list_display = (
+    """ List of fields to display in Django Admin """
+    list_display = (
         'friendly_name',
         'name',
     )

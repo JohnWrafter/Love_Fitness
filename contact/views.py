@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
 
+
 def contact(request):
     """ This view returns contact page and
        posts the contact form information to the db

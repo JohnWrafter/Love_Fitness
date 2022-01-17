@@ -17,9 +17,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Wishlist',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('products', models.ManyToManyField(blank=True, to='products.Product')),
-                ('username', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='auth.user')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('products', models.ManyToManyField(
+                    blank=True, to='products.Product')),
+                ('username', models.OneToOneField(
+                    on_delete=django.db.models.deletion.CASCADE, to='auth.user')),
             ],
             options={
                 'verbose_name_plural': 'Wishlists',

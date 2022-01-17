@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Contact(models.Model):
     """ Contact model and text fields """
     subject = models.CharField(max_length=120, null=False, blank=False)

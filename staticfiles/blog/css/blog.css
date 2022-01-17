@@ -1,0 +1,31 @@
+.posts{
+    border: 1px solid #493843;
+    border-radius: .2rem;
+    padding: 1rem 1.5rem;
+    /* https://cssgenerator.org/box-shadow-css-generator.html was used to generate a box shadow */
+    box-shadow: 1px 4px 29px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 4px 29px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 4px 29px 0px rgba(0,0,0,0.75);
+}
+
+.post-intro{
+    width: 100%;
+}
+
+#comment-info{
+    display: none;
+}
+#add-comment-info{
+    display: none;
+}
+.post-title{
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+}
+.post-body{
+    font-weight: 300;
+}
+.form-image{
+    width: 100%;
+}

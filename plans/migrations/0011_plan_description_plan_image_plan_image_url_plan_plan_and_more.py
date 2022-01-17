@@ -29,16 +29,19 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='plan',
             name='plan',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='Plans', to='plans.plan'),
+            field=models.ForeignKey(
+                blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='Plans', to='plans.plan'),
         ),
         migrations.AddField(
             model_name='plan',
             name='price',
-            field=models.DecimalField(decimal_places=2, max_digits=6, null=True),
+            field=models.DecimalField(
+                decimal_places=2, max_digits=6, null=True),
         ),
         migrations.AddField(
             model_name='plan',
             name='rating',
-            field=models.DecimalField(blank=True, decimal_places=2, max_digits=6, null=True),
+            field=models.DecimalField(
+                blank=True, decimal_places=2, max_digits=6, null=True),
         ),
     ]

@@ -19,7 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'l!=^3@c!++dqm10@#v1cz8_@1u^i(a-r@x0-)f@)n*_$t^2x3l')
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY', 'l!=^3@c!++dqm10@#v1cz8_@1u^i(a-r@x0-)f@)n*_$t^2x3l')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -58,7 +59,7 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'storages',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -86,7 +87,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
