@@ -6,7 +6,9 @@
         <div class="col"></div>
     </div>
 </div>
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 <!-- Overlay white background -->
 <div class="overlay"></div>
 <!-- Main Blog Detail Container -->
@@ -30,8 +32,7 @@
                     <p class="card-text">{{ post.body }}</p>
                     <p class="card-text">{{ post.author.first_name }} {{ post.author.last_name }}</p>
                     <!-- Edit and Delete Buttons -->
-                    {% if user.is_authenticated %}
-                  		{% if user.id == post.author.id %}
+                    {% if user.is_authenticated %} {% if user.id == post.author.id %}
                     <div class="ml-3 mb-2 text-center">
                         <a class="text-info text-decoration-none" href="{% url 'update_blog' post.pk %}">Edit</a> |
                         <a class="text-danger text-decoration-none" data-toggle="modal" data-target="#modal-overlay" href="{% url 'delete_blog' post.pk %}">Delete</a>
@@ -40,13 +41,12 @@
                     <div class="card-footer text-muted">
                         {{ post.post_date }}
                     </div>
-                    {% endif %}
-                  {% endif %}
+                    {% endif %} {% endif %}
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
-    <br />
-    {% endblock %}
 </div>
+<br />
+{% endblock %}
