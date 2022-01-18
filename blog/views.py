@@ -28,6 +28,8 @@ class AddBlogView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/add_blog.html'
+    success_url = reverse_lazy('blog')
+    success_message = reverse_lazy('Blog Added Successfully')
 
 
 class UpdateBlogView(UpdateView):
