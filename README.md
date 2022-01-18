@@ -288,18 +288,30 @@ I have used the W3C CSS Validation Service - Jigsaw to check that my CSS is vali
 | Entire Site | CSS Validation passed with 0 Errors | [View Results](docs/Validation/CSS/CSS_Validation.PNG) |
 ---
 
-### HTML Validation - Change for MS4
+### HTML Validation
 I have used the W3C Markup Validation Service to check my HTML is valid
 
-|   Page         |  Result              |                      Screenshot                      |
-|:--------------:|:--------------------:|:----------------------------------------------------:|
-|   Home         | 0 errors             | [View Results](docs/Validation/HTML/Home.PNG)        |
-|   Lyrics       | 0 errors             | [View Results](docs/Validation/HTML/Lyrics.PNG)      |
-|   New Lyrics   | 0 errors             | [View Results](docs/Validation/HTML/New_Lyrics.PNG)  |
-|   Manage Genres| 0 errors             | [View Results](docs/Validation/HTML/Genres.PNG)      |
-|   Register     | 0 errors             | [View Results](docs/Validation/HTML/Register.PNG)    |
-|   Log In       | 0 errors             | [View Results](docs/Validation/HTML/Log_In.PNG)      |
-|   Entire Site  | 0 errors             | [View Results](docs/Validation/HTML/Entire_Site.PNG) |
+|   Page                    |  Result  |                      Screenshot                                                       |
+|:-------------------------:|:---------|:-------------------------------------------------------------------------------------:|
+|   Home                    | 0 errors | [View Results](readme/html_validation/html_validation_home.PNG)                       |
+|   Products                | 0 errors | [View Results](readme/html_validation/html_validation_products.PNG)                   |
+|   Product Details         | 0 errors | [View Results](readme/html_validation/html_validation_product_details.PNG)            |
+|   Add Products            | 0 errors | [View Results](readme/html_validation/html_validation_add_products.PNG)               |
+|   Edit Products           | 0 errors | [View Results](readme/html_validation/html_validation_edit_products.PNG)              |
+|   Bag                     | 0 errors | [View Results](readme/html_validation/html_validation_bag.PNG)                        |
+|   Add Blog                | 0 errors | [View Results](readme/html_validation/html_validation_blog_add_blog.PNG)              |
+|   Change Password         | 0 errors | [View Results](readme/html_validation/html_validation_change_password.PNG)            |
+|   Confirm Change Password | 0 errors | [View Results](readme/html_validation/html_validation_confirmed_password_changed.PNG) |
+|   Password Reset          | 0 errors | [View Results](readme/html_validation/html_validation_confirmed_password_changed.PNG) |
+|   Checkout                | 0 errors | [View Results](readme/html_validation/html_validation_checkout.PNG)                   |
+|   Contact                 | 0 errors | [View Results](readme/html_validation/html_validation_password_reset.PNG)             |
+|   Profile                 | 0 errors | [View Results](readme/html_validation/html_validation_profile.PNG)                    |
+|   Register                | 0 errors | [View Results](readme/html_validation/html_validation_register_account.PNG)           |
+|   Log In                  | 0 errors | [View Results](readme/html_validation/html_validation_login.PNG)                      |
+|   Log Out                 | 0 errors | [View Results](readme/html_validation/html_validation_login.PNG)                      |
+|   Wishlist                | 0 errors | [View Results](readme/html_validation/html_validation_wishlist.PNG)                   |
+|   Verification Emai Sent  | 0 errors | [View Results](readme/html_validation/html_verification_email_sent.PNG)               |
+|   Entire Site             | 0 errors | [View Results](docs/Validation/HTML/Entire_Site.PNG) |
 ---
 
 ### Javascript Validation - Change for MS4
