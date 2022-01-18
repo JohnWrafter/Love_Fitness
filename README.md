@@ -299,6 +299,7 @@ I have used the W3C Markup Validation Service to check my HTML is valid
 |   Add Products            | 0 errors | [View Results](readme/html_validation/html_validation_add_products.PNG)               |
 |   Edit Products           | 0 errors | [View Results](readme/html_validation/html_validation_edit_products.PNG)              |
 |   Bag                     | 0 errors | [View Results](readme/html_validation/html_validation_bag.PNG)                        |
+|   Blog                    | 0 errors | [View Results](readme/html_validation/html_validation_blog.PNG)                       |
 |   Add Blog                | 0 errors | [View Results](readme/html_validation/html_validation_blog_add_blog.PNG)              |
 |   Change Password         | 0 errors | [View Results](readme/html_validation/html_validation_change_password.PNG)            |
 |   Confirm Change Password | 0 errors | [View Results](readme/html_validation/html_validation_confirmed_password_changed.PNG) |
@@ -329,7 +330,7 @@ I have used PEP8 Online to check of my Ptyhon code is valid or not.
 |:------------:|:--------:|:-------------------------------------------------:|
 |    app.py    | 0 errors | [View Results](docs/Validation/Python/app.py.PNG) |
 
-### WAVE Accessibility - Change for MS4
+### WAVE Accessibility
 
 I have used the WAVE Web Accessibilty Evaluation Tool to ensure site is accessible
 
