@@ -333,18 +333,27 @@ I have used PEP8 Online to check of my Ptyhon code is valid or not.
 
 I have used the WAVE Web Accessibilty Evaluation Tool to ensure site is accessible
 
-|   Page        |            Result           |                      Screenshot                      |      
-|:-------------:|:---------------------------:|:----------------------------------------------------:|                                                                
-|   Log In      | 0 errors, 0 contrast errors | [View results](docs/Validation/WAVE/login.PNG)       |
-|   Register    | 0 errors, 0 contrast errors | [View results](docs/Validation/WAVE/register.PNG)    |
-|   Home        | 0 errors, 0 contrast errors | [View results](docs/Validation/WAVE/home.PNG)        |
-|   Lyrics      | 0 errors, 0 contrast errors | [View results](docs/Validation/WAVE/lyrics.PNG)      |
-|  New Lyrics   | 1 errors, 0 contrast errors | [View results](docs/Validation/WAVE/new_lyrics.PNG)  |
-| Manage Genres | 0 errors, 0 contrast errors | [View results](docs/Validation/WAVE/genres.PNG)      |
-|   Add Genre   | 0 errors, 0 contrast errors | [View results](docs/Validation/WAVE/add_genre.PNG)   |
-|   Edit Genre  | 0 errors, 0 contrast errors | [View results](docs/Validation/WAVE/edit_genre.PNG)  |
-|  Edit Lyrics  | 1 errors, 0 contrast errors | [View results](docs/Validation/WAVE/edit_lyrics.PNG) |
-
+|   Page                    |  Result  |                      Screenshot                                                                          |
+|:-------------------------:|:---------|:--------------------------------------------------------------------------------------------------------:|
+|   Home                    | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_home.PNG)                       |
+|   Products                | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_products.PNG)                   |
+|   Product Details         | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_product_details.PNG)            |
+|   Add Products            | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_add_products.PNG)               |
+|   Edit Products           | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_edit_products.PNG)              |
+|   Bag                     | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_bag.PNG)                        |
+|   Add Blog                | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_blog_add_blog.PNG)              |
+|   Change Password         | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_change_password.PNG)            |
+|   Confirm Change Password | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_change_password_confirmed.PNG)  |
+|   Password Reset          | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_password_reset.PNG)             |
+|   Checkout                | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_checkout.PNG)                   |
+|   Checkout Success        | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_checkout_success.PNG)           |
+|   Contact                 | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_contact.PNG)                    |
+|   Profile                 | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_profile.PNG)                    |
+|   Register                | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_register.PNG)                   |
+|   Log In                  | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_login.PNG)                      |
+|   Log Out                 | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_logout.PNG)                     |
+|   Wishlist                | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_view_wishlist.PNG)              |
+|   Verification Emai Sent  | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_verification_email_sent.PNG)    |
 --- 
 
 ### Lighthouse Performance - CHange for MS4
