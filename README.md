@@ -57,24 +57,25 @@ The primary customer goals of this site are:
 > * A community to interact with other users.
 
 ## Scope - Change for MS4
-## User Stories - Change for MS4
+## User Stories 
 As a new or returning visitor I would like to see:
-> 1. A site that is easy and clear to navigate.
-> 2. External social media links.
-> 3. A site that responds and provides feedback on my interactions.
-> 4. A site that I can interact with.
-> 5. As a user I would like to see a responsive site that can be used on mobile devices.
-> 6. An error page to show if I have enterted an incorrect URL.
-> 7. The ability to edit and delete lyrics added by the user.
-> 8. A site that has clear login and registration pages.
-> 9. A profile page displayed.
+> 1. To easily register a new account to access the site and all its features.
+> 2. View a list of all the products available to purchase.
+> 3. View a single product.
+> 4. To be able to add / delete products from a wish list or favourites.
+> 5. Option to search for products by name or description. 
+> 6. To be able to complete purchase from shopping bag.
+> 7. An error page to show if I have enterted an incorrect URL.
+> 8. Sort the list pf products by its category, price and rating.
+> 9. A contact page to get in touch with the site owner.
+> 10. A profile page where I can add default delivery address and view orders.
 
-## Site owner goals - Change for MS4
+## Site owner goals
 The main goal of this site is to present song lyrics on a website that is easy to navigate.
-> 10. Present the end user with a clear and simple navigaion menu.
-> 11. Make a site that is responsive across all devices.
-> 12. A site that provides feedback and validation.
-> 13. Abilty to edit or delete genres
+> 10. To use full CRUD funcitonality to manage products and plans within the store.
+> 11. Allow users to buy products from the store.
+> 12. Present the end user with a clear and simple navigaion menu.
+> 13. A site that is easy and clear to navigate.
 > 14. On the 404 page the user shouldn't use the broswer back but instead the nav bar.
 ---
 
@@ -342,6 +343,7 @@ I have used the WAVE Web Accessibilty Evaluation Tool to ensure site is accessib
 |   Add Products            | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_add_products.PNG)               |
 |   Edit Products           | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_edit_products.PNG)              |
 |   Bag                     | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_bag.PNG)                        |
+|   Blog                    | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_blog.PNG)                      |
 |   Add Blog                | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_blog_add_blog.PNG)              |
 |   Change Password         | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_change_password.PNG)            |
 |   Confirm Change Password | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_change_password_confirmed.PNG)  |
