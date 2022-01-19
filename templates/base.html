@@ -88,12 +88,12 @@
                         <a class="{% if favourites_count %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_product_favourites' %}">
                             <div class="text-center">
                                 {% if favourites_count %}
-                                    <div><i class="fas fa-heart"></i></div>
+                                    <div><i class="fas fa-list"></i></div>
                                     <p class="my-0">
                                         Wishlist ({{ favourites_items }})
                                     </p>
                                 {% else %}
-                                   <div><i class="fas fa-heart"></i></div>
+                                   <div><i class="fas fa-list"></i></div>
                                     <p class="my-0">
                                         Wishlist (0)
                                     </p>
