@@ -79,21 +79,30 @@ The main goal of this site is to present song lyrics on a website that is easy t
 > 14. On the 404 page the user shouldn't use the broswer back but instead the nav bar.
 ---
 
-## Structure - Change for MS4
-The website is made up of 8 web pages. Each page is cleary designed, easy to navigate, and with well layed out information. With a mobile first approach in mind I have used bootstrap throughout to make the site respoinsive on mobile devices.
+## Structure
+The website is made up of over 10 pages. Each page is cleary designed, easy to navigate, and with well laid out information. With a mobile first approach in mind I have used bootstrap throughout to make the site respoinsive on mobile devices.
 
-> The 8 pages are:
-> 1. Home Page: A welcome brieft welcome message greets the user, a link for new users to register and a link for existing users to login.
-> 2. Login Page: A page where users can login - with a link to register a new account
-> 3. Register Page: Where new users can register for the first time - with a a link for existing users to login.
-> 4. Lyrics Page: 6 cards have already been added with a selection of lyrics from different musical genres displayed. Also loggeed in users can can add, edit and delete they have added.
-> 5. Profile Page: A profile page that the display the name of the users logged in and a link to add lyrics.
-> 6. New Lyrics Page: A form where a user can add their own lyrics to the site.
-> 7. Manage Genre Page: For admin users only who can add, edit or delate music genres
-> 8. 404: This alerts users if they have entered an incorrect URL for the site. The user is presented with warning message, navbar and footer.
+The main pages are listed and descriobed below.
+
+> 1. Home Page: An carousel dislays the main products the can be bought on the site.
+> 2. Sign Up Page: Where new users can register for the first time - with a link for existing users to login.
+> 3. Login Page: A page where exiting users can login - with a link to register a new account.
+> 4. Log Out Page: A log out page with an option to sign out completety or a cancel option to stay logged in.
+> 5. Shop (Products) Page: Products subdivded in to Women, Men, Fitness Equipment and Nutrition. Main Image, product name, price, rating and category displayed.
+> 6. Shop (Product Details) Page: Displays larger image, description, price, category, product rating.
+> 7. Product Management Page - Add Products: A page where new products can be added.
+> 8. Product Management Page - Edit Products: A page where existing products can be updated.
+> 9. Product Management Page - Delete Products: A page where existing products can be deleted.
+> 10. Add to wishlist: Users can add products to a wish list. 
+> 10. Wishlist: Clicking on the list icon on the products detail page will add item wish list. Items can be removed from list by clicking on delete.
+> 11. My Profile Page: A profile page where users can update address details.
+> 12. Order history: A list of orders that users have made can be viewed here.
+> 13. Bag: Users can add and view products to the shopping bag, as well as a total price and any applicable delivery charges.
+> 14. Checkout Page: Users can enter payment details and finalise their purchase.
+> 15. Checkout success: A user can view the checkout success after the payment has gone through.
 ---
 
-## Skeleton - Change for MS4
+## Skeleton
 To design and develop the wireframes I first used Balsamiq, then used Snipping Tools to create PNG versions. The wireframes images are designed to collaspe.
 
 ## Wireframes - Change for MS4
@@ -280,13 +289,15 @@ Using the conceptual database design I was able to create the physical database 
 > * Balsamiq
 
 ## Testing - Change for MS4
-## Code Validation - Change for MS4
-### CSS Validation - Change for MS4
+## Code Validation
+### CSS Validation
 I have used the W3C CSS Validation Service - Jigsaw to check that my CSS is valid
 
-|    Page     |               Result                |                       Screenshot                       |
-| :---------: | :---------------------------------: | :----------------------------------------------------: |
-| Entire Site | CSS Validation passed with 0 Errors | [View Results](docs/Validation/CSS/CSS_Validation.PNG) |
+|    Page     |               Result                |                       Screenshot                     |
+| :---------: | :---------------------------------: | :---------------------------------------------------:|
+| Base CSS    | CSS Validation passed with 0 Errors | [View Results](readme/css_validation/base.css.PNG)   |
+| Blog CSS    | CSS Validation passed with 0 Errors | [View Results](readme/css_validation/blog.css.PNG)   |
+| Profile CSS | CSS Validation passed with 0 Errors | [View Results](readme/css_validation/profile.css.PNG)|
 ---
 
 ### HTML Validation
