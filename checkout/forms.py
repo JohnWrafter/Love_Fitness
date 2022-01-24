@@ -1,17 +1,35 @@
 """ Import from django and Order form from models """
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django import forms
+
+# Internal:
 from .models import Order
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class OrderForm(forms.ModelForm):
-    """ Order form layout """
+    """
+    Order form layout
+    """
     class Meta:
-        """ Address field for order form """
+        """
+        Address field for order form
+        """
         model = Order
-        fields = ('full_name', 'email', 'phone_number',
-                  'street_address1', 'street_address2',
-                  'town_or_city', 'postcode', 'country',
-                  'county',)
+        fields = (
+            'full_name',
+            'email',
+            'phone_number',
+            'street_address1',
+            'street_address2',
+            'town_or_city',
+            'postcode',
+            'country',
+            'county',
+        )
 
     def __init__(self, *args, **kwargs):
         """

@@ -1,11 +1,21 @@
-""" Import Forms, Product and Category Models, Custom Clearable File Input """
+"""
+Import Forms, Product and Category Models, Custom Clearable File Input
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category
 
+# Internal:
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 class ProductForm(forms.ModelForm):
-
+    """
+    A class for product forms
+    """
     class Meta:
         """ Meta fields for Product Form """
         model = Product

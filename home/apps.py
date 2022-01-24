@@ -1,4 +1,9 @@
-""" Import AppConfig from Django Apps """
+"""
+Import AppConfig from Django Apps
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.apps import AppConfig
 
 

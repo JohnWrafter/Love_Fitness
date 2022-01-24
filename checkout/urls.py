@@ -1,7 +1,16 @@
-""" Import path, views and webhooks """
+"""
+Import path, views and webhooks
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.urls import path
+
+# Internal:
 from . import views
 from .webhooks import webhook
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 urlpatterns = [
     path('', views.checkout, name='checkout'),

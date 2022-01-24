@@ -1,12 +1,20 @@
-""" Import Admin, Product and Category models """
+"""
+Import Admin, Product and Category models
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib import admin
-from .models import Product, Category
 
-# Register your models here.
+# Internal
+from .models import Product, Category
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class ProductAdmin(admin.ModelAdmin):
-    """ List of fields to display in Django Admin """
+    """
+    List of fields to display in Django Admin
+    """
     list_display = (
         'name',
         'category',
@@ -19,7 +27,9 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    """ List of fields to display in Django Admin """
+    """
+    List of fields to display in Django Admin
+    """
     list_display = (
         'friendly_name',
         'name',
