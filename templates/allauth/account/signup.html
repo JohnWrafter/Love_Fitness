@@ -6,10 +6,10 @@
 
 {% block inner_content %}
 <hr>
-<h2 class="logo-font">{% trans "Sign Up" %}</h2>
-<hr>
+<h2 class="logo-font mb-4 text-center text-black mb-4">{% trans "Sign Up" %}</h2>
 
-<p class="mt-5">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="small text-muted text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<hr>
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}

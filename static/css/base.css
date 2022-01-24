@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100&display=swap');
 
+/* --- Global styling --- */
 html {
     height: 100%;
 }
@@ -7,7 +8,6 @@ html {
 body {
     height: calc(100vh - 164px);
     color: #555;
-
 }
 
 /* from Bulma */
@@ -23,63 +23,23 @@ body {
     background-color: #4470AD !important;
 }
 
+/* To set colour on Footer and Info banner */ 
 .bg-wild-blue-yonder {
     background-color:  #6888BE !important;
 }
 
+/* Style for logo font */ 
 .logo-font {
     text-transform: uppercase;
     font-size: 23px;
 }
 
+/* Main logo link */
 .main-logo-link {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-white {
-    color: #fff !important;
-    font-weight: 900;
-}
-
-
-  
-  
-
-
-/* Rename */
-.text-black {
-    color:#000 !important;
-}   
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.bg-black {
-    background: #000 !important;
-}
-
+/* Set overlay */
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -90,6 +50,7 @@ body {
 	z-index: -1;
 }
 
+/* Catergory badge */
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -118,20 +79,36 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Style buttons for shopping pages */ 
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+
 /* ------------------------------- Font Awesome */
-/* Overall font size if icons */
+/* Global style for icons */
 .fab {
     font-size: 25px;
 }
 
+/* Facebook */
 .fa-facebook {
     color: #3b5998;
 }
 
+/* Twitter */
 .fa-twitter {
     color: #1DA1F2;
 }
 
+/* Instagram */
 .fa-instagram {
     font-size:30px;
     background: #d6249f;
@@ -140,12 +117,12 @@ a.category-badge > span.badge:hover {
     -webkit-text-fill-color: transparent;
 }
 
+/* You tube */
 .fa-youtube {
     color: #FF0000;
 }
 
-/* ------------------------------- Contact Form */
-
+/* Font size for page headings */ 
 .display-6 {
     margin-top: 168px;
     font-size: 1.438rem;
@@ -153,12 +130,7 @@ a.category-badge > span.badge:hover {
     line-height: 1.2;
 }
 
-
-
-
-
 /* ------------------------------- Toasts */
-
 /* Toast container positioning */
 .message-container {
     position: fixed;
@@ -185,6 +157,7 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+/* WAVE validation */
 .sr-only{
     position:absolute;
     left:-10000px;
@@ -285,6 +258,8 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
+
+
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {
@@ -298,15 +273,72 @@ a.category-badge > span.badge:hover {
       .header-container {
           padding-top: 164px;
       }
-  }
 
-  /* pad the top a bit when navbar is collapsed on mobile */
-  @media (max-width: 991px) {
-      .header-container {
-          padding-top: 116px;
-      }
-
-      body {
-          height: calc(100vh - 116px);
-      }
   }
+    
+/* --- Greater than 991px --- */
+@media screen and (max-width: 991px) {
+    /* --- Generic --- */
+    .header-container {
+        padding-top: 92px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+}  
+    
+  /* X-SMALL SCREEN */
+@media (max-width: 320px) {
+    /* --- Generic --- */
+    .container {
+      max-width: 100%;
+    }
+
+    /* Hide catergoty badge*/
+    .category-badge{ 
+        display:none;
+    }
+
+    /* Logo font */
+    .logo-font {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    /* Font awesome icons */
+    .fa-lg {
+        font-size: 1rem !important;
+        line-height: .75em;
+        vertical-align: -0.0667em;
+    }
+    
+    /* Font size for info banner */
+    #info-banner {
+        font-size: 16px;
+    }
+
+    /* Buttons for bag */
+    .btn btn-outline-black rounded-0 btn-lg,
+    .btn btn-black rounded-0 btn-lg {
+        font-size: 100px;
+    }
+
+    /* Dropdown menu font size */
+    .dropdown-menu >a{
+        font-size: 13px;
+        font-weight: bold;
+    }
+}

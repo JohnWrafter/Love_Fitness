@@ -13,9 +13,11 @@
 <div class="overlay"></div>
 <div class="container-fluid px-3 favourites-page">
     <div class="row">
-        <div class="col-12 col-sm-6 p-4 my-auto">
-            <h1 class="font-black-bg">Wishlist ({{ favourites_items_count }})</h1>
-            <p class="font-black-bg">Your saved wishlist</p>
+        <div class="col-12 col-md-6 mt-4 mx-auto">
+            <hr>
+            <h2 class="logo-font mb-4 mt-4 text-center text-black">Wish List ({{ favourites_items_count }})</h2>
+            <h5 class="text-muted text-center">Your saved wishlist</h5>
+            <hr>
         </div>
     </div>
     <div class="row">
@@ -49,23 +51,23 @@
                             <strong>£{{ favourite.price }}</strong>
                         </div>
                     </div>
-                    <div class="center-div pt-3">
-                        <a class="btn black-btn" data-bs-toggle="modal" data-bs-target="#deleteFavourite{{ favourite.id }}">Delete</a>
+                    <div class="center-div pt-3 text-center">
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteFavourite{{ favourite.id }}">Delete</a>
                         <!-- Delete favourite modal -->
                         <div class="modal fade" id="deleteFavourite{{ favourite.id }}" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h2 class="modal-title font-black">Delete Favourite</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="btn btn-outline-dark" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body font-black">
                                         Are you sure you want to delete this from your Wishlist?
                                     </div>
                                     <div class="modal-footer">
                                         <!-- Close and delete favourite buttons-->
-                                        <button type="button" class="btn black-btn" data-bs-dismiss="modal">Close</button>
-                                        <a href="{% url 'remove_product_from_favourites' favourite.id 'favourites' %}" class="btn red-btn">Delete</a>
+                                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                                        <a href="{% url 'remove_product_from_favourites' favourite.id 'favourites' %}" class="btn btn-danger">Delete</a>
                                     </div>
                                 </div>
                             </div>

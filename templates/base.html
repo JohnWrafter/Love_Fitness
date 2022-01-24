@@ -36,7 +36,7 @@
         <!-- Main page header -->
         <header class="container-fluid fixed-top">
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <div class="col-12 col-lg-3 py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-black my-0"><strong>Love</strong> Fitness</h2>
                     </a>
@@ -58,7 +58,7 @@
                     </form>
                 </div>
                 <!-- Account option when logged in or out-->
-                <div class="col-lg-4 col-sm-4 menu-top-right">
+                <div class="col-12 col-lg-5 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
                             <a class="text-black nav-link" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -93,7 +93,7 @@
                                         Wishlist ({{ favourites_items }})
                                     </p>
                                 {% else %}
-                                   <div><i class="fas fa-list"></i></div>
+                                   <div><i class="fas fa-list fa-lg"></i></div>
                                     <p class="my-0">
                                         Wishlist (0)
                                     </p>
