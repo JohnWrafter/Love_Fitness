@@ -1,11 +1,20 @@
-""" Import Render, Get Object or 404 """
+"""
+Import Render, Get Object or 404
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
+
+# Internal:
+from checkout.models import Order
 from .models import UserProfile
 from .forms import UserProfileForm
 
-from checkout.models import Order
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 def profile(request):

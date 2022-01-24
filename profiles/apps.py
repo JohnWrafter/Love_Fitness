@@ -1,8 +1,14 @@
-""" Import AppConfig from DjangoApps """
+"""
+Import AppConfig from DjangoApps
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.apps import AppConfig
 
 
 class ProfilesConfig(AppConfig):
-    """ Config BigAutoField for Profiles app SS"""
-    default_auto_field = 'django.db.models.BigAutoField'
+    """
+    A class for configuring the profiles app
+    """
     name = 'profiles'
