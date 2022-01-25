@@ -18,7 +18,7 @@ class Contact(models.Model):
         max_length=120,
         null=False,
         blank=False,
-        default="full_name"
+        default=""
     )
     subject = models.CharField(
         max_length=120,
