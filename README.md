@@ -109,7 +109,7 @@ To design and develop the wireframes I first used Balsamiq, then used Snipping T
 >
 ### Desktop
 > <details><summary>Bag</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_bagPNG.PNG">
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_bag.PNG">
 ></details>
 >
 > <details><summary>Blog</summary>
@@ -223,73 +223,116 @@ To help better understand the design of my database I created a conceptual model
 Using the conceptual database design I was able to create the physical database model. This physical database model show all the fields stored in each of the database collections.
 ![Physical Database Model](docs/database/physical_design_model.PNG)
 
-# Features - Change for MS4
-## Existing Features - Change for MS4
-### Feature 1: Navbar - Change for MS4
-- A Materialize and fully responsive nav bar, that has links to Home, Quiz and Contact pages. As part the Materalize functionality the nav bar displays as a burger menu on mobile devices.
-> ![Nav Bar](docs/Features/nav_bar.PNG)
-> ![Mobile Nav](docs/Features/mobile_nav.PNG)
+# Features
+## Existing Features
+### Feature 1: Navbar
+- A fully responsive nav bar, that has links to Home, All Products, Shop, Plans, Contact and Special Offer pages. To make it resposive on mobile devices a burger menu replaces the standard nav bar.
+> ![Nav Bar](readme/features/features_nav_bar.PNG)
+> ![Mobile Nav](readme/features/features_mobile_nav.PNG)
 > User stories feature relates to:
-> * 1.1 A site that is easy and clear to navigate
-> * 1.10 Present the end user with a clear and simple navigaion menu
+> * 1.11 A site that is easy and clear to navigate
+> * 1.14 Present the end user with a clear and simple navigaion menu
 
 ### Feature 2: Home Page
-- The homepage consists of a background image with a musical theme in keeping with the sites overall subject.
-- An introductory message is also displayed to greet the user.
-> ![Home Page](docs/Features/home_page.PNG)
+- The home page consists of an image carousel with pictures all relating to the products sold on the site.
+> ![Home Page](readme/features/features_home.PNG)
 > User stories feature relates to:
-> * 1.1 A site that is easy and clear to navigate
+> * 2.12 A homepage with image carousel.
 
-### Feature 3: Lyrics Page
-- A search bar is present at the very top of the page allowing users to search existing lyrics.
-- To dislay the lyrics I have used Materialize card classes with each card being the same size. The front side of the card shows a picture of the band, artist name, music genre, composer and the user the lyrics were added by. Clicking on the fontawesome plus button reveals the song title and also the lyrics of the song.
-- There are two button present (only visible to admins or the user who has added the lyrics) to delete and or edit the lyrics.
-> ![Lyrics Page](docs/Features/lyrics_page.PNG)
+### Feature 3: Shop (Products) Page
+- A search bar is present at the very top of the page allowing users to search for products in the store.
+- To display the products I have used Boostrap 5 cards. Each card diplays product image, product name, price, product categoty and rating.
+- There are two button present (only visible to admins) to delete and or edit products.
+> ![Shop (Products) Page](readme/features/features_products.PNG)
 > User stories feature relates to:
-> * 3.7 The ability to edit and delete lyrics added by the user.
-> * 3.11 The ability to add, edit and delete lyrics.
+> * 3.2 View a list of all the products available to purchase.
+> * 3.3 View a single product.
+> * 3.10 To use full CRUD funcitonality to manage products and plans within the store.
 
-### Feature 4: Profile Page
-- The profile page displays the current users name and Materilize card with a link on it to add lyrics.
-> ![Profile Page](docs/Features/profile_page.PNG)
+### Feature 4: Add Products 
+- When logged in with a super user account the store owner / admin can add products.
+- Clicking the Product Manage Option under My Account and form is displayed where products can be added
+> ![Add Products](readme/features/features_add_products.PNG)
 > User stories feature relates to:
-> * 4.9. A profile page displayed.
+> * 4.10 To use full CRUD funcitonality to manage products and plans within the store.
 
-### Feature 5: New Lyrics Page
-- A form is diplayed made up of 6 input field; Choose Genre (a select dropdown list), artist name, song title, song lyrics, song composer and add album artwork.
+### Feature 5: Edit Products
+- When logged in with a super user account the owner / admin can edit or delete products
+- There are two buttons present (only visible to admins) on each product card to delete and or edit products.
+> ![Edit Products Page](readme/features/features_edit_product.PNG)
+> User stories feature relates to:
+> * 5.2 View a list of all the products available to purchase.
+> * 5.10 To use full CRUD funcitonality to manage products and plans within the store.
+
+### Feature 6: Wish List
+- Users can added or products from their wishlist.
+> ![Wish list](readme/wireframes/wireframes_wishlist.PNG)
+> User stories feature relates to:
+> * 6.4. To be able to add / delete products from a wish list or favourites.
+
+### Feature 7: Register Page
+- A simple form made up of 5 input fields which are: email-address, email address confirmation, user name, password, confirm password.
 - Each input field is a required element, with form validation not allowing the users to skip a field without first completing it.
-- Finally, an add lyrics button which submits the lyrics to the database. A flash message is displayed confirming this.
-> ![Lyrics Page](docs/Features/new_lyrics_page.PNG)
-> * 5.11 The ability to add, edit and delete lyrics.
+- Finally, two buttons are displayed: one to cancel sign up and one to sign up.
+> ![Register Page](readme/wireframes/wireframes_register.PNG)
+> * 7.1 To easily register a new account to access the site and all its features.
 
-### Feature 6: Manage Genres Page
-- The Manage Genres page is only visible to site admins whereby they can add, edit or even delete genres from the database.
-- Once again I have used simple Materialize cards to display any genres that have already been or will be added tot the site.
-> ![Manage Genres](docs/Features/manage_genres.PNG)
+### Feature 8: Search Products
+- There is a search bar located in the header section (above the main nav) to search for products in the store.
+> ![Search Products](readme/features/features_search.PNG)
 > User stories feature relates to:
-> * 6.15. Abilty to edit or delete genres
+> * 8.2. View a list of all the products available to purchase.
+> * 8.3 View a single product.
+> * 8.5. Option to search for products by name or description.
 
- 
-### Feature 7: Log In
-- A simple form with two fields is displayed; username and password.
-- If a new user visits the site a link is display for that user to reigster a new account via the Register Page.
-> ![Log In](docs/Features/Log_In.PNG)
+### Feature 9: Sort Products
+- From the All Produts link on the nav bar products can be sorted by Price, Rating, Category and All Products.
+- From the products page there is a sort by drop down where products can be sorted by Price, Rating, Name, and Category. 
+> ![Sort Products (via nav bar)](readme/features/features_sort_products_via_nav.PNG)
+> ![Sort Products (via sort by drop down)](readme/features/features_sort_products_via_sort_by.PNG)
 > User stories feature relates to:
-> * 7.8 A site that has clear login and registration pages.
+> * 9.2. View a list of all the products available to purchase.
+> * 9.5. Option to search for products by name or description.
+> * 9.3 View a single product.
 
-### Feature 8: Register Page
-- A simple form with two fields is displayed; username and password.
-- If the users is already resgistered there is a link display to redirect back to the Log In page.
-> ![Register Page](docs/Features/register.PNG)
+### Feature 10: Contact Page
+- A contact page to allow existing users or potential customers to contact the site owner.
+> ![Contact Page](readme/features/features_contact_us.PNG)
 > User stories feature relates to:
-> * 8.8 A site that has clear login and registration pages.
+> * 10.9 A contact page to get in touch with the site owner.
 
-### Feature 9: 404 Error Page
-- 404 error page for when a user enters a incorrect URL
-> ![404 Error Page](docs/Features/404_error_page.PNG)
+### Feature 11: Profile Page
+- The profile page allows visitors to the store to save default delivery information and view a list of any orders they have made.
+> ![Profile Page](readme/features/features_profile.PNG)
 > User stories feature relates to:
-> * 9.6 An error page to show if I have enterted an incorrect URL
-> * 9.14 On the 404 page the user shouldn't use the broswer back but instead the nav bar
+> * 11.10 A profile page where I can add default delivery address and view orders.
+
+### Feature 12: Bag
+- Any products that are ready to be purachased are displayed in the Shopping Bag.
+- The product quantity can be adjusted up (or down) and updated or the product(s) removed entirely.
+- There is a Keep Shopping button so the can go back to the store or a Secure Checkout button to start the purchase process..
+> ![Bag](readme/features/features_bag.PNG)
+> User stories feature relates to:
+> * 12.10 To be able to complete purchase from shopping bag.
+> * 12.11 Allow users to buy products from the store.
+
+### Feature 13: Checkout
+- On the checkout page a form is displayed where the user can add their delivery address and card payment details.
+- The order summary displays a list of the products about to be purchased.
+- There are two buttons displayed: one to go back and amend the shopping bag and one to complete the order.
+> ![Checkout](readme/features/features_checkout.PNG)
+> User stories feature relates to:
+> * 13.10 To be able to complete purchase from shopping bag.
+> * 13.11 Allow users to buy products from the store.
+
+### Feature 14: Checkout Success
+- There is slight delay while the payment goes through. The last page displays an auto generated order number, a summary of delivery details.
+- A confirmation of the order will be also be emailed to the user.
+> ![Checkout Success](readme/features/features_checkout_success.PNG)
+> User stories feature relates to:
+> * 14.10 A profile page where I can add default delivery address and view orders.
+> * 14.11 Allow users to buy products from the store.
+
 ---
 
 ## Technolgies Used - Change for MS4
