@@ -105,64 +105,75 @@ The main pages are listed and descriobed below.
 ## Skeleton
 To design and develop the wireframes I first used Balsamiq, then used Snipping Tools to create PNG versions. The wireframes images are designed to collaspe.
 
-## Wireframes - Change for MS4
+## Wireframes
 >
 ### Desktop
-> <details><summary>Log In</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Desktop/Log%20In.PNG">
+> <details><summary>Bag</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_bagPNG.PNG">
 ></details>
 >
-> <details><summary>Home Page</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Desktop/Home.PNG">
+> <details><summary>Blog</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_blog.PNG">
 > </details>
 > 
-> <details><summary>Lyrics Page</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Desktop/Lyrics.PNG">
+> <details><summary>Add Blog</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_blog_add_blog.PNG">
 > </details>
 >
-> <details><summary>Profile Page</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Desktop/Profile.PNG">
+> <details><summary>Checkout</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_checkout.PNG">
 > </details>
 >
-> <details><summary>New Lyrics</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Desktop/New_Lyrics.PNG">
+> <details><summary>Checkout Success</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_checkout_success.PNG">
 > </details>
 >
-> <details><summary>Manage Genres</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Desktop/Manage_Genres.PNG">
+> <details><summary>Contact Us</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_contact_us.PNG">
 > </details>
 >
-> <details><summary>Log Out</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Desktop/Manage_Genres.PNG">
+> <details><summary>Home</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_home.PNG">
 > </details>
 >
-### Mobile
-> <details><summary>Log In</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Mobile/Log%20In.PNG">
+> <details><summary>Order History</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_order_history.PNG">
 ></details>
 >
-> <details><summary>Home Page</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Mobile/Home.PNG">
+> <details><summary>Products Details</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_product_details.PNG">
+> </details>
+>
+> <details><summary>Products</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_products.PNG">
 > </details>
 > 
-> <details><summary>Lyrics Page</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Mobile/Lyrics.PNG">
+> <details><summary>Add Products</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_products_add_products.PNG">
 > </details>
 >
-> <details><summary>Profile Page</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Mobile/Profile.PNG">
+> <details><summary>Edit Products</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_products_edit_products.PNG">
 > </details>
 >
-> <details><summary>New Lyrics</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Mobile/New_Lyrics.PNG">
+> <details><summary>Profile</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_profile.PNG">
 > </details>
 >
-> <details><summary>Manage Genres</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Mobile/Manage_Genres.PNG">
+> <details><summary>Register</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_register.PNG">
 > </details>
 >
-> <details><summary>Log Out</summary>
-> <img src="https://github.com/J0hn1975/MS3-LyricFinder/blob/main/docs/Wireframes/Desktop/Manage_Genres.PNG">
+> <details><summary>Sign In</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_sign_in.PNG">
+> </details>
+>
+> <details><summary>Sign Out</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_sign_out.PNG">
+> </details>
+>
+> <details><summary>Wishlist</summary>
+> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_wishlist.PNG">
 > </details>
 
 ---
@@ -327,7 +338,7 @@ I have used the W3C Markup Validation Service to check my HTML is valid
 |   Entire Site             | 0 errors | [View Results](docs/Validation/HTML/Entire_Site.PNG) |
 ---
 
-### Javascript Validation - Change for MS4
+### Javascript Validation
 I have used JS Hint to validate my Javascript.
 
 |     Page     |        Result        |                         Screenshot                          |
@@ -370,30 +381,52 @@ I have used the WAVE Web Accessibilty Evaluation Tool to ensure site is accessib
 |   Verification Emai Sent  | 0 errors, 0 contrast errors | [View Results](readme/wave_validation/wave_validation_verification_email_sent.PNG)    |
 --- 
 
-### Lighthouse Performance - CHange for MS4
+### Lighthouse Performance
 I have used Google Lighthouse (in Google Dev tools) to measure the performance the site
 
-|       Page             |                            Result                             |                        Screenshot                                   |
-| :--------------------: | :------------------------------------------------------------:|:------------------------------------------------------------------: |
-|  Log In (Desktop)      | 100 Performance, 87 Accessibility, 93 Best Practices, 78 SEO  |  [View Results](docs/Validation/Lighthouse/Desktop/login.PNG)       |
-|  Register (Desktop)    | 100 Performance, 87 Accessibility, 93 Best Practices, 78 SEO  |  [View Results](docs/Validation/Lighthouse/Desktop/register.PNG)    |
-| Home (Desktop)         | 100 Performance, 82 Accessibility, 100 Best Practices, 78 SEO | [View Results](docs/Validation/Lighthouse/Desktop/home.PNG)         |
-|   Lyrics (Desktop)     | 97 Performance, 88 Accessibility, 80 Best Practices, 80 SEO   |  [View Results](docs/Validation/Lighthouse/Desktop/lyrics.PNG)      |
-|   New Lyrics (Desktop) | 100 Performance, 78 Accessibility, 100 Best Practices, 78 SEO |   [View Results](docs/Validation/Lighthouse/Desktop/new_lyrics.PNG) |
-| Manage Genres (Desktop)| 100 Performance, 82 Accessibility, 100 Best Practices, 78 SEO | [View Results](docs/Validation/Lighthouse/Desktop/manage_genres.PNG)|
-| Add Genre (Desktop)    | 100 Performance, 88 Accessibility, 100 Best Practices, 78 SEO | [View Results](docs/Validation/Lighthouse/Desktop/add_genre.PNG)    |
-| Edit Genre (Desktop)   | 100 Performance, 88 Accessibility, 100 Best Practices, 78 SEO | [View Results](docs/Validation/Lighthouse/Desktop/edit_genre.PNG)   |
-| Edit Lyrics (Desktop)  | 100 Performance, 78 Accessibility, 100 Best Practices, 78 SEO | [View Results](docs/Validation/Lighthouse/Desktop/edit_lyrics.PNG)  |
-| Log In (Mobile)        | 98 Performance, 87 Accessibility, 93 Best Practices, 100 SEO  | [View Results](docs/Validation/Lighthouse/Mobile/login.PNG)         |
-| Register (Mobile)      | 98 Performance, 87 Accessibility, 93 Best Practices, 82 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/register.PNG)      |
-| Home (Mobile)          | 96 Performance, 82 Accessibility, 93 Best Practices, 82 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/home.PNG)          |
-| Lyrics (Mobile)        | 98 Performance, 88 Accessibility, 80 Best Practices, 83 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/lyrics.PNG)        |
-| New Lyrics (Mobile)    | 98 Performance, 78 Accessibility, 93 Best Practices, 80 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/new_lyrics.PNG)    |
-| Manage Genre (Mobile)  | 96 Performance, 82 Accessibility, 93 Best Practices, 82 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/manage_genres.PNG) |
-| Add Genre (Mobile)     | 99 Performance, 88 Accessibility, 93 Best Practices, 82 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/add_genre.PNG)     |
-| Edit Genre (Mobile)    | 98 Performance, 88 Accessibility, 93 Best Practices, 82 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/edit_genre.PNG)    |
-| Edit Lyrics (Mobile)   | 95 Performance, 78 Accessibility, 93 Best Practices, 80 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/edit_lyrics.PNG)   |
-| Edit Genre (Mobile)    | 98 Performance, 88 Accessibility, 93 Best Practices, 82 SEO   | [View Results](docs/Validation/Lighthouse/Mobile/edit_genre.PNG)    |
+|   Page                              |  Result                                                       |                      Screenshot                                    |
+|:-----------------------------------:|:--------------------------------------------------------------|:------------------------------------------------------------------:|
+|   Home - Desktop                    | 92 Performance, 91 Accessibility, 100 Best Practices, 89 SEO  | [View Results](readme/lighthouse/desktop/home.PNG)                 |
+|   Products - Desktop                | 98 Performance, 92 Accessibility, 100 Best Practices, 90 SEO  | [View Results](readme/lighthouse/desktop/products.PNG)             |
+|   Product Details - Desktop         | 99 Performance, 92 Accessibility, 100 Best Practices, 90 SEO  | [View Results](readme/lighthouse/desktop/product_details.PNG)      |
+|   Add Products - Desktop            | 100 Performance, 81 Accessibility, 100 Best Practices, 78 SEO | [View Results](readme/lighthouse/desktop/add_product.PNG)          |
+|   Edit Products - Desktop           | 100 Performance, 85 Accessibility, 100 Best Practices, 80 SEO | [View Results](readme/lighthouse/desktop/edit_product.PNG)         |
+|   Bag - Desktop                     | 98 Performance, 81 Accessibility, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/desktop/bag.PNG)                  |
+|   Blog - Desktop                    | 100 Performance, 87 Accessibility, 100 Best Practices, 78 SEO | [View Results](readme/lighthouse/desktop/blog.PNG)                 |
+|   Add Blog - Desktop                | 99 Performance, 91 Accessibilty, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/add_blog.PNG)             |
+|   Change Password - Desktop         | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/password_reset.PNG)       |
+|   Confirm Change Password - Desktop | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/change_password_conf.PNG) |
+|   Checkout - Desktop                | 99 Performance, 93 Accessibilty, 100 Best Practices, 80 SEO   | [View Results](readme/lighthouse/desktop/checkout.PNG)             |
+|   Checkout Success - Desktop        | 98 Performance, 90 Accessibilty, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/checkout_success.PNG)     |
+|   Contact - Desktop                 | 99 Performance, 90 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/contact.PNG)              |
+|   Profile - Desktop                 | 99 Performance, 90 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/profile.PNG)              |
+|   Register - Desktop                | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/sign_up.PNG)              |
+|   Log In - Desktop                  | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/sign_in.PNG)              |
+|   Log Out - Desktop                 | 99 Performance, 91 Accessibilty, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/sign_out.PNG)             |
+|   Wishlist - Desktop                | 100 Performance, 90 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/desktop/wish_list.PNG)            |
+|   Order History - Desktop           | 99 Performance, 93 Accessibilty, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/order_history.PNG)        |
+>
+|   Page                             |  Result                                                      |                      Screenshot                                   |
+|:----------------------------------:|:-------------------------------------------------------------|:-----------------------------------------------------------------:|
+|   Home - Mobile                    | 69 Performance, 91 Accessibility, 100 Best Practices, 91 SEO | [View Results](readme/lighthouse/mobile/home.PNG)                 |
+|   Products - Mobile                | 64 Performance, 90 Accessibility, 93 Best Practices, 91 SEO  | [View Results](readme/lighthouse/mobile/products.PNG)             |
+|   Product Details - Mobile         | 84 Performance, 90 Accessibility, 100 Best Practices, 82 SEO | [View Results](readme/lighthouse/mobile/product_details.PNG)      |
+|   Add Products - Mobile            | 92 Performance, 81 Accessibility, 100 Best Practices, 80 SEO | [View Results](readme/lighthouse/mobile/add_product.PNG)          |
+|   Edit Products - Mobile           | 91 Performance, 82 Accessibility, 100 Best Practices, 82 SEO | [View Results](readme/lighthouse/mobile/edit_product.PNG)         |
+|   Bag - Mobile                     | 91 Performance, 88 Accessibility, 100 Best Practices, 79 SEO | [View Results](readme/lighthouse/mobile/bag.PNG)                  |
+|   Blog - Mobile                    | 91 Performance, 84 Accessibility, 100 Best Practices, 82 SEO | [View Results](readme/lighthouse/mobile/blog.PNG)                 |
+|   Add Blog - Mobile                | 90 Performance, 88 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/mobile/add_blog.PNG)             |
+|   Change Password - Mobile         | 99 Performance, 91 Accessibilty, 100 Best Practices, 78 SEO  | [View Results](readme/lighthouse/mobile/password_reset.PNG)       |
+|   Confirm Change Password - Mobile | 90 Performance, 91 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/mobile/change_password_conf.PNG) |
+|   Checkout - Mobile                | 91 Performance, 91 Accessibilty, 100 Best Practices, 81 SEO  | [View Results](readme/lighthouse/mobile/checkout.PNG)             |
+|   Checkout Success - Mobile        | 91 Performance, 88 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/mobile/checkout_success.PNG)     |
+|   Contact - Mobile                 | 92 Performance, 87 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/mobile/contact.PNG)              |
+|   Profile - Mobile                 | 90 Performance, 89 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/mobile/profile.PNG)              |
+|   Register - Mobile                | 91 Performance, 88 Accessibilty, 100 Best Practices, 89 SEO  | [View Results](readme/lighthouse/mobile/sign_up.PNG)              |
+|   Log In - Mobile                  | 91 Performance, 88 Accessibilty, 100 Best Practices, 89 SEO  | [View Results](readme/lighthouse/mobile/sign_in.PNG)              |
+|   Log Out - Mobile                 | 90 Performance, 88 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/mobile/sign_out.PNG)             |
+|   Wishlist - Mobile                | 90 Performance, 88 Accessibilty, 93 Best Practices, 81 SEO   | [View Results](readme/lighthouse/mobile/wish_list.PNG)            |
+|   Order History - Mobile           | 91 Performance, 90 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/mobile/order_history.PNG)        |
 --- 
 
 ### Device Tests - Change for MS4
