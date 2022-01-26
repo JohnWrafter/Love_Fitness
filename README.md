@@ -662,16 +662,6 @@ Clone site locally
 > 6. Type git clone and then copy in repo URL
 > 7. Press enter and repo will go through short cloning process
 
-## Mongo Database - Delete
-
-> 1. Create an account at mongodb
-> 2. Create a database cluster
-> 3. Select the cluster, and in the collections section create a database and create 5 collections under the database: memories, comments, ratings, tournaments, users
-> 4. In the database access, create a user and allow the user read/write access. Note the username
-> 5. In the network access tab, allow network access from the ip-address of the application connecting to the database
-> 6. In the Databases section click Connect, and select connect your application
-> 7. Note the MONGO_URI, MONGO_DBNAME and user, these parameters are used when deploying locally(env.py file) and deploying on the likes of heroku(config vars)
-
 ## Heroku - Change for MS4
 
 1. In the app.py file, ensure that debug is not enabled, i.e. set to True
