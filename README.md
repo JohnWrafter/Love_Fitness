@@ -384,9 +384,14 @@ I have used the W3C Markup Validation Service to check my HTML is valid
 ### Javascript Validation
 I have used JS Hint to validate my Javascript.
 
-|     Page     |        Result        |                         Screenshot                          |
-|:------------:|:--------------------:|:-----------------------------------------------------------:|
-|    script.js   | 0 errors, 0 warnings | [View Results](docs/Validation/Javascript/script.js.PNG)  |
+|     Page        |        Result           |                            Screenshot                 |
+|:---------------:|:-----------------------:|:-----------------------------------------------------:|
+| bag.js          |   0 errors, 0 warnings  | [View Results](readme/jshint/jshint_bag.PNG)          |
+| carousel.js     |   0 errors, 0 warnings  | [View Results](readme/jshint/jshint_carousel.PNG)     |
+| countryfield.js |   0 errors, 0 warnings  | [View Results](readme/jshint/jshint_countryfield.PNG) |
+| stripe.js       |   0 errors, 0 warnings  | [View Results](readme/jshint/jshint_stripe.PNG)       |
+| toast.js        |   0 errors, 0 warnings  | [View Results](readme/jshint/toast.PNG)               |
+
 ---
 
 ### Python - Change for MS4
