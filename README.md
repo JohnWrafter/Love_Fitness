@@ -188,40 +188,31 @@ Each page is design with very simple colours and images to showcase the island. 
 ## Typography - Change for MS4
 For the brand logo I have used Google Font - Lobster, and for the Lyrics (flow-test) I have used Google Font - Roboto Condensed. Everywhere else I have used the default Materialize font.
 
-## Database - Change for MS4
-> For the database I have useed MongoDB. The database is made up of 3 collections;
-- Genre
-- Lyrics
-- Users
-
-### Genre
-
-I have stored the different style of music using the 'genre' keyword, as this allow the user to select musical genres from a select dropdown list. 
-
-![Genre DB Image](docs/database/genre.PNG)
-
-### Lyrics
-
-Any lyrics that the user adds through the application will be stored in the database, this data can will be pulled from the database and displayed on the Lyrics page.
-
-![Lyrics DB Image](docs/database/lyrics.PNG)
-
-### Users
-
-The usernames and password are stored in the database as this allows the users to log in/log out securely.
-
-![Users DB Image](docs/database/users.PNG)
-
-### Conceptual Database Model
-
-To help better understand the design of my database I created a conceptual model. This helped decide and plan which collections would be required.
-
-![Conceptual Database Model](docs/database/conceptual_database_design.png)
+## Database
+> For the development environment a SQLLite databse was used but for product I have used PostGres
 
 ### Physical database model
 
 Using the conceptual database design I was able to create the physical database model. This physical database model show all the fields stored in each of the database collections.
-![Physical Database Model](docs/database/physical_design_model.PNG)
+![Physical Database Model](readme/misc/database.PNG)
+
+User Model
+
+UserProfile Model
+
+Order Model
+
+Order LineItem Model
+
+Blog Model
+
+Favourites Model
+
+Product Model
+
+Category Model
+
+Contact Us Model
 
 # Features
 ## Existing Features
@@ -394,12 +385,34 @@ I have used JS Hint to validate my Javascript.
 
 ---
 
-### Python - Change for MS4
-I have used PEP8 Online to check of my Ptyhon code is valid or not.
+### Python
+Each file was individually checked in (https://pep8online.com/) and any errors resolved. The entire project was then checked in PyCharm to produce a report.
 
-|     Page     |   Result |                         Screenshot                |
-|:------------:|:--------:|:-------------------------------------------------:|
-|    app.py    | 0 errors | [View Results](docs/Validation/Python/app.py.PNG) |
+|     Page         |   Result             |
+|:----------------:|:--------------------:|
+|   bag/admin.py   | 0 errors, 0 warnings |
+|   bag/apps.py   | 0 errors, 0 warnings |
+|   bag/contexts.py   | 0 errors, 0 warnings |
+|   bag/models.py   | 0 errors, 0 warnings |
+|   bag/urls.py   | 0 errors, 0 warnings |
+|   bag/views.py   | 0 errors, 0 warnings |
+|   checkout/admin.py   | 0 errors, 0 warnings |
+|   checkout/apps.py   | 0 errors, 0 warnings |
+|   checkout/forms.py   | 0 errors, 0 warnings |
+|   checkout/models.py   | 0 errors, 0 warnings |
+|   checkout/signals.py   | 0 errors, 0 warnings |
+|   checkout/urls.py   | 0 errors, 0 warnings |
+|   checkout/views.py   | 0 errors, 0 warnings |
+|   checkout/webhook_handler.py   | 0 errors, 0 warnings |
+|   checkout/webhooks.py    | 0 errors, 0 warnings |
+|   checkout/urls.py   | 0 errors, 0 warnings |
+|   checkout/urls.py   | 0 errors, 0 warnings |
+|   checkout/urls.py   | 0 errors, 0 warnings |
+|   checkout/urls.py   | 0 errors, 0 warnings |
+|   checkout/urls.py   | 0 errors, 0 warnings |
+|   checkout/urls.py   | 0 errors, 0 warnings |
+
+
 
 ### WAVE Accessibility
 
