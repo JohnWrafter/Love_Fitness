@@ -332,7 +332,7 @@ Contact Us Model
 > * MongoDB
 > * Balsamiq
 
-## Testing - Change for MS4
+## Testing
 ## Code Validation
 ### CSS Validation
 I have used the W3C CSS Validation Service - Jigsaw to check that my CSS is valid
@@ -387,31 +387,57 @@ I have used JS Hint to validate my Javascript.
 ### Python
 Each file was individually checked in (https://pep8online.com/) and any errors resolved. The entire project was then checked in PyCharm to produce a report.
 
-|     Page         |   Result             |
-|:----------------:|:--------------------:|
-|   bag/admin.py   | 0 errors, 0 warnings |
-|   bag/apps.py   | 0 errors, 0 warnings |
-|   bag/contexts.py   | 0 errors, 0 warnings |
-|   bag/models.py   | 0 errors, 0 warnings |
-|   bag/urls.py   | 0 errors, 0 warnings |
-|   bag/views.py   | 0 errors, 0 warnings |
-|   checkout/admin.py   | 0 errors, 0 warnings |
-|   checkout/apps.py   | 0 errors, 0 warnings |
-|   checkout/forms.py   | 0 errors, 0 warnings |
-|   checkout/models.py   | 0 errors, 0 warnings |
-|   checkout/signals.py   | 0 errors, 0 warnings |
-|   checkout/urls.py   | 0 errors, 0 warnings |
-|   checkout/views.py   | 0 errors, 0 warnings |
-|   checkout/webhook_handler.py   | 0 errors, 0 warnings |
-|   checkout/webhooks.py    | 0 errors, 0 warnings |
-|   checkout/urls.py   | 0 errors, 0 warnings |
-|   checkout/urls.py   | 0 errors, 0 warnings |
-|   checkout/urls.py   | 0 errors, 0 warnings |
-|   checkout/urls.py   | 0 errors, 0 warnings |
-|   checkout/urls.py   | 0 errors, 0 warnings |
-|   checkout/urls.py   | 0 errors, 0 warnings |
+|     Page                      |   Result             |
+|:-----------------------------:|:--------------------:|
+|   bag/admin.py                | No errors or warnings |
+|   bag/apps.py                 | No errors or warnings |
+|   bag/contexts.py             | No errors or warnings |
+|   bag/models.py               | No errors or warnings |
+|   bag/urls.py                 | No errors or warnings |
+|   bag/views.py                | No errors or warnings |
+|   contact/admin.py            | No errors or warnings |
+|   contact/apps.py             | No errors or warnings |
+|   contact/forms.py            | No errors or warnings |
+|   contact/models.py           | No errors or warnings |
+|   contact/urls.py             | No errors or warnings |
+|   contact/views.py            | No errors or warnings |
+|   checkout/admin.py           | No errors or warnings |
+|   checkout/apps.py            | No errors or warnings |
+|   checkout/forms.py           | No errors or warnings |
+|   checkout/models.py          | No errors or warnings |
+|   checkout/signals.py         | No errors or warnings |
+|   checkout/urls.py            | No errors or warnings |
+|   checkout/views.py           | No errors or warnings |
+|   checkout/webhook_handler.py | No errors or warnings |
+|   checkout/webhooks.py        | No errors or warnings |
+|   wishlist/admin.py           | No errors or warnings |
+|   wishlist/apps.py            | No errors or warnings |
+|   wishlist/models.py          | No errors or warnings |
+|   wishlist/urls.py            | No errors or warnings |
+|   wishlist/views.py           | No errors or warnings |
+|   home/admin.py               | No errors or warnings |
+|   home/apps.py                | No errors or warnings |
+|   home/forms.py               | No errors or warnings |
+|   home/models.py              | No errors or warnings |
+|   home/urls.py                | No errors or warnings |
+|   home/views.py               | No errors or warnings |
+|   products/admin.py           | No errors or warnings |
+|   products/apps.py            | No errors or warnings |
+|   products/forms.py           | No errors or warnings |
+|   products/models.py          | No errors or warnings |
+|   products/urls.py            | No errors or warnings |
+|   products/views.py           | No errors or warnings |
+|   products/widgets.py         | No errors or warnings |
+|   profiles/admin.py           | No errors or warnings |
+|   profiles/apps.py            | No errors or warnings |
+|   profiles/forms.py           | No errors or warnings |
+|   profiles/models.py          | No errors or warnings |
+|   profiles/urls.py            | No errors or warnings |
+|   profiles/views.py           | No errors or warnings |
+|   products/widgets.py         | No errors or warnings |
 
-
+After checking the Python files seperately and correctng any errors, I then used PyCharm to check all files within the project to provive a report.
+[View Results](readme/testing/pep8/pep8.PNG)
 
 ### WAVE Accessibility
 
@@ -674,7 +700,7 @@ Clone site locally
 
 ### Credits - Change for MS4
 ## Images
-> * Stone Roses image credited to Pinterest.com - https://i.pinimg.com/originals/17/e6/21/17e6212ef5b95530f2408332959b99f7.jpg
+> * Main product images  - https://i.pinimg.com/originals/17/e6/21/17e6212ef5b95530f2408332959b99f7.jpg
 > * The Charlatans image credited to Exeter Phoenix - https://exeterphoenix.org.uk/wp-content/uploads/2021/06/the-charlatans-exeter-phoenix-great-hall.jpg
 > * Queens of the Stone Age (QOTSA) image credited to Mesa Press - https://www.mesapress.com/wp-content/uploads/2017/09/Villains-QOTSA.png
 > * James Brown image credited to Wallpapercave.com - https://wallpapercave.com/wp/wp2160960.jpg
