@@ -44,8 +44,8 @@ The users I have used on this site are:
 The ideal target audience for Love Fitness are for those looking to get to in to fitness for the first time but also for experienced
 gym goers looking further their fitness goals.
 
-# The 5 Planes of UX - Change for MS4
-## Strategy - Change for MS4
+# The 5 Planes of UX
+## Strategy
 ## Project Goals
 ---
 The primary business goals of this site are:
@@ -56,7 +56,7 @@ The primary customer goals of this site are:
 > * To be able to purchase fitness and nutrtional products, as well as fitness and nutrition plans.
 > * A community to interact with other users.
 
-## Scope - Change for MS4
+## Scope
 ## User Stories 
 As a new or returning visitor I would like to see:
 > 1. To easily register a new account to access the site and all its features.
@@ -348,12 +348,15 @@ Contact Us Model
 
 ---
 
-## Technolgies Used - Change for MS4
-> * HTML5
-> * CSS3
-> * Javascript
-> * MongoDB
-> * Balsamiq
+## Technolgies Used
+> * HTML5 (https://en.wikipedia.org/wiki/HTML)  
+       - HTML is used throughout the project to build the structure of the web pages.
+> * CSS3 (https://en.wikipedia.org/wiki/CSS)  
+       - CSS is used throughout the site to style the HTML structure of the web pages.
+> * Javascript (https://www.javascript.com/)  
+       - Javascript was used to add the logic and scripting to the site
+> * Python v4.0 (https://www.python.org/)  
+       - Python was used to code the backend of the project
 
 ## Testing
 ## Code Validation
@@ -675,13 +678,16 @@ Overall results:
 
 ---
 
-# Bugs - Change for MS4
-> **Bug** Image URL on Edit Lyrics page breaks the album artwork image  
-> **Fix** Removed Image URL section of Edit Lyrics form
+# Bugs
+> **Bug** Navbar drop down menus stopped working
+> **Fix** Changed data-toggle attribute to data-bs-
+
+> **Bug** Footer Info Banner text not centered
+> **Fix** Added Text Center to Span Class 
 
 # Deployment
 
-## Github Pages - Keep
+## Github Pages
 I have deployed this site to GitHub pages
 
 > 1. Log in to git hub and find the respositry you wish to deploy
@@ -692,7 +698,7 @@ I have deployed this site to GitHub pages
 > 6. The deplyment will take a few moments to finalise
 > 7. The live site URL is now displayed under Github Pages
 
-## Clone Locally - Keep
+## Clone Locally
 Clone site locally
 
 > 1. Log in to Github and navigate to main page of repository
@@ -703,21 +709,20 @@ Clone site locally
 > 6. Type git clone and then copy in repo URL
 > 7. Press enter and repo will go through short cloning process
 
-## Heroku - Change for MS4
+## Heroku
 
-1. In the app.py file, ensure that debug is not enabled, i.e. set to True
-2. Create a file called ProcFile in the root directory, and add the line <code>web: python app.py</code> if the file does not already exist
-3. Create a requirements.txt file by running the command <code>pip freeze > requirements.txt</code> in your terminal if the file doesn't already exist
-5. Both the ProcFile and requirements.txt files should be added to your git repo in the root directory
-6. Create an account on heroku.com
-7. Create a new application and give it a unique name
-8. In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
-9. Select the branch for example master and enable automatic deploys if desired. Otherwise, a deployment will be manual
-10. The next step is to set the config variables in the Settings section
-11. Set key/value pairs for the following keys: IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
-12. Go to the dashboard and trigger a deployment
-13. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
-14. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
+1. Create a file called ProcFile in the root directory, and add the line <code>web: python app.py</code> if the file does not already exist
+2. Create a requirements.txt file by running the command <code>pip freeze > requirements.txt</code> in your terminal if the file doesn't already exist
+3. Both the ProcFile and requirements.txt files should be added to your git repo in the root directory
+4. Create an account on heroku.com
+5. Create a new application and give it a unique name
+6. In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
+7. Select the branch for example master and enable automatic deploys if desired. Otherwise, a deployment will be manual
+8. The next step is to set the config variables in the Settings section
+9. Set key/value pairs for the following keys: IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
+10. Go to the dashboard and trigger a deployment
+11. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
+12. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
 ---
 
