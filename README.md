@@ -489,25 +489,25 @@ I have used Google Lighthouse (in Google Dev tools) to measure the performance t
 |   Order History - Mobile           | 91 Performance, 90 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/mobile/order_history.PNG)        |
 --- 
 
-### Device Tests - Change for MS4
+### Device Tests
 The site has been tested on the following physical devices
 > - Huawei P30 Pro
 > - HP Envy 17 Laptop
 > - Samsung Galaxy A31
 
 Actual tests:
-> 1. Home, Lryics, Profile, New Lyrics, Manage Genres nav links all go to the correct pages. Clicking the Lyric Finder brand logo navigates back to the Home page from each page.
-> 2. On a mobile device the nav bar collapses to a hamburger button. When clicked a sidenav appears, all links work here too and the Lyric Finder brand logo navigates to home when clicked.
-> 3. The search function on the Lyrics pages return results on lyrics, artist name, music genre, composer as intended. A flash message appears if no results can be found. The reset button clears search results.
+> 1. Home, All Products(and dropdown menu), Shop(and drop down menu), Plans (and dropdown menu), Contact us, Special Offers all go to the correct pages. Clicking the Love Fitness brand logo navigates back to the Home page
+> 2. On a mobile device the nav bar collapses to a hamburger button. When clicked a sidenav appears, all links work here too when clicked.
+> 3. The search function on the main header returns searches on each product as intended. A toast notification pops warning user if search button clicked without entering search criteria.
 > 4. The text and images are all clearly displayed.
-> 5. All pages are responsive.
-> 6. When clicking on each page the nav bar hover colour changes.
+> 5. When logged in as admin user products and added, edited and deleted, these are restricted for non-admin users.
+> 6. When a non admin user is logged in only the Fitness Hub, My Profile and Logout options are displayed. An admin users sees all these options and Product Management
 > 7. A 404 error page will be displayed in the event of a incorrect URL being entered. The standard nav can be used to navigate back to the site pages.
 > 8. The three social links for Facebook, Instgram and Twitter all navigate to respective sites home pages and also open in a new tab.
 Overall results:
 > * The above physical tests passed on each device they were tested on.
 
-### Browser Tests - Keep
+### Browser Tests
 > * Firefox Developer Edition - All nav links, features and website work as expected
 > * Google Chrome - All nav links, features and website work as expected
 > * Firefox Developer Edition - All nav links, features and website work as expected
