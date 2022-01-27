@@ -188,30 +188,53 @@ Each page is design with very simple colours and images to showcase the island. 
 For the brand logo I have used Google Font - Lobster, and for the Lyrics (flow-test) I have used Google Font - Roboto Condensed. Everywhere else I have used the default Materialize font.
 
 ## Database
-> For the development environment a SQLLite databse was used but for product I have used PostGres
+> For the development environment a SQLLite database was used but for product I have used PostGres
 
 ### Physical database model
 
 Using the conceptual database design I was able to create the physical database model. This physical database model show all the fields stored in each of the database collections.
 ![Physical Database Model](readme/misc/database.PNG)
 
+Models
+> * The models listed below were created for the Love Fitnss Website
+
 User Model
+> * This model contains of the relevant information for the User.
 
 UserProfile Model
+> * The UserProfile and User model have one-to-one relationship with each other
+> * The fields contained within the User Profile model are: default_phone_number, default_street_address1, default_street_address2 default_town_or_city, default_county, default_postcode and default_country
 
 Order Model
+> * Any information relating to customer orders is stored here.
+> * The fields contained within the Order Model are: order_number, user_profile, full_name, email, phone_number, country, postcode, town_or_city, street_address1 , street_address2, county, date, delivery_cost, order_total, grand_total, original_bag, stripe_pid.
 
 Order LineItem Model
+> * The fields contained within the Order LineITem Model are: order, product, product_size, quantity, lineitem_total.
+> * This model stores information on any order made on the website.
 
 Blog Model
+> * The Blog model contains information on any Blog entries made on the site.
+> * The fields contained within this model are: title, title_tag, author, body, post_date.
 
-Favourites Model
+Favourites Model - utilised in this project as a Wish List
+> * The Wish List model contains information on any products stored in a users wish list.
+> * The fields contained in this model are: products and username.
 
 Product Model
+> * Category has been added as a Foreign Key
+> * This model contains inforamtion on a product and its repective details.
+> * The fields contained within this model are: category, name, description, has_sizes, price, rating, image_url, image.
+> * The product image is stored in the Image field
+> * And the URL for the image is stored in the Image_URL field. 
 
 Category Model
+> * This model contains infomation about the different categories used within the store.
+> * The field contained within this model are: name, friendly_name
 
 Contact Us Model
+> * This model contains any informaiton sent through the Contact Us form.
+> * The fields contained within this model are: full_name, subject, email, message
 
 # Features
 ## Existing Features
