@@ -519,47 +519,48 @@ Overall results:
 | :-----------------------------------------------------------------------: | :--------------------------------: | :---------------------------: | :----------------: |
 | To easily register a new account to access the site and all its features. | Click on My Account, Register      |       Sign Up form loads      | Works as expected |
 
-[User story screenshot](docs/Features/home_page.PNG)  
+[User story screenshot](readme/testing/user_story_1/register.PNG)  
 
 > 2. View a list of all the products available to purchase.
 
-|                   Feature    |                          Test Steps                            |    Expected                                     |      Actual       |
-| :--------------------------: | :------------------------------------------------------------: | :---------------------------------------------: | :---------------: |
-| View a list of all the products available to purchase.  |  Navigate to the footer where social media icons are displayed | Links to external sites to load when clicked on | Works as expected |  
+|        Feature                                          |                          Test Steps                   |    Expected      |      Actual       |
+| :-----------------------------------------------------: | :---------------------------------------------------: | :----------------| :---------------: |
+| View a list of all the products available to purchase.  |  Click on dropdown menus in All Products, Shop, Plans | Products display | Works as expected |  
 
-[User story screen shot](docs/Features/footer.PNG)  
+[User story screen shot](readme/testing/user_story_2/user_story_2.PNG)  
 
 > 3. View a single product.
 
-|                           Feature                           |       Test Steps        |               Expected                       |      Actual       |
-| :---------------------------------------------------------: | :---------------------: | :------------------------------------------: | :---------------: |
-|  View a single product.   | Enter lyrics.           |  Lyrics added successfully message to display| Works as expected |
+|         Feature           |       Test Steps                     |     Expected             |      Actual       |
+| :--------------------------------------------------------------: | :------------------- --: | :---------------: |
+|  View a single product.   | Enter search criteria in search bar. |  Single product displays | Works as expected |
 
-[User story screen shot](docs/Features/site_that_responds.PNG)
+[User story screen shot](readme/testing/user_story_3/user_story_3.PNG)
 
 > 4. To be able to add / delete products from a wish list or favourites.
 
-|                Feature                                               |   Test Steps                |      Expected       |      Actual       |
-| :------------------------------------------------------------------: | :-------------------------: | :-----------------: | :---------------: |
-| To be able to add / delete products from a wish list or favourites.  | Added lyrics to lyrics page | Lyrics to be added  | Works as expected |
+|                Feature                                               |   Test Steps                        |      Expected         |      Actual       |
+| :------------------------------------------------------------------: | :---------------------------------: | :-------------------: | :---------------: |
+| To be able to add / delete products from a wish list or favourites.  | Added Product to Wish List          | Product to be added   | Works as expected |
+| To be able to add / delete products from a wish list or favourites.  | On added product clicked on delete  | Product to be deleted | Works as expected |
 
-[User story screen shot](docs/Features/add_lyrics.PNG)
+[User story screen shot](readme/testing/user_story_4/user_story_4.png)
 
 > 5. Option to search for products by name or description.
 
-|                         Feature         |     Test Steps                       |           Expected       |      Actual       |
-| :-------------------------------------: | :----------------------------------: | :----------------------: | :---------------: |
-| Option to search for products by name or description.    | Displayed site in mobile breakpoint  |  Site to be responsive   | Works as expected |  
+|                         Feature    ..............     |     Test Steps                                     |           Expected       |      Actual       |
+| :---------------------------------------------------: | :------------------------------------------------: | :----------------------: | :---------------: |
+| Option to search for products by name or description. | Entered search criteria by name or description     |  Product is displayed    | Works as expected |  
 
-[User story screen shot](docs/Features/responsive.PNG)      
+[User story screen shot](readme/testing/user_story_5/user_story_5.PNG)      
 
 > 6. To be able to complete purchase from shopping bag.
 
-|                  Feature                         |   Test Steps                       |               Expected                         |      Actual       |
-| :----------------------------------------------: | :--------------------------------: | :--------------------------------------------: | :---------------: |
-| To be able to complete purchase from shopping bag. | Entered incorrect URL | 404 Error page to load | Works as expected |
+|                  Feature                           |   Test Steps          |      Expected        |      Actual       |
+| :------------------------------------------------: | :------------------ : | :------------------: | :---------------: |
+| To be able to complete purchase from shopping bag. | Made test purchase    | Purchase to complete | Works as expected |
 
-[User story screen shot](docs/Features/404_error_page.PNG)  
+[User story screen shot](readme/testing/user_story_6/user_story_6.png)  
 
 > 7. An error page to show if I have enterted an incorrect URL.
 
@@ -567,25 +568,21 @@ Overall results:
 | :----------------------------------------------: | :--------------------------------: | :--------------------------------------------: | :---------------: |
 | An error page to show if I have enterted an incorrect URL. | Clicked on delete and edit buttons | Lyrics to be deleted. Edit lyrics page to show | Works as expected |
 
-[User story screen shot](docs/Features/edit_lyrics_page.PNG)  
-[User story screen shot](docs/Features/lyrics_deleted.PNG)
-
 > 8. Sort the list of products by its category, price and rating.
 
-|                    Feature                     |    Test Steps       |                    Expected                     |      Actual       |
-| :--------------------------------------------: | :----------------:  | :---------------------------------------------: | :---------------: |
-|       Sort the list of products by its category, price and rating.               | Clicked on Log In   |            Log In form to be displayed          | Works as expected |
+|                    Feature                                   |    Test Steps                                          |                    Expected               |      Actual       |
+| :----------------------------------------------------------: | :---------------------------------------------------:  | :---------------------------------------: | :---------------: |
+| Sort the list of products by its category, price and rating. | Clicked All Products, By Price, By Rating, By Category |  Products displayed by relevant category  | Works as expected |
 
-[User story screen shot](docs/Features/log_in_page.PNG)  
-[User story screen shot](docs/Features/register_page.PNG)  
+[User story screen shot](readme/testing/user_story_8/user_story_8.PNG)  
 
 > 9. A contact page to get in touch with the site owner.
 
-|                   Feature                   |      Test Steps      |             Expected             |      Actual       |
-| :-----------------------------------------: | :------------------: | :------------------------------: | :---------------: |
-| Profile page displayed when user logs in    | Log in to site       | Profile page to be displayed     | Works as expected |
+|                   Feature                           |      Test Steps      |             Expected                    |      Actual       |
+| :-------------------------------------------------: | :------------------: | :-------------------------------------: | :---------------: |
+| A contact page to get in touch with the site owner. | Click on Contact Us  | Contact form displayed and message sent | Works as expected |
 
-[User story screen shot](docs/Features/profile_page.PNG) 
+[User story screen shot](readme/testing/user_story_9/user_story_9.PNG)  
 
 > 10. A profile page where I can add default delivery address and view orders.
 
@@ -593,7 +590,8 @@ Overall results:
 | :----------------------------------------------------------: | :------------------------------------------------: | :-----------------------------: | :---------------: |
 | A profile page where I can add default delivery address and view orders. | Loaded site where the nav bar is clearly layed out | Nav bar to display on each page | Works as expected |
 
-[User story screen shot](docs/Features/nav_bar.PNG)
+[User story screen shot](readme/testing/user_story_10/user_story_10_add_address.png)  
+[User story screen shot](readme/testing/user_story_10/user_story_10_order_history.png)  
 
 > 11. To use full CRUD funcitonality to manage products and plans within the store.
 
@@ -603,32 +601,28 @@ Overall results:
 
 [User story screen shot](docs/Features/responsive.PNG)  
 
-> 12. Present the end user with a clear and simple navigation menu.
+> 12. Allow users to buy products from the store.
 
-|                         Feature                          |     Test Steps                       |        Expected         |      Actual       |
-| :------------------------------------------------------: | :----------------------------------: | :---------------------: | :---------------: |
-| Present the end user with a clear and simple navigation menu.      |  Tried submitting a blank yrics form | Form not to be sumitted | Works as expected |  
+|            Feature                          |     Test Steps      |        Expected      |      Actual       |
+| :-----------------------------------------: | :-----------------: | :------------------: | :---------------: |
+| Allow users to buy products from the store. |  Made test purchase | Purchase to complete | Works as expected | 
 
-[User story screen shot](docs/Features/new_lyrics_page.PNG)  
+[User story screen shot](readme/testing/user_story_12/user_story_12.png)  
 
-> 13. Abilty to add, edit or delete genres (for admin users only)
+> 13. Present the end user with a clear and simple navigation menu.
 
 |                           Feature                            |                     Test Steps                     |            Expected             |      Actual       |
 | :----------------------------------------------------------: | :------------------------------------------------: | :-----------------------------: | :---------------: |
 | Add, edit, delete genre function available for admin users   | Logged in a admin. Tested add, edit, delete genres |    Genre add, edit and delete   | Works as expected |
 
-[User story screen shot](docs/Features/add_delete_edit.PNG)  
-[User story screen shot](docs/Features/add_genres.PNG)  
-[User story screen shot](docs/Features/edit_genres.PNG)  
+[User story screen shot](readme/testing/user_story_13/user_story_13_desktop_nav.PNG)  
+[User story screen shot](readme/testing/user_story_13/user_story_13_mobile_nav.PNG)  
 
 > 14. On the 404 page the user shouldn't use the broswer back button but instead the nav bar.
 
 |                       Feature         |    Test Steps   |                   Expected                    |      Actual       |
 | :-----------------------------------: | :-------------: | :-------------------------------------------: | :---------------: |
 | Nav bar displayed on error 404 page   | Loaded 404 page | Weather widget with daily forecast to display | Works as expected |
-
-[User story screen shot](docs/Features/error_404_nav.PNG)
-
 
 ---
 
