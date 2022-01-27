@@ -72,10 +72,9 @@ As a new or returning visitor I would like to see:
 
 ## Site owner goals
 The main goal of this site is to present song lyrics on a website that is easy to navigate.
-> 10. To use full CRUD funcitonality to manage products and plans within the store.
-> 11. Allow users to buy products from the store.
-> 12. Present the end user with a clear and simple navigaion menu.
-> 13. A site that is easy and clear to navigate.
+> 11. To use full CRUD funcitonality to manage products and plans within the store.
+> 12. Allow users to buy products from the store.
+> 13. Present the end user with a clear and simple navigation menu.
 > 14. On the 404 page the user shouldn't use the broswer back but instead the nav bar.
 ---
 
@@ -219,7 +218,7 @@ Contact Us Model
 ### Feature 1: Navbar
 - A fully responsive nav bar, that has links to Home, All Products, Shop, Plans, Contact and Special Offer pages. To make it resposive on mobile devices a burger menu replaces the standard nav bar.
 > ![Nav Bar](readme/features/features_nav_bar.PNG)
-> ![Mobile Nav](readme/features/features_mobile_nav.PNG)
+> ![Mobile Nav](readme/features/features_mobile_nav.PNG)  
 > User stories feature relates to:
 > * 1.11 A site that is easy and clear to navigate
 > * 1.14 Present the end user with a clear and simple navigaion menu
@@ -513,75 +512,74 @@ Overall results:
 > * Google Chrome - All nav links, features and website work as expected
 > * Firefox Developer Edition - All nav links, features and website work as expected
 
-### User story tests - Change for MS4
-> 1. A site that is easy and clear to navigate
+### User story tests
+> 1. To easily register a new account to access the site and all its features.
 
-|                    Feature                    |             Test Steps             |           Expected            |       Actual       |
-| :-------------------------------------------: | :--------------------------------: | :---------------------------: | :----------------: |
-| A website that is easy and clear to navigate. | Clicked on nav links for each page | Pages to load when clicked on | Works as expected |
+|                    Feature                                                |             Test Steps             |           Expected            |       Actual       |
+| :-----------------------------------------------------------------------: | :--------------------------------: | :---------------------------: | :----------------: |
+| To easily register a new account to access the site and all its features. | Click on My Account, Register      |       Sign Up form loads      | Works as expected |
 
 [User story screenshot](docs/Features/home_page.PNG)  
 
-> 2. External Social Media links
+> 2. View a list of all the products available to purchase.
 
 |                   Feature    |                          Test Steps                            |    Expected                                     |      Actual       |
 | :--------------------------: | :------------------------------------------------------------: | :---------------------------------------------: | :---------------: |
-| Display social media links.  |  Navigate to the footer where social media icons are displayed | Links to external sites to load when clicked on | Works as expected |  
+| View a list of all the products available to purchase.  |  Navigate to the footer where social media icons are displayed | Links to external sites to load when clicked on | Works as expected |  
 
 [User story screen shot](docs/Features/footer.PNG)  
 
-> 3. A site that responds and provides feedback on my interactions.
+> 3. View a single product.
 
 |                           Feature                           |       Test Steps        |               Expected                       |      Actual       |
 | :---------------------------------------------------------: | :---------------------: | :------------------------------------------: | :---------------: |
-|  Flash message that shows an action completed sucessfully   | Enter lyrics.           |  Lyrics added successfully message to display| Works as expected |
+|  View a single product.   | Enter lyrics.           |  Lyrics added successfully message to display| Works as expected |
 
 [User story screen shot](docs/Features/site_that_responds.PNG)
 
-> 4. A site that I can interact with.
+> 4. To be able to add / delete products from a wish list or favourites.
 
-|                Feature          |   Test Steps                |      Expected       |      Actual       |
-| :-----------------------------: | :-------------------------: | :-----------------: | :---------------: |
-| Page where user can add lyrics  | Added lyrics to lyrics page | Lyrics to be added  | Works as expected |
+|                Feature                                               |   Test Steps                |      Expected       |      Actual       |
+| :------------------------------------------------------------------: | :-------------------------: | :-----------------: | :---------------: |
+| To be able to add / delete products from a wish list or favourites.  | Added lyrics to lyrics page | Lyrics to be added  | Works as expected |
 
 [User story screen shot](docs/Features/add_lyrics.PNG)
 
-> 5. As a user I would like to see a responsive site that can be used on mobile devices.
+> 5. Option to search for products by name or description.
 
 |                         Feature         |     Test Steps                       |           Expected       |      Actual       |
 | :-------------------------------------: | :----------------------------------: | :----------------------: | :---------------: |
-| Displayed sire in mobile view poiint    | Displayed site in mobile breakpoint  |  Site to be responsive   | Works as expected |  
+| Option to search for products by name or description.    | Displayed site in mobile breakpoint  |  Site to be responsive   | Works as expected |  
 
 [User story screen shot](docs/Features/responsive.PNG)      
 
-> 6. An error page to show if I have enterted an incorrect URL  
+> 6. To be able to complete purchase from shopping bag.
 
 |                  Feature                         |   Test Steps                       |               Expected                         |      Actual       |
 | :----------------------------------------------: | :--------------------------------: | :--------------------------------------------: | :---------------: |
-| A 404 error page will display if an incorrect link is visited | Entered incorrect URL | 404 Error page to load | Works as expected |
+| To be able to complete purchase from shopping bag. | Entered incorrect URL | 404 Error page to load | Works as expected |
 
 [User story screen shot](docs/Features/404_error_page.PNG)  
 
-> 7. The ability to edit and delete lyrics added by the user.
+> 7. An error page to show if I have enterted an incorrect URL.
 
 |                  Feature                         |   Test Steps                       |               Expected                         |      Actual       |
 | :----------------------------------------------: | :--------------------------------: | :--------------------------------------------: | :---------------: |
-| Delete and Edit buttons on each Materialize card | Clicked on delete and edit buttons | Lyrics to be deleted. Edit lyrics page to show | Works as expected |
+| An error page to show if I have enterted an incorrect URL. | Clicked on delete and edit buttons | Lyrics to be deleted. Edit lyrics page to show | Works as expected |
 
 [User story screen shot](docs/Features/edit_lyrics_page.PNG)  
 [User story screen shot](docs/Features/lyrics_deleted.PNG)
 
-> 8. A site that has clear login and registration pages.
+> 8. Sort the list of products by its category, price and rating.
 
 |                    Feature                     |    Test Steps       |                    Expected                     |      Actual       |
 | :--------------------------------------------: | :----------------:  | :---------------------------------------------: | :---------------: |
-|       Log In option on nav bar                 | Clicked on Log In   |            Log In form to be displayed          | Works as expected |
-|       Registration option on nav bar           | Clicked on Register |           Register form to be displayed         | Works as expected |
+|       Sort the list of products by its category, price and rating.               | Clicked on Log In   |            Log In form to be displayed          | Works as expected |
 
 [User story screen shot](docs/Features/log_in_page.PNG)  
 [User story screen shot](docs/Features/register_page.PNG)  
 
-> 9. A profile page displayed.
+> 9. A contact page to get in touch with the site owner.
 
 |                   Feature                   |      Test Steps      |             Expected             |      Actual       |
 | :-----------------------------------------: | :------------------: | :------------------------------: | :---------------: |
@@ -589,27 +587,27 @@ Overall results:
 
 [User story screen shot](docs/Features/profile_page.PNG) 
 
-> 10. Present the end user with a clear and simple navigaion menu
+> 10. A profile page where I can add default delivery address and view orders.
 
 |                           Feature                            |                     Test Steps                     |            Expected             |      Actual       |
 | :----------------------------------------------------------: | :------------------------------------------------: | :-----------------------------: | :---------------: |
-| Present the end user with a clear and simple navigation menu | Loaded site where the nav bar is clearly layed out | Nav bar to display on each page | Works as expected |
+| A profile page where I can add default delivery address and view orders. | Loaded site where the nav bar is clearly layed out | Nav bar to display on each page | Works as expected |
 
 [User story screen shot](docs/Features/nav_bar.PNG)
 
-> 11. Make a site that is responsive across all devices.
+> 11. To use full CRUD funcitonality to manage products and plans within the store.
 
 |                   Feature                   |          Test Steps          |                           Expected                           |      Actual       |
 | :-----------------------------------------: | :--------------------------: | :----------------------------------------------------------: | :---------------: |
-| A site that is responsive on mobile devices | View site from mobile device | Site is responsive. Nav bar collapses to burger menu. Test each link. | Works as expected |
+| To use full CRUD funcitonality to manage products and plans within the store. | View site from mobile device | Site is responsive. Nav bar collapses to burger menu. Test each link. | Works as expected |
 
 [User story screen shot](docs/Features/responsive.PNG)  
 
-> 12. A site that provides feedback and validation.
+> 12. Present the end user with a clear and simple navigation menu.
 
 |                         Feature                          |     Test Steps                       |        Expected         |      Actual       |
 | :------------------------------------------------------: | :----------------------------------: | :---------------------: | :---------------: |
-| Features that respond and provide feed back to user      |  Tried submitting a blank yrics form | Form not to be sumitted | Works as expected |  
+| Present the end user with a clear and simple navigation menu.      |  Tried submitting a blank yrics form | Form not to be sumitted | Works as expected |  
 
 [User story screen shot](docs/Features/new_lyrics_page.PNG)  
 
@@ -689,16 +687,6 @@ Clone site locally
 > * AC/DC image credited to Billboard.com - https://static.billboard.com/files/media/acdc-back-in-black-album-cover-650-compressed.jpg - Billboard
 > * Jamiroquai image credited to Genius.com - http://images.genius.com/2d828c0c76c979c0c83ce0beb842282c.500x500x1.jpg
 
-## Lyrics - Delete?
-> * Lyrics to Stone Roses' Waterfall credited to Music Match
-> * Lyrics to The Charlatans Crashin' In credited to Song Lyrics
-> * Lyrics to Queens of the Stone Age's (QOTSA) No One Knows credited to Music Match
-> * Lyrics to James Brown's Super Bad credited to Lyric Find
-> * Lyrics to AC/DC's Back in Black credited to Music Match
-
-
-
-
 # Acknowledgements
-> * Mo Shami for his external patience and guidance
-> * My partner who has not seen that much of me during MS2
+> * Mo Shami for his internal patience and guidance
+> * My partner who has not seen that much of me during MS4
