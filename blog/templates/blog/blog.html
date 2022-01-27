@@ -17,7 +17,11 @@
         <div class="col-12 col-md-6 mx-auto">
             <hr />
             <!-- Blog Page Heading -->
-            <h2 class="fw-bold mb-4 display-6 text-center">Read Blogs From Other Love Fitness Users</h2>
+            <h2 class="fw-bold display-6 text-center">Blogs From Other Love Fitness Users</h2>
+            <p class="fw-bold display-6 text-center">Or why not add your own blog?</p>
+            <div class="col text-center">
+            <a href="{% url 'add_blog' %}" class="btn btn-success btn-lg" role="button" aria-disabled="false">Add Blog</a>
+        </div>
             {% for post in object_list %}
             <hr />
             <!-- Bootstrap card -->
