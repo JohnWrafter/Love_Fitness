@@ -29,7 +29,9 @@ class Post(models.Model):
         User,
         on_delete=models.CASCADE
     )
-    body = models.TextField()
+    body = models.TextField(
+        verbose_name=('Name')
+    )
     post_date = models.DateField(
         auto_now_add=True
     )
