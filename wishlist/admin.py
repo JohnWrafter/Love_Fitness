@@ -12,14 +12,14 @@ from .models import Favourites
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-class PostAdmin(admin.ModelAdmin):
+class FavouritesAdmin(admin.ModelAdmin):
     """
     List of fields to display in Django Admin
     """
     list_display = (
-        'products',
         'username',
     )
+
 
     ordering = ('username',)
 
