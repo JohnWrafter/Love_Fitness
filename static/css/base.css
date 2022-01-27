@@ -20,12 +20,12 @@ body {
 }
 
 .bg-blue-yonder {
-    background-color: #4470AD !important;
+    background-color: #018190 !important;
 }
 
 /* To set colour on Footer and Info banner */ 
 .bg-wild-blue-yonder {
-    background-color:  #6888BE !important;
+    background-color:  #00b4d8 !important;
 }
 
 /* Style for logo font */ 
@@ -46,8 +46,16 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+    background-color: #e9ecef;
 	z-index: -1;
+}
+
+.card-body {
+    background-color: #0077b6;
+}
+
+.card-footer {
+    background-color: #89c2d9;
 }
 
 /* Catergory badge */
