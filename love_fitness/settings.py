@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitnes-yoej5e0i65m.ws-eu28.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitnes-4wtont2k0l6.ws-eu29.gitpod.io']
 
 ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp.com', 'localhost']
 
