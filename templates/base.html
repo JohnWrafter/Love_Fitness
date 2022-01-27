@@ -36,13 +36,13 @@
         <!-- Main page header -->
         <header class="container-fluid fixed-top">
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-                <div class="col-12 col-lg-3 py-1 py-lg-0 text-center text-lg-left">
+                <div class="col-12 col-lg-3 py-1 py-lg-0 text-center text-lg-left ">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-black my-0"><strong>Love</strong> Fitness</h2>
                     </a>
                 </div>
                 <!-- Search -->
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
                             <label for="siteSearch" class="sr-only">Search</label>
@@ -71,7 +71,6 @@
                             <div class="dropdown-menu border-0">
                                 {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                <a href="" class="dropdown-item">News Item Management</a>
                                 <a href="{% url 'blog' %}" class="dropdown-item">Fitness Hub</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
@@ -79,7 +78,6 @@
                                 {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                <a href="{% url 'home' %}" class="dropdown-item">Calculate your BMI</a>
                                 {% endif %}
                             </div>
                         </li>
@@ -116,7 +114,7 @@
             </div>
             <!-- Mobile and main nav area -->
             <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
+                <nav class="navbar navbar-expand-lg navbar-light bg-blue-yonder w-100">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -126,7 +124,7 @@
             <!-- Information Banner -->
             <div id="info-banner" class="row fw-bold text-center bg-wild-blue-yonder">
                 <div class="col">
-                    <div class="mt-1 mb-2">
+                    <div class="mt-1 mb-1">
                         <span class="text-black text-center">Free worldwide delivery on orders over £{{ free_delivery_threshold }}!</span>
                         <span class="d-none d-lg-inline ml-3 mr-3 text-black">-</span>
                         <span class="d-none d-lg-inline text-black">Next day delivery options available</span>
@@ -209,7 +207,6 @@
                         <ul class="list-unstyled mb-0">
                             {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                             <li class="mb-2"><a href="" class="text-black">Product Management</a></li>
-                            <li class="mb-2"><a href="" class="text-black">News Item Management</a></li>
                             {% endif %}
                             <li class="mb-2"><a href="" class="text-black">My Profile</a></li>
                             {% else %}
