@@ -1,3 +1,4 @@
+<!-- Quantity Form -->
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
     {% csrf_token %}
     <div class="form-group">
@@ -10,7 +11,7 @@
                 </button>
             </div>
             <label for="prd_qty" class="sr-only">Search</label>
-            <input class="form-control form-control-sm qty_input"  id="prd_qty" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" />
+            <input class="form-control form-control-sm qty_input" id="prd_qty" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" />
             <div class="input-group-append">
                 <button class="increment-qty btn btn-sm btn-black rounded-0" aria-label="increase-quantity" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                     <span>
