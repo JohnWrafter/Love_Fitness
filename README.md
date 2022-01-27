@@ -257,7 +257,7 @@ Contact Us Model
 
 ### Feature 6: Wish List
 - Users can added or products from their wishlist.
-> ![Wish list](readme/wireframes/wireframes_wishlist.PNG)
+> ![Wish list](readme/features/features_wishlist.PNG)
 > User stories feature relates to:
 > * 6.4. To be able to add / delete products from a wish list or favourites.
 
@@ -265,7 +265,7 @@ Contact Us Model
 - A simple form made up of 5 input fields which are: email-address, email address confirmation, user name, password, confirm password.
 - Each input field is a required element, with form validation not allowing the users to skip a field without first completing it.
 - Finally, two buttons are displayed: one to cancel sign up and one to sign up.
-> ![Register Page](readme/wireframes/wireframes_register.PNG)
+> ![Register Page](readme/features/feature_register.PNG)
 > * 7.1 To easily register a new account to access the site and all its features.
 
 ### Feature 8: Search Products
