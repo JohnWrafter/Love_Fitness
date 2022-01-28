@@ -496,27 +496,27 @@ I have used the WAVE Web Accessibilty Evaluation Tool to ensure site is accessib
 ### Lighthouse Performance
 I have used Google Lighthouse (in Google Dev tools) to measure the performance the site
 
-|   Page                              |  Result                                                       |                      Screenshot                                    |
-|:-----------------------------------:|:--------------------------------------------------------------|:------------------------------------------------------------------:|
-|   Home - Desktop                    | 92 Performance, 91 Accessibility, 100 Best Practices, 89 SEO  | [View Results](readme/lighthouse/desktop/home.PNG)                 |
-|   Products - Desktop                | 98 Performance, 92 Accessibility, 100 Best Practices, 90 SEO  | [View Results](readme/lighthouse/desktop/products.PNG)             |
-|   Product Details - Desktop         | 99 Performance, 92 Accessibility, 100 Best Practices, 90 SEO  | [View Results](readme/lighthouse/desktop/product_details.PNG)      |
-|   Add Products - Desktop            | 100 Performance, 81 Accessibility, 100 Best Practices, 78 SEO | [View Results](readme/lighthouse/desktop/add_product.PNG)          |
-|   Edit Products - Desktop           | 100 Performance, 85 Accessibility, 100 Best Practices, 80 SEO | [View Results](readme/lighthouse/desktop/edit_product.PNG)         |
-|   Bag - Desktop                     | 98 Performance, 81 Accessibility, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/desktop/bag.PNG)                  |
-|   Blog - Desktop                    | 100 Performance, 87 Accessibility, 100 Best Practices, 78 SEO | [View Results](readme/lighthouse/desktop/blog.PNG)                 |
-|   Add Blog - Desktop                | 99 Performance, 91 Accessibilty, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/add_blog.PNG)             |
-|   Change Password - Desktop         | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/password_reset.PNG)       |
-|   Confirm Change Password - Desktop | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/change_password_conf.PNG) |
-|   Checkout - Desktop                | 99 Performance, 93 Accessibilty, 100 Best Practices, 80 SEO   | [View Results](readme/lighthouse/desktop/checkout.PNG)             |
-|   Checkout Success - Desktop        | 98 Performance, 90 Accessibilty, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/checkout_success.PNG)     |
-|   Contact - Desktop                 | 99 Performance, 90 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/contact.PNG)              |
-|   Profile - Desktop                 | 99 Performance, 90 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/profile.PNG)              |
-|   Register - Desktop                | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/sign_up.PNG)              |
-|   Log In - Desktop                  | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO   | [View Results](readme/lighthouse/desktop/sign_in.PNG)              |
-|   Log Out - Desktop                 | 99 Performance, 91 Accessibilty, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/sign_out.PNG)             |
-|   Wishlist - Desktop                | 100 Performance, 90 Accessibilty, 100 Best Practices, 80 SEO  | [View Results](readme/lighthouse/desktop/wish_list.PNG)            |
-|   Order History - Desktop           | 99 Performance, 93 Accessibilty, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/order_history.PNG)        |
+|   Page                              |  Result                                                         |                      Screenshot                                    |
+|:-----------------------------------:|:----------------------------------------------------------------|:------------------------------------------------------------------:|
+|   Home - Desktop                    | 92 Performance, 91 Accessibility, 100 Best Practices, 89 SEO    | [View Results](readme/lighthouse/desktop/home.PNG)                 |
+|   Products - Desktop                | 98 Performance, 92 Accessibility, 100 Best Practices, 90 SEO    | [View Results](readme/lighthouse/desktop/products.PNG)             |
+|   Product Details - Desktop         | 99 Performance, 92 Accessibility, 100 Best Practices, 90 SEO    | [View Results](readme/lighthouse/desktop/product_details.PNG)      |
+|   Add Products - Desktop            | 100 Performance, 81 Accessibility, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/add_product.PNG)          |
+|   Edit Products - Desktop           | 100 Performance, 85 Accessibility, 100 Best Practices, 80 SEO   | [View Results](readme/lighthouse/desktop/edit_product.PNG)         |
+|   Bag - Desktop                     | 98 Performance, 81 Accessibility, 100 Best Practices, 80 SEO    | [View Results](readme/lighthouse/desktop/bag.PNG)                  |
+|   Blog - Desktop                    | 100 Performance, 87 Accessibility, 100 Best Practices, 78 SEO   | [View Results](readme/lighthouse/desktop/blog.PNG)                 |
+|   Add Blog - Desktop                | 99 Performance, 91 Accessibilty, 100 Best Practices, 78 SEO     | [View Results](readme/lighthouse/desktop/add_blog.PNG)             |
+|   Change Password - Desktop         | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO     | [View Results](readme/lighthouse/desktop/password_reset.PNG)       |
+|   Confirm Change Password - Desktop | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO     | [View Results](readme/lighthouse/desktop/change_password_conf.PNG) |
+|   Checkout - Desktop                | 99 Performance, 93 Accessibilty, 100 Best Practices, 80 SEO     | [View Results](readme/lighthouse/desktop/checkout.PNG)             |
+|   Checkout Success - Desktop        | 98 Performance, 90 Accessibilty, 100 Best Practices, 78 SEO     | [View Results](readme/lighthouse/desktop/checkout_success.PNG)     |
+|   Contact - Desktop                 | 99 Performance, 90 Accessibilty, 100 Best Practices, 89 SEO     | [View Results](readme/lighthouse/desktop/contact.PNG)              |
+|   Profile - Desktop                 | 99 Performance, 90 Accessibilty, 100 Best Practices, 89 SEO     | [View Results](readme/lighthouse/desktop/profile.PNG)              |
+|   Register - Desktop                | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO     | [View Results](readme/lighthouse/desktop/sign_up.PNG)              |
+|   Log In - Desktop                  | 99 Performance, 91 Accessibilty, 100 Best Practices, 89 SEO     | [View Results](readme/lighthouse/desktop/sign_in.PNG)              |
+|   Log Out - Desktop                 | 99 Performance, 91 Accessibilty, 100 Best Practices, 78 SEO     | [View Results](readme/lighthouse/desktop/sign_out.PNG)             |
+|   Wishlist - Desktop                | 100 Performance, 90 Accessibilty, 100 Best Practices, 80 SEO    | [View Results](readme/lighthouse/desktop/wish_list.PNG)            |
+|   Order History - Desktop           | 99 Performance, 93 Accessibilty, 100 Best Practices, 78 SEO     | [View Results](readme/lighthouse/desktop/order_history.PNG)        |
 >
 |   Page                             |  Result                                                      |                      Screenshot                                   |
 |:----------------------------------:|:-------------------------------------------------------------|:-----------------------------------------------------------------:|
