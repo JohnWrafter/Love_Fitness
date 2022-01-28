@@ -583,11 +583,11 @@ Overall results:
 
 > 3. View a single product.
 
-|         Feature           |       Test Steps                     |     Expected             |      Actual       |
-| :--------------------------------------------------------------: | :------------------- --: | :---------------: |
-|  View a single product.   | Enter search criteria in search bar. |  Single product displays | Works as expected |
+|        Feature         |         Test Steps                   |    Expected              |      Actual       |
+| :--------------------: | :----------------------------------: | :------------------------| :---------------: |
+| View a single product  |  Enter search criteria in search bar | Single products displays | Works as expected |  
 
-[User story screen shot](readme/testing/user_story_3/user_story_3.PNG)
+[User story screen shot](readme/testing/user_story_3/user_story_3.PNG)  
 
 > 4. To be able to add / delete products from a wish list or favourites.
 
@@ -600,17 +600,17 @@ Overall results:
 
 > 5. Option to search for products by name or description.
 
-|                         Feature    ..............     |     Test Steps                                     |           Expected       |      Actual       |
+|                         Feature                       |     Test Steps                                     |           Expected       |      Actual       |
 | :---------------------------------------------------: | :------------------------------------------------: | :----------------------: | :---------------: |
 | Option to search for products by name or description. | Entered search criteria by name or description     |  Product is displayed    | Works as expected |  
 
-[User story screen shot](readme/testing/user_story_5/user_story_5.PNG)      
+[User story screen shot](readme/testing/user_story_5/user_story_5.PNG)  
 
-> 6. To be able to complete purchase from shopping bag.
+> 6. To be able to complete a purchase from the shopping bag.
 
-|                  Feature                           |   Test Steps          |      Expected        |      Actual       |
-| :------------------------------------------------: | :------------------ : | :------------------: | :---------------: |
-| To be able to complete purchase from shopping bag. | Made test purchase    | Purchase to complete | Works as expected |
+|                         Feature                         |     Test Steps        |           Expected       |      Actual       |
+| :-----------------------------------------------------: | :-------------------: | :----------------------: | :---------------: |
+| To be able to complete a purchase from the shopping bag | Made a test purchase  |  Purchase to complete    | Works as expected |  
 
 [User story screen shot](readme/testing/user_story_6/user_story_6.png)  
 
@@ -647,8 +647,8 @@ Overall results:
 
 > 11. To use full CRUD funcitonality to manage products and plans within the store.
 
-|                   Feature                   |          Test Steps          |                           Expected                           |      Actual       |
-| :-----------------------------------------: | :--------------------------: | :----------------------------------------------------------: | :---------------: |
+|                   Feature                   |          Test Steps             |                           Expected                           |      Actual       |
+| :-----------------------------------------: | :-----------------------------: | :----------------------------------------------------------: | :---------------: |
 | To use full CRUD funcitonality to manage products and plans within the store. | View site from mobile device | Site is responsive. Nav bar collapses to burger menu. Test each link. | Works as expected |
 
 [User story screen shot](docs/Features/responsive.PNG)  
@@ -686,17 +686,6 @@ Overall results:
 > **Fix** Added Text Center to Span Class 
 
 # Deployment
-
-## Github Pages
-I have deployed this site to GitHub pages
-
-> 1. Log in to git hub and find the respositry you wish to deploy
-> 2. On the respository click on **Settings**
-> 3. From left the hand menue click on **Pages**
-> 4. Click on the **Source** option
-> 5. From the dropdown change **none** to **master branch**
-> 6. The deplyment will take a few moments to finalise
-> 7. The live site URL is now displayed under Github Pages
 
 ## Clone Locally
 Clone site locally
