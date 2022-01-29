@@ -2,6 +2,7 @@
 {% load static %}
 {% load bag_tools %} 
 {% block page_header %}
+{% block extra_title %}Shopping Bag{% endblock %}
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -114,11 +115,15 @@
                 </span>
                 <span class="text-uppercase">Keep Shopping</span>
             </a>
+            <a class="update-link text-info"><small>Update</small></a>
+                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
             {% endif %}
         </div>
     </div>
 </div>
-{% endblock %} {% block postloadjs %} {{ block.super }}
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
 <script>
     $(".btt-link").click(function (e) {
         window.scrollTo(0, 0);
