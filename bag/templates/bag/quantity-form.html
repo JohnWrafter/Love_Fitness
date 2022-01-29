@@ -10,6 +10,7 @@
                     </span>
                 </button>
             </div>
+            <!-- Plus and minus buttons -->
             <label for="prd_qty" class="sr-only">Search</label>
             <input class="form-control form-control-sm qty_input" id="prd_qty" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" />
             <div class="input-group-append">
@@ -24,4 +25,7 @@
             {% endif %}
         </div>
     </div>
+    <!--Update and remove item quantity-->
+      <a class="update-link text-info"><button type="button" class="btn btn-outline-success btn-sm mt-1">Update</button></a>
+      <a class="remove-item text-danger float-end mt-1" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><button type="button" class="btn btn-outline-danger btn-sm">Remove</button></a>
 </form>
