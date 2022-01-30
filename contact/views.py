@@ -4,7 +4,9 @@ Views for contact app
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
 
 # Internal:
 from .forms import ContactForm
@@ -23,10 +25,10 @@ def contact(request):
             form.email = request.POST['email'],
             form.save()
             user_email = ''.join(form.email)
-            messages.success(request,
-                             f"Thanks { user_email }, Your message has been sent.\
-                             We will be in touch shortly.")
-            return redirect("home")
+            messages.success(
+                request, f'Thanks { user_email }, Your message has been sent.\
+                             We will be in touch shortly.')
+            return redirect('contact')
         else:
             messages.error(request,
                            'Error: something has gone wrong \
@@ -35,7 +37,7 @@ def contact(request):
     else:
         form = ContactForm()
 
-    template = 'contact/contact_us.html'
+    template = 'contact/contact.html'
     context = {
         'form': form,
     }

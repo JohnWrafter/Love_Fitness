@@ -5,6 +5,8 @@ Config for contact forms
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from django import forms
+
+# Internal
 from .models import Contact
 
 
@@ -14,7 +16,7 @@ class ContactForm(forms.ModelForm):
     """
     class Meta:
         """
-        Meta config for contact form
+        Configure meta data contact form
         """
         model = Contact
 
