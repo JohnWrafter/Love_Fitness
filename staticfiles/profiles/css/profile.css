@@ -1,0 +1,27 @@
+/* Order history main container */
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}
+
+/* Style form control*/
+#profile-update-form .form-control {
+    color: #000;
+}
+
+/* Placeholder colour*/
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+/* Country drop down text colour */
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+/* Placeholder colour */
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
+
