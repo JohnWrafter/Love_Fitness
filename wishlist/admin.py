@@ -20,7 +20,6 @@ class FavouritesAdmin(admin.ModelAdmin):
         'username',
     )
 
-
     ordering = ('username',)
 
 
