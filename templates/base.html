@@ -71,8 +71,8 @@
                             <div class="dropdown-menu border-0">
                                 {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                <a href="{% url 'blog' %}" class="dropdown-item">Fitness Hub</a>
                                 {% endif %}
+                                <a href="{% url 'blog' %}" class="dropdown-item">Fitness Hub</a>
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
