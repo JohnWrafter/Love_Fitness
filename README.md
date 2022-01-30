@@ -4,8 +4,11 @@
 [You can visit the live site here](https://ci-ms4-lovefitness.herokuapp.com/)
 
  I have created two user for this site for the accessors to use and the credentials are: 
-> username: ciuser password: UserPassword
-> username: ciadmin password: AdminPassword
+> username: ciuser, password: UserPassword
+> username: ciadmin, password: AdminPassword
+
+The account I have used for this project.
+> username: admin, password: Em3w0rth! 
 
 ## Table of Contents
 > 1. [Target Audience](#target-audience)
@@ -695,7 +698,6 @@ Clone site locally
 > 7. Press enter and repo will go through short cloning process
 
 ## Heroku
-
 1. Create a file called ProcFile in the root directory, and add the line <code>web: python app.py</code> if the file does not already exist
 2. Create a requirements.txt file by running the command <code>pip freeze > requirements.txt</code> in your terminal if the file doesn't already exist
 3. Both the ProcFile and requirements.txt files should be added to your git repo in the root directory
@@ -718,11 +720,7 @@ Clone site locally
 
 ## Images
 > * Main product images  web scraped from My Protein - https://www.myprotein.com/ and Argos - https://www.argos.co.uk/
-> * The Charlatans image credited to Exeter Phoenix - https://exeterphoenix.org.uk/wp-content/uploads/2021/06/the-charlatans-exeter-phoenix-great-hall.jpg
-> * Queens of the Stone Age (QOTSA) image credited to Mesa Press - https://www.mesapress.com/wp-content/uploads/2017/09/Villains-QOTSA.png
-> * James Brown image credited to Wallpapercave.com - https://wallpapercave.com/wp/wp2160960.jpg
-> * AC/DC image credited to Billboard.com - https://static.billboard.com/files/media/acdc-back-in-black-album-cover-650-compressed.jpg - Billboard
-> * Jamiroquai image credited to Genius.com - http://images.genius.com/2d828c0c76c979c0c83ce0beb842282c.500x500x1.jpg
+> * Carousel images courtesy of Unsplash - https://unsplash.com/
 
 # Acknowledgements
 > * Mo Shami for his internal patience and guidance
