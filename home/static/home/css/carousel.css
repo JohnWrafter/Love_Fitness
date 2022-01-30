@@ -6,6 +6,7 @@
     width: 100vw;
   }
   
+  /* Image carousel images*/
   .slide {
     position: absolute;
     top: 0;
@@ -16,10 +17,12 @@
     transition: opacity 0.4s ease-in-out;
   }
   
+  /* Main carousel image */
   .slide.current {
     opacity: 1;
   }
   
+  /* Carsousel image */ 
   .slide .content {
     position: absolute;
     bottom: 70px;
@@ -31,22 +34,26 @@
     padding: 35px;
   }
   
+  /* Carousel image header*/
   .slide .content h1 {
     margin-bottom: 10px;
   }
   
+ /* Carousel image text container */
   .slide.current .content {
     opacity: 1;
     transform: translateX(600px);
     transition: all 0.7s ease-in-out 0.3s;
   }
   
+  /* Carousel next image buttons */
   .buttons button#next {
     position: absolute;
     top: 40%;
     right: 15px;
   }
   
+  /* Carousel image previous button */
   .buttons button#prev {
     position: absolute;
     top: 40%;
@@ -64,13 +71,13 @@
     outline: none;
   }
   
+  /* Hover colour for buttons */
   .buttons button:hover {
     background-color: #fff;
     color: #333;
   }
 
 /* Carousel Background Images */
-
 .slide:first-child {
     background: url('https://ci-ms4-lovefitness.s3.eu-west-2.amazonaws.com/media/carousel_image_1.jpg') no-repeat
       center top/cover;
@@ -82,18 +89,6 @@
   .slide:nth-child(3) {
     background: url('https://ci-ms4-lovefitness.s3.eu-west-2.amazonaws.com/media/carousel_image_3.jpg') no-repeat
       center top/cover;
-  }
-  .slide:nth-child(4) {
-    background: url('https://source.unsplash.com/yXpA_eCbtzI/1600x900') no-repeat
-      center top/cover;
-  }
-  .slide:nth-child(5) {
-    background: url('https://source.unsplash.com/ULmaQh9Gvbg/1600x900') no-repeat
-      center top/cover;
-  } 
-  .slide:nth-child(6)  {
-    background: url('https://source.unsplash.com/ggZuL3BTSJU/1600x900') no-repeat
-      center center/cover;
   }
 
 /* Image Carousel Media Queries */
