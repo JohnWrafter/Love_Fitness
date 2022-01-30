@@ -4,14 +4,10 @@
 [You can visit the live site here](https://ci-ms4-lovefitness.herokuapp.com/)
 
  I have created two user for this site for the accessors to use and the credentials are: 
-> username: AdminUser password: Password123
-> username: NormalUser password: Password123
+> username: ciuser password: UserPassword
+> username: ciadmin password: AdminPassword
 
-The users I have used on this site are:
-> username: Admin password Em3w0rth1
-> username: JohnW passord Em3w0rth1
-
-## Table of Contents - Change for MS4
+## Table of Contents
 > 1. [Target Audience](#target-audience)
 > 2. [Project Goals](#project-goals)
 > 3. [The 5 Planes of UX](#the-5-planes-of-ux)  
@@ -177,7 +173,7 @@ To design and develop the wireframes I first used Balsamiq, then used Snipping T
 
 ---
 
-## Surface - Change for MS4
+## Surface
 ## Colours
 Each page is design with very simple colours and images to showcase the island. The colours I have used are as follows:
 > - Light Blue and Red for buttons
@@ -715,9 +711,13 @@ Clone site locally
 
 ---
 
-### Credits - Change for MS4
+### Credits
+
+## Image Carousel
+> * Image carousel courtesy of Brad Traversy - https://codepen.io/bradtraversy/pen/oVPBaa
+
 ## Images
-> * Main product images  - https://i.pinimg.com/originals/17/e6/21/17e6212ef5b95530f2408332959b99f7.jpg
+> * Main product images  web scraped from My Protein - https://www.myprotein.com/ and Argos - https://www.argos.co.uk/
 > * The Charlatans image credited to Exeter Phoenix - https://exeterphoenix.org.uk/wp-content/uploads/2021/06/the-charlatans-exeter-phoenix-great-hall.jpg
 > * Queens of the Stone Age (QOTSA) image credited to Mesa Press - https://www.mesapress.com/wp-content/uploads/2017/09/Villains-QOTSA.png
 > * James Brown image credited to Wallpapercave.com - https://wallpapercave.com/wp/wp2160960.jpg
