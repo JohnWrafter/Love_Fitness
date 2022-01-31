@@ -50,10 +50,12 @@ body {
 	z-index: -1;
 }
 
+/* Product card body */ 
 .card-body {
     background-color: #0077b6;
 }
 
+/* Product card footer */
 .card-footer {
     background-color: #89c2d9;
 }
