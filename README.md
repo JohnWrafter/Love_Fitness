@@ -65,7 +65,7 @@ As a new or returning visitor I would like to see:
 > 5. Option to search for products by name or description. 
 > 6. To be able to complete purchase from shopping bag.
 > 7. An error page to show if I have enterted an incorrect URL.
-> 8. Sort the list pf products by its category, price and rating.
+> 8. Sort the list of products by its category, price and rating.
 > 9. A contact page to get in touch with the site owner.
 > 10. A profile page where I can add default delivery address and view orders.
 
@@ -179,11 +179,11 @@ To design and develop the wireframes I first used Balsamiq, then used Snipping T
 ## Surface
 ## Colours
 Each page is design with very simple colours and images to showcase the island. The colours I have used are as follows:
-> - Light Blue and Red for buttons
-> - Black text for buttons and card contents
-> - Blanchedalmond for site back ground colours
+> - For the nav bar and info banners I have used green with white text to add contrast
+> - For the products cards I have used blue for the card headers and light blue for the card body, with contrasting black text
+> - I have used a very light grey for the overlay.
 
-## Typography - Change for MS4
+## Typography
 For the brand logo I have used Google Font - Lobster, and for the Lyrics (flow-test) I have used Google Font - Roboto Condensed. Everywhere else I have used the default Materialize font.
 
 ## Database
@@ -686,30 +686,99 @@ Overall results:
 
 # Deployment
 
-## Clone Locally
-Clone site locally
+## Local Deployment
+Deploy site locally
 
-> 1. Log in to Github and navigate to main page of repository
-> 2. Click on **Code** above the list of files
-> 3. Copy the link under clone to https
-> 4. Open Git bash
-> 5. If required change the directory to where you would like repo cloned to
-> 6. Type git clone and then copy in repo URL
-> 7. Press enter and repo will go through short cloning process
+1. Log in to Github and navigate to main page of repository
+2. Click on **Code** above the list of files
+3. Copy the link under clone to https
+4. Open Git bash
+5. If required change the directory to where you would like repo cloned to
+6. Type git clone and then copy in repo URL
+7. Press enter and repo will go through short cloning process
+8. Create an env.py file(do not commit this file to source control) in the root folder in your project, and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values<br>
+<br><code>import os</code>
+<br><code>os.environ.setdefault("SECRET_KEY", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("STRIPE_PUBLIC_KEY", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("STRIPE_SECRET_KEY", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("STRIPE_WH_SECRET", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("AWS_ACCESS_KEY_ID", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("AWS_SECRET_ACCESS_KEY", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("EMAIL_HOST_USER", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("EMAIL_HOST_PASS", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("USE_AWS", TO BE ADDED BY USER)</code>
+<br><code>os.environ.setdefault("DATABASE_URL", TO BE ADDED BY USER)</code><br>
+9. Install the relevant packages as per the requirements.txt file
+10. In the settings.py ensure the connection is set to either the Heroku postgres database or the local sqllite database
+11. Ensure debug is set to true in the settings.py file for local development
+12. Add localhost/127.0.0.1 to the ALLOWED_HOSTS variable in settings.py
+13. Run "python3 manage.py showmigrations" to check the status of the migrations. Run "python3 manage.py migrate" to migrate the database
+14. Run "python3 manage.py createsuperuser" to create a super/admin user
+15. Run "python3 manage.py loaddata categories.json" on the categories file in products/fixtures to create the categories
+16. Run "python3 manage.py loaddata products.json" on the products file in products/fixtures to create the products
+17. Run "python3 manage.py loaddata plan_categories.json" on the news file in news/fixtures to create catergories for plan categories
+17. Run "python3 manage.py loaddata plan_products.json" on the news file in news/fixtures to create catergories for plan products
+18. Start the application by running <code>python3 manage.py runserver</code>
+19. Open the application in a web browser, for example: http://127.0.0.1:8000/
 
-## Heroku
+## Heroku and PostGres
 1. Create a file called ProcFile in the root directory, and add the line <code>web: python app.py</code> if the file does not already exist
 2. Create a requirements.txt file by running the command <code>pip freeze > requirements.txt</code> in your terminal if the file doesn't already exist
 3. Both the ProcFile and requirements.txt files should be added to your git repo in the root directory
 4. Create an account on heroku.com
 5. Create a new application and give it a unique name
-6. In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
-7. Select the branch for example master and enable automatic deploys if desired. Otherwise, a deployment will be manual
-8. The next step is to set the config variables in the Settings section
-9. Set key/value pairs for the following keys: IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
-10. Go to the dashboard and trigger a deployment
-11. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
-12. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
+6. Click on the resources tab, search for and add PostGres as a database for the app.
+7. A URL for the database will be created, make a note of it as it will be required to add to environment variables.
+8. In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
+9. Select the branch for example master and enable automatic deploys if desired. Otherwise, a deployment will be manual
+10. The next step is to set the config variables in the Settings section
+11. Go to the dashboard and trigger a deployment
+12. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
+13. If you encounter any issues accessing the build logs is a good way to troubleshoot the 
+
+## Stripe
+1. Go to stripe.com and register for an account
+2. Once logged in click on the Developers section.
+3. Click on the API Keys
+4. Make a record the values for the publishable and secret keys
+5. In your local environment(env.py) and heroku, create environment variables STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY with the publishable and secret key values
+6. Back in the Developers section of your stripe account click on Webhooks
+7. Create a webhook with the url of your website <url>/checkout/wh/, for example: https://ci-ms4-lovefitness.herokuapp.com/checkout/wh/
+8. Select the payment_intent.payment_failed and payment_intent.succeeded as events to send
+9. Note the key created for this webhook
+10. In your local environment(env.py) and heroku, create environment variable STRIPE_WH_SECRET with the secret values
+11. Feel free to test out the webhook and note the success/fail attempts for troubleshooting
+
+## Amazon WebServices
+1. Create an account at aws.amazon.com
+2. Open the S3 application and create an S3 bucket named "ci-ms4-rugby-shop"
+3. Uncheck the "Block All Public access setting"
+4. In the Properties section, navigate to the "Static Website Hosting" section and click edit
+5. Enable the setting, and set the index.html and the error.html values
+6. In the Permissions section, click edit on the CORS configuration and set the below configuration
+7. In the permissions section, click edit on the bucket policy and generate and set the below configuration(or similar to your settings)
+8. In the permissions section, click edit on the Access control list(ACL)
+9. Set Read access for the Bucket ACL for Everyone(Public Access)
+10. The bucket is created, the next step is to open the IAM application to set up access
+11. Create a new user group named "ci-ms4-rugby-shop"
+12. Add the "AmazonS3FullAccess" policy permission for the user group
+13. Go to "Policies" and click "Create New Policy"
+14. Click "Import Managed Policy" and select "AmazonS3FullAccess" > Click 'Import'.
+15. In the JSON editor, update the policy "Resource" to the following
+<br><code>"Resource": [</code>
+<br><code>"arn:aws:s3:::ci-ms4-lovefitness",</code>
+<br><code>"arn:aws:s3:::ci-ms4-lovefitness/*"</code>
+<br><code>]</code>
+16. Give the policy a name and click "Create Policy"
+17. Add the newly created policy to the user group
+18. Go to Users and create a new user
+19. Add the user to the user group ci-ms4-rugby-shop
+20. Select "Programmatic access" for the access type
+21. Note the AWS_SECRET_ACCESS_KEY and AWS_ACCESS_KEY_ID variables, they are used in other parts of this README for local deployment and Heroku setup
+22. The user is now created with the correct user group and policy
+23. Note the AWS code in settings.py. Note an environment variable called USE_AWS must be set to use these settings, otherwise it will use local storage
+24. These settings set up a cache policy, set the bucket name, and the environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY that you set in your aws account
+25. The configuration also requires the media/static folders that must be setup in the AWS S3 bucket to store the media and static files 
 
 ---
 
