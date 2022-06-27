@@ -516,7 +516,7 @@
     "price": 12.34,
     "category": 3,
     "rating": 4.3,
-    "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/10529701-1724835571924615.jpg",
+    "image_url": "https://ci-ms4-lovefitness-1.s3.eu-west-2.amazonaws.com/media/10529701-1724835571924615.jpg",
     "image": "10529701-1724835571924615.jpg"
   }
 },
