@@ -13,6 +13,7 @@ django-storages = "*"
 psycopg2 = "*"
 django-countries = "*"
 whitenoise = "*"
+stripe = "*"
 
 [dev-packages]
 
