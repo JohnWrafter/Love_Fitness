@@ -9,6 +9,7 @@ django = "*"
 dj-database-url = "*"
 django-allauth = "*"
 django-crispy-forms = "*"
+django-storages = "*"
 
 [dev-packages]
 
