@@ -11,6 +11,7 @@ django-allauth = "*"
 django-crispy-forms = "*"
 django-storages = "*"
 psycopg2 = "*"
+django-countries = "*"
 
 [dev-packages]
 
