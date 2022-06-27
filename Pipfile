@@ -16,6 +16,7 @@ whitenoise = "*"
 stripe = "*"
 pillow = "*"
 boto3 = "*"
+django-model-utils = "*"
 
 [dev-packages]
 
