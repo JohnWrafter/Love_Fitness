@@ -30,7 +30,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitne-v7hrxb0gg10.ws-eu47.gitpod.io']
 
-ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness-1.herokuapp.com', 'localhost']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
