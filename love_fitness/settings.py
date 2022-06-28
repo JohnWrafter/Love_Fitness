@@ -22,14 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get(
     'SECRET_KEY', 'l!=^3@c!++dqm10@#v1cz8_@1u^i(a-r@x0-)f@)n*_$t^2x3l')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitne-v7hrxb0gg10.ws-eu47.gitpod.io']
 
-ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness-1.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp.com', 'localhost']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
