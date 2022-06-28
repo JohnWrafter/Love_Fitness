@@ -8,8 +8,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 import os
 import dj_database_url
-from pathlib import Path
-from storages.backends.s3boto3 import S3Boto3Storage
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -205,9 +204,9 @@ if 'USE_AWS' in os.environ:
 
     # Static and media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-    STATICFILES_LOCATION = 'static'
+    STATICFILES_LOCATION = '/static/'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-    MEDIAFILES_LOCATION = 'media'
+    MEDIAFILES_LOCATION = '/media/'
 
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
