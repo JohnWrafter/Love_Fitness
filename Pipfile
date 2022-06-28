@@ -17,7 +17,6 @@ stripe = "*"
 pillow = "*"
 boto3 = "*"
 django-model-utils = "*"
-boto = "*"
 django-heroku = "*"
 
 [dev-packages]
