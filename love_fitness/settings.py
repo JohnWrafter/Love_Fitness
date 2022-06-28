@@ -195,7 +195,7 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'ci-ms4-lovefitness-1'
+    AWS_STORAGE_BUCKET_NAME = 'ci-ms4-lovefitness'
     AWS_S3_REGION_NAME = 'eu-west-2'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
@@ -204,7 +204,7 @@ if 'USE_AWS' in os.environ:
     # Static and media files
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     STATICFILESTATICFILES_LOCATION = 'static'
-    STATICFILES_STORAGE = 'ci-ms4-lovefitness.custom_storages.StaticStorage'
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     MEDIAFILES_LOCATION = 'media'
     DEFAULT_FILE_STORAGE = 'ci-ms4-lovefitness.custom_storage.MediaStorage'
 
