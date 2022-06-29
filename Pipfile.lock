@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f94f580434dcf914bdb8fbcf471ac46d87a254d9df59c9f3a3f38c9713a9d844"
+            "sha256": "bfde4864a47f3e6a816ba044f2c9bc6824f1fe174d5549f946501e2e64ea1734"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -133,12 +133,6 @@
             "markers": "python_version >= '3.5'",
             "version": "==2.0.12"
         },
-        "cloudinary": {
-            "hashes": [
-                "sha256:f436ef3ddb2b3989199afaf82bc50655b187bf1ae98c4bf0bb3eb63055953466"
-            ],
-            "version": "==1.29.0"
-        },
         "cryptography": {
             "hashes": [
                 "sha256:093cb351031656d3ee2f4fa1be579a8c69c754cf874206be1d4cf3b542042804",
@@ -196,14 +190,6 @@
             ],
             "index": "pypi",
             "version": "==0.51.0"
-        },
-        "django-cloudinary-storage": {
-            "hashes": [
-                "sha256:95c855c7334141b2a485ea7eb5716de87bb6ce0d848e205debb3a3ab7bbbd49a",
-                "sha256:debd403a5f225c9d35c4af508ff4abc7fdc262129464134b60b2feeb2c44d3e1"
-            ],
-            "index": "pypi",
-            "version": "==0.3.0"
         },
         "django-countries": {
             "hashes": [
