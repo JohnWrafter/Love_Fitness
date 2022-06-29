@@ -17,7 +17,6 @@ pillow = "*"
 boto3 = "*"
 django-model-utils = "*"
 django-heroku = "*"
-django-cloudinary-storage = "*"
 
 [dev-packages]
 
