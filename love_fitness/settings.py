@@ -55,6 +55,9 @@ INSTALLED_APPS = [
     'blog',
     'wishlist',
     'contact',
+    'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary'
 
     # Other
     'crispy_forms',
