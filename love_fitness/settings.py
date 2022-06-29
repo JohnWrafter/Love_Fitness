@@ -13,17 +13,15 @@ import os
 import dj_database_url
 from pathlib import Path
 
+# Internal:
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 if os.path.exists("env.py"):
     import env
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# CLOUDINARY_STORAGE = {
-#     # other settings, like credentials
-#     'STATICFILES_MANIFEST_ROOT': os.path.join(BASE_DIR, 'my-manifest-directory')
-# }
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -37,8 +35,6 @@ SECRET_KEY = os.environ.get(
 # DEBUG = False
 
 DEBUG = 'DEVELOPMENT' in os.environ
-
-CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitne-v7hrxb0gg10.ws-eu47.gitpod.io']
 
 ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp.com', 'localhost']
 
@@ -134,13 +130,6 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'love_fitness.wsgi.application'
 
-# # Cloudinary Credentials
-# CLOUDINARY_STORAGE = {
-#     'CLOUD_NAME': 'dhdubuck0',
-#     'API_KEY': '761257361247753',
-#     'API_SECRET': 'VKL1kYeGPH4Xbnhyvxs5XBOdbpQ'
-# }
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -156,7 +145,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -200,19 +188,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-STATIC_ROOT = 'staticfiles'
 
-
-
-
-# MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Cloudinary Static Files
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 if 'USE_AWS' in os.environ:
     # Cache control
