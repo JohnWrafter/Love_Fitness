@@ -40,6 +40,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp.com', 'localhost']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = [ "https://8000-j0hn1975-cims4lovefitne-n0wabjpcq9h.ws-eu47.gitpod.io"]
 
 # Application definition
 
