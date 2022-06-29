@@ -126,6 +126,13 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'love_fitness.wsgi.application'
 
+# Cloudinary Credentials
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dhdubuck0',
+    'API_KEY': '761257361247753',
+    'API_SECRET': 'VKL1kYeGPH4Xbnhyvxs5XBOdbpQ'
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
