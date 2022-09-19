@@ -1,1 +1,1 @@
-web: gunicorn love_fitness.wsgi:application --preload 
+web: gunicorn love_fitness-1.wsgi:application --preload 
