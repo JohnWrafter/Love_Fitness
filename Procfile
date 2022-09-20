@@ -1,1 +1,1 @@
-web:gunicorn ci-ms4-lovefitness-1.wsgi:application --preload
+web: gunicorn --bind 0.0.0.0:$PORT ci-ms4-lovefitness-1.wsgi:app --preload
