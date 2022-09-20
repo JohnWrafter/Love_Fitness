@@ -80,7 +80,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'love_fitness.urls'
+ROOT_URLCONF = 'love-fitness.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -129,7 +129,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-WSGI_APPLICATION = 'love_fitness.wsgi.application'
+WSGI_APPLICATION = 'love-fitness-1.wsgi.application'
 
 
 # Database
