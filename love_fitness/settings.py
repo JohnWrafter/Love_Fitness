@@ -36,11 +36,11 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp-1.com', 'localhost']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = [ "https://8000-j0hn1975-cims4lovefitne-n0wabjpcq9h.ws-eu47.gitpod.io"]
+CSRF_TRUSTED_ORIGINS = ["https://8000-j0hn1975-cims4lovefitne-n0wabjpcq9h.ws-eu47.gitpod.io"]
 
 # Application definition
 
