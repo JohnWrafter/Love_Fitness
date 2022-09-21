@@ -63,11 +63,10 @@ INSTALLED_APPS = [
     'blog',
     'wishlist',
     'contact',
-    
+
     # Other
     'crispy_forms',
     'storages',
-
 ]
 
 MIDDLEWARE = [
