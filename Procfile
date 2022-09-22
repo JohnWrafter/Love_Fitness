@@ -1,0 +1,1 @@
+web: gunicorn love-fitness:app port:8080
