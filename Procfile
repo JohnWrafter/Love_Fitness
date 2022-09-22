@@ -1,1 +1,1 @@
-web: gunicorn love-fitness:app port:8080
+web: gunicorn love_fitness:application
