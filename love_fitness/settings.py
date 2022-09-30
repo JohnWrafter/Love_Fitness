@@ -45,6 +45,7 @@ CSRF_TRUSTED_ORIGINS = ["https://8000-j0hn1975-cims4lovefitne-n0wabjpcq9h.ws-eu4
 # Application definition
 
 INSTALLED_APPS = [
+    'love-fitness.app.love-fitnessConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
