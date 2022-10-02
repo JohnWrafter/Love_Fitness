@@ -79,7 +79,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'love-fitness.urls'
+ROOT_URLCONF = 'love_fitness.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
