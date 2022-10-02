@@ -1,1 +1,1 @@
-web: gunicorn love_fitness:application
+web: gunicorn love_fitness.wsgi:application
