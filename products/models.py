@@ -16,7 +16,7 @@ class Category(models.Model):
     """
     class Meta:
         """
-        A meta class for the category models
+        A meta class for the category models 
         """
         verbose_name_plural = 'Categories'
 
