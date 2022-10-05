@@ -36,7 +36,9 @@ DEBUG = "DEVELOPMENT" in os.environ
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['127.0.0.1', 'ci-ms4-lovefitness.herokuapp-1.com', 'localhost']
+
+ALLOWED_HOSTS = ['ci-ms4-lovefitness-1.herokuapp.com', 'localhost', '127.0.0.1']
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
