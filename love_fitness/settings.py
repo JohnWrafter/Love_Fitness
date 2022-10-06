@@ -29,13 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 import os
 SECRET_KEY = os.environ.get("SECRET_KEY")
-# DEBUG = "DEVELOPMENT" in os.environ
-
-# SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get('ON_HEROKU', '0') == '0':
-    DEBUG = True
-else:
-    DEBUG = False
+DEBUG = "DEVELOPMENT" in os.environ
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
@@ -142,7 +136,7 @@ WSGI_APPLICATION = 'love_fitness.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('HEROKU_DATABASE_URL'))
     }
 else:
     DATABASES = {
