@@ -32,12 +32,12 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = "DEVELOPMENT" in os.environ
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
+DEBUG = False
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
-ALLOWED_HOSTS = ['ci-ms4-lovefitness-1.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['ci-ms4-lovefitness-1.herokuapp.com','8080-j0hn1975-cims4lovefitne-d1ne5f8n5hg.ws-eu67.gitpod.io', 'localhost', '127.0.0.1']
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
