@@ -327,11 +327,12 @@ a.category-badge>span.badge:hover {
     .mt-1 {
         margin-top: 1rem !important;
     }
+
 }
 
 @media (min-width: 321px) and (max-width: 355px) {
     #info-banner {
-        font-size: 1.8rem;
+        font-size: .875rem;
     }
 }
 
@@ -343,7 +344,7 @@ a.category-badge>span.badge:hover {
         max-width: 100%;
     }
 
-    /* Hide catergoty badge*/
+    /* Hide category badge*/
     .category-badge {
         display: none;
     }
@@ -352,6 +353,11 @@ a.category-badge>span.badge:hover {
     .logo-font {
         font-size: 20px;
         font-weight: bold;
+    }
+
+    /* Hide back to top button */
+    .btt-button {
+        display: none;
     }
 
     /* Font awesome icons */
@@ -363,7 +369,7 @@ a.category-badge>span.badge:hover {
 
     /* Font size for info banner */
     #info-banner {
-        font-size: 0.8rem;
+        font-size: 0.875rem;
     }
 
     .mb-1 {
