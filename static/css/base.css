@@ -23,12 +23,12 @@ body {
     background-color: #018190 !important;
 }
 
-/* To set colour on Footer and Info banner */ 
+/* To set colour on Footer and Info banner */
 .bg-wild-blue-yonder {
-    background-color:  #00b4d8 !important;
+    background-color: #00b4d8 !important;
 }
 
-/* Style for logo font */ 
+/* Style for logo font */
 .logo-font {
     text-transform: uppercase;
     font-size: 23px;
@@ -41,16 +41,16 @@ body {
 
 /* Set overlay */
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
     background-color: #e9ecef;
-	z-index: -1;
+    z-index: -1;
 }
 
-/* Product card body */ 
+/* Product card body */
 .card-body {
     background-color: #0077b6;
 }
@@ -61,7 +61,7 @@ body {
 }
 
 /* Catergory badge */
-a.category-badge > span.badge:hover {
+a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
@@ -69,7 +69,8 @@ a.category-badge > span.badge:hover {
 /* Keep shopping bag button outline */
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
+    /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -89,10 +90,11 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/* Style buttons for shopping pages */ 
+/* Style buttons for shopping pages */
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
+    /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -120,9 +122,9 @@ a.category-badge > span.badge:hover {
 
 /* Instagram */
 .fa-instagram {
-    font-size:30px;
+    font-size: 30px;
     background: #d6249f;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -132,7 +134,7 @@ a.category-badge > span.badge:hover {
     color: #FF0000;
 }
 
-/* Font size for page headings */ 
+/* Font size for page headings */
 .display-6 {
     margin-top: 168px;
     font-size: 1.438rem;
@@ -168,78 +170,81 @@ a.category-badge > span.badge:hover {
 }
 
 /* WAVE validation */
-.sr-only{
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
- }
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
-      max-width: 80%;
+        max-width: 80%;
     }
-  }
+}
 
-  /* Allauth form formatting */
+/* Allauth form formatting */
 
-  .allauth-form-inner-content p {
-      margin-top: 1.5rem; /* mt-4 */
-      color: #6c757d; /* text-secondary */
-  }
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
+}
 
-  .allauth-form-inner-content input {
-      border-color: #000;
-      border-radius: 0;
-  }
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
 
-  .allauth-form-inner-content label:not([for='id_remember']) {
-      display: none;
-  }
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
 
-  .allauth-form-inner-content input::placeholder {
-      color: #aab7c4;
-  }
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
 
-  .allauth-form-inner-content button,
-  .allauth-form-inner-content input[type='submit'] {
-      /* btn */
-      display: inline-block;
-      font-weight: 400;
-      color: #fff;
-      text-align: center;
-      vertical-align: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      border: 1px solid #000;
-      padding: .375rem .75rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      border-radius: 0;
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
 
-      /* standard bootstrap btn transitions */
-      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  }
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
 
-  .allauth-form-inner-content button:hover,
-  .allauth-form-inner-content input[type='submit']:hover {
-      color: #fff;
-      background-color: #222;
-      border-color: #222;
-  }
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
 
-  .allauth-form-inner-content a {
-      color: #0C6064; /* text-info */
-  }
+.allauth-form-inner-content a {
+    color: #0C6064;
+    /* text-info */
+}
 
- /* Product Form */
+/* Product Form */
 
 .btn-file {
     position: relative;
@@ -254,7 +259,7 @@ a.category-badge > span.badge:hover {
     min-height: 100%;
     opacity: 0;
     cursor: pointer;
-    
+
 }
 
 .custom-checkbox .custom-control-label::before {
@@ -270,24 +275,25 @@ a.category-badge > span.badge:hover {
 
 
 
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
 
-      .header-container {
-          padding-top: 164px;
-      }
+    .header-container {
+        padding-top: 164px;
+    }
 
-  }
-    
+}
+
 /* --- Greater than 991px --- */
 @media screen and (max-width: 991px) {
+
     /* --- Generic --- */
     .header-container {
         padding-top: 92px;
@@ -308,18 +314,24 @@ a.category-badge > span.badge:hover {
     .nav-link i.fa-lg {
         font-size: 1rem;
     }
-}  
-    
-  /* X-SMALL SCREEN */
+
+    /* Font size for info banner */
+    #info-banner {
+        font-size: 0.8rem;
+    }
+}
+
+/* X-SMALL SCREEN */
 @media (max-width: 320px) {
+
     /* --- Generic --- */
     .container {
-      max-width: 100%;
+        max-width: 100%;
     }
 
     /* Hide catergoty badge*/
-    .category-badge{ 
-        display:none;
+    .category-badge {
+        display: none;
     }
 
     /* Logo font */
@@ -334,10 +346,18 @@ a.category-badge > span.badge:hover {
         line-height: .75em;
         vertical-align: -0.0667em;
     }
-    
+
     /* Font size for info banner */
     #info-banner {
-        font-size: 16px;
+        font-size: 0.8rem;
+    }
+
+    .mb-1 {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .mt-1 {
+        margin-top: 1rem !important;
     }
 
     /* Buttons for bag */
@@ -347,7 +367,7 @@ a.category-badge > span.badge:hover {
     }
 
     /* Dropdown menu font size */
-    .dropdown-menu >a{
+    .dropdown-menu>a {
         font-size: 13px;
         font-weight: bold;
     }
