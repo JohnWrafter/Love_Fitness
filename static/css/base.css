@@ -329,6 +329,12 @@ a.category-badge>span.badge:hover {
     }
 }
 
+@media (min-width: 321px) and (max-width: 355px) {
+    #info-banner {
+        font-size: 1.8rem;
+    }
+}
+
 /* X-SMALL SCREEN */
 @media (max-width: 320px) {
 
