@@ -8,12 +8,13 @@
 <hr>
 <h2 class="logo-font mb-4 text-center text-black mb-4">{% trans "Sign Up" %}</h2>
 
-<p class="small text-muted text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="small text-muted text-center">{% blocktrans %}Already have an account? Then please <a
+    href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 <hr>
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
-  {{ form|crispy }}
+  {{ form.as_p }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
