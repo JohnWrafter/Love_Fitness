@@ -11,7 +11,6 @@ from .models import Product, Category
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 class ProductForm(forms.ModelForm):
     """
     A class for product forms
