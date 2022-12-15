@@ -11,16 +11,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-import os
 from dotenv import load_dotenv
-
 load_dotenv()
 
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# if os.path.exists("dotenv"):
-#     import dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 import os
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 DEBUG = "DEVELOPMENT" in os.environ
 
 # SECURITY WARNING: don't run with debug turned on in production!
