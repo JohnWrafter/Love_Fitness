@@ -4,10 +4,6 @@ import os
 import sys
 
 
-if __name__ == "__main__":
-    dotenv.read_dotenv()
-
-
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'love_fitness.settings')
     try:
