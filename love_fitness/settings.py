@@ -12,17 +12,16 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 import os
-import dj_database_url
-from pathlib import Path
-
 from dotenv import load_dotenv
+
 load_dotenv()
 
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-from dotenv import load_dotenv
-load_dotenv()
+# if os.path.exists("dotenv"):
+#     import dotenv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
