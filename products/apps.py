@@ -9,7 +9,7 @@ from django.apps import AppConfig
 # Internal
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class LoveFitnessConfig(AppConfig):
-    name = 'love-fitness' 
+    name = 'lovefitness' 
 
 class ProductsConfig(AppConfig):
     """
