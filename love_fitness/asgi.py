@@ -1,5 +1,5 @@
 """
-ASGI config for love_fitness project.
+ASGI config for lovefitness project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
