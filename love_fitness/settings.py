@@ -11,11 +11,18 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
+import os
+import dj_database_url
+from pathlib import Path
 from dotenv import load_dotenv
+
 load_dotenv()
 
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# if os.path.exists("dotenv"):
+#     import dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,14 +34,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 import os
-SECRET_KEY = str(os.getenv('SECRET_KEY'))
+SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = "DEVELOPMENT" in os.environ
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 
 
-ALLOWED_HOSTS = ['ci-ms4-lovefitness-1.herokuapp.com','8080-j0hn1975-cims4lovefitne-d1ne5f8n5hg.ws-eu67.gitpod.io', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['lovefitness.herokuapp.com/', 'localhost', '127.0.0.1']
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -79,7 +86,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'love_fitness.urls'
+ROOT_URLCONF = 'lovefitness.urls'
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
@@ -130,7 +137,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-WSGI_APPLICATION = 'love_fitness.wsgi.application'
+WSGI_APPLICATION = 'lovefitness.wsgi.application'
 
 
 # Database
