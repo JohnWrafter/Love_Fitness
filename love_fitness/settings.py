@@ -41,7 +41,7 @@ DEBUG = "DEVELOPMENT" in os.environ
 #DEBUG = True
 
 
-ALLOWED_HOSTS = ['lovefitness.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['love_fitness.herokuapp.com/', 'localhost', '127.0.0.1']
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -86,7 +86,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'lovefitness.urls'
+ROOT_URLCONF = 'love_fitness.urls'
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
@@ -137,7 +137,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-WSGI_APPLICATION = 'lovefitness.wsgi.application'
+WSGI_APPLICATION = 'love_fitness.wsgi.application'
 
 
 # Database
@@ -210,7 +210,7 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'ci-ms4-lovefitness'
+    AWS_STORAGE_BUCKET_NAME = 'ci-ms4-love_fitness'
     AWS_S3_REGION_NAME = 'eu-west-2'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')

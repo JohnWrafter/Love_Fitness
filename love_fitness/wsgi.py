@@ -15,6 +15,6 @@ from django.core.wsgi import get_wsgi_application
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lovefitness.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'love_fitness.settings')
 
 application = get_wsgi_application()
