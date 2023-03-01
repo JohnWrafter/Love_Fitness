@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-# ALLOWED_HOSTS = ['lovefitness.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['lovefitness.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -70,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# ROOT_URLCONF = 'lovefitness.urls'
+ROOT_URLCONF = 'lovefitness.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -122,7 +122,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-# WSGI_APPLICATION = 'lovefitness.wsgi.application'
+ WSGI_APPLICATION = 'lovefitness.wsgi.application'
 
 
 # Database
