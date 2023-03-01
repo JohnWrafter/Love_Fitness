@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'profiles',
     'news',
     'favourites',
-    'lovefitness',
+
 
     # Other
     'crispy_forms',
@@ -122,7 +122,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
- WSGI_APPLICATION = 'lovefitness.wsgi.application'
+WSGI_APPLICATION = 'lovefitness.wsgi.application'
 
 
 # Database
