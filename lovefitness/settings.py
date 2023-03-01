@@ -90,7 +90,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
-                'favourites.contexts.wishlist_contents'
+                'wishlist.contexts.wishlist_contents'
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -128,9 +128,9 @@ WSGI_APPLICATION = 'lovefitness.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
+if 'HEROKU_DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('HEROKU_DATABASE_URL'))
     }
 else:
     DATABASES = {
