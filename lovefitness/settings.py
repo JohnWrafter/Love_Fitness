@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 # 3rd party:
 import os
 import dj_database_url
+import django_heroku
 from pathlib import Path
 
 # Internal:
