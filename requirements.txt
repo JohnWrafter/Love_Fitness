@@ -12,6 +12,7 @@ django-countries==7.3.2
 django-crispy-forms==1.14.0
 django-excel-base==1.0.4
 django-excel-response2==3.0.2
+django-heroku==0.3.1
 django-six==1.0.4
 django-storages==1.13.1
 django-widget-tweaks==1.4.12
