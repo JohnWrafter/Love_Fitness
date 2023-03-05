@@ -14,6 +14,7 @@ class Category(models.Model):
     """
     A class for the category model
     """
+
     class Meta:
         """
         A meta class for the category models 
@@ -29,6 +30,7 @@ class Category(models.Model):
         null=True,
         blank=True,
     )
+    
 
 
 def __str__(self):

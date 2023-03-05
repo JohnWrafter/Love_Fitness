@@ -11,6 +11,7 @@ from django.apps import AppConfig
 class LoveFitnessConfig(AppConfig):
     name = 'lovefitness' 
 
+
 class ProductsConfig(AppConfig):
     """
     A class for the product app

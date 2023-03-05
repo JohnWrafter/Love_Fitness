@@ -6,11 +6,8 @@ Import AppConfig
 # 3rd party:
 from django.apps import AppConfig
 
-
 class CheckoutConfig(AppConfig):
-    """
-    Signals for Checkout App
-    """
+    default_auto_field = 'django.db.models.BigAutoField'
     name = 'checkout'
 
     def ready(self):
