@@ -55,15 +55,16 @@
             <div class="col-12 col-lg-3 py-1 py-lg-0 text-center text-lg-left ">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <!-- <h2 class="logo-font text-black my-0"><strong>Love</strong> Fitness</h2> -->
-                    <img src="media/logo.jpg" alt="">
+                    <img src="{{ MEDIA_URL }}logo_1.png" type="image/png">
+
                 </a>
 
             </div>
-            <a class="navbar-brand" href="/">
+            <!-- <a class="navbar-brand" href="/">
                 <div class="logo-image">
-                    <img src="media/logo.jpg" class="img-fluid">
+                    <img src=" {{ MEDIA_URL }}logo_1.png">
                 </div>
-            </a>
+            </a> -->
             <!-- Search -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
                 <form method="GET" action="{% url 'products' %}">
