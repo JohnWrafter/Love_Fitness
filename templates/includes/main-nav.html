@@ -1,10 +1,69 @@
 <!-- Main nav container -->
 <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <a class="navbar-brand" href="/">
+    <nav class="nav">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <!-- <a class="nav-link disabled">Disabled</a> -->
+    </nav>
+    <ul class="navbar-nav mx-auto">
+        <a class="navbar-brand " href="/">
             <div class="logo-image text-center">
-                <img src=" {{ MEDIA_URL }}logo.png" height="100">
+                <img src=" {{ MEDIA_URL }}logo.png" height="50">
             </div>
         </a>
     </ul>
+    <nav class="nav">
+        <li class="list-inline-item dropdown">
+            <a class="text-black nav-link" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fa fa-user fa-lg"></i></div>
+                    <p class="my-0">My Account</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0">
+                {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
+                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                {% endif %}
+                <a href="{% url 'blog' %}" class="dropdown-item">Fitness Hub</a>
+                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+            </div>
+        </li>
+        <!-- favourites -->
+        <li class="list-inline-item">
+            <a class="{% if favourites_count %} font-weight-bold{% else %}text-black{% endif %} nav-link"
+                href="{% url 'view_product_favourites' %}">
+                <div class="text-center">
+                    {% if favourites_count %}
+                    <div><i class="fas fa-list"></i></div>
+                    <p class="my-0">
+                        Favourites ({{ favourites_items_count }})
+                    </p>
+                    {% else %}
+                    <div><i class="fas fa-heart fa-lg"></i></div>
+                    <p class="my-0">
+                        Favourites ({{ favourites_items_count }})
+                    </p>
+                    {% endif %}
+                </div>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link"
+                href="{% url 'view_bag' %}">
+                <div class="text-center">
+                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                    <p class="my-0">
+                        {% if grand_total %} £{{ grand_total|floatformat:2 }} {% else %} £0.00 {% endif %}
+                    </p>
+                </div>
+            </a>
+        </li>
+        </ul>
 </div>

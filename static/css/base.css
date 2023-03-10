@@ -328,6 +328,10 @@ a.category-badge>span.badge:hover {
         margin-top: 1rem !important;
     }
 
+    .logo-image.img {
+        height: 20px;
+    }
+
 }
 
 @media (min-width: 321px) and (max-width: 355px) {
