@@ -1,55 +1,10 @@
 <!-- Main nav container -->
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-            <a href="{% url 'home' %}" class="logo-font fw-bold nav-link text-white mr-5">Home</a>
-        <!-- Main nav menu links -->
-        <li class="nav-item dropdown">
-            <a class="logo-font fw-bold nav-link text-white mr-5" href="#" id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+        <a class="navbar-brand" href="/">
+            <div class="logo-image text-center">
+                <img src=" {{ MEDIA_URL }}logo.png" height="100">
             </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font fw-bold nav-link text-white mr-5" href="#" id="clothing-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Shop
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=sports_bra,leggings" class="dropdown-item">Women</a>
-                <a href="{% url 'products' %}?category=shorts,tops_t-shirts" class="dropdown-item">Men</a>
-                <a href="{% url 'products' %}?category=fitness_equipment" class="dropdown-item">Fitness Equipment</a>
-                <a href="{% url 'products' %}?category=sports_nutrition" class="dropdown-item">Nutrition</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font fw-bold nav-link text-white" href="#" id="homeware-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Plans
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="{% url 'products' %}?category=exercise" class="dropdown-item">Exercise</a>
-                <a href="{% url 'products' %}?category=nutrition" class="dropdown-item">Nutrition</a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a href="{% url 'contact' %}" class="logo-font fw-bold nav-link text-white" id="contact-link">
-                Contact Us
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font fw-bold nav-link text-white" href="#" id="specials-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
-            </div>
-        </li>
+        </a>
     </ul>
 </div>
