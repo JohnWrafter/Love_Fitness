@@ -303,6 +303,12 @@ a.category-badge>span.badge:hover {
     .nav-link i.fa-lg {
         font-size: 1rem;
     }
+
+    .navbar-brand {
+        margin-right: 9rem;
+        text-decoration: none;
+        margin-right: 11rem;
+    }
 }
 
 /* X-SMALL SCREEN */
@@ -323,6 +329,7 @@ a.category-badge>span.badge:hover {
         font-size: 1rem !important;
         line-height: .75em;
         vertical-align: -0.0667em;
+        color: grey;
     }
 
     /* Font size for info banner */

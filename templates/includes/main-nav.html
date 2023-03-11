@@ -14,7 +14,7 @@
     </nav>
     <ul class="navbar-nav mx-auto">
         <a class="navbar-brand " href="/">
-            <div class="logo-image text-center">
+            <div class="logo-image">
                 <img src=" {{ MEDIA_URL }}logo.png" height="50">
             </div>
         </a>
@@ -25,7 +25,7 @@
                 aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fa fa-user fa-lg"></i></div>
-                    <p class="my-0">My Account</p>
+                    <!-- <p class="my-0">My Account</p> -->
                 </div>
             </a>
             <div class="dropdown-menu border-0">
@@ -49,12 +49,12 @@
                     {% if favourites_count %}
                     <div><i class="fas fa-list"></i></div>
                     <p class="my-0">
-                        Favourites ({{ favourites_items_count }})
+                        ({{ favourites_items_count }})
                     </p>
                     {% else %}
                     <div><i class="fas fa-heart fa-lg"></i></div>
                     <p class="my-0">
-                        Favourites ({{ favourites_items_count }})
+                        {{ favourites_items_count }}
                     </p>
                     {% endif %}
                 </div>
@@ -66,7 +66,7 @@
                 <div class="text-center">
                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                     <p class="my-0">
-                        {% if grand_total %} £{{ grand_total|floatformat:2 }} {% else %} £0.00 {% endif %}
+                        {% if grand_total %} £{{ grand_total|floatformat:2 }} {% else %} {% endif %}
                     </p>
                 </div>
             </a>
