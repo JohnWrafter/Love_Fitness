@@ -269,6 +269,12 @@ a.category-badge>span.badge:hover {
     border-radius: 0;
 }
 
+.navbar-brand {
+    margin-right: 9rem;
+    text-decoration: none;
+    margin-right: 11rem;
+}
+
 
 
 /* fixed top navbar only on medium and up */
@@ -362,6 +368,7 @@ a.category-badge>span.badge:hover {
         font-size: 1rem !important;
         line-height: .75em;
         vertical-align: -0.0667em;
+        color: grey;
     }
 
     /* Font size for info banner */
