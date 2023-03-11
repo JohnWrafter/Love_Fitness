@@ -10,12 +10,6 @@ body {
     color: #555;
 }
 
-.logo-font {
-    font-family: 'Exo', sans-serif;
-    font-weight: bolder;
-    text-transform: capitalize;
-}
-
 /* from Bulma */
 .icon {
     align-items: center;

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
 
 /* --- Global styling --- */
 html {
@@ -27,6 +28,7 @@ body {
 .bg-wild-blue-yonder {
     background-color: #00b4d8 !important;
 }
+
 
 /* Main logo link */
 .main-logo-link {
@@ -283,6 +285,11 @@ a.category-badge>span.badge:hover {
         padding-top: 164px;
     }
 
+    .logo-font {
+        text-transform: uppercase;
+        color: grey;
+    }
+
 }
 
 /* --- Greater than 991px --- */
@@ -297,9 +304,7 @@ a.category-badge>span.badge:hover {
         height: calc(100vh - 116px);
     }
 
-    /* .display-4.logo-font.text-black {
-        font-size: 2rem;
-    } */
+
 
     .nav-link {
         padding: 0.15rem;
