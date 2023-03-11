@@ -3,9 +3,9 @@
 {% block page_header %}
 <!--Main header block -->
 <div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
+  <div class="row">
+    <div class="col"></div>
+  </div>
 </div>
 {% endblock %}
 {% block extra_css %}
@@ -13,34 +13,19 @@
 {% endblock %}
 
 {% block content %}
-<!-- Main Image Carousel -->
-<div class="slider">
-    <div class="slide current">
-      <div class="content">
-        <h2 class="">Fitness Equipment</h2>
-        <p class="">View our extensive range of fitness equipment.</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="content">
-        <h2 class="">Sports Nutrition</h2>
-        <p class="">View our extensive range of sports nutrition.</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="content">
-        <h2>Fitness Classes</h2>
-                <p>View our extensive range of fitness classes.</p>
-      </div>
-    </div>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
   </div>
-  <div class="buttons">
-    <button id="prev" aria-label="arrow-left"><i class="fas fa-arrow-left"></i></button>
-    <button id="next" aria-label="arrow-right"><i class="fas fa-arrow-right" ></i></button>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
   </div>
+</div>
 
 {% endblock %}
 <!-- Postload Javascript -->
 {% block postloadjs %}
-<script src="{% static 'home/js/carousel.js' %}"></script>
+<!-- <script src="{% static 'home/js/carousel.js' %}"></script> -->
 {% endblock %}

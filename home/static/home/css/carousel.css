@@ -1,105 +1,19 @@
-/* Image Carousel */
-.slider {
-    position: relative;
-    overflow: hidden;
-    height: 80vh;
-    width: 100vw;
-  }
-  
-  /* Image carousel images*/
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
   }
-  
-  /* Main carousel image */
-  .slide.current {
-    opacity: 1;
-  }
-  
-  /* Carsousel image */ 
-  .slide .content {
-    position: absolute;
-    bottom: 70px;
-    left: -600px;
-    opacity: 0;
-    width: 600px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-    padding: 35px;
-  }
-  
-  /* Carousel image header*/
-  .slide .content h1 {
-    margin-bottom: 10px;
-  }
-  
- /* Carousel image text container */
-  .slide.current .content {
-    opacity: 1;
-    transform: translateX(600px);
-    transition: all 0.7s ease-in-out 0.3s;
-  }
-  
-  /* Carousel next image buttons */
-  .buttons button#next {
-    position: absolute;
-    top: 40%;
-    right: 15px;
-  }
-  
-  /* Carousel image previous button */
-  .buttons button#prev {
-    position: absolute;
-    top: 40%;
-    left: 15px;
-  }
-  
-  /* Style carousel left and right buttons */
-  .buttons button {
-    border: 2px solid black;
-    background-color: transparent;
-    color: black;
-    cursor: pointer;
-    padding: 13px 15px;
-    border-radius: 50%;
-    outline: none;
-  }
-  
-  /* Hover colour for buttons */
-  .buttons button:hover {
-    background-color: #fff;
-    color: #333;
-  }
-
-/* Carousel Background Images */
-.slide:first-child {
-    background: url('https://ci-ms4-lovefitness.s3.eu-west-2.amazonaws.com/media/carousel_image_1.jpg') no-repeat
-      center top/cover;
-  }
-  .slide:nth-child(2) {
-    background: url('https://ci-ms4-lovefitness.s3.eu-west-2.amazonaws.com/media/carousel_image_2.jpg') no-repeat
-      center top/cover;
-  }
-  .slide:nth-child(3) {
-    background: url('https://ci-ms4-lovefitness.s3.eu-west-2.amazonaws.com/media/carousel_image_3_med.jpg') no-repeat
-      center top/cover;
-  }
-
-/* Image Carousel Media Queries */
-@media (max-width: 500px) {
-    .slide .content {
-      bottom: -300px;
-      left: 0;
-      width: 100%;
-    }
-  
-    .slide.current .content {
-      transform: translateY(-300px);
-    }
-  }
+}
