@@ -28,14 +28,6 @@ body {
     background-color: #00b4d8 !important;
 }
 
-/* Style for logo font */
-
-li.nav-item.logo-font {
-    /* font-size: 100px;
-    font-family: 'Exo', sans-serif;
-    text-transform: capitalize; */
-}
-
 /* Main logo link */
 .main-logo-link {
     width: fit-content;
