@@ -273,6 +273,8 @@ a.category-badge>span.badge:hover {
     margin-right: 9rem;
     text-decoration: none;
     margin-right: 11rem;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 
