@@ -10,13 +10,15 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6">
+    <div class="column">
         <img src=" {{ MEDIA_URL }}exercise_1.jpg" alt="" class="responsive">
     </div>
-    <div class="col-md-6">
-        <P>Hello</P>
+    <div class="column">
+        <h2>Smash all your fitness goals</h2>
+        <input type="submit" class="btn btn-success rounded-2 text-uppercase mt-5" value="Shop Now">
     </div>
 </div>
+
 {% endblock %}
 <!-- Postload Javascript -->
 {% block postloadjs %}
