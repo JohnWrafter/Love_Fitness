@@ -1,0 +1,8 @@
+/* Create two equal columns that floats next to each other */
+.container {
+  column-count: 2;
+}
+
+.p {
+  font-size: 100px;
+}
