@@ -15,6 +15,13 @@
     clear: both;
 }
 
+.column.cta-text {
+    margin-top: 15%;
+    padding-left: 5rem;
+    font-family: exo;
+    color: black;
+}
+
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
