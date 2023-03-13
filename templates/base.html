@@ -121,7 +121,7 @@
         </div>
     </div>
     <!-- Footer -->
-    <footer class="bg-white">
+    <footer class="bg-black">
         <div class="container pt-5">
             <div class="row">
                 <!-- Logo and social media links -->
@@ -165,7 +165,7 @@
                                 class="text-white">Leggings</a></li>
                         <li class="mb-2"><a href="{% url 'products' %}?category=sports_nutrition"
                                 class="text-white">Nutrition</a></li>
-                        <li class="mb-2"><a href="{% url 'products' %}?category=shorts" class="text-black">Shorts</a>
+                        <li class="mb-2"><a href="{% url 'products' %}?category=shorts" class="text-white">Shorts</a>
                         </li>
                         <li class="mb-2"><a href="{% url 'products' %}?category=sports_bra" class="text-white">Sports
                                 Bra</a></li>
@@ -174,20 +174,20 @@
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6 col-xs-6 mb-4 mb-lg-0">
-                    <h2 class="logo-font text-uppercase font-weight-bold mb-4 text-whitek">Website</h2>
+                    <h2 class="logo-font text-uppercase font-weight-bold mb-4 text-white">My Account</h2>
                     <ul class="list-unstyled mb-0">
                         {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                         <li class="mb-2"><a href="" class="text-white">Product Management</a></li>
                         {% endif %}
                         <li class="mb-2"><a href="" class="text-white">My Profile</a></li>
                         {% else %}
-                        <li class="mb-2"><a href="{% url 'account_signup' %}" class="text-white">Register</a></li>
                         <li class="mb-2"><a href="{% url 'account_login' %}" class="text-white">Login</a></li>
+                        <li class="mb-2"><a href="{% url 'account_signup' %}" class="text-white">Sign Up</a></li>
                         {% endif %}
                     </ul>
                 </div>
                 <!-- Copyright information -->
-                <div class="bg-white py-1">
+                <div class="bg-black py-1">
                     <div class="container text-center text-white">
                         <p class="mb-0 py-2 footer-font">© 2021 All rights reserved.</p>
                     </div>

@@ -1,23 +1,53 @@
 <!-- Main nav container -->
 <div class="collapse navbar-collapse" id="main-nav">
     <nav class="nav">
-        <li class="nav-item">
-            <a class="nav-link active logo-font" aria-current="page" href="#">Shop</a>
-        </li>
-        <li class="nav-item dropdown">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle logo-font" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Shop
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a href="/products/?category=shorts,tops_t-shirts" class="dropdown-item">Men</a></li>
+                <li><a href="/products/?category=sports_bra,leggings" class="dropdown-item">Women</a></li>
+                <li><a href="/products/?category=nutrition" class="dropdown-item">Nutrition</a></li>
+                <li><a href="/products/?category=fitness_equipment" class="dropdown-item">Fitness Equipment</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle logo-font" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Plans
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a href="/products/?category=exercise" class="dropdown-item">Exercise</a></li>
+                <li><a href="/products/?category=nutrition" class="dropdown-item">Nutrition</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle logo-font" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                All Products
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a href="/products/?sort=price&amp;direction=asc" class="dropdown-item">By Price</a></li>
+                <li><a href="/products/?sort=rating&amp;direction=desc" class="dropdown-item">By Rating</a></li>
+                <li><a href="/products/" class="dropdown-item">By Product</a></li>
+                <li><a href="/products/?sort=category&amp;direction=asc" class="dropdown-item">By Category</a></li>
+            </ul>
+        </div>
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link text-grey logo-font" href="#" id="homeware-link" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="true">
                 Plans
-            </a>
-            <!-- <div class="dropdown-menu border-0 show" aria-labelledby="homeware-link" data-bs-popper="none">
+            </a> -->
+        <!-- <div class="dropdown-menu border-0 show" aria-labelledby="homeware-link" data-bs-popper="none">
                 <a href="/products/?category=exercise" class="dropdown-item">Exercise</a>
                 <a href="/products/?category=nutrition" class="dropdown-item">Nutrition</a>
             </div> -->
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link logo-font" href="#">Contact</a>
-        </li>
-        <!-- <a class="nav-link disabled">Disabled</a> -->
+        </li> -->
     </nav>
     <ul class="navbar-nav mx-auto">
         <a class="navbar-brand" href="/">
