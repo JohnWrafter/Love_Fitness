@@ -5,10 +5,10 @@
 }
 
 .some-text {
-position: absolute;
-bottom: 8px;
-left: 16px;
-padding-left: 5rem;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    padding-left: 2rem;
 
 }
 
@@ -18,4 +18,3 @@ padding-left: 5rem;
     font-family: exo;
     color: black;
 }
-
