@@ -6,10 +6,10 @@
 
 .some-text {
     position: absolute;
-    bottom: 8px;
+    bottom: 0px;
     left: 16px;
     padding-left: 1rem;
-    background: rgba(0, 0, 0, 0.5);
+    padding-bottom: 1rem;
 }
 
 #cta-text {
