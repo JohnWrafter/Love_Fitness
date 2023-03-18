@@ -10,7 +10,6 @@
     left: 16px;
     padding-left: 1rem;
     background: rgba(0, 0, 0, 0.5);
-
 }
 
 #cta-text {
@@ -18,4 +17,8 @@
     padding-left: 5rem;
     font-family: exo;
     color: black;
+}
+
+.secondary-heading {
+    font-family: exo;
 }
