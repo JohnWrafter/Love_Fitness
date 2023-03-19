@@ -128,7 +128,7 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'lovefitness.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitne-e5dt0kg3qpl.ws-eu89b.gitpod.io/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitne-3p7e7n3q6r6.ws-eu90.gitpod.io']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
