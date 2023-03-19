@@ -9,23 +9,32 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid mb-5">
-    <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6">
-            <img src=" {{ MEDIA_URL }}exercise_1.jpg" alt="" class="img-fluid">
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-6" id="cta-text">
-            <h5>Welcome to Love Fitness</h5>
-            <h2>Smash all your fitness goals</h2>
-            <input type="submit" class="btn btn-dark rounded-3 text-uppercase" value="Shop Now">
+<section>
+    <div class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <img src=" {{ MEDIA_URL }}exercise_1.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6" id="cta-text">
+                <h5>Welcome to Love Fitness</h5>
+                <h2>Smash all your fitness goals</h2>
+                <input type="submit" class="btn btn-dark rounded-3 text-uppercase" value="Shop Now">
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<section>
+    <div class="container-fluid">
+        <div class="row text-center">
+            Delivery Information
+        </div>
+</section>
 <div class="container-fluid mb-5">
     <div class="row text-center">
         <div class="col">
             <div class="box">
-                <img src="{{ MEDIA_URL }}nutrition.jpg" alt="" width="595" />
+                <img src="{{ MEDIA_URL }}nutrition.jpg" alt="" width="610" />
                 <div class="some-text">
                     <h5>Welcome to Love Fitness</h5>
                     <h2 class="secondary-heading">Nutrition</h2>
@@ -35,7 +44,7 @@
         </div>
         <div class="col">
             <div class="box">
-                <img src="{{ MEDIA_URL }}equipment.jpg" alt="" width="595" />
+                <img src="{{ MEDIA_URL }}equipment.jpg" alt="" width="610" />
                 <div class="some-text">
                     <h5>Welcome to Love Fitness</h5>
                     <h2 class="secondary-heading">Equipment</h2>
@@ -45,7 +54,7 @@
         </div>
         <div class="col">
             <div class="box">
-                <img src="{{ MEDIA_URL }}apparel.jpg" alt="" width="595" />
+                <img src="{{ MEDIA_URL }}apparel.jpg" alt="" width="610" />
                 <div class="some-text">
                     <h5>Welcome to Love Fitness</h5>
                     <h2 class="secondary-heading">Apparel</h2>

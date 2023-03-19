@@ -15,10 +15,10 @@
 <!-- Main Products Container -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center bg-wild-blue-yonder">
+        <div class="col text-left bg-wild-blue-yonder">
             <hr>
-            <h2 class="logo-font text-center text-black fw-bold fs-2">Products</h2>
-            <h5 class="text-center text-black">Browse Our Products</h5>
+            <h2 class="logo-font text-left text-black fw-bold fs-2">Products</h2>
+            <h5 class="text-left text-black">Browse Our Products</h5>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span
