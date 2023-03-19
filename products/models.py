@@ -71,7 +71,8 @@ class Product(models.Model):
         verbose_name=('Description')
     )
     gender = models.TextField(
-        verbose_name=('Gender')
+        verbose_name=('Gender'),
+        null=True,
     )
     has_sizes = models.BooleanField(
         default=False,
