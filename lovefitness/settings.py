@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'columns',
     'dynamic_breadcrumbs',
+    'view_breadcrumbs',
 
 
     # Other

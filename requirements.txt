@@ -11,6 +11,7 @@ django-countries==7.5.1
 django-crispy-forms==2.0
 django-dynamic-breadcrumbs==0.4.2
 django-storages==1.13.2
+django-view-breadcrumbs==2.4.1
 jmespath==1.0.1
 oauthlib==3.2.2
 Pillow==9.4.0
