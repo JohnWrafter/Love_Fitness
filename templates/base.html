@@ -28,19 +28,6 @@
     {% block extra_css %}
     {% endblock %}
 
-    {% block breadcrumbs %}
-    {% render_breadcrumbs %}
-    {# Optionally provide a custom template e.g {% render_breadcrumbs "view_breadcrumbs/bootstrap5.html" %} #}
-    {% endblock %}
-
-    <!-- {% if breadcrumbs %}
-    <div class="container">
-        {% include "dynamic_breadcrumbs/breadcrumbs.html" with breadcrumbs=breadcrumbs%}
-    </div>
-    {% endif %} -->
-
-
-
     {% block corejs %}
     <!-- Javascript -->
     <script src=" https://kit.fontawesome.com/a985752e7d.js" crossorigin="anonymous"></script>
