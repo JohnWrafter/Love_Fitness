@@ -39,17 +39,6 @@ body {
     width: fit-content;
 }
 
-/* Set overlay */
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: #e9ecef;
-    z-index: -1;
-}
-
 /* Product card body */
 .card-body {
     background-color: #0077b6;
