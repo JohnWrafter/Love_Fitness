@@ -56,10 +56,7 @@ INSTALLED_APPS = [
     'contact',
     'corsheaders',
     'columns',
-    'dynamic_breadcrumbs',
-    'view_breadcrumbs',
-
-
+    
     # Other
     'crispy_forms',
     'storages',
