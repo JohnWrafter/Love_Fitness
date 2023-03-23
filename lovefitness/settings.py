@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'contact',
     'corsheaders',
     'columns',
+    'view_breadcrumbs',
+    'dynamic_breadcrumbs',
     
     # Other
     'crispy_forms',
@@ -93,7 +95,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
-                'wishlist.contexts.wishlist_contents'
+                'wishlist.contexts.wishlist_contents',
                 'dynamic_breadcrumbs.context_processors.breadcrumbs'
             ],
             'builtins': [
