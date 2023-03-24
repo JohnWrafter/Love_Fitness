@@ -3,7 +3,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Tempo Seamless Sports Bra",
+      "name": "Tempo Seamless Sports Bra",
       "description": "Introducing our NEW Tempo Seamless Bra , optimised for high energy and impact interval and agility training.",
       "price": 28.00,
       "category": 1,
@@ -17,7 +17,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Tempo Cross Back Repreve Sports Bra",
+      "name": "Tempo Cross Back Repreve Sports Bra",
       "description": "Introducing our NEW Tempo Repreve® Sports Bra with removeable moulded bra cups which is optimised for high energy and impact interval and agility training.",
       "price": 30.00,
       "category": 1,
@@ -31,7 +31,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Shape Seamless Ultra Sports Bra",
+      "name": "Shape Seamless Ultra Sports Bra",
       "description": "Designed to support and sculpt, our Shape Seamless Cross-Strap Bra is contoured to your curves and features stay-dry, sweat-wicking technology— ready for your next move.",
       "price": 26.00,
       "category": 1,
@@ -45,7 +45,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Power Mesh Sports Bra",
+      "name": "Power Mesh Sports Bra",
       "description": "Stay supported in the Power Mesh Sports Bra, with removable cups and a breathable mesh back, you’ll be fit to fly through any workout.",
       "price": 22.00,
       "category": 1,
@@ -59,7 +59,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Curve Sports Bra",
+      "name": "Curve Sports Bra",
       "description": "A seamless sports bra built with the purpose to aid performance. Move with no restriction with its racerback style",
       "price": 13.99,
       "category": 1,
@@ -73,7 +73,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Repeat Mark Graphic Training Sports Bra",
+      "name": "Repeat Mark Graphic Training Sports Bra",
       "description": "A seamless sports bra built with the purpose to aid performance. Move with no restriction with its racerback style",
       "price": 17.99,
       "category": 1,
@@ -88,7 +88,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Velocity Seamless Sports Bra",
+      "name": "Velocity Seamless Sports Bra",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions.",
       "price": 36.00,
       "category": 1,
@@ -102,7 +102,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Composure Twist Back Sports Bra",
+      "name": "Composure Twist Back Sports Bra",
       "description": "Composure is designed with your Yoga practice and Pilates session in mind. This collection has been carefully created to give maximum comfort, increased mobility and complete confidence.",
       "price": 28.00,
       "category": 1,
@@ -116,7 +116,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Power Longline Sports Bra",
+      "name": "Power Longline Sports Bra",
       "description": "Reach all your workout goals in our Power Longline Sports Bra.",
       "price": 26.00,
       "category": 1,
@@ -130,7 +130,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Power Ultra Sports Bra",
+      "name": "Power Ultra Sports Bra",
       "description": "Think Power, but more powerful. Our Power Ultra range is made with fabrics that are lighter, softer, and more opaque than the original Power collection, and able to withstand your toughest gym sessions.",
       "price": 32.00,
       "category": 1,
@@ -144,7 +144,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Tempo Seamless Sports Bra",
+      "name": "Tempo Seamless Sports Bra",
       "description": "Introducing our NEW Tempo Seamless Bra , optimised for high energy and impact interval and agility training.",
       "price": 28.00,
       "category": 1,
@@ -158,7 +158,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Power Mesh Sports Bra",
+      "name": "Power Mesh Sports Bra",
       "description": "Stay supported in the Power Mesh Sports Bra, with removable cups and a breathable mesh back, you’ll be fit to fly through any workout.",
       "price": 22.00,
       "category": 1,
@@ -172,7 +172,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Engage Colour Block Convertible Sports Bra",
+      "name": "Engage Colour Block Convertible Sports Bra",
       "description": "Defeat any obstacles with this convertible sports bra. With combat sports being an environment where bras aren't built for.",
       "price": 28.00,
       "category": 1,
@@ -186,7 +186,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Velocity Reflective Sports Bra",
+      "name": "Velocity Reflective Sports Bra",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions",
       "price": 32.00,
       "category": 1,
@@ -200,7 +200,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Power Ultra Strappy Sports Bra",
+      "name": "Power Ultra Strappy Sports Bra",
       "description": "Think Power, but more powerful. Our Power Ultra range is made with fabrics that are lighter, softer, and more opaque than the original Power collection, and able to withstand your toughest gym sessions.",
       "price": 32.00,
       "category": 1,
@@ -214,7 +214,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Composure Twist Back Sports Bra",
+      "name": "Composure Twist Back Sports Bra",
       "description": "Composure is designed with your Yoga practice and Pilates session in mind. This collection has been carefully created to give maximum comfort.",
       "price": 28.00,
       "category": 1,
@@ -228,7 +228,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": " MP Women's Curve Leggings",
+      "name": "Curve Leggings",
       "description": "Our best-selling Curve Leggings are made with sweat-wicking technology.",
       "price": 38.00,
       "category": 2,
@@ -242,7 +242,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Power Leggings",
+      "name": "Power Leggings",
       "description": "Our best-selling Power Leggings are made with sweat-wicking technology.",
       "price": 34.00,
       "category": 2,
@@ -256,7 +256,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Power Leggings",
+      "name": "Power Leggings",
       "description": "Our best-selling Power Leggings are made with sweat-wicking technology.",
       "price": 16.99,
       "category": 2,
@@ -270,7 +270,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Power Leggings",
+      "name": "Power Leggings",
       "description": "With sculpting seams and a supportive fit, find your strength in the Power Leggings. Created for enhanced coverage, you can be confident from warm-up sprints through to cool-down stretches.",
       "price": 17.99,
       "category": 2,
@@ -284,7 +284,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Chalk Graphic Leggings",
+      "name": "Chalk Graphic Leggings",
       "description": "Our best-selling Power Leggings are made with sweat-wicking technology.",
       "price": 15.99,
       "category": 2,
@@ -298,7 +298,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Chalk Graphic Leggings",
+      "name": "Chalk Graphic Leggings",
       "description": "Whatever your workout schedule, our Chalk Graphic styles will have you rest day or active ready.",
       "price": 15.99,
       "category": 2,
@@ -312,7 +312,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Curve Leggings",
+      "name": "Curve Leggings",
       "description": "Built with specific features which prioritise performance, these Curve Leggings are the perfect workout partner.",
       "price": 38.00,
       "category": 2,
@@ -326,7 +326,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Mini Mark Graphic Leggings",
+      "name": "Mini Mark Graphic Leggings",
       "description": "Whatever your workout schedule, our Chalk Graphic styles will have you rest day or active ready.",
       "price": 20.99,
       "category": 2,
@@ -340,7 +340,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP MP Women's Shape Seamless Ultra Leggings",
+      "name": "Shape Seamless Ultra Leggings",
       "description": "Designed to support and sculpt, our Shape Seamless Ultra Leggings offer a high-waisted supportive fit, ideal to keep you covered and confident throughout all training types.",
       "price": 25.99,
       "category": 2,
@@ -354,7 +354,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Curve Leggings",
+      "name": "Curve Leggings",
       "description": "Built with specific features which prioritise performance, these Curve Leggings are the perfect workout partner.",
       "price": 38.00,
       "category": 2,
@@ -368,7 +368,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Central Graphic Leggings",
+      "name": "Central Graphic Leggings",
       "description": "Our collection of Central Graphic styles are designed for day to day activities. Offering feel-good fit with super-soft stretch fabric, our MP Central Graphic Leggings are a must-have.",
       "price": 12.99,
       "category": 2,
@@ -382,7 +382,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Essentials Training Leggings",
+      "name": "Essentials Training Leggings",
       "description": "Our Essentials Training Leggings are built with your comfort in mind.",
       "price": 8.99,
       "category": 2,
@@ -396,7 +396,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Curve 3/4 Leggings",
+      "name": "Curve 3/4 Leggings",
       "description": "Whatever your workout schedule, our Curve 3/4 Leggings will have you rest day or active ready.",
       "price": 38.00,
       "category": 2,
@@ -410,7 +410,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Training Reversible Leggings",
+      "name": "Training Reversible Leggings",
       "description": "The training range captures training in a pure form. Our aim was to engineer distinctive, technical products which flourish under the toughest environments.",
       "price": 38.00,
       "category": 2,
@@ -424,7 +424,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "MP Women's Branded Training Leggings",
+      "name": "Training Leggings",
       "description": "Our Branded Training Range is designed to brighten up your everyday workouts! Tackle weights, stretches and low-intensity training in the Branded Training leggings.",
       "price": 14.99,
       "category": 2,
