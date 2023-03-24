@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'columns',
     'view_breadcrumbs',
     'dynamic_breadcrumbs',
+    'crispy_bootstrap4',
     
     # Other
     'crispy_forms',
