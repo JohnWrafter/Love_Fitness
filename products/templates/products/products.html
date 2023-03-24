@@ -10,29 +10,28 @@
 {% endblock %}
 
 {% block content %}
-<!-- Overlay white background -->
-<div class="overlay"></div>
 <!-- Main Products Container -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-left bg-wild-blue-yonder">
-            <hr>
-            <h2 class="logo-font text-left text-black fw-bold fs-2">Products</h2>
+        <div class="col text-center">
+            <!-- <hr> -->
+            <!-- <h2 class="logo-font text-left text-black fw-bold fs-2">Products</h2> -->
             <h5 class="text-left text-black">Browse Our Products</h5>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span
-                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    class="p-2 mt-2 badge badge-white logo-font text-black rounded-5 border border-dark">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
             <a class="category-badge text-decoration-none"
                 href="{% url 'products' %}?category=sports_bra,leggings,shorts,tops_t-shirts,sports_nutrition,fitness_equipment{{ c.name }}">
-                <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">Show All
+                <span class="p-2 mt-2 badge badge-white logo-font rounded-5 border">All
                     Products</span>
             </a>
             <hr>
         </div>
     </div>
+
     <!-- Search and sorting -->
     <div class="row">
         <div class="product-container col-10 offset-1">

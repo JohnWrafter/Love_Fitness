@@ -49,11 +49,18 @@ body {
     background-color: #89c2d9;
 }
 
+
 /* Catergory badge */
 a.category-badge>span.badge:hover {
-    background: #212529 !important;
+    background: #e7e9eb !important;
     color: #fff !important;
 }
+
+.border {
+    border: 2px solid #89939e;
+}
+
+#89939E
 
 /* Keep shopping bag button outline */
 .btn-outline-black {
