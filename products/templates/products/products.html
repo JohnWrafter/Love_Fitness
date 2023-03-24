@@ -19,13 +19,12 @@
             <h5 class="text-left text-black">Browse Our Products</h5>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                <span
-                    class="p-2 mt-2 badge badge-white logo-font text-black rounded-5 border border-dark">{{ c.friendly_name }}</span>
+                <span class="p-2 mt-2 badge badge-white badge-border logo-font rounded-5">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
             <a class="category-badge text-decoration-none"
                 href="{% url 'products' %}?category=sports_bra,leggings,shorts,tops_t-shirts,sports_nutrition,fitness_equipment{{ c.name }}">
-                <span class="p-2 mt-2 badge badge-white logo-font rounded-5 border">All
+                <span class="p-2 mt-2 badge badge-white badge-border logo-font rounded-5">All
                     Products</span>
             </a>
             <hr>

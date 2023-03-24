@@ -56,8 +56,8 @@ a.category-badge>span.badge:hover {
     color: #fff !important;
 }
 
-.border {
-    border: 2px solid #89939e;
+.badge-border {
+    border: 2px solid #89939e !important;
 }
 
 #89939E
