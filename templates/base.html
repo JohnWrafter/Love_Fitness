@@ -61,9 +61,25 @@
         <div class="col-12 col-lg-5 my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
 
-                <!-- favourites -->
-
-
+                <!-- Favourites -->
+                <li class="list-inline-item">
+                    <a class="{% if favourites_count %} font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        href="{% url 'view_product_favourites' %}">
+                        <div class="text-center">
+                            {% if favourites_count %}
+                            <div><i class="fas fa-heart"></i></div>
+                            <p class="my-0">
+                                Favourites ({{ favourites_count }})
+                            </p>
+                            {% else %}
+                            <div><i class="fas fa-heart"></i></div>
+                            <p class="my-0">
+                                Favourites (0)
+                            </p>
+                            {% endif %}
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
 
