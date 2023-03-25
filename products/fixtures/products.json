@@ -636,7 +636,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Retro Sweatshorts",
+      "name": "Retro Sweatshorts",
       "description": "https://www.myprotein.com/sports-clothing/mp-men-s-retro-sweatshorts-black/12962308.html",
       "price": 26.00,
       "category": 4,
@@ -650,7 +650,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Velocity Shorts",
+      "name": "Velocity Shorts",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions. High performing fabrics ensure you stay comfortable when training, meaning that our Velocity range is workout gear that’ll keep up with you.",
       "price": 35.00,
       "category": 4,
@@ -664,7 +664,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials Training Shorts",
+      "name": "Essentials Training Shorts",
       "description": "Our Essentials Training pieces are designed to form the basis of your training wardrobe.",
       "price": 20.00,
       "category": 4,
@@ -678,7 +678,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials 2 in 1 Training Shorts",
+      "name": "Essentials 2 in 1 Training Shorts",
       "description": "Our Essentials Training pieces are designed to form the basis of your training wardrobe.",
       "price": 28.00,
       "category": 4,
@@ -692,7 +692,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials Sweatshorts",
+      "name": "Essentials Sweatshorts",
       "description": "We know everyone needs those key essential pieces to complete their wardrobe. The Essentials range is designed with the day-to-day in mind.",
       "price": 22.00,
       "category": 4,
@@ -706,7 +706,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials Sweatshorts",
+      "name": "Essentials Sweatshorts",
       "description": "We know everyone needs those key essential pieces to complete their wardrobe. The Essentials range is designed with the day-to-day in mind.",
       "price": 22.00,
       "category": 4,
@@ -720,7 +720,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Velocity 2 in 1 Shorts",
+      "name": "Velocity 2 in 1 Shorts",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions. High performing fabrics ensure you stay comfortable when training, meaning that our Velocity range is workout gear that’ll keep up with you.",
       "price": 30.99,
       "category": 4,
@@ -734,7 +734,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials Training Shorts",
+      "name": "Essentials Training Shorts",
       "description": "Our Essentials Training pieces are designed to form the basis of your training wardrobe.",
       "price": 20.00,
       "category": 4,
@@ -748,7 +748,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials Training Baselayer Shorts",
+      "name": "Essentials Training Baselayer Shorts",
       "description": "Engineered for a body-sculpting fit, our high-tension Essentials Training Baselayer Shorts offer solid support throughout every set.",
       "price": 20.00,
       "category": 4,
@@ -762,7 +762,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Composure Shorts",
+      "name": "Composure Shorts",
       "description": "Composure is designed with your Yoga practice and Pilates session in mind. This collection has been carefully created to give maximum comfort.",
       "price": 28.99,
       "category": 4,
@@ -776,7 +776,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials Lightweight Jersey Training Shorts",
+      "name": "Essentials Lightweight Jersey Training Shorts",
       "description": "Our Essential Lightweight Training Shorts are built for everyday performance.",
       "price": 20.00,
       "category": 4,
@@ -790,7 +790,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials Sweatshorts",
+      "name": "Essentials Sweatshorts",
       "description": "We know everyone needs those key essential pieces to complete their wardrobe. The Essentials range is designed with the day-to-day in mind.",
       "price": 22.00,
       "category": 4,
@@ -804,7 +804,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials Woven Training Shorts",
+      "name": "Essentials Woven Training Shorts",
       "description": "Our Essential Lightweight Training Shorts are built for everyday performance.",
       "price": 20.00,
       "category": 4,
@@ -818,7 +818,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Tempo Graphic Shorts",
+      "name": "Tempo Graphic Shorts",
       "description": "Introducing the Tempo Range, optimised for high energy, high impact interval and agility training. Cooling fabrics and unrestrictive designs ensure you are able to push your workout to the maximum.",
       "price": 24.00,
       "category": 4,
@@ -832,7 +832,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Graphic Running Shorts",
+      "name": "Graphic Running Shorts",
       "description": "Introducing our Graphic Running range, perfectly designed for any workout from running to the gym floor, these pieces offer everything you need for everyday sessions.",
       "price": 21.99,
       "category": 4,
@@ -846,7 +846,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Velocity Shorts",
+      "name": "Velocity Shorts",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions. High performing fabrics ensure you stay comfortable when training, meaning that our Velocity range is workout gear that’ll keep up with you.",
       "price": 27.99,
       "category": 4,
@@ -860,7 +860,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Velocity Shorts",
+      "name": "Velocity Shorts",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions. High performing fabrics ensure you stay comfortable when training, meaning that our Velocity range is workout gear that’ll keep up with you.",
       "price": 27.99,
       "category": 4,
@@ -874,7 +874,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Essentials T-Shirt",
+      "name": "Essentials T-Shirt",
       "description": "We know everyone needs those key essential pieces to complete their wardrobe. The Essentials range is designed with the day-to-day in mind.",
       "price": 16.99,
       "category": 5,
@@ -888,7 +888,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Performance 1/4 Zip Top",
+      "name": "Performance 1/4 Zip Top",
       "description": "It's our mission to make sure you're covered throughout all types of training — which is where our Performance range comes in.",
       "price": 26.00,
       "category": 5,
@@ -902,7 +902,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Tempo Short Sleeve T-Shirt",
+      "name": "Tempo Short Sleeve T-Shirt",
       "description": "Introducing the Tempo short sleeve t-shirt, optimised for high energy, high impact interval and agility training.",
       "price": 26.00,
       "category": 5,
@@ -916,7 +916,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Performance T-Shirt",
+      "name": "Performance T-Shirt",
       "description": "Power through every rep, set, and circuit in our Performance T-Shirt, with lightweight stretch material to always keep you cool and comfortable.",
       "price": 22.00,
       "category": 5,
@@ -930,7 +930,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Luxe Classic Crew T-Shirt",
+      "name": "Luxe Classic Crew T-Shirt",
       "description": "The Luxe Classic Crew T-Shirt is a wardrobe classic we can all buy into. The soft-touch cotton base is combined with elastane to create an unrestricted, close fit.",
       "price": 13.99,
       "category": 5,
@@ -944,7 +944,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Graphic Running Tank Top",
+      "name": "Graphic Running Tank Top",
       "description": "Introducing our Graphic Running range, perfectly designed for any workout from running to the gym floor, these pieces offer everything you need for everyday sessions. ",
       "price": 17.99,
       "category": 5,
@@ -958,7 +958,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Luxe Classic Drop Armhole Tank Top",
+      "name": "Luxe Classic Drop Armhole Tank Top",
       "description": "Our Luxe Classic Drop Armhole Tank is designed for a timeless fit. The soft-touch cotton base is combined with elastane to create an unrestricted, close fit.",
       "price": 11.99,
       "category": 5,
@@ -972,7 +972,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Velocity Long Sleeve Top",
+      "name": "Velocity Long Sleeve Top",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions.",
       "price": 26.00,
       "category": 5,
@@ -986,7 +986,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Performance T-shirt",
+      "name": "Performance T-shirt",
       "description": "Power through every rep, set, and circuit in our Performance T-Shirt, with lightweight stretch material to always keep you cool and comfortable.",
       "price": 22.00,
       "category": 5,
@@ -1000,7 +1000,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Velocity Short Sleeve T-Shirt",
+      "name": "Velocity Short Sleeve T-Shirt",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions.",
       "price": 32.00,
       "category": 5,
@@ -1014,7 +1014,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Retro Oversized Move T-Shirt",
+      "name": "Retro Oversized Move T-Shirt",
       "description": "Arriving with an oversized fit, this t-shirt is perfect to wear wherever and whenever. Move and MP logos and graphics feature on the fabric.",
       "price": 22.00,
       "category": 5,
@@ -1028,7 +1028,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Performance Short Sleeve T-Shirt",
+      "name": "Performance Short Sleeve T-Shirt",
       "description": "Built for performance, this t-shirt arrives with soft touch fabrics, comfort is a focus, yet with it being able to stretch and not limit movement, it's able to perform as well as anything.",
       "price": 22.00,
       "category": 5,
@@ -1042,7 +1042,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Retro Oversized Lift T-Shirt",
+      "name": "Retro Oversized Lift T-Shirt",
       "description": "Arriving with an oversized fit, this t-shirt is perfect to wear wherever and whenever. Move and MP logos and graphics feature on the fabric.",
       "price": 22.00,
       "category": 5,
@@ -1056,7 +1056,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Velocity Short Sleeve T-Shirt",
+      "name": "Velocity Short Sleeve T-Shirt",
       "description": "If you’re ready to take your running to the next level, our Velocity range is here to supercharge your sessions.",
       "price": 24.00,
       "category": 5,
@@ -1070,7 +1070,7 @@
     "model": "products.product",
     "fields": {
       "gender": "Men",
-      "name": "MP Men's Luxe Classic Crew T-Shirt",
+      "name": "Luxe Classic Crew T-Shirt",
       "description": "The Luxe Classic Crew T-Shirt is a wardrobe classic we can all buy into. The soft-touch cotton base is combined with elastane to create an unrestricted, close fit.",
       "price": 14.99,
       "category": 5,

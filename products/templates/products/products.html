@@ -27,7 +27,7 @@
                 <span class="p-2 mt-2 badge badge-white badge-border logo-font rounded-5">All
                     Products</span>
             </a>
-            <hr>
+            <!-- <hr> -->
         </div>
     </div>
 
@@ -86,27 +86,23 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body text-left">
-                            <p class="text-white fw-bold">{{ product.name }}</p>
+                        <div class="card-body">
+                            <p class="text-black fw-bold">{{ product.name }}</p>
+                            <p class="lead text-black fw-bold">£{{ product.price }}</p>
+                            {% if product.category %}
+                            <p class="small mt-1 mb-0">
+                                <a class="text-black" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                </a>
+                            </p>
+                            {% endif %}
                         </div>
                         <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead text-center text-black fw-bold">£{{ product.price }}</p>
-                                    {% if product.category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-black"
-                                            href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    {% if product.rating %}
-                                    <small class="text-black"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
-                                        5</small>
-                                    {% else %}
-                                    <small class="text-black">No Rating</small>
-                                    {% endif %}
+
+
+
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_product' product.id %}">Edit</a> |
