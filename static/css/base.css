@@ -8,18 +8,19 @@
 
 .card {
     border: none !important;
+    transition: all 2s ease;
 }
 
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
-    transition-duration: 2s, 1s;
 }
 
 .product-name,
 .product-price {
     font-family: exo2;
 }
+
 
 html {
     height: 100%;
