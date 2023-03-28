@@ -6,6 +6,10 @@
     background-color: white;
 }
 
+.card {
+    border: none !important;
+}
+
 html {
     height: 100%;
 }
@@ -48,8 +52,6 @@ a.category-badge>span.badge:hover {
 .badge-border {
     border: 2px solid #89939e !important;
 }
-
-#89939E
 
 /* Keep shopping bag button outline */
 .btn-outline-black {
