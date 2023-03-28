@@ -86,8 +86,8 @@
                         </a>
                         {% endif %}
                         <div class="card-body">
-                            <p class="text-black fw-bold">{{ product.name }}</p>
-                            <p class="lead text-black fw-bold">£{{ product.price }}</p>
+                            <h5 class="product-name fs-6">{{ product.name }}</h5>
+                            <h6 class="text-black product-price fs-6">£{{ product.price }}</h6>
                             {% if product.category %}
                             <p class="small mt-1 mb-0">
                                 <a class="text-black" href="{% url 'products' %}?category={{ product.category.name }}">
