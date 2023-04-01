@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %} 
+{% load bag_tools %}
 {% block page_header %}
 {% block extra_title %}Shopping Bag{% endblock %}
 <div class="container header-container">
@@ -56,7 +56,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col"><hr /></div>
+                    <div class="col">
+                        <hr />
+                    </div>
                 </div>
                 {% endfor %}
                 <div class="btt-button shadow-sm rounded-0 border border-black">
@@ -117,7 +119,8 @@
                 <span class="text-uppercase">Keep Shopping</span>
             </a>
             <a class="update-link text-info"><small>Update</small></a>
-                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                data-size="{{ item.size }}"><small>Remove</small></a>
             {% endif %}
         </div>
     </div>
@@ -129,6 +132,7 @@
     $(".btt-link").click(function (e) {
         window.scrollTo(0, 0);
     });
+
 </script>
 {% include 'products/includes/quantity_input.html' %}
 <script>
@@ -143,11 +147,15 @@
         var itemId = $(this).attr("id").split("remove_")[1];
         var size = $(this).data("product_size");
         var url = `/bag/remove/${itemId}/`;
-        var data = { csrfmiddlewaretoken: csrfToken, product_size: size };
+        var data = {
+            csrfmiddlewaretoken: csrfToken,
+            product_size: size
+        };
 
         $.post(url, data).done(function () {
             location.reload();
         });
     });
+
 </script>
 {% endblock %}
