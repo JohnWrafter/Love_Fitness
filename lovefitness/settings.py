@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'view_breadcrumbs',
     'dynamic_breadcrumbs',
     'crispy_bootstrap4',
-    
+
     # Other
     'crispy_forms',
     'storages',
@@ -131,7 +131,7 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'lovefitness.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitne-3p7e7n3q6r6.ws-eu92.gitpod.io']
+CSRF_TRUSTED_ORIGINS = [' https://8000-j0hn1975-cims4lovefitne-3p7e7n3q6r6.ws-eu93.gitpod.io']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
