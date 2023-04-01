@@ -21,9 +21,11 @@
 
 .secondary-heading {
     font-family: exo;
-    letter-spacing: 2px;
 }
 
-.delivery-icons {
-    height: 45px;
+.btn-light {
+    color: #000;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    font-family: 'Exo';
 }
