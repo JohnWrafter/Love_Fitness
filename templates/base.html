@@ -27,6 +27,7 @@
 
     {% endblock %}
     {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}" type="text/css">
     {% endblock %}
 
     {% block corejs %}
@@ -94,16 +95,27 @@
             </nav>
         </div>
         <!-- Information Banner -->
-        <div id="info-banner" class="row fw-bold text-center bg-wild-blue-yonder">
-            <div class="col">
-                <div class="mt-1 mb-1">
-                    <span class="text-black text-center">Free worldwide delivery on orders over
-                        £{{ free_delivery_threshold }}!</span>
-                    <span class="d-none d-lg-inline ml-3 mr-3 text-black">-</span>
-                    <span class="d-none d-lg-inline text-black">Next day delivery options available</span>
+        <div class="container-fluid mb-2">
+            <div class="row text-center delivery-info">
+                <div class="col">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <p>Free Delivery</p>
+
+                            </div>
+                            <div class="carousel-item">
+                                <p>Free Delivery 1</p>
+
+                            </div>
+                            <div class="carousel-item">
+                                <p>Free Delivery 2</p>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </header>
     <!-- Toast messages -->
     {% if messages %}

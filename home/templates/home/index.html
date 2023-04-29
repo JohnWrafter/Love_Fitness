@@ -6,18 +6,18 @@
 {% endblock %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'home/css/home.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" type="text/css">
 {% endblock %}
-
 
 
 {% block content %}
 <section>
-    <div class="container-fluid mb-5 px-0">
+    <div class="container-fluid px-0">
         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="col-xl-6">
                 <img src=" {{ MEDIA_URL }}exercise_1.jpg" alt="" class="img-fluid">
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6" id="cta-text">
+            <div class="col-xl-6" id="cta-text">
                 <h5>Welcome to Love Fitness</h5>
                 <h2>Smash all your fitness goals</h2>
                 <input type="submit" class="btn btn-dark rounded-3 text-uppercase" value="Shop Now">
@@ -26,12 +26,7 @@
     </div>
 </section>
 
-<section>
-    <div class="container-fluid">
-        <div class="row text-center">
-            Delivery Information
-        </div>
-</section>
+
 <div class="container-fluid mb-5">
     <div class="row text-center">
         <div class="col">
