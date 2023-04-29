@@ -1,29 +1,51 @@
 {% extends "account/base.html" %}
+{% load static %}
+
+{% block page_header %}
+<!--Main header block -->
+<div class="container header-container"></div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static '/css/account.css' %}" type="text/css" />
+{% endblock %}
+
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
-<hr>
+
 
 {% block inner_content %}
 
 {% load crispy_forms_tags %}
-<hr>
-<h2 class="primary-heading mb-4 text-center text-black mb-4">{% trans "Sign Up" %}</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-1662961154170-d2421e29f94b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+        alt="">
+    </div>
+    <div class="col">
+      <h4 class="primary-heading mb-4 text-center text-black mb-4">{% trans "Create an Account" %}</h4>
 
-<p class="secondary-heading small text-muted text-center">{% blocktrans %}Already have an account? Then please <a
-    href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-<hr>
+      <p class="secondary-heading small text-muted text-center">Sign up and you’ll be able to manage your account.</p>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="btn btn-outline-black rounded-0 mt-4" href="{% url 'account_login' %}">Back to Login</a>
-  <button type="submit" class="btn btn-success mt-4">{% trans "Sign Up" %}</button>
-</form>
+      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <a class="btn btn-outline-black rounded-0 mt-4" href="{% url 'account_login' %}">Back to Login</a>
+        <button type="submit" class="btn btn-success mt-4">{% trans "Sign Up" %}</button>
+      </form>
+
+      <p class="secondary-heading small text-muted text-center">{% blocktrans %}Already have an account? Then please <a
+          href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+    </div>
+  </div>
+</div>
 
 
 {% endblock %}

@@ -3,13 +3,13 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}{% trans "Create An Account" %}{% endblock %}
 
 {% block inner_content %}
 
 {% load crispy_forms_tags %}
 <hr>
-<h2 class="logo-font mb-4 text-center text-black mb-4 mt-5">{% trans "Sign In" %}</h2>
+<h2 class="logo-font primary-heading mb-4 text-center text-black mb-4 mt-5">{% trans "Create An Account" %}</h2>
 <hr>
 
 {% get_providers as socialaccount_providers %}
@@ -33,7 +33,7 @@
 
 {% else %}
 <p class="small text-muted text-center">{% blocktrans %}If you have not created an account yet, then please
-  <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+  <a href="{{ signup_url }}">Create An Account{% endblocktrans %}</p>
 {% endif %}
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
