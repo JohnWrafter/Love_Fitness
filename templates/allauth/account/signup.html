@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/account.css' %}" type="text/css" />
 <link rel="stylesheet" href="{% static 'css/carousel.css' %}" type="text/css">
 {% endblock %}
 
@@ -24,9 +23,7 @@
 <div class="conatiner-fluid">
   <div class="row">
     <div class="col">
-      <img
-        src="https://images.unsplash.com/photo-1662961154170-d2421e29f94b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-        alt="">
+      <img src=" {{ MEDIA_URL }}exercise_1.jpg" alt="" class="img-fluid">
     </div>
     <div class="col">
       <h4 class="primary-heading mb-4 text-center text-black mb-4">{% trans "Create an Account" %}</h4>
