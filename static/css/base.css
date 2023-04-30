@@ -297,24 +297,14 @@ a.category-badge>span.badge:hover {
         z-index: 1030;
     }
 
-    .header-container {
-        padding-top: 101px;
-    }
-
     .logo-font {
         text-transform: uppercase;
         color: grey;
     }
-
 }
 
 /* --- Greater than 991px --- */
 @media screen and (max-width: 991px) {
-
-    /* --- Generic --- */
-    .header-container {
-        padding-top: 92px;
-    }
 
     body {
         height: calc(100vh - 116px);

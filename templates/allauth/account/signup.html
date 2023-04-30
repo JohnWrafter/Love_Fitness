@@ -7,7 +7,8 @@
 {% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static '/css/account.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/account.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}" type="text/css">
 {% endblock %}
 
 
@@ -19,7 +20,8 @@
 {% block inner_content %}
 
 {% load crispy_forms_tags %}
-<div class="container-fluid">
+
+<div class="conatiner-fluid">
   <div class="row">
     <div class="col">
       <img
@@ -46,6 +48,7 @@
     </div>
   </div>
 </div>
+
 
 
 {% endblock %}
