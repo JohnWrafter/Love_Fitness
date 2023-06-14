@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
+import psycopg2
 import os
 import dj_database_url
 from pathlib import Path
