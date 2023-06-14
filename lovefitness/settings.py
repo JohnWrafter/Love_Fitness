@@ -59,6 +59,8 @@ INSTALLED_APPS = [
     'view_breadcrumbs',
     'dynamic_breadcrumbs',
     'crispy_bootstrap4',
+    'psycopg',
+    'psycopg2',
 
     # Other
     'crispy_forms',
