@@ -16,7 +16,6 @@ oauthlib==3.2.2
 Pillow==9.5.0
 postgres==4.0
 psycopg2==2.9.6
-psycopg2-binary==2.9.6
 psycopg2-pool==1.1
 PyJWT==2.7.0
 python3-openid==3.2.0
