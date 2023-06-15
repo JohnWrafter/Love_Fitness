@@ -140,9 +140,9 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitne-3p7e7n3q6r6.ws-eu9
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
+if 'HEROKU_DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('HEROKU_DATABASE_URL'))
     }
 else:
     DATABASES = {
