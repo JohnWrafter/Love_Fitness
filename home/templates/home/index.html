@@ -26,6 +26,9 @@
     </div>
 </section>
 
+{% static "media/apparel.jpg" %}" alt="" width="610">
+
+<img src="{% static "media/apparel.jpg" %}" alt="My image" width="610">
 
 <div class="container-fluid mb-5">
     <div class="row text-center">
@@ -51,7 +54,7 @@
         </div>
         <div class="col">
             <div class="box">
-                <img src="{{ MEDIA_URL }}apparel.jpg" alt="" width="610" />
+                <img src="{% static 'media/apparel.jpg %}" alt="" width="610" />
                 <div class="some-text">
                     <h5>Welcome to Love Fitness</h5>
                     <h2 class="secondary-heading">Apparel</h2>
@@ -61,7 +64,6 @@
         </div>
     </div>
 </div>
-
 
 {% endblock %}
 Postload Javascript
