@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-johnwrafter-lovefitness-srev4lukvwh.ws-eu99.gitpod.io', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['8000-johnwrafter-lovefitness-srev4lukvwh.ws-eu100.gitpod.io', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -215,7 +215,6 @@ if 'USE_AWS' in os.environ:
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = \
         f'{AWS_STORAGE_BUCKET_NAME}.s3.eu-west-2.amazonaws.com'
-
     # Static and media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
