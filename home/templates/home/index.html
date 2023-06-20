@@ -26,6 +26,10 @@
     </div>
 </section>
 
+{% static "media/apparel.jpg" %}" alt="" width="610">
+
+<img src="{% static "media/apparel.jpg" %}" alt="My image" width="610">
+
 <div class="container-fluid mb-5">
     <div class="row text-center">
         <div class="col">
@@ -40,8 +44,7 @@
         </div>
         <div class="col">
             <div class="box">
-                <img src="https://ci-ms4-lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" alt=""
-                    width="610" />
+                <img src="{{ MEDIA_URL }}equipment.jpg" alt="" width="610" />
                 <div class="some-text">
                     <h5>Welcome to Love Fitness</h5>
                     <h2 class="secondary-heading">Equipment</h2>
