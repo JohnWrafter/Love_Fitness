@@ -1,0 +1,49 @@
+.box {
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+.some-text {
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+#cta-text {
+    margin-top: 15%;
+    padding-left: 5rem;
+    font-family: exo;
+    color: black;
+}
+
+.secondary-heading {
+    font-family: exo;
+}
+
+.btn-light {
+    color: #000;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    font-family: 'Exo';
+}
+
+.delivery-info {
+    height: ;
+    color: #000;
+}
+
+.carousel {
+    margin-top: 50px;
+}
+
+.carousel-inner {
+    height: 100px;
+}
+
+.carousel-caption {
+    color: #fff;
+    top: 50%;
+}
