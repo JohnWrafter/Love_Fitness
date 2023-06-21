@@ -22,6 +22,7 @@ django-storages==1.13.2
 django-view-breadcrumbs==2.4.1
 Flask==2.3.2
 Flask-RESTful==0.3.10
+gunicorn==20.1.0
 itsdangerous==2.1.2
 jmespath==1.0.1
 oauthlib==3.2.2
