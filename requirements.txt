@@ -1,4 +1,5 @@
 asgiref==3.7.2
+backports.zoneinfo==0.2.1
 columns==0.0.2
 crispy-bootstrap4==2022.1
 dj-database-url==2.0.0
@@ -10,6 +11,7 @@ django-crispy-forms==2.0
 django-dynamic-breadcrumbs==0.4.2
 django-storages==1.13.2
 django-view-breadcrumbs==2.4.1
+gunicorn==20.1.0
 oauthlib==3.2.2
 Pillow==9.5.0
 psycopg==3.1.9
