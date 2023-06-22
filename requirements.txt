@@ -18,6 +18,7 @@ django-cors-headers==4.1.0
 django-countries==7.5.1
 django-crispy-forms==2.0
 django-dynamic-breadcrumbs==0.4.2
+django-heroku==0.3.1
 django-storages==1.13.2
 django-view-breadcrumbs==2.4.1
 Flask==2.3.2
@@ -40,3 +41,4 @@ sqlparse==0.4.4
 stripe==5.4.0
 urllib3==1.26.16
 Werkzeug==2.3.6
+whitenoise==6.5.0
