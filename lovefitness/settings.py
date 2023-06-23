@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'psycopg',
     'psycopg2',
+    'dotenv',
 
     # Other
     'crispy_forms',
