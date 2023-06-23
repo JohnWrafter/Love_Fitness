@@ -8,7 +8,7 @@
       "price": 28.00,
       "category": 1,
       "rating": 4.6,
-      "image_url": "https://ci-ms4-lovefitness-1.s3.eu-west-2.amazonaws.com/media/12767049-1184878561521970.jpg",
+      "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/12767049-1184878561521970.jpg",
       "image": "12767049-1184878561521970.jpg"
     }
   },
