@@ -29,7 +29,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = '6IQ>Ovd&_1b<DRL6ctOne0yjED'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT'
 
 ALLOWED_HOSTS = ['8000-johnwrafter-lovefitness-36heizmjpuy.ws-eu100.gitpod.io', '127.0.01']
 
