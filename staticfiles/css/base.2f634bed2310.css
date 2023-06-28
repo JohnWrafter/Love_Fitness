@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+
+/* --- Global styling --- */
+.navbar {
+    background-color: white;
+}
+
+.card {
+    border: none !important;
+    transition: all 2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+.primary-heading,
+.secondary-heading {
+    font-family: exo;
+}
+
+.product-name,
+.product-price {
+    font-family: exo2;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    color: #555;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.bg-blue-yonder {
+    background-color: #018190 !important;
+}
+
+/* To set colour on Footer and Info banner */
+.bg-wild-blue-yonder {
+    background-color: #00b4d8 !important;
+}
+
+
+/* Main logo link */
+.main-logo-link {
+    width: fit-content;
+}
+
+/* Catergory badge */
+a.category-badge>span.badge:hover {
+    background: #e7e9eb !important;
+    color: #fff !important;
+}
+
+.badge-border {
+    border: 2px solid #89939e !important;
+}
+
+/* Keep shopping bag button outline */
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+/* Back to top button */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Back to top button link */
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+/* Style buttons for shopping pages */
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+
+/* ------------------------------- Font Awesome */
+/* Global style for icons */
+.fab {
+    font-size: 25px;
+}
+
+/* Facebook */
+.fa-facebook {
+    color: #3b5998;
+}
+
+/* Twitter */
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+/* Instagram */
+.fa-instagram {
+    font-size: 30px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* You tube */
+.fa-youtube {
+    color: #FF0000;
+}
+
+/* Font size for page headings */
+.display-6 {
+    margin-top: 168px;
+    font-size: 1.438rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+/* ------------------------------- Toasts */
+/* Toast container positioning */
+.message-container {
+    position: fixed;
+    top: 175px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+/* Style custom toast class */
+.custom-toast {
+    overflow: visible;
+}
+
+
+/* Main toast body */
+.toast-body {
+    font-size: 12px;
+}
+
+/* Bag notification wrapper */
+.bag-notification-wrapper {
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* WAVE validation */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 5px;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+    color: #0C6064;
+    /* text-info */
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+.navbar-brand {
+    margin-right: 9rem;
+    text-decoration: none;
+    margin-right: 11rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .logo-font {
+        text-transform: uppercase;
+        color: grey;
+    }
+}
+
+/* --- Greater than 991px --- */
+@media screen and (max-width: 991px) {
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    /* Font size for info banner */
+    #info-banner {
+        font-size: 1rem;
+    }
+
+    .mb-1 {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .mt-1 {
+        margin-top: 1rem !important;
+    }
+
+    .logo-image.img {
+        height: 20px;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 355px) {
+    #info-banner {
+        font-size: .875rem;
+    }
+}
+
+/* X-SMALL SCREEN */
+@media (max-width: 320px) {
+
+    /* --- Generic --- */
+    .container {
+        max-width: 100%;
+    }
+
+    /* Hide category badge*/
+    .category-badge {
+        display: none;
+    }
+
+    /* Hide back to top button */
+    .btt-button {
+        display: none;
+    }
+
+    /* Font awesome icons */
+    .fa-lg {
+        font-size: 1rem !important;
+        line-height: .75em;
+        vertical-align: -0.0667em;
+        color: grey;
+    }
+
+    /* Font size for info banner */
+    #info-banner {
+        font-size: 0.875rem;
+    }
+
+    .mb-1 {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .mt-1 {
+        margin-top: 1rem !important;
+    }
+
+    /* Buttons for bag */
+    .btn btn-outline-black rounded-0 btn-lg,
+    .btn btn-black rounded-0 btn-lg {
+        font-size: 100px;
+    }
+
+    /* Dropdown menu font size */
+    .dropdown-menu>a {
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
