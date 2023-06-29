@@ -1,15 +1,16 @@
-[{
+;[{
     "pk": 1,
     "model": "products.product",
     "fields": {
       "gender": "Women",
-      "name": "Tempo Seamless Sports Bra",
-      "description": "Introducing our NEW Tempo Seamless Bra , optimised for high energy and impact interval and agility training.",
-      "price": 28.00,
+      "name": "Twist Sports Bra",
+      "colour": "Tan",
+      "description": "Get ready to be mesmerized by the extraordinary features of this remarkable sports bra. It boasts an exquisite front twist, a captivating strappy front, and an exclusive teardrop cut-out design that will leave you in awe. The thoughtfully designed straps ensure a comfortable fit without causing any discomfort or strain on your shoulders, allowing you to cross them in the front if desired. With its exceptional support, this sports bra guarantees to keep your bust secure and firmly in place, even during the most vigorous workouts. Crafted from our premium moisture-wicking fabric, it ensures optimal breathability, keeping you cool and dry even during the most intense exercise sessions. This indispensable garment is tailored to perfection, ensuring a flawless fit that complements your body flawlessly.",
+      "price": 64.00,
       "category": 1,
       "rating": 4.6,
-      "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/12767049-1184878561521970.jpg",
-      "image": "12767049-1184878561521970.jpg"
+      "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_1.webp",
+      "image": "sportsbra_1"
     }
   },
   {
