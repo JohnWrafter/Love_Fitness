@@ -385,8 +385,8 @@
     "price": 89.00,
     "category": 2,
     "rating": 3.1,
-    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_10.webp",
-    "image": "leggings_10.webp"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_10.jpg",
+    "image": "leggings_10.jpg"
   }
 },
 {
@@ -477,20 +477,6 @@
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_16.webp",
     "image": "leggings_16.webp"
-  }
-},
-{
-  "pk": 32,
-  "model": "products.product",
-  "fields": {
-    "gender": "Women",
-    "name": "Impact Whey Protein",
-    "description": "Premium whey packed with 21g of protein per serving, for the everyday protein you need from a quality source.",
-    "price": 7.67,
-    "category": 3,
-    "rating": 3.8,
-    "image_url": "https://static.thcdn.com/images/large/original//productimg/1600/1600/10530943-1224889444460882.jpg",
-    "image": "10530943-1224889444460882.jpg"
   }
 },
 {
