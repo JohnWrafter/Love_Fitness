@@ -244,13 +244,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Curve Leggings",
-    "description": "Our best-selling Curve Leggings are made with sweat-wicking technology.",
-    "price": 38.00,
+    "name": "Shape Leggings",
+    "colour":"Grey Smoke",
+    "description": "If you're looking for leggings that will accentuate your curves and give your butt a fuller and rounder appearance, then look no further than these Shape Leggings. These bottoms are designed with specific seams that create a flattering and lifted effect on your butt, enhancing its natural shape and giving you the appearance of a fuller and rounder behind. With their high-quality smooth fabric, comfortable design, and eye-catching style, these leggings are a must-have for anyone to look and feel their best.",
+    "price": 89.00,
     "category": 2,
     "rating": 4.2,
-    "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12773439-2094862198106534.jpg",
-    "image": "12773439-2094862198106534.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_1.webp",
+    "image": "leggings_1.webp"
   }
 },
 {
@@ -258,13 +259,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Power Leggings",
-    "description": "Our best-selling Power Leggings are made with sweat-wicking technology.",
-    "price": 34.00,
+    "name": "Toggle Leggings",
+    "colour":"Ombre Fiji Coral",
+    "description": "If you want your activewear to be as hardworking as you are in the gym, you need a versatile piece that can flex to fit your needs. Meet our new ombre leggings. The V-cut waist is flattering, feminine, and fierce, while the ombre design completes this luxurious athleisure look. Made from a fabric so buttery-soft it has to be felt to be believed, they are the perfect fit and all yours in the season’s hottest shades. Snag a pair for yourself today, and level-up your workout look.",
+    "price": 89.00,
     "category": 2,
     "rating": 4.1,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12775027-1544864017958686.jpg",
-    "image": "12775027-1544864017958686.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_2.webp",
+    "image": "leggings_2.webp"
   }
 },
 {
@@ -272,13 +274,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Power Leggings",
-    "description": "Our best-selling Power Leggings are made with sweat-wicking technology.",
-    "price": 16.99,
+    "name": "Adjustable Leggings",
+    "colour": "Marble Pink",
+    "description": "Our marble leggings have landed and we are officially obsessed. Slip into the perfect fit with a liquid-soft fabric with snapback recovery and a stretch that moves with you. Featuring scrunch-butt technology, a form-hugging straight waist, and a range of color-crush marble shades, they are uplifting both inside and out.",
+    "price": 89.00,
     "category": 2,
     "rating": 4.0,
-    "image_url": "https://static.thcdn.com/images/xsmall/original//productimg/1600/1600/12645034-1634822261490835.jpg",
-    "image": "12645034-1634822261490835.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_3.webp",
+    "image": "leggings_3.webp"
   }
 },
 {
@@ -286,13 +289,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Power Leggings",
-    "description": "With sculpting seams and a supportive fit, find your strength in the Power Leggings. Created for enhanced coverage, you can be confident from warm-up sprints through to cool-down stretches.",
-    "price": 17.99,
+    "name": "Gloss Leggings",
+    "colour":"Gloss Navy",
+    "description": "Designed for the badass in you, our high-shine Gloss leggings accentuate every curve and muscle for a fiercely feminine look. Ultra lightweight, supportive, and sassy in equal measure, these wet-look leggings are a motivational force for your workout, with power and confidence guaranteed on every wear. Engineered for the gym but way too stylish to save for workouts alone, they have all the versatility of being dressed down for chill vibes or up for a night out with friends, for feel-good power dressing that blends high performance with high fashion.",
+    "price": 92.00,
     "category": 2,
     "rating": 4.1,
-    "image_url": "https://static.thcdn.com/images/xsmall/original/productimg/1600/1600/11871428-2074691360464800.jpg",
-    "image": "11871428-2074691360464800.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_4.webp",
+    "image": "leggings_4.webp"
   }
 },
 {
@@ -300,13 +304,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Chalk Graphic Leggings",
-    "description": "Our best-selling Power Leggings are made with sweat-wicking technology.",
-    "price": 15.99,
+    "name": "Sexy Back Leggings",
+    "colour": "Orchid Purple",
+    "description": "A Bombshell OG favorite we are bringing back in fun pop print colors. These Tiger print bum-sculpting beauties flatter your form, and kick some serious ass in the gym, as well as in the style stakes. Pair with the matching strappy back sports bra to complete this must-have look.",
+    "price": 89.00,
     "category": 2,
     "rating": 4.1,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12847877-1164850321743869.jpg",
-    "image": "12847877-1164850321743869.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_5.webp",
+    "image": "leggings_5.webp"
   }
 },
 {
@@ -314,13 +319,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Chalk Graphic Leggings",
+    "name": "Toggle Leggings",
+    "colour":"Ombre Fiji Coral",
     "description": "Whatever your workout schedule, our Chalk Graphic styles will have you rest day or active ready.",
-    "price": 15.99,
+    "price": 89.00,
     "category": 2,
     "rating": 4.1,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/https://static.thcdn.com/images/large/webp//productimg/1600/1600/12847893-8504850322407466.jpg",
-    "image": "12847893-8504850322407466.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_6.webp",
+    "image": "leggings_6.webp"
   }
 },
 {
@@ -328,13 +334,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Curve Leggings",
-    "description": "Built with specific features which prioritise performance, these Curve Leggings are the perfect workout partner.",
-    "price": 38.00,
+    "name": "Fit Cheetah Leggings",
+    "colour": "Lightning Grey",
+    "description": "Unleash your wild side with these bold and beautiful print leggings. Designed to move with you in every direction. You’ll feel confident, supported, and empowered to smash your workout. With a second-skin softness consider these your new training faves, but be warned-these are too amazing to save for the gym alone. Luckily the luxurious feel means you’ll be able to wear them all day long, from morning to night. Pro tip: Team with the matching Cheetah Racerback Bra for maximum sports-luxe vibes.",
+    "price": 89.00,
     "category": 2,
     "rating": 4.1,
-    "image_url": "https://static.thcdn.com/images/xsmall/original//productimg/original/12899396-1064900588297002.jpg",
-    "image": "12899396-1064900588297002.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_7.webp",
+    "image": "leggings_7.webp"
   }
 },
 {
@@ -342,13 +349,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Mini Mark Graphic Leggings",
-    "description": "Whatever your workout schedule, our Chalk Graphic styles will have you rest day or active ready.",
-    "price": 20.99,
+    "name": "Killing It Leggings",
+    "colour":"Royal Purple",
+    "description": "Anything is possible with these goal-crushing leggings. Made for women who love to lift, they feature a motivational side print to empower you to be your own star. Created to hold tight, sit smoothly against your curves, and bring next-level comfort, these head-turning leggings are butter-soft, stylish, and as functional as they are fierce. Designed and made in the USA, they’re a celebration of our all-American collection. Pair yours with a matching color-pop sports bra for maximum fit girl vibes.",
+    "price": 71.20,
     "category": 2,
     "rating": 4.0,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12767568-6274884220409022.jpg",
-    "image": "12767568-6274884220409022.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_8.webp",
+    "image": "leggings_8.webp"
   }
 },
 {
@@ -356,13 +364,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Shape Seamless Ultra Leggings",
-    "description": "Designed to support and sculpt, our Shape Seamless Ultra Leggings offer a high-waisted supportive fit, ideal to keep you covered and confident throughout all training types.",
-    "price": 25.99,
+    "name": "Shine Leggings",
+    "colour": "White Python",
+    "description": "Make your power play in this high-shine, high-drama set of the season. This dynamic duo is one hard-working team, helping you to smash your personal best while adding serious street-style vibes to your off-duty look. Very much the fashionistas of activewear, our Shine Python Leggings have a bold, badass look. But their beauty is more than (snake)skin deep. Made from a technical interlock material, they are the slayers of squats, meaning what they bring in style they more than match in performance. Get a double hit of endorphins with the coordinating Shine Python Sports Bra for a killer combo in the gym, or style with a blazer and baseball cap for a masterclass in sports-luxe couture.",
+    "price": 92.00,
     "category": 2,
     "rating": 3.8,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12645130-7734831859172660.jpg",
-    "image": "12645130-7734831859172660.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_9.webp",
+    "image": "leggings_9.webp"
   }
 },
 {
@@ -370,13 +379,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Curve Leggings",
-    "description": "Built with specific features which prioritise performance, these Curve Leggings are the perfect workout partner.",
-    "price": 38.00,
+    "name": "Contour Leggings",
+    "colour": "Ocean Teal",
+    "description": "Made for workouts, the Contour Leggings have it all, from v-cut waistband, no front seam, side pockets, to the perfect scrunch booty! With an incredible fit that hugs your body in all the right places.  Make it a power set with the Angel Sports Bra.",
+    "price": 89.00,
     "category": 2,
     "rating": 3.1,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12773423-1634862205473046.jpg",
-    "image": "12773423-1634862205473046.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_10.webp",
+    "image": "leggings_10.webp"
   }
 },
 {
@@ -384,13 +394,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Central Graphic Leggings",
-    "description": "Our collection of Central Graphic styles are designed for day to day activities. Offering feel-good fit with super-soft stretch fabric, our MP Central Graphic Leggings are a must-have.",
-    "price": 12.99,
+    "name": "Contour Leggings",
+    "colour": "Ultra Pink",
+    "description": "Made for workouts, the Contour Leggings have it all, from v-cut waistband, no front seam, side pockets, to the perfect scrunch booty! With an incredible fit that hugs your body in all the right places. Make it a power set with the Angel Sports Bra.",
+    "price": 89.00,
     "category": 2,
     "rating": 4.0,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12651599-1564850315017845.jpg",
-    "image": "12651599-1564850315017845.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_11.webp",
+    "image": "leggings_11.webp"
   }
 },
 {
@@ -398,13 +409,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Essentials Training Leggings",
-    "description": "Our Essentials Training Leggings are built with your comfort in mind.",
-    "price": 8.99,
+    "name": "Curves Leggings",
+    "colour":"Party Pink",
+    "description": "A must-have addition to your Bombshell collection! The Curve Pocket Leggings are soft, sculpting and supportive.  Designed to flatter your curves with the scrunch booty back, high-waisted, easy side pockets for any size cell phone. These leggings are made to move with you and keep up with all your workouts and after gym activities!",
+    "price": 89.00,
     "category": 2,
     "rating": 4.0,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12644762-4884822582276902.jpg",
-    "image": "12644762-4884822582276902.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_12.webp",
+    "image": "leggings_12.webp"
   }
 },
 {
@@ -412,13 +424,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Curve 3/4 Leggings",
-    "description": "Whatever your workout schedule, our Curve 3/4 Leggings will have you rest day or active ready.",
-    "price": 38.00,
+    "name": "Gloss Leggings",
+    "colour": "Gloss Red",
+    "description": "Designed for the badass in you, our high-shine Gloss leggings accentuate every curve and muscle for a fiercely feminine look. Ultra lightweight, supportive, and sassy in equal measure, these wet-look leggings are a motivational force for your workout, with power and confidence guaranteed on every wear. Engineered for the gym but way too stylish to save for workouts alone, they have all the versatility of being dressed down for chill vibes or up for a night out with friends, for feel-good power dressing that blends high performance with high fashion.",
+    "price": 92.00,
     "category": 2,
     "rating": 4.7,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12773455-1624862247465816.jpg",
-    "image": "12773455-1624862247465816.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_13.webp",
+    "image": "leggings_13.webp"
   }
 },
 {
@@ -426,13 +439,14 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Training Reversible Leggings",
-    "description": "The training range captures training in a pure form. Our aim was to engineer distinctive, technical products which flourish under the toughest environments.",
-    "price": 38.00,
+    "name": "Waist Cincher Leggings",
+    "colour": "Twilight Blue",
+    "description": "Accentuate your waist with these hour-glass-giving leggings. Cinch in and strut out in total confidence as this high-drama style walks you from day to night. The hook and eye detailing adds a fashionista edge, while the thickset waistband nips and tucks for figure-hugging flattery that will elevate your style, your confidence, and your mood, both in and out of the gym.",
+    "price": 92.00,
     "category": 2,
     "rating": 4.0,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12782722-5224892025947541.jpg",
-    "image": "12782722-5224892025947541.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_14.webp",
+    "image": "leggings_14.webp"
   }
 },
 {
@@ -440,13 +454,29 @@
   "model": "products.product",
   "fields": {
     "gender": "Women",
-    "name": "Training Leggings",
-    "description": "Our Branded Training Range is designed to brighten up your everyday workouts! Tackle weights, stretches and low-intensity training in the Branded Training leggings.",
-    "price": 14.99,
+    "name": "Boost Leggings",
+    "colour":"Sunkissed",
+    "description": "Bag a Brazilian booty with these curve-creating leggings. Blending unrivalled comfort with street-style couture, these hard-working heroes are heading straight to the top of our workout-to-weekend wish list. The buttery soft material hugs your form for a performance-enhancing boost where, and when, you need it most.",
+    "price": 86.00,
     "category": 2,
     "rating": 4.0,
-    "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12651719-7804851360026547.jpg",
-    "image": "12651719-7804851360026547.jpg"
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_15.webp",
+    "image": "leggings_15.webp"
+  }
+},
+{
+  "pk": 32,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Chevron Leggings",
+    "colour":"Lucky Green",
+    "description": "Add a new dimension to your workout with our high-drama chevron leggings. Dialing up the texture to a whole new level, this gorgeous pattern update is perfection for glossing over flaws for fierce vibes only. With snapback recovery and a high straight waist, these leggings always give a perfect fit, with the stamina to hold strong as you lift and squat. You’ll love the way the high-performance fabric feels against your skin, providing maximum comfort and breathability. The perfect blend of function and fashion, these will have you feeling and looking your best in the gym and beyond. Upgrade your workout wardrobe today.",
+    "price": 89.00,
+    "category": 2,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_16.webp",
+    "image": "leggings_16.webp"
   }
 },
 {
