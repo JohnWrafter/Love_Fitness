@@ -16,7 +16,7 @@
         <div class="col text-center">
             <!-- <hr> -->
             <!-- <h2 class="logo-font text-left text-black fw-bold fs-2">Products</h2> -->
-            <h5 class="text-left text-black">Browse Our Products</h5>
+            <h5 class="text-left text-black mt-5">Browse Our Products</h5>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-2 mt-2 badge badge-white badge-border logo-font rounded-5">{{ c.friendly_name }}</span>
