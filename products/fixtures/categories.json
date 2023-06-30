@@ -94,5 +94,13 @@
       "name": "clearance",
       "friendly_name": "Clearance"
    }
+},
+{
+   "pk": 13,
+   "model": "products.category",
+   "fields": {
+      "name": "bodysuits",
+      "friendly_name": "Bodysuits"
+   }
 }
 ]
