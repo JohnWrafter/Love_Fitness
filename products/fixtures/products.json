@@ -1305,6 +1305,246 @@
     "image_url": "https://www.houseoffraser.co.uk/brand/usa-pro/x-courtney-black-hiit-sports-bra-420979#colcode=42097915",
     "image": "42097915_4pl.webp"
   }
+},
+{
+  "pk": 94,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "The Perfect Bodysuit",
+    "colour": "Honeycomb",
+    "description": "Our perfect-fit bodysuit is designed to slip comfortably & seamlessly (literally) under your leggings or shorts. Made from our iconic second skin fabric you know and love, this glamorous, yet super supportive bodysuit features a g-string back and built-in sports bra for added support. Our figure flatter bodysuit is so versatile taking you from the gym to life outside the weight room in comfort & style!",
+    "price": 59.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_16.webp",
+    "image": "bodysuit_16.webp"
+  }
+},
+{
+  "pk": 95,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Form Bodysuit",
+    "colour": "Ultra Pink",
+    "description": "Designed to have your back through the toughest of workouts, this confidence-building one-piece features stylish skinny crossover straps on the reverse to ensure it stays put when your workout levels up. The deep V back accentuates your booty and shows off toned backs, while the built-in sports bra brings you both freedom and support. And with super-sensuous stretchy fabric taking comfort and fit to another level to flatter your form, this is the ultimate partner for gym performance, not to mention a pleasure to wear.",
+    "price": 119.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_1.webp",
+    "image": "bodysuit_1.webp"
+  }
+},
+{
+  "pk": 96,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "The Prefect Bodysuit",
+    "colour": "Rose Blush",
+    "description": "What the activewear industry has been missing until now. Our perfect-fit bodysuit is designed to slip comfortably & seamlessly (literally) under your leggings or shorts. Made from our iconic second skin fabric you know and love, this glamorous, yet super supportive bodysuit features a g-string back and built-in sports bra for added support. Our figure flatter bodysuit is so versatile taking you from the gym to life outside the weight room in comfort & style!",
+    "price": 54.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_2.webp",
+    "image": "bodysuit_2.webp"
+  }
+},
+{
+  "pk": 97,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Sculpted Bodysuit Shorts",
+    "colour": "Blush",
+    "description": "Your favorite all-in-one piece bodysuit shorts. Our V back design is made to flatter, sculpt and support. With a built in sports bra this piece is versatile, comfortable and so body conturing sexy. A must have for your next gym workout.",
+    "price": 98.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_3.webp",
+    "image": "bodysuit_3.webp"
+  }
+},
+{
+  "pk": 98,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Sculpted Bodysuit",
+    "colour": "Black Camo",
+    "description": "The perfect silhouette in this super attractive all-in-one piece. Our V back design is so flattering with great support. Versatile, comfortable and so body conturing sexy. Get the perfect layered look with our Inspo Crop Pullover that adds warmth and style. ",
+    "price": 119.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_4.webp",
+    "image": "bodysuit_4.webp"
+  }
+},
+{
+  "pk": 99,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Form Bodysuit",
+    "colour": "Ocean",
+    "description": "Designed to have your back through the toughest of workouts, this confidence-building one-piece features stylish skinny crossover straps on the reverse to ensure it stays put when your workout levels up. The deep V back accentuates your booty and shows off toned backs, while the built-in sports bra brings you both freedom and support. And with super-sensuous stretchy fabric taking comfort and fit to another level to flatter your form, this is the ultimate partner for gym performance, not to mention a pleasure to wear.",
+    "price": 119.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_5.webp",
+    "image": "bodysuit_5.webp"
+  }
+},
+{
+  "pk": 100,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "The Perfect Bodysuit",
+    "colour": "Black",
+    "description": "Our perfect-fit bodysuit is designed to slip comfortably & seamlessly (literally) under your leggings or shorts. Made from our iconic second skin fabric you know and love, this glamorous, yet super supportive bodysuit features a g-string back and built-in sports bra for added support. Our figure flatter bodysuit is so versatile taking you from the gym to life outside the weight room in comfort & style!",
+    "price": 54.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_6.webp",
+    "image": "bodysuit_6.webp"
+  }
+},
+{
+  "pk": 101,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "The Perfect Bodysuit",
+    "colour": "Baby Blue",
+    "description": "What the activewear industry has been missing until now. Our perfect-fit bodysuit is designed to slip comfortably & seamlessly (literally) under your leggings or shorts. Made from our iconic second skin fabric you know and love, this glamorous, yet super supportive bodysuit features a g-string back and built-in sports bra for added support.",
+    "price": 54.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_7.webp",
+    "image": "bodysuit_7.webp"
+  }
+},
+{
+  "pk": 102,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Form Bodysuit Shorts",
+    "colour": "Magenta",
+    "description": "",
+    "price": 98.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_8.webp",
+    "image": "bodysuit_8.webp"
+  }
+},
+{
+  "pk": 103,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Waist Cincher Leggings",
+    "colour": "Red Apple",
+    "description": "Our perfect-fit bodysuit is designed to slip comfortably & seamlessly (literally) under your leggings or shorts. Made from our iconic second skin fabric you know and love, this glamorous, yet super supportive bodysuit features a g-string back and built-in sports bra for added support. Our figure flatter bodysuit is so versatile taking you from the gym to life outside the weight room in comfort & style!",
+    "price": 54.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_15.webp",
+    "image": "bodysuit_15.webp"
+  }
+},
+{
+  "pk": 104,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Form Bodysuit Shorts",
+    "colour": "Violet",
+    "description": "Designed to have your back through the toughest of workouts, this confidence building one-piece features stylish skinny crossover straps on the reverse to ensure it stays put when your workout levels up. The deep V back accentuates your booty and shows off toned backs, while the built-in sports bra brings you both freedom and support. And with super-sensuous stretchy fabric taking comfort and fit to another level to flatter your form, this is the ultimate partner for gym performance, not to mention a pleasure to wear.",
+    "price": 98.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_9.webp",
+    "image": "bodysuit_9.webp"
+  }
+},
+{
+  "pk": 105,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Sculpted Bodysuit Shorts",
+    "colour": "Black",
+    "description": "Achieve the perfect silhouette in this super attractive all-in-one piece. Our V back design is so flattering with great support. Versatile, comfortable and so body conturing sexy. Get the perfect layered look with tees and hoodies that add warmth and style. ",
+    "price": 98.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_10.webp",
+    "image": "bodysuit_10.webp"
+  }
+},
+{
+  "pk": 106,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "The Perfect Bodysuit",
+    "colour": "Green Tea",
+    "description": "Our perfect-fit bodysuit is designed to slip comfortably & seamlessly (literally) under your leggings or shorts. Made from our iconic second skin fabric you know and love, this glamorous, yet super supportive bodysuit features a g-string back and built-in sports bra for added support. Our figure flatter bodysuit is so versatile taking you from the gym to life outside the weight room in comfort & style!",
+    "price": 54.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_11.webp",
+    "image": "bodysuit_11.webp"
+  }
+},
+{
+  "pk": 107,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Form Bodysuit",
+    "colour": "Charcoal",
+    "description": "Designed to have your back through the toughest of workouts, this confidence-building one-piece features stylish skinny crossover straps on the reverse to ensure it stays put when your workout levels up. The deep V back accentuates your booty and shows off toned backs, while the built-in sports bra brings you both freedom and support. And with super-sensuous stretchy fabric taking comfort and fit to another level to flatter your form, this is the ultimate partner for gym performance, not to mention a pleasure to wear.",
+    "price": 92.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_12.webp",
+    "image": "bodysuit_12.webp"
+  }
+},
+{
+  "pk": 108,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Sculpted Bodysuit Shorts",
+    "colour": "Hibiscus Camo",
+    "description": "Your favorite all-in-one piece bodysuit shorts. Our V back design is made to flatter, sculpt and support. With a built in sports bra this piece is versatile, comfortable and so body conturing sexy. A must have for your next gym workout.",
+    "price": 98.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_13.webp",
+    "image": "bodysuit_13.webp"
+  }
+},
+{
+  "pk": 109,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Form Bodysuit Shorts",
+    "colour": "Sunset Red",
+    "description": "Designed to have your back through the toughest of workouts, this confidence building one-piece features stylish skinny crossover straps on the reverse to ensure it stays put when your workout levels up. The deep V back accentuates your booty and shows off toned backs, while the built-in sports bra brings you both freedom and support. And with super-sensuous stretchy fabric taking comfort and fit to another level to flatter your form, this is the ultimate partner for gym performance, not to mention a pleasure to wear.",
+    "price": 98.00,
+    "category": 13,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodsysuit_14.webp",
+    "image": "bodysuit_14.webp"
+  }
 }
 ]
 
