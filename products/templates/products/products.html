@@ -23,9 +23,12 @@
             </a>
             {% endfor %}
             <a class="category-badge text-decoration-none"
-                href="{% url 'products' %}?category=sports_bra,leggings,shorts,shorts_women,bodysuits,tops_t-shirts,sports_nutrition,fitness_equipment{{ c.name }}">
-                <span class="p-2 mt-2 badge badge-white badge-border logo-font rounded-5">All
-                    Products</span>
+                href="{% url 'products' %}?category=sports_bra,leggings,shorts_women,bodysuits,sports_nutrition,fitness_equipment{{ c.name }}">
+                <span class="p-2 mt-2 badge badge-white badge-border logo-font rounded-5">Women</span>
+            </a>
+            <a class="category-badge text-decoration-none"
+                href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_nutrition,fitness_equipment{{ c.name }}">
+                <span class="p-2 mt-2 badge badge-white badge-border logo-font rounded-5">Men</span>
             </a>
             <!-- <hr> -->
         </div>
