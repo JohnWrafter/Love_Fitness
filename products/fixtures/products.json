@@ -1545,6 +1545,246 @@
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodsysuit_14.webp",
     "image": "bodysuit_14.webp"
   }
+},
+{
+  "pk": 110,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Toggle Shorts",
+    "colour": "Ombre Tahiti Blue",
+    "description": "The thigh’s the limit with our figure-hugging Toggle Shorts. The straight waistband flatters while the side ruching with toggles bring a standout color contrast and playful vibe. They’re the perfect companion for taking the heat in the gym, and for putting a stylish and sporty spin on your weekend look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_1.webp",
+    "image": "shorts_1.webp"
+  }
+},
+{
+  "pk": 111,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Contour Toggle Shorts",
+    "colour": "Iris",
+    "description": "The thigh’s the limit with our figure-hugging Toggle Shorts. The wrap-around waistband flatters to give an hour-glass effect, while the side ruching and neon toggles bring a standout color contrast and playful vibe. They’re the perfect companion for taking the heat in the gym, and for putting a stylish and sporty spin on your weekend look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_2.webp",
+    "image": "shorts_2.webp"
+  }
+},
+{
+  "pk": 112,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Contour Toggle Shorts",
+    "colour": "Coral",
+    "description": "The thigh’s the limit with our figure-hugging Toggle Shorts. The wrap-around waistband flatters to give an hour-glass effect, while the side ruching and toggles bring a standout color contrast and playful vibe. They’re the perfect companion for taking the heat in the gym, and for putting a stylish and sporty spin on your weekend look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_3.webp",
+    "image": "shorts_3.webp"
+  }
+},
+{
+  "pk": 113,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Toggle Shorts",
+    "colour": "Ombre Fiji Coral",
+    "description": "The thigh’s the limit with our figure-hugging Toggle Shorts. The straight waistband flatters while the side ruching with toggles bring a standout color contrast and playful vibe. They’re the perfect companion for taking the heat in the gym, and for putting a stylish and sporty spin on your weekend look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_4.webp",
+    "image": "shorts_4.webp"
+  }
+},
+{
+  "pk": 114,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Toggle Shorts",
+    "colour": "Black",
+    "description": "The thigh’s the limit with our figure-hugging Toggle Shorts. The straight waistband flatters while the side ruching with toggles bring a standout playful vibe. They’re the perfect companion for taking the heat in the gym, and for putting a stylish and sporty spin on your weekend look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_5.webp",
+    "image": "shorts_5.webp"
+  }
+},
+{
+  "pk": 115,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Contour Toggle Shorts",
+    "colour": "Mint",
+    "description": "The thigh’s the limit with our figure-hugging Toggle Shorts. The wrap-around waistband flatters to give an hour-glass effect, while the side ruching and neon toggles bring a standout color contrast and playful vibe. They’re the perfect companion for taking the heat in the gym, and for putting a stylish and sporty spin on your weekend look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_6.webp",
+    "image": "shorts_6.webp"
+  }
+},
+{
+  "pk": 116,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Toggle Shorts",
+    "colour": "Charcoal Leopard",
+    "description": "The thigh’s the limit with our figure-hugging Toggle Shorts. The straight waistband flatters while the side ruching with toggles bring a standout color contrast and playful vibe. They’re the perfect companion for taking the heat in the gym, and for putting a stylish and sporty spin on your weekend look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_7.webp",
+    "image": "shorts_7.webp"
+  }
+},
+{
+  "pk": 117,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Toggle Shorts",
+    "colour": "Brown Leopard",
+    "description": "The thigh’s the limit with our figure-hugging Toggle Shorts. The straight waistband flatters while the side ruching with toggles bring a standout color contrast and playful vibe. They’re the perfect companion for taking the heat in the gym, and for putting a stylish and sporty spin on your weekend look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_8.webp",
+    "image": "shorts_8.webp"
+  }
+},
+{
+  "pk": 118,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Tiny Waist Shorts",
+    "colour": "Sunkissed",
+    "description": "Featuring a perfect v-cut waistband to enhance your waistline, no front seam, flat lock stitching, softest butter fabric, and scrunch back to make your booty pop! These shorts are sporty, ultra figure flattering, and perfect for your next gym sesh!",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_9.webp",
+    "image": "shorts_9.webp"
+  }
+},
+{
+  "pk": 119,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Tiny Waist Shorts",
+    "colour": "Black",
+    "description": "Featuring a perfect v-cut waistband to enhance your waistline, no front seam, flat lock stitching, softest butter fabric, and scrunch back to make your booty pop! These shorts are sporty, ultra figure flattering, and perfect for your next gym sesh!",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_10.webp",
+    "image": "shorts_10.webp"
+  }
+},
+{
+  "pk": 120,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Tiny Waist Shorts",
+    "colour": "Fuscia",
+    "description": "Featuring a perfect v-cut waistband to enhance your waistline, no front seam, flat lock stitching, softest butter fabric, and scrunch back to make your booty pop! These shorts are sporty, ultra figure flattering, and perfect for your next gym sesh!",
+    "price": 98.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_11.webp",
+    "image": "shorts_11.webp"
+  }
+},
+{
+  "pk": 121,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Curves Shorts",
+    "colour": "Black",
+    "description": "Make your booty pop with the Curves Pocket Shorts! Featuring a booty scrunch back, easy side pockets for any size cell phone, high-waisted, with the softest fabric. Ultra-flattering and up for anything, these must-have shorts are perfect for the gym and beyond.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_12.webp",
+    "image": "shorts_12.webp"
+  }
+},
+{
+  "pk": 122,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Refined Shorts",
+    "colour": "Honeycomb",
+    "description": "These fiercely feminine 4” inseam shorts are on a mission to boost your confidence to the next level with their bold street style vibes and comfortable wear. The seam-free sides and flat-lock stitching give a sumptuous second-skin feel, while the tapered waistband and rounded cut on the reverse means a more accentuated booty and a sleek, form-fitting silhouette. Buddy these up with our bodysuit to create the ultimate fitness power couple, or team them effortlessly with your Bombshell favorites for a strong and beautiful mix-and-match look.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_13.webp",
+    "image": "shorts_13.webp"
+  }
+},
+{
+  "pk": 123,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Fit Camo Shorts",
+    "colour": "Green Black",
+    "description": "Meet your new go-to active Camo Shorts you will want to wear daily! Constructed with our high performance fabric that hides flaws & sweat! The booty flattering shape has the perfect scrunch & heart seam that sculpts & shapes all body types. These shorts are sure to level up your gym game! Power up & make it a match with the Fit Camo Sports Bra.",
+    "price": 67.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_14.webp",
+    "image": "shorts_14.webp"
+  }
+},
+{
+  "pk": 124,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Straight Up Shorts",
+    "colour": "Rose Blush",
+    "description": "Extreme comfort meets sporty couture in these high-waisted, figure-hugging shorts. The scrunch butt technology lifts, tones, and accentuates your curves while keeping you feeling cool—and looking hot—from gym bench to beach.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_15.webp",
+    "image": "shorts_15.webp"
+  }
+},
+{
+  "pk": 125,
+  "model": "products.product",
+  "fields": {
+    "gender": "Women",
+    "name": "Straight Up Shorts",
+    "colour": "Baby Blue",
+    "description": "Extreme comfort meets sporty couture in these high-waisted, figure-hugging shorts. The scrunch butt technology lifts, tones, and accentuates your curves while keeping you feeling cool—and looking hot—from gym bench to beach.",
+    "price": 64.00,
+    "category": 14,
+    "rating": 4.0,
+    "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_16.webp",
+    "image": "shorts_16.webp"
+  }
 }
 ]
 
