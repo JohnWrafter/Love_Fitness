@@ -108,7 +108,7 @@
    "model": "products.category",
    "fields": {
       "name": "shorts_women",
-      "friendly_name": "Shorts"
+      "friendly_name": "Shorts Women"
    }
 }
 ]
