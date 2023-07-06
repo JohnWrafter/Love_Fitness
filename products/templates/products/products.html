@@ -89,15 +89,16 @@
                         </a>
                         {% endif %}
                         <div class="card-body">
-                            <h5 class="product-name fs-6">{{ product.name }}</h5>
-                            <h6 class="text-black product-price fs-6">£{{ product.price }}</h6>
-                            {% if product.category %}
-                            <p class="small mt-1 mb-0">
-                                <a class="text-black" href="{% url 'products' %}?category={{ product.category.name }}">
-                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                </a>
-                            </p>
-                            {% endif %}
+                            <h5 class="product-name fs-6 fw-bold">{{ product.name }}</h5>
+                            <h6 class="text-black product-price fs-6">{{ product.colour }}</h6>
+                            <h6 class="text-black product-price fs-6 fw-bold">£{{ product.price }}</h6>
+                            {% comment %} {% if product.category %} {% endcomment %}
+                            {% comment %} <p class="small mt-1 mb-0"> {% endcomment %}
+                                {% comment %} <a class="text-black" href="{% url 'products' %}?category={{ product.category.name }}"> {% endcomment %}
+                                    {% comment %} <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }} {% endcomment %}
+                                {% comment %} </a> {% endcomment %}
+                            {% comment %} </p> {% endcomment %}
+                            {% comment %} {% endif %} {% endcomment %}
                         </div>
                         <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">

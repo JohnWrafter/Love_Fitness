@@ -20,6 +20,7 @@
         type="text/css" />
     <!-- User style css -->
     <link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/css/base.css" type="text/css">
+    <link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/css/carousel.css" type="text/css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://lovefitness.s3.eu-west-2.amazonaws.com/media/favicon/favicon.ico" />
 
@@ -91,27 +92,27 @@
                 {% include 'includes/mobile-top-header.html' %} {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <!-- Information Banner -->
-        {% comment %} <div class="container-fluid mb-2 px-0"> {% endcomment %}
-            {% comment %} <div class="row text-center delivery-info"> {% endcomment %}
-                {% comment %} <div class="col"> {% endcomment %}
-                    {% comment %} <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"> {% endcomment %}
-                        {% comment %} <div class="carousel-inner"> {% endcomment %}
-                            {% comment %} <div class="carousel-item active"> {% endcomment %}
-                                {% comment %} <p class="carousel-text">Free Delivery</p> {% endcomment %}
+        {% comment %} <!-- Information Banner --> {% endcomment %}
+        <div class="container-fluid mb-2 px-0">
+            <div class="row text-center delivery-info">
+                <div class="col">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <p class="carousel-text">Free Delivery Over £50</p>
 
-                            {% comment %} </div> {% endcomment %}
-                            {% comment %} <div class="carousel-item"> {% endcomment %}
-                                {% comment %} <p class="carousel-text">Free Delivery 1</p> {% endcomment %}
+                            </div>
+                            <div class="carousel-item">
+                                <p class="carousel-text">Made in the UK</p>
 
-                            {% comment %} </div> {% endcomment %}
-                            {% comment %} <div class="carousel-item"> {% endcomment %}
-                                {% comment %} <p class="carousel-text">Free Delivery 2</p> {% endcomment %}
-                            {% comment %} </div> {% endcomment %}
-                        {% comment %} </div> {% endcomment %}
-                    {% comment %} </div> {% endcomment %}
-                {% comment %} </div> {% endcomment %}
-            {% comment %} </div> {% endcomment %}
+                            </div>
+                            <div class="carousel-item">
+                                <p class="carousel-text">Flexible ways to pay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </header>
     <!-- Toast messages -->
     {% if messages %}
