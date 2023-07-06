@@ -64,6 +64,10 @@ body {
 }
 
 /* Catergory badge */
+.margin-top {
+    margin-top: 7rem;
+}
+
 a.category-badge>span.badge:hover {
     background: #e7e9eb !important;
     color: #fff !important;
