@@ -37,3 +37,34 @@
     border-color: #f8f9fa;
     font-family: 'Exo';
 }
+
+.col-12 {
+    padding: 0;
+}
+
+
+    .col {
+        float: left;
+        width: 33.3%;
+      }
+      
+      /* Clear floats */
+      .row:after {
+        content: "";
+        display: table;
+         clear: both;
+      }
+      
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 900px) {
+        .col {
+          width: 50%;
+        }
+      }
+      
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .col {
+          width: 100%;
+        }
+      }

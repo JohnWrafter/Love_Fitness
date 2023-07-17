@@ -12,55 +12,109 @@
 
 {% block content %}
 <section>
-    <div class="container-fluid px-0">
-        
-                            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/exercise_test.jpg" class="img-fluid" alt="man and woman exercising">
-                            
-                            <div class="cta-text">
-                                <div class="overlay"></div>
-                                <h5>Welcome to Love Fitness</h5>
-                                <h2>Smash all your fitness goals</h2>
-                                <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-                            </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/exercise_test.jpg" class="img-fluid" alt="man and woman exercising" />
+          <div class="cta-text">
+            <div class="overlay"></div>
+            <h5>Welcome to Love Fitness</h5>
+            <h2>Smash all your fitness goals</h2>
+            <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
+          </div>
+        </div>
+        <h2 class="text-center secondary-heading text-uppercase mt-2">Shop By Category</h2>
+                <div class="col">
+          <div class="box">
+            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/nutrition.jpg" alt="" width="605" />
+            <div class="some-text">
+              <h5>Welcome to Love Fitness</h5>
+              <h2 class="secondary-heading">Nutrition</h2>
+              <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
             </div>
-</section>
-<div class="container-fluid mb-5">
-    <div class="row text-center">
-        <h1>SHOP BY CATEGORY</h1>
-        <div class="col">
-            <div class="box">
-               
-                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/nutrition.jpg" alt="" width="610" />
-                <div class="some-text">
-                    <h5>Welcome to Love Fitness</h5>
-                    <h2 class="secondary-heading">Nutrition</h2>
-                    <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-                </div>
-            </div>
+          </div>
         </div>
         <div class="col">
-            <div class="box">
-                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" alt=""
-                    width="610" />
-                <div class="some-text">
-                    <h5>Welcome to Love Fitness</h5>
-                    <h2 class="secondary-heading">Equipment</h2>
-                    <a href="/products/?category=fitness_equipment" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-                </div>
+          <div class="box">
+            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" alt="" width="605" />
+            <div class="some-text">
+              <h5>Welcome to Love Fitness</h5>
+              <h2 class="secondary-heading">Equipment</h2>
+              <a href="/products/?category=fitness_equipment" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
             </div>
+          </div>
+        </div>
+           <div class="col">
+          <div class="box">
+            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/apparel.jpg" alt="" width="605" />
+            <div class="some-text">
+              <h5>Welcome to Love Fitness</h5>
+              <h2 class="secondary-heading">Apparel</h2>
+              <a href="/products/?category=sports_bra,leggings,bodysuits,shorts_women,shorts,tops_t-shirts" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
+            </div>
+          </div>
         </div>
         <div class="col">
-            <div class="box">
-                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/apparel.jpg" alt="" width="610" />
-                <div class="some-text">
-                    <h5>Welcome to Love Fitness</h5>
-                    <h2 class="secondary-heading">Apparel</h2>
-                    <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-                </div>
+          <div class="box">
+            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/apparel.jpg" alt="" width="605" />
+            <div class="some-text">
+              <h5>Welcome to Love Fitness</h5>
+              <h2 class="secondary-heading">Apparel</h2>
+              <a href="/products/?category=sports_bra,leggings,bodysuits,shorts_women,shorts,tops_t-shirts" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
             </div>
+          </div>
+        </div>
         </div>
     </div>
-</div>
+  </section>
+   
+                                                                             
+    
+
+{% comment %} <div class="container-fluid mb-5"> {% endcomment %}
+    {% comment %} <h1 class="text-center">SHOP BY CATEGORY</h1> {% endcomment %}
+    {% comment %} <div class="row"> {% endcomment %}
+{% comment %}         {% endcomment %}
+      {% comment %} <div class="col-6 col-md-4"> {% endcomment %}
+{% comment %}         {% endcomment %}
+        {% comment %} <div class="box"> {% endcomment %}
+            {% comment %} <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/nutrition.jpg" alt="" {% endcomment %}
+                {% comment %} width="" /> {% endcomment %}
+            {% comment %} <div class="some-text"> {% endcomment %}
+                {% comment %} <h5>Welcome to Love Fitness</h5> {% endcomment %}
+                {% comment %} <h2 class="secondary-heading">Nutrition</h2> {% endcomment %}
+                {% comment %} <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a> {% endcomment %}
+            {% comment %} </div> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
+      {% comment %} </div> {% endcomment %}
+      {% comment %} <div class="col-6 col-md-4"> {% endcomment %}
+        {% comment %} <div class="box"> {% endcomment %}
+            {% comment %} <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" alt="" {% endcomment %}
+                {% comment %} width="" /> {% endcomment %}
+            {% comment %} <div class="some-text"> {% endcomment %}
+                {% comment %} <h5>Welcome to Love Fitness</h5> {% endcomment %}
+                {% comment %} <h2 class="secondary-heading">Equipment</h2> {% endcomment %}
+                {% comment %} <a href="/products/?category=fitness_equipment" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a> {% endcomment %}
+            {% comment %} </div> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
+      {% comment %} </div> {% endcomment %}
+      {% comment %} <div class="col-6 col-md-4"> {% endcomment %}
+        {% comment %} <div class="box"> {% endcomment %}
+            {% comment %} <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/apparel.jpg" alt="" {% endcomment %}
+                {% comment %} width="" /> {% endcomment %}
+            {% comment %} <div class="some-text"> {% endcomment %}
+                {% comment %} <h5>Welcome to Love Fitness</h5> {% endcomment %}
+                {% comment %} <h2 class="secondary-heading">Apparel</h2> {% endcomment %}
+                {% comment %} <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a> {% endcomment %}
+            {% comment %} </div> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
+      {% comment %} </div> {% endcomment %}
+    {% comment %} </div> {% endcomment %}
+{% comment %} </div> {% endcomment %}
+
+
+
+    
 
 {% endblock %}
 Postload Javascript
