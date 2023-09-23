@@ -12,6 +12,10 @@
     padding-bottom: 1rem;
 }
 
+.category-section {
+  background: #f9f2f0;
+}
+
 /* .container-fluid { */
     /* position: relative; */
     /* text-align: center; */
@@ -46,6 +50,7 @@
     .col {
         float: left;
         width: 33.3%;
+        
       }
       
       /* Clear floats */
