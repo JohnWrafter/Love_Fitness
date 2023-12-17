@@ -137,92 +137,9 @@
     {% block content %}
     {% endblock %}
     <!-- Footer info banner -->
-    <!-- <div class="container-fluid bg-wild-blue-yonder pt-4 pb-4 text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <i class="fas fa-cart-plus text-black" aria-hidden="true"></i>
-                    <span class="fw-bold text-black text-center">Free worldwide delivery over
-                        £{{ free_delivery_threshold }}</span>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    
     <!-- Footer -->
-    <div class="col-12">
-    <footer class="bg-black mt-5">
-        <div class="container pt-5">
-            <div class="row">
-                <!-- Logo and social media links -->
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <a href="{% url 'home' %}" aria-label="nav-link main-logo-link" class="nav-link main-logo-link">
-                        <h2 class="logo-font text-white my-0"><strong>Love</strong> Fitness</h2>
-                        <p class="text-white mt-4">Welcome to Love Fitness.</p>
-                    </a>
-                    <ul class="list-inline mt-4">
-                        <li class="list-inline-item">
-                            <a href="https://www.twitter.com" target="_blank" rel="noreferrer"
-                                aria-label="Go to our twitter page (opens in new tab)" title="twitter"><i
-                                    class="dark-green fa fa-twitter"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com" target="_blank" rel="noreferrer"
-                                aria-label="Go to our facebook page (opens in new tab)" title="facebook"><i
-                                    class="dark-green fa fa-facebook"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.instagram.com" target="_blank" rel="noreferrer"
-                                aria-label="Go to our instagram page (opens in new tab)" title="instagram"><i
-                                    class="dark-green fa fa-instagram"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.pinterest.com" target="_blank" rel="noreferrer"
-                                aria-label="Go to our pinterest page (opens in new tab)" title="pinterest"><i
-                                    class="dark-green fa fa-pinterest"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.snapchat.com" target="_blank" rel="noreferrer"
-                                aria-label="Go to our snapchat page (opens in new tab)" title="snapchat"><i
-                                    class="dark-green fa fa-snapchat"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h2 class="logo-font text-uppercase font-weight-bold mb-4 text-white">Products</h2>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="{% url 'products' %}?category=leggings"
-                                class="text-white">Leggings</a></li>
-                        <li class="mb-2"><a href="{% url 'products' %}?category=sports_nutrition"
-                                class="text-white">Nutrition</a></li>
-                        <li class="mb-2"><a href="{% url 'products' %}?category=shorts" class="text-white">Shorts</a>
-                        </li>
-                        <li class="mb-2"><a href="{% url 'products' %}?category=sports_bra" class="text-white">Sports
-                                Bra</a></li>
-                        <li class="mb-2"><a href="{% url 'products' %}?category=tops_t-shirts" class="text-white">Tops
-                                &amp; T-Shirts</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6 col-xs-6 mb-4 mb-lg-0">
-                    <h2 class="logo-font text-uppercase font-weight-bold mb-4 text-white">My Account</h2>
-                    <ul class="list-unstyled mb-0">
-                        {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-                        <li class="mb-2"><a href="" class="text-white">Product Management</a></li>
-                        {% endif %}
-                        <li class="mb-2"><a href="" class="text-white">My Profile</a></li>
-                        {% else %}
-                        <li class="mb-2"><a href="{% url 'account_login' %}" class="text-white">Login</a></li>
-                        <li class="mb-2"><a href="{% url 'account_signup' %}" class="text-white">Sign Up</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-                <!-- Copyright information -->
-                <div class="bg-black py-1">
-                    <div class="container text-center text-white">
-                        <p class="mb-0 py-2 footer-font">© 2021 All rights reserved.</p>
-                    </div>
-                </div>
-    </footer>
-</div>
+    
     {% block postloadjs %}
     <script src="https://ci-ms4-lovefitness.s3.eu-west-2.amazonaws.com/static/js/toast.js" type="text/css"></script>
     {% endblock %}

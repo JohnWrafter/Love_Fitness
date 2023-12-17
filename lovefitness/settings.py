@@ -31,7 +31,7 @@ SECRET_KEY = '6IQ>Ovd&_1b<DRL6ctOne0yjED'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT'
 
-ALLOWED_HOSTS = ['8000-johnwrafter-lovefitness-36heizmjpuy.ws-eu100.gitpod.io', '127.0.01']
+ALLOWED_HOSTS = ['localhost','8000-johnwrafter-lovefitness-36heizmjpuy.ws-eu100.gitpod.io', '127.0.01']
 
 # Application definition
 
@@ -54,12 +54,8 @@ INSTALLED_APPS = [
     'blog',
     'wishlist',
     'contact',
-    'corsheaders',
-    'crispy_bootstrap4',
-    'psycopg',
-    'psycopg2',
-    'dotenv',
-
+    
+    
     # Other
     'crispy_forms',
     'storages',
@@ -74,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'lovefitness.urls'
@@ -97,7 +94,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
                 'wishlist.contexts.wishlist_contents',
-                'dynamic_breadcrumbs.context_processors.breadcrumbs'
+                
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -135,10 +132,18 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-j0hn1975-cims4lovefitne-3p7e7n3q6r6.ws-eu9
 
 
 # Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-# load database from the DATABASE_URL environment variable
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# https://docs.djangoproject.com/en/2.1/ref/settings/databases
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -255,6 +260,6 @@ else:
 
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
-del DATABASES['default']['OPTIONS']['sslmode']
+# # Activate Django-Heroku.
+# django_heroku.settings(locals())
+# del DATABASES['default']['OPTIONS']['sslmode']
