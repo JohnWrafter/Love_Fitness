@@ -2,108 +2,104 @@
 {% load static %}
 {% block extra_title %}Home{% endblock %}
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container header-container">
+  <div class="row">
+      <div class="col"></div>
+  </div>
+</div>
 {% endblock %}
 {% block content %}
 <link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/home/css/home.css"
     type="text/css" />
 
-
-
     <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-12">
-          <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/exercise_test.jpg" class="img-fluid" alt="man and woman exercising" />
-          <div class="cta-text">
-            <div class="overlay"></div>
-          <h5>Welcome to Love Fitness</h5>
-          <h2>Smash all your fitness goals</h2>
-          <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disaabled="true">
-            shop now
-          </a>
-          </div>
+        <div class="row text-center">
+            <div class="col">
+                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/exercise_test.jpg" class="img-fluid" alt="man and woman exercising" />
+                <div class="cta-text">
+                    <div class="overlay"></div>
+                    <h5>Welcome to Love Fitness</h5>
+                    <h2>Smash all your fitness goals</h2>
+                    <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disaabled="true">
+                        shop now
+                    </a>
+                </div>
+            </div>
+            <section class="category">
+                <h2 class="text-center text-uppercase mt-1">Shop</h2>
+                <div class="row mb-5">
+                    <!-- <div class="col-sm col-md">
+                        <div class="card" style="">
+                            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/nutrition.jpg" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title">Nutrition</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-sm">
+                        <div class="card" style="">
+                            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title">Equipment</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card" style="">
+                            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/apparel.jpg" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title">Apparel</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card" style="">
+                            <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title">Equipment New 1</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-train">
+                <div class="container-fluid">
+                    <h2>Train</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class=""><i class="fa-solid fa-person-running fa-2xl"></i></div>
+                            <span>Running</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quis sequi ipsa. Suscipit, provident repudiandae. At a omnis enim, illum ex consequatur et, quas temporibus ad, maxime perspiciatis nobis id!</p>
+                        </div>
+                        <div class="col-sm">
+                            <div class=""><i class="fa-solid fa-dumbbell fa-2xl"></i></div>
+                            <span>Weights</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nisi non, voluptas repellendus cupiditate similique odio sed, iusto minus quia fugit hic id perferendis quo laboriosam soluta, ullam eius magnam.</p>
+                        </div>
+                        <div class="col-sm">
+                            <div class=""><i class="fa-solid fa-heart fa-2xl"></i></div>
+                            <span>Cardio</span>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia pariatur minus velit culpa sed voluptatibus consequuntur deleniti ipsa maiores vero? Incidunt nam labore dolorem! Ullam similique veritatis explicabo corporis reiciendis.</p>
+                        </div>
+                        <div class="col-sm">
+                            <div class=""><i class="fa-solid fa-blender fa-2xl"></i></div>
+                            <span>Running</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolor nam nostrum natus facilis dolores fugiat, sequi reiciendis dolore cupiditate rem sint possimus unde explicabo cumque quidem fugit molestiae accusantium.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <section class="category-section">
-        <h2 class="text-center text-uppercase mt-1">Shop</h2>
-        <div class="row mb-5">
-          <div class="col">
-            <div class="card" style="">
-              <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/nutrition.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Nutrition</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="card" style="">
-              <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Equipment</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="card" style="">
-              <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/apparel.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Apparel</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-              </div>
-            </div>
-          </div>  
-          <div class="col-sm">
-            <div class="card" style="">
-              <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Equipment New 1</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/products/?category=nutrition" class="btn btn-light rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-              </div>
-            </div>
-          </div>        
-        </div>
-        </section>
-        <section>
-               <h2>Train</h2>
-               <li class="list-inline-item">
-                               <div class=""><i class="fa-solid fa-person-running fa-2xl"></i></div>
-                               <span>Running</span>
-                              </li>
-               <li class="list-inline-item">
-                              <div class=""><i class="fa-solid fa-dumbbell fa-2xl"></i></div>
-                              <span>Weights</span>
-                              </li>
-               <li class="list-inline-item">
-                               <div class=""><i class="fa-solid fa-heart fa-2xl"></i></div>
-              <span>Cardio</span>
-                              </li>
-               <li class="list-inline-item">
-                               <div class=""><i class="fa-solid fa-person-running fa-2xl"></i></div>
-              <span>More Running</span>
-                              </li>
-                          
-               
-        </section>
-     </row>
     </div>
-  </div>
-
-
-  
-  
- 
-     
-         
-     
+    
 
     {% endblock %}
     
