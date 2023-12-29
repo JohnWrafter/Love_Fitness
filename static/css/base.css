@@ -28,6 +28,8 @@ body {
     font-family: 'Ropa Sans', sans-serif;
 }
 
+.card-title,
+.card-text,
 .product-name,
 .product-price,
 .product-description {
