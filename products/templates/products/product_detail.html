@@ -46,8 +46,11 @@
                 {% comment %} </div> {% endcomment %}
                 <!-- Main Products Container -->
                 <div class="col-12 col-md-6 col-lg-4 ms-5 mt-5">
-                        <h4 class="product-name">{{ product.name }}</h4>
-                        <p class="lead product-price">£{{ product.price }}</p>
+                        <h4 class="product-name fs-5 fw-bold">{{ product.name }}</h4>
+                        {% if product.colour %}
+                        <div class="span mb-3 text-muted product-name fs-6 fw-bold">{{ product.colour }}</div>
+                        {% endif %}
+                        <p class="product-price fs-5 fw-bold">£{{ product.price }}</p>
                         <!-- Products catergory -->
                         {% if product.category %}
                         <p class="small mt-1 mb-0 mt-5">
