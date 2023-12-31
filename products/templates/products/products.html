@@ -64,9 +64,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-sm-6 order-md-first">
-                    <p class="text-muted mt-3 text-md-left secondary-heading">
+                    <p class="text-muted mt-3 text-md-left fs-6 fw-bold secondary-heading">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="large"><a href="{% url 'products' %}">Products Home</a> | </span>
+                        <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
