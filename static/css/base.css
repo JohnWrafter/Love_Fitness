@@ -9,6 +9,10 @@ body {
     background: #f8f8f8;
 }
 
+.fa-lg {
+    color:grey;
+}
+
 .navbar {
     background-color: white;
 }
