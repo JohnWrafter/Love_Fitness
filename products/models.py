@@ -14,6 +14,7 @@ class Category(models.Model):
     """
     A class for the category model
     """
+    id = models.AutoField(primary_key=True)
 
     class Meta:
         """
