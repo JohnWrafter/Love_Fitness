@@ -31,7 +31,7 @@ SECRET_KEY = '6IQ>Ovd&_1b<DRL6ctOne0yjED'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT'
 
-ALLOWED_HOSTS = ['localhost','8000-johnwrafter-lovefitness-36heizmjpuy.ws-eu100.gitpod.io', '127.0.01']
+ALLOWED_HOSTS = ['localhost','lovefitness-248ac75f099c.herokuapp.com', '127.0.01']
 
 # Application definition
 
