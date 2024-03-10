@@ -59,6 +59,8 @@ class Product(models.Model):
     """
     A class for the product model
     """
+    id = models.AutoField(primary_key=True)
+    
     category = models.ForeignKey(
         'Category',
         null=True,
