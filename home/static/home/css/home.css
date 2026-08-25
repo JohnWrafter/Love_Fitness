@@ -244,6 +244,105 @@
   transition: filter .35s ease, transform .35s ease;
 }
 
+.product-card {
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  transition: box-shadow .35s ease, transform .35s ease;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  box-shadow: 0 1.25rem 2.5rem rgba(23, 33, 38, .14);
+  transform: translateY(-.35rem);
+}
+
+.product-card__media {
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.product-card__media > a {
+  display: block;
+}
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.35rem 1.4rem;
+}
+
+.product-card__meta {
+  color: #687277;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem;
+  justify-content: space-between;
+  letter-spacing: .06em;
+  min-height: 1rem;
+  text-transform: uppercase;
+}
+
+.product-card__meta i {
+  color: #d87900;
+}
+
+.product-card__title {
+  color: #172126;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin: .75rem 0 .2rem;
+}
+
+.product-card__colour {
+  color: #687277;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .85rem;
+  margin: 0;
+}
+
+.product-card__footer {
+  align-items: center;
+  border-top: 1px solid #e5e8e8;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+}
+
+.product-card__price {
+  color: #172126;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.1rem;
+}
+
+.product-card__link {
+  color: #172126;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .72rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.product-card__link i {
+  color: #d87900;
+  margin-left: .3rem;
+  transition: transform .25s ease;
+}
+
+.product-card__link:hover i,
+.product-card__link:focus-visible i {
+  transform: translateX(.25rem);
+}
+
+.product-card__admin {
+  background: transparent;
+  padding: 0 1.35rem .8rem;
+}
+
 .sports-bra-image {
   background: linear-gradient(145deg, #f3f0eb 0%, #dfe8e1 100%);
   filter: saturate(1.12) contrast(1.04);

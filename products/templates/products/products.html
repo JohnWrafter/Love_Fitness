@@ -10,8 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/home/css/home.css"
-    type="text/css" />
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" type="text/css" />
 
 <!-- Main Products Container -->
 <div class="container-fluid">
@@ -80,7 +79,8 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100">
+                    <article class="card product-card h-100">
+                        <div class="product-card__media">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid product-card-image{% if product.category.name == 'sports_bra' %} sports-bra-image{% endif %}" src="{{ product.image.url }}" alt="{{ product.name }} in {{ product.colour }}">
@@ -91,24 +91,22 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body">
-                            <h5 class="product-name fs-6 fw-bold">{{ product.name }}</h5>
-                            <h6 class="text-black product-price fs-6">{{ product.colour }}</h6>
-                            <h6 class="text-black product-price fs-6 fw-bold">£{{ product.price }}</h6>
-                            {% comment %} {% if product.category %} {% endcomment %}
-                            {% comment %} <p class="small mt-1 mb-0"> {% endcomment %}
-                                {% comment %} <a class="text-black" href="{% url 'products' %}?category={{ product.category.name }}"> {% endcomment %}
-                                    {% comment %} <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }} {% endcomment %}
-                                {% comment %} </a> {% endcomment %}
-                            {% comment %} </p> {% endcomment %}
-                            {% comment %} {% endif %} {% endcomment %}
                         </div>
-                        <div class="card-footer pt-0 border-0 text-left">
+                        <div class="card-body product-card__body">
+                            <div class="product-card__meta">
+                                {% if product.category %}<span>{{ product.category.friendly_name }}</span>{% endif %}
+                                {% if product.rating %}<span><i class="fas fa-star" aria-hidden="true"></i> {{ product.rating }}</span>{% endif %}
+                            </div>
+                            <h2 class="product-card__title">{{ product.name }}</h2>
+                            <p class="product-card__colour">{{ product.colour }}</p>
+                            <div class="product-card__footer">
+                                <strong class="product-card__price">£{{ product.price }}</strong>
+                                <a class="product-card__link" href="{% url 'product_detail' product.id %}">View details <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-footer product-card__admin">
                             <div class="row">
                                 <div class="col">
-
-
-
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_product' product.id %}">Edit</a> |
@@ -118,7 +116,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
                 <div class="col-12 d-sm-none mb-5">
