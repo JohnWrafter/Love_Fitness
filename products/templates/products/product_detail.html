@@ -21,7 +21,7 @@
             <div class="image-container">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid product-detail-image" src="{{ product.image.url }}" alt="{{ product.name }}" />
+                    <img class="card-img-top img-fluid product-detail-image{% if product.category.name == 'sports_bra' %} sports-bra-image{% endif %}" src="{{ product.image.url }}" alt="{{ product.name }} in {{ product.colour }}" />
                 </a>
                 {% else %}
                 <a href="{{ product.image.url }}">

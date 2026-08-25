@@ -241,12 +241,30 @@
   background: #f1f1f1;
   object-fit: contain;
   padding: .5rem;
+  transition: filter .35s ease, transform .35s ease;
+}
+
+.sports-bra-image {
+  background: linear-gradient(145deg, #f3f0eb 0%, #dfe8e1 100%);
+  filter: saturate(1.12) contrast(1.04);
+  padding: .85rem;
+}
+
+a:hover .sports-bra-image,
+a:focus-visible .sports-bra-image {
+  filter: saturate(1.2) contrast(1.08);
+  transform: scale(1.025);
 }
 
 .product-detail-image {
   background: #f1f1f1;
   max-height: 44rem;
   object-fit: contain;
+}
+
+.product-detail-image.sports-bra-image {
+  background: linear-gradient(145deg, #f3f0eb 0%, #dfe8e1 100%);
+  padding: clamp(.75rem, 2vw, 1.5rem);
 }
 
 @media (max-width: 576px) {
