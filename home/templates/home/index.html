@@ -2,7 +2,7 @@
 {% load static %}
 {% block extra_title %}Home{% endblock %}
 {% block extra_css %}
-<link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/home/css/home.css" type="text/css" />
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" type="text/css" />
 {% endblock %}
 {% block page_header %}
 <div class="container header-container">
@@ -12,110 +12,63 @@
 </div>
 {% endblock %}
 {% block content %}
+    <main>
     <section class="home-hero" aria-labelledby="hero-title">
-        <img class="home-hero__image" src="{{ MEDIA_URL }}exercise_2000x.jpg"
-            alt="Two people training on treadmills in a bright gym">
+        <img class="home-hero__image" src="{{ MEDIA_URL }}carousel_image_3_med.jpg"
+            alt="Two athletes holding a plank during a gym workout">
         <div class="home-hero__overlay"></div>
         <div class="home-hero__content">
-            <p class="home-hero__eyebrow">Move with purpose</p>
-            <h1 id="hero-title">Smash your fitness goals</h1>
-            <p class="home-hero__text">Performance gear, equipment and nutrition for every stage of your training.</p>
+            <p class="home-hero__eyebrow">Made for movement</p>
+            <h1 id="hero-title">Train hard.<br>Live stronger.</h1>
+            <p class="home-hero__text">Gear, guidance and everyday fuel for the work you put in.</p>
             <a href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment"
-                class="btn btn-warning rounded-3 text-uppercase">Shop the collection</a>
+                class="btn btn-warning rounded-3 text-uppercase">Explore the collection</a>
         </div>
     </section>
 
-    <!-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/exercise_test.jpg" class="img-fluid" alt="man and woman exercising" />
-                <div class="cta-text">
-                    <div class="overlay"></div>
-                    <h5>Welcome to Love Fitness</h5>
-                    <h2>Smash all your fitness goals</h2>
-                    <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disaabled="true">
-                        shop now
-                    </a>
-                </div>
-            </div> -->
-            <section class="category">
-                <div class="aos-animate" data-aos="flip-left">
-                    <h2 class="text-center text-uppercase mt-1">Shop</h2>
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                    <div class="card" style="">
-                                        <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/nutrition.jpg" class="card-img-top" alt="..." />
-                                        <div class="card-body">
-                                            <h5 class="card-title fs-6 fw-bold">Nutrition</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            <a href="/products/?category=nutrition" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                        <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card" style="">
-                                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/equipment.jpg" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <h5 class="card-title fs-6 fw-bold">Equipment</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="/products/?category=fitness_equipment" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card" style="">
-                                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/apparel.jpg" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <h5 class="card-title fs-6 fw-bold">Apparel</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,shorts_women,bodysuits" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card" style="">
-                                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/nutrition.jpg" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <h5 class="card-title fs-6 fw-bold">Nutrition</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="/products/?category=nutrition" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disabled="true">shop now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="section-train">
-                <div class="container-fluid">
-                    <h2 class="text-center">Train</h2>
-                    <div class="row text-center">
-                        <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class=""><i class="fa-solid fa-person-running fa-2xl"></i></div>
-                            <span>Running</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quis sequi ipsa. Suscipit, provident repudiandae. At a omnis enim, illum ex consequatur et, quas temporibus ad, maxime perspiciatis nobis id!</p>
-                        </div>
-                        <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class=""><i class="fa-solid fa-dumbbell fa-2xl"></i></div>
-                            <span>Weights</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nisi non, voluptas repellendus cupiditate similique odio sed, iusto minus quia fugit hic id perferendis quo laboriosam soluta, ullam eius magnam.</p>
-                        </div>
-                        <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class=""><i class="fa-solid fa-heart fa-2xl"></i></div>
-                            <span>Cardio</span>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia pariatur minus velit culpa sed voluptatibus consequuntur deleniti ipsa maiores vero? Incidunt nam labore dolorem! Ullam similique veritatis explicabo corporis reiciendis.</p>
-                        </div>
-                        <div class="col-sm col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class=""><i class="fa-solid fa-blender fa-2xl"></i></div>
-                            <span>Running</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolor nam nostrum natus facilis dolores fugiat, sequi reiciendis dolore cupiditate rem sint possimus unde explicabo cumque quidem fugit molestiae accusantium.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <section class="shop-section" aria-labelledby="shop-title">
+        <div class="section-heading">
+            <p class="section-eyebrow">Find your rhythm</p>
+            <h2 id="shop-title">Shop by focus</h2>
+            <p>Everything you need to make showing up feel good.</p>
         </div>
-    </div>
-    
+        <div class="shop-grid">
+            <a class="shop-card" href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_bra,leggings,shorts_women,bodysuits">
+                <img src="{{ MEDIA_URL }}apparel.jpg" alt="Athletic apparel collection">
+                <span class="shop-card__shade"></span>
+                <span class="shop-card__content"><strong>Apparel</strong><small>Move freely</small></span>
+            </a>
+            <a class="shop-card" href="{% url 'products' %}?category=fitness_equipment">
+                <img src="{{ MEDIA_URL }}equipment.jpg" alt="Fitness equipment for home training">
+                <span class="shop-card__shade"></span>
+                <span class="shop-card__content"><strong>Equipment</strong><small>Build strength</small></span>
+            </a>
+            <a class="shop-card" href="{% url 'products' %}?category=nutrition">
+                <img src="{{ MEDIA_URL }}nutrition.jpg" alt="Nutrition products and supplements">
+                <span class="shop-card__shade"></span>
+                <span class="shop-card__content"><strong>Nutrition</strong><small>Fuel the work</small></span>
+            </a>
+            <a class="shop-card" href="{% url 'products' %}?category=exercise">
+                <img src="{{ MEDIA_URL }}exercise.jpg" alt="Exercise plan and training guidance">
+                <span class="shop-card__shade"></span>
+                <span class="shop-card__content"><strong>Plans</strong><small>Stay consistent</small></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="train-section" aria-labelledby="train-title">
+        <div class="train-section__intro">
+            <p class="section-eyebrow">Make it yours</p>
+            <h2 id="train-title">Train your way.</h2>
+            <p>Small steps become serious progress. Choose a focus, find your pace and keep moving forward.</p>
+        </div>
+        <div class="train-grid">
+            <div class="train-item"><i class="fa-solid fa-person-running" aria-hidden="true"></i><h3>Run</h3><p>Lightweight essentials for miles in the making.</p></div>
+            <div class="train-item"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i><h3>Lift</h3><p>Build confidence with equipment that works hard.</p></div>
+            <div class="train-item"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i><h3>Recover</h3><p>Support your body between every session.</p></div>
+        </div>
+    </section>
+    </main>
 
     {% endblock %}
     

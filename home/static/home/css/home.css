@@ -1,6 +1,6 @@
 
 .home-hero {
-  min-height: clamp(32rem, 76vh, 52rem);
+  min-height: clamp(34rem, 78vh, 54rem);
   margin-top: 5.5rem;
   position: relative;
   overflow: hidden;
@@ -29,7 +29,7 @@
 
 .home-hero__content {
   color: #fff;
-  max-width: 38rem;
+  max-width: 42rem;
   padding: clamp(7rem, 18vw, 13rem) clamp(1.5rem, 8vw, 8rem);
 }
 
@@ -48,6 +48,153 @@
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1;
   margin-bottom: 1.25rem;
+}
+
+.shop-section {
+  background: #f8f8f8;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 5vw, 5rem);
+}
+
+.section-heading {
+  margin: 0 auto 2.5rem;
+  max-width: 42rem;
+  text-align: center;
+}
+
+.section-heading h2,
+.train-section h2 {
+  font-family: 'Exo', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  margin-bottom: .75rem;
+}
+
+.section-heading > p:last-child,
+.train-section__intro > p:last-child {
+  color: #596368;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.section-eyebrow {
+  color: #d87900;
+  font-family: 'Exo 2', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  margin-bottom: .75rem;
+  text-transform: uppercase;
+}
+
+.shop-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  max-width: 92rem;
+}
+
+.shop-card {
+  min-height: 24rem;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+.shop-card img,
+.shop-card__shade {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.shop-card img {
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.shop-card__shade {
+  background: linear-gradient(0deg, rgba(9, 16, 19, .8), rgba(9, 16, 19, 0) 65%);
+}
+
+.shop-card__content {
+  bottom: 1.5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  left: 1.5rem;
+  position: absolute;
+}
+
+.shop-card__content strong {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.5rem;
+}
+
+.shop-card__content small {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: .25rem;
+}
+
+.shop-card:hover img,
+.shop-card:focus-visible img {
+  transform: scale(1.06);
+}
+
+.train-section {
+  background: #172126;
+  color: #fff;
+  display: grid;
+  gap: clamp(2rem, 8vw, 8rem);
+  grid-template-columns: minmax(15rem, .8fr) 1.2fr;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 8vw, 8rem);
+}
+
+.train-section__intro {
+  align-self: center;
+  max-width: 28rem;
+}
+
+.train-section__intro .section-eyebrow {
+  color: #ffc107;
+}
+
+.train-section h2 {
+  margin-top: 0;
+}
+
+.train-section__intro > p:last-child {
+  color: #d7e0e2;
+}
+
+.train-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.train-item {
+  border-left: 1px solid rgba(255, 255, 255, .25);
+  padding: .5rem 1.5rem;
+}
+
+.train-item i {
+  color: #ffc107;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.train-item h3 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.35rem;
+}
+
+.train-item p {
+  color: #d7e0e2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  line-height: 1.6;
 }
 
 .home-hero__text {
@@ -69,6 +216,19 @@
   margin-top: 6.5rem!important;
 }
 
+.product-card-image {
+  aspect-ratio: 3 / 4;
+  background: #f1f1f1;
+  object-fit: contain;
+  padding: .5rem;
+}
+
+.product-detail-image {
+  background: #f1f1f1;
+  max-height: 44rem;
+  object-fit: contain;
+}
+
 @media (max-width: 576px) {
   .home-hero {
     min-height: 36rem;
@@ -81,6 +241,37 @@
 
   .home-hero__overlay {
     background: linear-gradient(0deg, rgba(11, 20, 24, .88) 0%, rgba(11, 20, 24, .35) 100%);
+  }
+}
+
+@media (max-width: 900px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .train-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .shop-grid,
+  .train-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-card {
+    min-height: 18rem;
+  }
+
+  .train-item {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    padding: 1.5rem 0 0;
+  }
+
+  .train-item i {
+    margin-bottom: 1rem;
   }
 }
 
