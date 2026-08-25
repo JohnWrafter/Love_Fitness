@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_title %}Home{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/home/css/home.css" type="text/css" />
+{% endblock %}
 {% block page_header %}
 <div class="container header-container">
   <div class="row">
@@ -9,23 +12,18 @@
 </div>
 {% endblock %}
 {% block content %}
-<link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/home/css/home.css"
-    type="text/css" />
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm col-sm-6 col-md-6 mt-5">
-                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/exercise_test.jpg" class="img-fluid" alt="man and woman exercising" />
-            </div>
-            <div class="col-sm col-sm-6 col-md-6 mt-5 col align-self-center">
-                <h5>Welcome to Love Fitness</h5>
-                    <h2>Smash all your fitness goals</h2>
-                    <a href="/products/?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment" class="btn btn-dark rounded-3 text-uppercase" tabindex="-1" role="button" aria-disaabled="true">
-                        shop now
-                    </a>
-            </div>
+    <section class="home-hero" aria-labelledby="hero-title">
+        <img class="home-hero__image" src="{{ MEDIA_URL }}exercise_2000x.jpg"
+            alt="Two people training on treadmills in a bright gym">
+        <div class="home-hero__overlay"></div>
+        <div class="home-hero__content">
+            <p class="home-hero__eyebrow">Move with purpose</p>
+            <h1 id="hero-title">Smash your fitness goals</h1>
+            <p class="home-hero__text">Performance gear, equipment and nutrition for every stage of your training.</p>
+            <a href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment"
+                class="btn btn-warning rounded-3 text-uppercase">Shop the collection</a>
         </div>
-    </div>
+    </section>
 
     <!-- <div class="container-fluid">
         <div class="row">
