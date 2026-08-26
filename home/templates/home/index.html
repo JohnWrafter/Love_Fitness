@@ -22,11 +22,20 @@
         <div class="home-hero__overlay"></div>
         <div class="home-hero__content">
             <p class="home-hero__eyebrow"><span></span>Made for movement</p>
-            <h1 id="hero-title">Train hard.<br>Live stronger.</h1>
-            <p class="home-hero__text">Gear, guidance and everyday fuel for the work you put in.</p>
-            <a href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment"
-                class="btn btn-warning rounded-3 text-uppercase">Explore the collection</a>
+            <h1 id="hero-title">Your strongest<br><em>self starts here.</em></h1>
+            <p class="home-hero__text">Gear, guidance and everyday fuel for the work you put in. Build a routine that feels like yours.</p>
+            <div class="home-hero__actions">
+                <a href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_bra,leggings,bodysuits,shorts_women,nutrition,fitness_equipment"
+                    class="btn btn-warning rounded-3 text-uppercase">Start moving <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="{% url 'blog' %}" class="home-hero__link">Read the fitness hub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
         </div>
+    </section>
+
+    <section class="promise-strip" aria-label="Why shop Love Fitness">
+        <div class="promise-strip__item"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span><strong>Move with purpose</strong><small>Tools for every kind of training</small></span></div>
+        <div class="promise-strip__item"><i class="fa-solid fa-earth-europe" aria-hidden="true"></i><span><strong>Made in the UK</strong><small>Thoughtful choices, closer to home</small></span></div>
+        <div class="promise-strip__item"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i><span><strong>Free delivery over £50</strong><small>More fuel for your next session</small></span></div>
     </section>
 
     <section class="shop-section" aria-labelledby="shop-title">

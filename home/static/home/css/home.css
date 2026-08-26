@@ -61,8 +61,89 @@
 .home-hero h1 {
   font-family: 'Exo', sans-serif;
   font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: 0;
   line-height: 1;
   margin-bottom: 1.25rem;
+}
+
+.home-hero h1 em {
+  color: #ffc107;
+  font-style: normal;
+}
+
+.home-hero__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.home-hero__link {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.home-hero__link i {
+  color: #ffc107;
+  margin-left: .35rem;
+}
+
+.home-hero__link:hover,
+.home-hero__link:focus-visible {
+  color: #ffc107;
+}
+
+.promise-strip {
+  align-items: stretch;
+  background: #ffc107;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.25rem clamp(1rem, 8vw, 8rem);
+}
+
+.promise-strip__item {
+  align-items: center;
+  border-right: 1px solid rgba(23, 33, 38, .2);
+  display: flex;
+  gap: .9rem;
+  padding: .35rem clamp(.75rem, 2vw, 2rem);
+}
+
+.promise-strip__item:first-child {
+  padding-left: 0;
+}
+
+.promise-strip__item:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.promise-strip__item > i {
+  color: #172126;
+  font-size: 1.45rem;
+}
+
+.promise-strip__item span {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.promise-strip strong {
+  color: #172126;
+  font-family: 'Exo 2', sans-serif;
+  font-size: .95rem;
+}
+
+.promise-strip small {
+  color: rgba(23, 33, 38, .72);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .72rem;
 }
 
 .shop-section {
@@ -227,6 +308,16 @@
   padding: .85rem 1.35rem;
 }
 
+.home-hero .btn i {
+  margin-left: .45rem;
+  transition: transform .25s ease;
+}
+
+.home-hero .btn:hover i,
+.home-hero .btn:focus-visible i {
+  transform: translateX(.2rem);
+}
+
 @keyframes hero-breathe {
   from { transform: scale(1.04); }
   to { transform: scale(1); }
@@ -386,6 +477,11 @@ a:focus-visible .sports-bra-image {
 }
 
 @media (max-width: 900px) {
+  .promise-strip {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .shop-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -396,6 +492,32 @@ a:focus-visible .sports-bra-image {
 }
 
 @media (max-width: 576px) {
+  .home-hero__actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .promise-strip {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .promise-strip__item,
+  .promise-strip__item:first-child,
+  .promise-strip__item:last-child {
+    border-bottom: 1px solid rgba(23, 33, 38, .2);
+    border-right: 0;
+    padding: 0 0 1rem;
+  }
+
+  .promise-strip__item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .shop-grid,
   .train-grid {
     grid-template-columns: 1fr;
