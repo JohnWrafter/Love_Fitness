@@ -19,6 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
+        'stock_quantity',
         'rating',
         'image',
     )

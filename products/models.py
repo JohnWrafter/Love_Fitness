@@ -90,6 +90,10 @@ class Product(models.Model):
         max_digits=6,
         decimal_places=2
     )
+    stock_quantity = models.PositiveIntegerField(
+        verbose_name=('Stock quantity'),
+        default=0,
+    )
     rating = models.DecimalField(
         max_digits=6,
         decimal_places=2,
