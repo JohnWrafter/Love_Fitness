@@ -60,6 +60,12 @@ body {
     width: min(19rem, 42vw);
 }
 
+.lovefitness-logo {
+    display: block;
+    height: auto;
+    max-width: min(210px, 42vw);
+}
+
 /* Catergory badge */
 .margin-top {
     margin-top: 7rem;

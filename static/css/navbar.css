@@ -1,0 +1,140 @@
+:root {
+    --lf-ink: #172126;
+    --lf-muted: #596368;
+    --lf-yellow: #ffc107;
+}
+
+.lovefitness-navbar {
+    align-items: center;
+    background: #fff;
+    min-height: 4.5rem;
+    padding: .5rem clamp(1rem, 4vw, 4rem);
+    position: relative;
+}
+
+.lovefitness-navbar__links,
+.lovefitness-navbar__actions {
+    align-items: center;
+    display: flex;
+    gap: .35rem;
+}
+
+.lovefitness-navbar__links .btn,
+.lovefitness-navbar__actions .nav-link {
+    color: var(--lf-muted);
+    font-family: 'Exo 2', sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.lovefitness-navbar__links .btn:hover,
+.lovefitness-navbar__links .btn:focus-visible,
+.lovefitness-navbar__actions .nav-link:hover,
+.lovefitness-navbar__actions .nav-link:focus-visible {
+    color: var(--lf-ink);
+}
+
+.lovefitness-navbar__links .dropdown-toggle::after {
+    color: var(--lf-yellow);
+    margin-left: .35rem;
+}
+
+.lovefitness-navbar__brand-wrap {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.lovefitness-navbar__brand,
+.lovefitness-navbar__mobile-brand {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.lovefitness-navbar__brand .logo-image {
+    line-height: 0;
+}
+
+.lovefitness-navbar__brand .lovefitness-logo {
+    max-width: 210px;
+    width: min(210px, 22vw);
+}
+
+.lovefitness-navbar__actions {
+    margin-left: auto;
+}
+
+.lovefitness-navbar__actions .nav-link {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    min-width: 2.5rem;
+    padding: .35rem .5rem;
+}
+
+.lovefitness-navbar__actions .nav-link i {
+    color: var(--lf-ink);
+    font-size: 1rem;
+}
+
+.lovefitness-navbar__actions .nav-link p {
+    color: var(--lf-muted);
+    font-size: .62rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.lovefitness-navbar__mobile-brand .lovefitness-logo {
+    max-width: 210px;
+    width: min(210px, 48vw);
+}
+
+@media (max-width: 991px) {
+    .lovefitness-navbar {
+        min-height: 3.5rem;
+        padding: .25rem 1rem;
+    }
+
+    .lovefitness-navbar__brand-wrap {
+        display: none;
+    }
+
+    .lovefitness-navbar__links,
+    .lovefitness-navbar__actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .lovefitness-navbar__actions {
+        margin-left: 0;
+    }
+
+    .lovefitness-navbar__links .btn {
+        padding-left: 0;
+    }
+
+    .lovefitness-navbar__mobile-brand {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .lovefitness-navbar__mobile-brand .lovefitness-logo {
+        width: min(170px, 43vw);
+    }
+}
+
+@media (max-width: 360px) {
+    .lovefitness-navbar__mobile-brand .lovefitness-logo {
+        width: 145px;
+    }
+}

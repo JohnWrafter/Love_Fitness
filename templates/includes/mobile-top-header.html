@@ -1,3 +1,5 @@
+{% load static %}
+
 <div class="list-inline-item">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-bs-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -75,7 +77,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-lg-none">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Offcanvas navbar</a>
+      <a class="navbar-brand lovefitness-navbar__mobile-brand" href="/" aria-label="Love Fitness home">
+        <img class="lovefitness-logo" src="{% static 'images/lovefitness-logo.svg' %}" alt="Love Fitness" width="210" height="48" />
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
