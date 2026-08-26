@@ -53,6 +53,13 @@ body {
     width: fit-content;
 }
 
+.logo-image img {
+    display: block;
+    height: auto;
+    max-height: 50px;
+    width: min(19rem, 42vw);
+}
+
 /* Catergory badge */
 .margin-top {
     margin-top: 7rem;

@@ -1,3 +1,5 @@
+{% load static %}
+
 <!-- Main nav container -->
 <div class="collapse navbar-collapse" id="main-nav">
     <nav class="nav">
@@ -53,7 +55,7 @@
     <ul class="navbar-nav mx-auto">
         <a class="navbar-brand" href="/">
             <div class="logo-image">
-                <img src="https://lovefitness.s3.eu-west-2.amazonaws.com/media/logo.png" height="50" />
+                <img src="{% static 'images/lovefitness-logo.svg' %}" alt="Love Fitness home" />
             </div>
         </a>
     </ul>
