@@ -1,140 +1,330 @@
 :root {
     --lf-ink: #172126;
     --lf-muted: #596368;
-    --lf-yellow: #ffc107;
+    --lf-accent: #d7f238;
+    --lf-paper: #ffffff;
+    --lf-line: #e5e9e5;
+}
+
+.site-header {
+    background: var(--lf-paper);
+    box-shadow: 0 2px 18px rgba(23, 33, 38, .08);
 }
 
 .lovefitness-navbar {
-    align-items: center;
-    background: #fff;
-    min-height: 4.5rem;
-    padding: .5rem clamp(1rem, 4vw, 4rem);
-    position: relative;
+    background: var(--lf-paper);
+    border-bottom: 1px solid var(--lf-line);
 }
 
-.lovefitness-navbar__links,
+.lovefitness-navbar__inner {
+    align-items: center;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 5.5rem;
+    padding: .8rem clamp(1rem, 4vw, 4rem);
+}
+
+.lovefitness-navbar__brand {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    line-height: 0;
+}
+
+.lovefitness-logo {
+    display: block;
+    height: auto;
+    max-width: 210px;
+    width: min(210px, 20vw);
+}
+
+.lovefitness-navbar__desktop-links,
 .lovefitness-navbar__actions {
     align-items: center;
     display: flex;
-    gap: .35rem;
 }
 
-.lovefitness-navbar__links .btn,
-.lovefitness-navbar__actions .nav-link {
-    color: var(--lf-muted);
+.lovefitness-navbar__desktop-links {
+    gap: .15rem;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.lovefitness-navbar__link,
+.lovefitness-navbar__action {
+    background: transparent;
+    border: 0;
+    color: var(--lf-ink);
     font-family: 'Exo 2', sans-serif;
     font-size: .78rem;
     font-weight: 600;
-    letter-spacing: .05em;
+    letter-spacing: .06em;
+    padding: .65rem .7rem;
+    text-decoration: none;
     text-transform: uppercase;
+    transition: color .2s ease, background-color .2s ease;
 }
 
-.lovefitness-navbar__links .btn:hover,
-.lovefitness-navbar__links .btn:focus-visible,
-.lovefitness-navbar__actions .nav-link:hover,
-.lovefitness-navbar__actions .nav-link:focus-visible {
+.lovefitness-navbar__link:hover,
+.lovefitness-navbar__link:focus-visible,
+.lovefitness-navbar__action:hover,
+.lovefitness-navbar__action:focus-visible {
+    background: #f4f6f1;
+    color: #4d6500;
+}
+
+.lovefitness-navbar__link:focus-visible,
+.lovefitness-navbar__action:focus-visible,
+.lovefitness-navbar__menu-button:focus-visible,
+.lovefitness-navbar__search button:focus-visible,
+.lovefitness-menu button:focus-visible {
+    outline: 3px solid var(--lf-accent);
+    outline-offset: 2px;
+}
+
+.lovefitness-navbar__link.dropdown-toggle::after {
+    color: #91aa00;
+    margin-left: .3rem;
+}
+
+.lovefitness-navbar__search {
+    align-items: center;
+    border-bottom: 1px solid var(--lf-ink);
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    margin-right: 18rem;
+    max-width: 9rem;
+}
+
+.lovefitness-navbar__search input,
+.lovefitness-menu__search input {
+    background: transparent;
+    border: 0;
     color: var(--lf-ink);
+    font-family: 'Montserrat', sans-serif;
+    min-width: 0;
+    outline: 0;
+    padding: .5rem .2rem;
+    width: 100%;
 }
 
-.lovefitness-navbar__links .dropdown-toggle::after {
-    color: var(--lf-yellow);
-    margin-left: .35rem;
+.lovefitness-navbar__search button,
+.lovefitness-menu__search button {
+    background: transparent;
+    border: 0;
+    color: var(--lf-ink);
+    padding: .5rem;
 }
 
-.lovefitness-navbar__brand-wrap {
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.lovefitness-navbar__brand,
-.lovefitness-navbar__mobile-brand {
-    display: block;
+.lovefitness-navbar__actions {
+    gap: .15rem;
+    grid-column: 3;
+    grid-row: 1;
+    justify-content: flex-end;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.lovefitness-navbar__brand .logo-image {
-    line-height: 0;
-}
-
-.lovefitness-navbar__brand .lovefitness-logo {
-    max-width: 210px;
-    width: min(210px, 22vw);
-}
-
-.lovefitness-navbar__actions {
-    margin-left: auto;
-}
-
-.lovefitness-navbar__actions .nav-link {
+.lovefitness-navbar__action {
     align-items: center;
     display: flex;
-    flex-direction: column;
-    gap: .15rem;
-    min-width: 2.5rem;
-    padding: .35rem .5rem;
+    gap: .4rem;
+    white-space: nowrap;
 }
 
-.lovefitness-navbar__actions .nav-link i {
+.lovefitness-navbar__action i {
+    color: #719000;
+    font-size: .95rem;
+}
+
+.lovefitness-navbar .dropdown-menu {
+    border: 1px solid var(--lf-line);
+    border-radius: 0;
+    box-shadow: 0 12px 24px rgba(23, 33, 38, .12);
+    margin-top: .5rem;
+    padding: .4rem;
+}
+
+.lovefitness-navbar .dropdown-item {
     color: var(--lf-ink);
-    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    padding: .6rem .75rem;
 }
 
-.lovefitness-navbar__actions .nav-link p {
-    color: var(--lf-muted);
-    font-size: .62rem;
-    line-height: 1;
+.lovefitness-navbar .dropdown-item:hover,
+.lovefitness-navbar .dropdown-item:focus {
+    background: var(--lf-accent);
+    color: var(--lf-ink);
+}
+
+.lovefitness-navbar__menu-button {
+    background: transparent;
+    border: 1px solid var(--lf-ink);
+    color: var(--lf-ink);
+    display: none;
+    font-size: 1.1rem;
+    height: 2.7rem;
+    width: 2.7rem;
+}
+
+.lovefitness-menu {
+    background: var(--lf-paper);
+    max-width: 22rem;
+}
+
+.lovefitness-menu .offcanvas-header {
+    border-bottom: 1px solid var(--lf-line);
+    padding: 1.5rem;
+}
+
+.lovefitness-menu .offcanvas-title {
+    color: var(--lf-ink);
+    font-family: 'Exo', sans-serif;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+.lovefitness-menu .offcanvas-body {
+    padding: 1.5rem;
+}
+
+.lovefitness-menu__search {
+    border: 1px solid var(--lf-ink);
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.lovefitness-menu__links,
+.lovefitness-menu__secondary {
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
-.lovefitness-navbar__mobile-brand .lovefitness-logo {
-    max-width: 210px;
-    width: min(210px, 48vw);
+.lovefitness-menu__links a,
+.lovefitness-menu__secondary a {
+    color: var(--lf-ink);
+    display: block;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    letter-spacing: .05em;
+    padding: .8rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.lovefitness-menu__links a:hover,
+.lovefitness-menu__links a:focus-visible,
+.lovefitness-menu__secondary a:hover,
+.lovefitness-menu__secondary a:focus-visible {
+    color: #4d6500;
+}
+
+.lovefitness-menu__secondary {
+    border-top: 1px solid var(--lf-line);
+    margin-top: 1rem;
+    padding-top: .7rem;
+}
+
+.lovefitness-menu__secondary a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    text-transform: none;
+}
+
+.lovefitness-menu__secondary i {
+    color: #719000;
+    margin-right: .5rem;
+    width: 1rem;
+}
+
+@media (max-width: 1199px) {
+    .lovefitness-navbar__link,
+    .lovefitness-navbar__action {
+        font-size: .7rem;
+        padding-left: .45rem;
+        padding-right: .45rem;
+    }
+
+    .lovefitness-navbar__search {
+        margin-right: 14rem;
+        max-width: 7rem;
+    }
 }
 
 @media (max-width: 991px) {
-    .lovefitness-navbar {
-        min-height: 3.5rem;
-        padding: .25rem 1rem;
+    .lovefitness-navbar__inner {
+        grid-template-columns: 2.7rem 1fr 2.7rem;
+        min-height: 4.5rem;
+        padding: .65rem 1rem;
     }
 
-    .lovefitness-navbar__brand-wrap {
+    .lovefitness-navbar__menu-button {
+        display: block;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .lovefitness-navbar__brand {
+        grid-column: 2;
+    }
+
+    .lovefitness-navbar__brand .lovefitness-logo {
+        width: min(175px, 43vw);
+    }
+
+    .lovefitness-navbar__desktop-links,
+    .lovefitness-navbar__search {
         display: none;
     }
 
-    .lovefitness-navbar__links,
     .lovefitness-navbar__actions {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0;
+        grid-column: 3;
+        justify-content: flex-end;
     }
 
-    .lovefitness-navbar__actions {
-        margin-left: 0;
+    .lovefitness-navbar__actions > li:not(:last-child) {
+        display: none;
     }
 
-    .lovefitness-navbar__links .btn {
-        padding-left: 0;
+    .lovefitness-navbar__action {
+        font-size: 0;
+        padding: .55rem .2rem;
     }
 
-    .lovefitness-navbar__mobile-brand {
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
+    .lovefitness-navbar__action i {
+        font-size: 1rem;
     }
 
-    .lovefitness-navbar__mobile-brand .lovefitness-logo {
-        width: min(170px, 43vw);
+    .lovefitness-navbar__actions > li:last-child .lovefitness-navbar__action span {
+        background: var(--lf-accent);
+        border-radius: 50%;
+        color: var(--lf-ink);
+        font-family: 'Montserrat', sans-serif;
+        font-size: .62rem;
+        height: 1.1rem;
+        line-height: 1.1rem;
+        margin-left: -.75rem;
+        margin-top: -.9rem;
+        text-align: center;
+        width: 1.1rem;
     }
 }
 
 @media (max-width: 360px) {
-    .lovefitness-navbar__mobile-brand .lovefitness-logo {
+    .lovefitness-navbar__inner {
+        padding-left: .65rem;
+        padding-right: .65rem;
+    }
+
+    .lovefitness-navbar__brand .lovefitness-logo {
         width: 145px;
     }
 }

@@ -48,49 +48,10 @@
 
 <body>
     <!-- Main page header -->
-    <header class="container-fluid fixed-top">
-
-
-        <!-- Search -->
-
-        <!-- Account option when logged in or out-->
-        <div class="col-12 col-lg-5 my-auto py-1 py-lg-0">
-            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-
-                <!-- Favourites -->
-                <!-- <li class="list-inline-item">
-                    <a class="{% if favourites_count %} font-weight-bold{% else %}text-black{% endif %} nav-link"
-                        href="{% url 'view_product_favourites' %}">
-                        <div class="text-center">
-                            {% if favourites_count %}
-                            <div><i class="fas fa-heart"></i></div>
-                            <p class="my-0">
-                                Favourites ({{ favourites_count }})
-                            </p>
-                            {% else %}
-                            <div><i class="fas fa-heart"></i></div>
-                            <p class="my-0">
-                                Favourites (0)
-                            </p>
-                            {% endif %}
-                        </div>
-                    </a>
-                </li>
-            </ul> -->
-        </div>
-
-        <!-- Mobile and main nav area -->
-        <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light secondary-heading">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %} {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
+    <header class="site-header fixed-top">
+        {% include 'includes/main-nav.html' %}
         {% comment %} <!-- Information Banner --> {% endcomment %}
-        <div class="container-fluid px-0">
+       <!-- <div class="container-fluid px-0">
             <div class="row text-center delivery-info">
                 <div class="col">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -109,9 +70,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
     </header>
-    Toast messages -->
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}

@@ -1,115 +1,96 @@
 {% load static %}
 
-<!-- Main nav container -->
-<div class="collapse navbar-collapse lovefitness-navbar" id="main-nav">
-    <nav class="nav lovefitness-navbar__links" aria-label="Shop navigation">
-        <div class="dropdown">
-            <button class="btn dropdown-toggle logo-font" type="button" id="dropdownMenuButton"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Shop
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a href="/products/?category=shorts,tops_t-shirts" class="dropdown-item">Men</a></li>
-                <li><a href="/products/?category=sports_bra,leggings,bodysuits,shorts_women" class="dropdown-item">Women</a></li>
-                <li><a href="/products/?category=nutrition" class="dropdown-item">Nutrition</a></li>
-                <li><a href="/products/?category=fitness_equipment" class="dropdown-item">Fitness Equipment</a></li>
-            </ul>
-            
-        </div>
-        <div class="dropdown">
-            <button class="btn dropdown-toggle logo-font" type="button" id="dropdownMenuButton"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Plans
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a href="/products/?category=exercise" class="dropdown-item">Exercise</a></li>
-                <li><a href="/products/?category=nutrition" class="dropdown-item">Nutrition</a></li>
-            </ul>
-        </div>
-        <div class="dropdown">
-            <button class="btn dropdown-toggle logo-font" type="button" id="dropdownMenuButton"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                All Products
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a href="/products/?sort=price&amp;direction=asc" class="dropdown-item">By Price</a></li>
-                <li><a href="/products/?sort=rating&amp;direction=desc" class="dropdown-item">By Rating</a></li>
-                <li><a href="/products/" class="dropdown-item">By Product</a></li>
-                <li><a href="/products/?sort=category&amp;direction=asc" class="dropdown-item">By Category</a></li>
-            </ul>
-        </div>
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link text-grey logo-font" href="#" id="homeware-link" data-bs-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="true">
-                Plans
-            </a> -->
-        <!-- <div class="dropdown-menu border-0 show" aria-labelledby="homeware-link" data-bs-popper="none">
-                <a href="/products/?category=exercise" class="dropdown-item">Exercise</a>
-                <a href="/products/?category=nutrition" class="dropdown-item">Nutrition</a>
-            </div> -->
-        </li>
-        <!-- <li class="nav-item">
-            <a class="nav-link logo-font" href="#">Contact</a>
-        </li> -->
-    </nav>
-    <div class="navbar-nav lovefitness-navbar__brand-wrap">
-        <a class="navbar-brand lovefitness-navbar__brand" href="/" aria-label="Love Fitness home">
-            <div class="logo-image">
-                <img class="lovefitness-logo" src="{% static 'images/lovefitness-logo.svg' %}" alt="Love Fitness home" width="210" height="48" />
-            </div>
+<nav class="lovefitness-navbar" aria-label="Main navigation">
+    <div class="lovefitness-navbar__inner">
+        <button class="lovefitness-navbar__menu-button" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#lovefitness-menu" aria-controls="lovefitness-menu" aria-label="Open navigation menu">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <a class="lovefitness-navbar__brand" href="{% url 'home' %}" aria-label="Love Fitness home">
+            <img class="lovefitness-logo" src="{% static 'images/lovefitness-logo.svg' %}" alt="Love Fitness" width="210" height="48" />
         </a>
-    </div>
-    <nav class="nav lovefitness-navbar__actions" aria-label="Account navigation">
-        <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                <div class="text-center">
-                    <div><i class="fa fa-user fa-lg"></i></div>
-                    <!-- <p class="my-0">My Account</p> -->
-                </div>
-            </a>
-            <div class="dropdown-menu border-0">
-                {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                {% endif %}
-                <a href="{% url 'blog' %}" class="dropdown-item">Fitness Hub</a>
-                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                {% endif %}
+
+        <div class="lovefitness-navbar__desktop-links">
+            <a href="{% url 'home' %}" class="lovefitness-navbar__link">Home</a>
+            <div class="dropdown">
+                <button class="lovefitness-navbar__link dropdown-toggle" type="button" id="shop-menu"
+                    data-bs-toggle="dropdown" aria-expanded="false">Shop</button>
+                <ul class="dropdown-menu" aria-labelledby="shop-menu">
+                    <li><a href="{% url 'products' %}?category=shorts,tops_t-shirts" class="dropdown-item">Men</a></li>
+                    <li><a href="{% url 'products' %}?category=sports_bra,leggings,bodysuits,shorts_women" class="dropdown-item">Women</a></li>
+                    <li><a href="{% url 'products' %}?category=nutrition" class="dropdown-item">Nutrition</a></li>
+                    <li><a href="{% url 'products' %}?category=fitness_equipment" class="dropdown-item">Equipment</a></li>
+                </ul>
             </div>
-        </li>
-        <!-- favourites -->
-        <li class="list-inline-item">
-            <a class="{% if favourites_count %} font-weight-bold{% else %}text-black{% endif %} nav-link"
-                href="{% url 'view_product_favourites' %}">
-                <div class="text-center">
-                    {% if favourites_count %}
-                    <div><i class="fas fa-list"></i></div>
-                    <p class="my-0">
-                        ({{ favourites_items_count }})
-                    </p>
+            <div class="dropdown">
+                <button class="lovefitness-navbar__link dropdown-toggle" type="button" id="plans-menu"
+                    data-bs-toggle="dropdown" aria-expanded="false">Plans</button>
+                <ul class="dropdown-menu" aria-labelledby="plans-menu">
+                    <li><a href="{% url 'products' %}?category=exercise" class="dropdown-item">Exercise</a></li>
+                    <li><a href="{% url 'products' %}?category=nutrition" class="dropdown-item">Nutrition</a></li>
+                </ul>
+            </div>
+            <a href="{% url 'blog' %}" class="lovefitness-navbar__link">Fitness Hub</a>
+            <a href="{% url 'contact' %}" class="lovefitness-navbar__link">Contact</a>
+        </div>
+
+        <form class="lovefitness-navbar__search" method="GET" action="{% url 'products' %}">
+            <label class="visually-hidden" for="navbar-search">Search products</label>
+            <input id="navbar-search" type="search" name="q" placeholder="Search" aria-label="Search products">
+            <button type="submit" aria-label="Submit product search"><i class="fas fa-search" aria-hidden="true"></i></button>
+        </form>
+
+        <ul class="lovefitness-navbar__actions">
+            <li class="dropdown">
+                <button class="lovefitness-navbar__action" type="button" id="account-menu" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user" aria-hidden="true"></i><span>Account</span></button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="account-menu">
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}<li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>{% endif %}
+                    <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
+                    <li><a href="{% url 'blog' %}" class="dropdown-item">Fitness Hub</a></li>
+                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                     {% else %}
-                    <div><i class="fas fa-heart fa-lg"></i></div>
-                    <p class="my-0">
-                        {{ favourites_items_count }}
-                    </p>
+                    <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                    <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
                     {% endif %}
-                </div>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link"
-                href="{% url 'view_bag' %}">
-                <div class="text-center">
-                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                    <p class="my-0">
-                        {% if grand_total %} £{{ grand_total|floatformat:2 }} {% else %} {% endif %}
-                    </p>
-                </div>
-            </a>
-        </li>
-    </nav>
-</div>
+                </ul>
+            </li>
+            <li><a class="lovefitness-navbar__action" href="{% url 'view_product_favourites' %}">
+                <i class="fas fa-heart" aria-hidden="true"></i><span>Wishlist{% if favourites_count %} ({{ favourites_count }}){% endif %}</span>
+            </a></li>
+            <li><a class="lovefitness-navbar__action" href="{% url 'view_bag' %}">
+                <i class="fas fa-shopping-bag" aria-hidden="true"></i><span>Bag ({{ product_count }})</span>
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="offcanvas offcanvas-start lovefitness-menu" tabindex="-1" id="lovefitness-menu"
+        aria-labelledby="lovefitness-menu-title">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="lovefitness-menu-title">Explore Love Fitness</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation menu"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="lovefitness-menu__search" method="GET" action="{% url 'products' %}">
+                <label class="visually-hidden" for="mobile-navbar-search">Search products</label>
+                <input id="mobile-navbar-search" type="search" name="q" placeholder="Search products">
+                <button type="submit" aria-label="Submit product search"><i class="fas fa-search" aria-hidden="true"></i></button>
+            </form>
+            <ul class="lovefitness-menu__links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'products' %}">All Products</a></li>
+                <li><a href="{% url 'products' %}?category=shorts,tops_t-shirts">Men</a></li>
+                <li><a href="{% url 'products' %}?category=sports_bra,leggings,bodysuits,shorts_women">Women</a></li>
+                <li><a href="{% url 'products' %}?category=exercise">Exercise Plans</a></li>
+                <li><a href="{% url 'blog' %}">Fitness Hub</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <div class="lovefitness-menu__secondary">
+                <a href="{% url 'view_product_favourites' %}"><i class="fas fa-heart" aria-hidden="true"></i> Wishlist ({{ favourites_count|default:0 }})</a>
+                <a href="{% url 'view_bag' %}"><i class="fas fa-shopping-bag" aria-hidden="true"></i> Bag ({{ product_count }})</a>
+            </div>
+        </div>
+    </div>
+</nav>
