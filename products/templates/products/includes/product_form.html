@@ -1,0 +1,65 @@
+<form class="product-editor-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% if form.non_field_errors %}
+    <div class="product-editor-form__errors" role="alert">
+        {% for error in form.non_field_errors %}<p>{{ error }}</p>{% endfor %}
+    </div>
+    {% endif %}
+
+    <section class="product-editor-form__section" aria-labelledby="product-basics-title">
+        <div class="product-editor-form__section-heading">
+            <span>01</span>
+            <div>
+                <h2 id="product-basics-title">Product details</h2>
+                <p>The essentials shoppers need to know.</p>
+            </div>
+        </div>
+        <div class="product-editor-form__fields">
+            {% for field in form %}
+                {% if field.name != "image" %}
+                <div class="product-editor-field{% if field.name == 'description' %} product-editor-field--wide{% endif %}{% if field.field.widget.input_type == 'checkbox' %} product-editor-field--checkbox{% endif %}">
+                    {% if field.field.widget.input_type == "checkbox" %}
+                    <div class="product-editor-field__checkbox">
+                        {{ field }}
+                        <div>
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {% if field.help_text %}<small>{{ field.help_text }}</small>{% endif %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %}<span aria-hidden="true"> *</span>{% endif %}</label>
+                    {{ field }}
+                    {% if field.help_text %}<small class="product-editor-field__help">{{ field.help_text }}</small>{% endif %}
+                    {% endif %}
+                    {% for error in field.errors %}<small class="product-editor-field__error">{{ error }}</small>{% endfor %}
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="product-editor-form__section" aria-labelledby="product-image-title">
+        <div class="product-editor-form__section-heading">
+            <span>02</span>
+            <div>
+                <h2 id="product-image-title">Product image</h2>
+                <p>Choose a clear image of this product.</p>
+            </div>
+        </div>
+        <div class="product-editor-image">
+            <div class="product-editor-image__icon"><i class="fas fa-image" aria-hidden="true"></i></div>
+            <div class="product-editor-image__content">
+                <label for="new-image">Upload image</label>
+                <p>Use a JPG, PNG or WEBP image. You can leave this blank and add one later.</p>
+                {{ form.image }}
+                {% for error in form.image.errors %}<small class="product-editor-field__error">{{ error }}</small>{% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <div class="product-editor-form__actions">
+        <a class="product-editor-form__cancel" href="{% if product %}{% url 'product_detail' product.id %}{% else %}{% url 'products' %}{% endif %}">Cancel</a>
+        <button class="product-editor-form__submit" type="submit">{{ submit_label }} <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+    </div>
+</form>

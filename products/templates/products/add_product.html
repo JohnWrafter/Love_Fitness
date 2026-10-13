@@ -1,55 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/product-pages.css' %}" type="text/css" />
+{% endblock %}
+
 {% block page_header %}
-<!--Main product container -->
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
+<div class="container header-container" aria-hidden="true"></div>
 {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/home/css/home.css"
-    type="text/css" />
-    <link rel="stylesheet" href="https://lovefitness.s3.eu-west-2.amazonaws.com/static/home/css/base.css"
-    type="text/css" />
-<!-- Overlay white background -->
-<div class="overlay"></div>
-<!-- Main Add Products Container -->
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 mt-4 mx-auto">
-            <hr>
-            <h2 class="primary-heading mb-4 text-center text-uppercase">Product Management</h2>
-            <h5 class="secondary-heading text-center text-uppercase">Add a Product</h5>
-            <hr>
-        </div>
-    </div>
-    <!-- Add Products Form -->
-    <div class="row">
-        <div class="col-12 col-md-6 mx-auto">
-            <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in form %}
-                {% if field.name != 'image' %}
-                {{ field | as_crispy_field }}
-                {% else %}
-                {{ field }}
-                {% endif %}
-                {% endfor %}
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <a class="btn btn-danger rounded-0" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-success rounded-0" type="submit">Add Product</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-{% endblock %}
-<!-- Postload Javascipt -->
-{% block postloadjs %}
-{{ block.super }}
-<script src="{% static 'products/js/products.js' %}"></script>}
+<main class="product-editor">
+    <a class="product-editor__back" href="{% url 'products' %}">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to shop
+    </a>
+    <header class="product-editor__header">
+        <p class="product-page-eyebrow"><span></span> Store management</p>
+        <h1>Add a product</h1>
+        <p>Create a new piece for the Love Fitness collection.</p>
+    </header>
+
+    {% include "products/includes/product_form.html" with submit_label="Publish product" %}
+</main>
 {% endblock %}

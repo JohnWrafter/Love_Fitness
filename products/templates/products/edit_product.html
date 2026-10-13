@@ -1,49 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/product-pages.css' %}" type="text/css" />
+{% endblock %}
+
 {% block page_header %}
-<!-- Main header block -->
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
+<div class="container header-container" aria-hidden="true"></div>
 {% endblock %}
 
 {% block content %}
-<!-- Overlay white background -->
-<div class="overlay"></div>
-<!-- Main Edit Products Container -->
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 mt-4">
-            <hr />
-            <h2 class="logo-font mb-4 text-center text-black">Product Management</h2>
-            <h5 class="text-muted text-center">Edit a Product</h5>
-            <hr />
-        </div>
-    </div>
-    <!-- Edit Products Form -->
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in form %}
-                {% if field.name != 'image' %} {{ field | as_crispy_field }} 
-                {% else %} 
-                {{ field }} 
-                {% endif %} 
-                {% endfor %}
-                <div class="text-right">
-                    <a class="btn btn-danger rounded-1" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-success rounded-1" type="submit">Update Product</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-{% endblock %}
-<!-- Postload Javascript -->
-{% block postloadjs %}
-{{ block.super }}
-<script src="{% static 'products/js/products.js' %}"></script>
+<main class="product-editor">
+    <a class="product-editor__back" href="{% url 'product_detail' product.id %}">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to product
+    </a>
+    <header class="product-editor__header">
+        <p class="product-page-eyebrow"><span></span> Store management / Edit</p>
+        <h1>Update product</h1>
+        <p>Editing <strong>{{ product.name }}</strong>. Changes will appear in the shop immediately.</p>
+    </header>
+
+    {% include "products/includes/product_form.html" with submit_label="Save changes" %}
+</main>
 {% endblock %}
