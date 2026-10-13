@@ -1,0 +1,89 @@
+{% if level == 40 %}
+<section class="toast fade lf-toast lf-toast--error" data-toast data-bs-delay="6500" role="alert" aria-live="assertive" aria-atomic="true">
+    <span class="lf-toast__icon" aria-hidden="true"><i class="fas fa-circle-exclamation"></i></span>
+    <div class="lf-toast__content">
+        <div class="lf-toast__heading">
+            <strong>Something needs attention</strong>
+            <button class="lf-toast__close" type="button" data-bs-dismiss="toast" aria-label="Dismiss message">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p class="lf-toast__message">{{ message }}</p>
+    </div>
+</section>
+{% elif level == 30 %}
+<section class="toast fade lf-toast lf-toast--warning" data-toast data-bs-delay="6500" role="status" aria-live="polite" aria-atomic="true">
+    <span class="lf-toast__icon" aria-hidden="true"><i class="fas fa-triangle-exclamation"></i></span>
+    <div class="lf-toast__content">
+        <div class="lf-toast__heading">
+            <strong>A quick heads-up</strong>
+            <button class="lf-toast__close" type="button" data-bs-dismiss="toast" aria-label="Dismiss message">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p class="lf-toast__message">{{ message }}</p>
+    </div>
+</section>
+{% elif level == 25 %}
+<section class="toast fade lf-toast lf-toast--success" data-toast data-bs-delay="{% if grand_total and not on_profile_page %}10000{% else %}6500{% endif %}" role="status" aria-live="polite" aria-atomic="true">
+    <span class="lf-toast__icon" aria-hidden="true"><i class="fas fa-check"></i></span>
+    <div class="lf-toast__content">
+        <div class="lf-toast__heading">
+            <strong>All done</strong>
+            <button class="lf-toast__close" type="button" data-bs-dismiss="toast" aria-label="Dismiss message">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p class="lf-toast__message">{{ message }}</p>
+        {% if grand_total and not on_profile_page %}
+        <div class="lf-toast-bag">
+            <div class="lf-toast-bag__heading">
+                <strong>Your bag</strong>
+                <span>{{ product_count }} item{{ product_count|pluralize }}</span>
+            </div>
+            <div class="lf-toast-bag__items">
+                {% for item in bag_items %}
+                <a class="lf-toast-bag__item" href="{% url 'product_detail' item.item_id %}">
+                    {% if item.product.image %}
+                    <img src="{{ item.product.image.url }}" alt="">
+                    {% else %}
+                    <img src="{{ MEDIA_URL }}noimage.png" alt="">
+                    {% endif %}
+                    <span>
+                        <strong>{{ item.product.name }}</strong>
+                        <small>{% if item.product.has_sizes %}Size {{ item.size|upper }} · {% endif %}Qty {{ item.quantity }}</small>
+                    </span>
+                    <strong>£{{ item.product.price }}</strong>
+                </a>
+                {% endfor %}
+            </div>
+            <div class="lf-toast-bag__total">
+                <span>Total{% if free_delivery_delta > 0 %} · delivery not included{% endif %}</span>
+                <strong>£{{ total|floatformat:2 }}</strong>
+            </div>
+            {% if free_delivery_delta > 0 %}
+            <p class="lf-toast-bag__delivery">Spend <strong>£{{ free_delivery_delta }}</strong> more for free delivery.</p>
+            {% else %}
+            <p class="lf-toast-bag__delivery">Your order qualifies for free delivery.</p>
+            {% endif %}
+            <a class="lf-toast-bag__checkout" href="{% url 'view_bag' %}">
+                View bag &amp; checkout <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% else %}
+<section class="toast fade lf-toast lf-toast--info" data-toast data-bs-delay="6500" role="status" aria-live="polite" aria-atomic="true">
+    <span class="lf-toast__icon" aria-hidden="true"><i class="fas fa-info"></i></span>
+    <div class="lf-toast__content">
+        <div class="lf-toast__heading">
+            <strong>Just so you know</strong>
+            <button class="lf-toast__close" type="button" data-bs-dismiss="toast" aria-label="Dismiss message">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <p class="lf-toast__message">{{ message }}</p>
+    </div>
+</section>
+{% endif %}

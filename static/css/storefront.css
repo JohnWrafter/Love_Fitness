@@ -559,8 +559,231 @@ textarea:focus {
 }
 
 .message-container {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    max-width: min(27rem, calc(100vw - 2rem));
     right: 1rem;
     top: 6rem;
+    width: 100%;
+}
+
+.lf-toast {
+    align-items: flex-start;
+    background: var(--lf-white);
+    border: 1px solid var(--lf-line);
+    border-left: 4px solid var(--lf-green);
+    border-radius: 2px;
+    box-shadow: 0 1rem 2.75rem rgb(23 27 26 / 17%);
+    color: var(--lf-ink);
+    display: flex;
+    gap: .85rem;
+    max-height: min(75vh, 42rem);
+    overflow: auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+.lf-toast--success {
+    border-left-color: var(--lf-green);
+}
+
+.lf-toast--error {
+    border-left-color: #bf3d30;
+}
+
+.lf-toast--warning {
+    border-left-color: #d28a12;
+}
+
+.lf-toast--info {
+    border-left-color: #3976a8;
+}
+
+.lf-toast__icon {
+    align-items: center;
+    background: var(--lf-green);
+    color: var(--lf-white);
+    display: inline-flex;
+    flex: 0 0 2rem;
+    height: 2rem;
+    justify-content: center;
+    margin-top: .1rem;
+    width: 2rem;
+}
+
+.lf-toast--error .lf-toast__icon {
+    background: #bf3d30;
+}
+
+.lf-toast--warning .lf-toast__icon {
+    background: #d28a12;
+}
+
+.lf-toast--info .lf-toast__icon {
+    background: #3976a8;
+}
+
+.lf-toast__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.lf-toast__heading {
+    align-items: center;
+    display: flex;
+    font-size: .9rem;
+    gap: .75rem;
+    justify-content: space-between;
+}
+
+.lf-toast__close {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: var(--lf-muted);
+    cursor: pointer;
+    display: inline-flex;
+    flex: 0 0 2rem;
+    height: 2rem;
+    justify-content: center;
+    margin: -.35rem -.4rem -.35rem 0;
+    padding: 0;
+    width: 2rem;
+}
+
+.lf-toast__close:hover,
+.lf-toast__close:focus-visible {
+    background: var(--lf-paper);
+    color: var(--lf-ink);
+}
+
+.lf-toast__message {
+    color: var(--lf-muted);
+    font-size: .82rem;
+    line-height: 1.5;
+    margin: .25rem 0 0;
+}
+
+.lf-toast-bag {
+    border-top: 1px solid var(--lf-line);
+    margin-top: .85rem;
+    padding-top: .8rem;
+}
+
+.lf-toast-bag__heading,
+.lf-toast-bag__total {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lf-toast-bag__heading {
+    font-size: .78rem;
+}
+
+.lf-toast-bag__heading span {
+    color: var(--lf-muted);
+    font-size: .7rem;
+}
+
+.lf-toast-bag__items {
+    max-height: 10rem;
+    overflow: auto;
+}
+
+.lf-toast-bag__item {
+    align-items: center;
+    border-bottom: 1px solid var(--lf-line);
+    color: var(--lf-ink);
+    display: grid;
+    font-size: .72rem;
+    gap: .6rem;
+    grid-template-columns: 2.8rem minmax(0, 1fr) auto;
+    padding: .6rem 0;
+    text-decoration: none;
+}
+
+.lf-toast-bag__item:hover,
+.lf-toast-bag__item:focus-visible {
+    color: var(--lf-green);
+}
+
+.lf-toast-bag__item img {
+    aspect-ratio: 1;
+    background: var(--lf-paper);
+    object-fit: contain;
+    width: 2.8rem;
+}
+
+.lf-toast-bag__item > span {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    min-width: 0;
+}
+
+.lf-toast-bag__item > span strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lf-toast-bag__item small {
+    color: var(--lf-muted);
+    font-size: .67rem;
+}
+
+.lf-toast-bag__total {
+    font-size: .75rem;
+    padding: .7rem 0 .55rem;
+}
+
+.lf-toast-bag__total span {
+    color: var(--lf-muted);
+}
+
+.lf-toast-bag__delivery {
+    background: var(--lf-paper);
+    color: var(--lf-muted);
+    font-size: .7rem;
+    margin: 0 0 .65rem;
+    padding: .55rem .65rem;
+    text-align: center;
+}
+
+.lf-toast-bag__delivery strong {
+    color: var(--lf-ink);
+}
+
+.lf-toast-bag__checkout {
+    align-items: center;
+    background: var(--lf-ink);
+    color: var(--lf-white);
+    display: flex;
+    font-size: .7rem;
+    font-weight: 700;
+    justify-content: space-between;
+    letter-spacing: .06em;
+    padding: .7rem .8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.lf-toast-bag__checkout:hover,
+.lf-toast-bag__checkout:focus-visible {
+    background: var(--lf-green);
+    color: var(--lf-white);
+}
+
+@media (max-width: 575px) {
+    .message-container {
+        left: .75rem;
+        max-width: none;
+        right: .75rem;
+        top: 5.5rem;
+        width: auto;
+    }
 }
 
 .btt-button {

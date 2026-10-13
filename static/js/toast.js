@@ -1,10 +1,10 @@
-let toastElList = [].slice.call(document.querySelectorAll(".toast"));
-            let toastList = toastElList.map(function (toastEl) {
-                let option = {
-                    animation: true,
-                    autohide: true,
-                    delay: 5000,
-                };
-                let bsToast = new bootstrap.Toast(toastEl, option);
-                bsToast.show();
-            });
+document.querySelectorAll("[data-toast]").forEach((toastElement) => {
+    const delay = Number(toastElement.dataset.bsDelay) || 6500;
+    const toast = bootstrap.Toast.getOrCreateInstance(toastElement, {
+        animation: true,
+        autohide: true,
+        delay,
+    });
+
+    toast.show();
+});
