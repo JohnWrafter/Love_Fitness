@@ -40,31 +40,51 @@
     </section>
 
     <section class="shop-section" aria-labelledby="shop-title">
-        <div class="section-heading">
-            <p class="section-eyebrow">Find your rhythm</p>
-            <h2 id="shop-title">Shop by focus</h2>
-            <p>Everything you need to make showing up feel good.</p>
+        <div class="shop-section__header">
+            <div>
+                <p class="section-eyebrow">Find your rhythm</p>
+                <h2 id="shop-title">Shop by focus</h2>
+            </div>
+            <p class="shop-section__intro">Everything you need to make showing up feel good, from daily essentials to the tools that keep you progressing.</p>
         </div>
-        <div class="shop-grid">
-            <a class="shop-card" href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_bra,leggings,shorts_women,bodysuits">
+
+        <div class="shop-focus-grid" aria-label="Shop by focus categories">
+            <a class="shop-focus-card shop-focus-card--feature" href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_bra,leggings,shorts_women,bodysuits">
                 <img src="{{ MEDIA_URL }}apparel.jpg" alt="Athletic apparel collection">
-                <span class="shop-card__shade"></span>
-                <span class="shop-card__content"><strong>Apparel</strong><small>Move freely</small></span>
+                <div class="shop-focus-card__content">
+                    <span class="shop-focus-card__tag">New day essentials</span>
+                    <strong>Apparel</strong>
+                    <small>Move freely, train harder and stay supported from warm-up to cool-down.</small>
+                    <span class="shop-focus-card__cta">Shop now</span>
+                </div>
             </a>
-            <a class="shop-card" href="{% url 'products' %}?category=fitness_equipment">
+
+            <a class="shop-focus-card" href="{% url 'products' %}?category=fitness_equipment">
                 <img src="{{ MEDIA_URL }}equipment.jpg" alt="Fitness equipment for home training">
-                <span class="shop-card__shade"></span>
-                <span class="shop-card__content"><strong>Equipment</strong><small>Build strength</small></span>
+                <div class="shop-focus-card__content">
+                    <span class="shop-focus-card__tag">Build strength</span>
+                    <strong>Equipment</strong>
+                    <span class="shop-focus-card__cta">Explore gear</span>
+                </div>
             </a>
-            <a class="shop-card" href="{% url 'products' %}?category=nutrition">
+
+            <a class="shop-focus-card" href="{% url 'products' %}?category=nutrition">
                 <img src="{{ MEDIA_URL }}nutrition.jpg" alt="Nutrition products and supplements">
-                <span class="shop-card__shade"></span>
-                <span class="shop-card__content"><strong>Nutrition</strong><small>Fuel the work</small></span>
+                <div class="shop-focus-card__content">
+                    <span class="shop-focus-card__tag">Fuel smarter</span>
+                    <strong>Nutrition</strong>
+                    <span class="shop-focus-card__cta">See essentials</span>
+                </div>
             </a>
-            <a class="shop-card" href="{% url 'products' %}?category=exercise">
+
+            <a class="shop-focus-card shop-focus-card--wide" href="{% url 'products' %}?category=exercise">
                 <img src="{{ MEDIA_URL }}exercise.jpg" alt="Exercise plan and training guidance">
-                <span class="shop-card__shade"></span>
-                <span class="shop-card__content"><strong>Plans</strong><small>Stay consistent</small></span>
+                <div class="shop-focus-card__content">
+                    <span class="shop-focus-card__tag">Stay consistent</span>
+                    <strong>Plans</strong>
+                    <small>Thoughtful guidance to keep momentum high all week.</small>
+                    <span class="shop-focus-card__cta">Get started</span>
+                </div>
             </a>
         </div>
     </section>
@@ -74,11 +94,30 @@
             <p class="section-eyebrow">Make it yours</p>
             <h2 id="train-title">Train your way.</h2>
             <p>Small steps become serious progress. Choose a focus, find your pace and keep moving forward.</p>
+            <a href="{% url 'products' %}" class="train-section__cta">Browse essentials</a>
         </div>
         <div class="train-grid">
-            <div class="train-item"><i class="fa-solid fa-person-running" aria-hidden="true"></i><h3>Run</h3><p>Lightweight essentials for miles in the making.</p></div>
-            <div class="train-item"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i><h3>Lift</h3><p>Build confidence with equipment that works hard.</p></div>
-            <div class="train-item"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i><h3>Recover</h3><p>Support your body between every session.</p></div>
+            <article class="train-item">
+                <div class="train-item__icon"><i class="fa-solid fa-person-running" aria-hidden="true"></i></div>
+                <div class="train-item__body">
+                    <h3>Run</h3>
+                    <p>Lightweight essentials for miles in the making.</p>
+                </div>
+            </article>
+            <article class="train-item">
+                <div class="train-item__icon"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i></div>
+                <div class="train-item__body">
+                    <h3>Lift</h3>
+                    <p>Build confidence with equipment that works hard.</p>
+                </div>
+            </article>
+            <article class="train-item">
+                <div class="train-item__icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
+                <div class="train-item__body">
+                    <h3>Recover</h3>
+                    <p>Support your body between every session.</p>
+                </div>
+            </article>
         </div>
     </section>
     </main>
