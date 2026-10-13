@@ -2,134 +2,156 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
+<div class="container header-container" aria-hidden="true"></div>
 {% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}" type="text/css" />
 {% endblock %}
 
 {% block content %}
-<main class="products-page">
-    <section class="products-heading" aria-labelledby="products-title">
-        <div>
-            <p class="products-heading__eyebrow">Find your next favourite</p>
-            <h1 id="products-title">The shop</h1>
+<main class="catalog-page">
+    <section class="catalog-hero" aria-labelledby="catalog-title">
+        <div class="catalog-hero__copy">
+            <p class="catalog-eyebrow"><span></span> Love Fitness / The edit</p>
+            <h1 id="catalog-title">
+                {% if search_term %}Search results{% elif current_categories %}{% for category in current_categories %}{% if forloop.first %}{{ category.friendly_name }}{% endif %}{% endfor %}{% else %}Gear for your next move{% endif %}
+            </h1>
+            <p class="catalog-hero__description">
+                {% if search_term %}
+                Products matching “{{ search_term }}”.
+                {% elif current_categories %}
+                Find the pieces made to move with you.
+                {% else %}
+                Support that shows up. Style that moves with you. Meet your new workout favourites.
+                {% endif %}
+            </p>
         </div>
-        <nav class="products-categories" aria-label="Shop by category">
-            <a href="{% url 'products' %}">All</a>
-            {% for c in current_categories %}
-            <a href="{% url 'products' %}?category={{ c.name }}">{{ c.friendly_name }}</a>
-            {% endfor %}
-            <a href="{% url 'products' %}?category=sports_bra,leggings,shorts_women,bodysuits">Women</a>
-            <a href="{% url 'products' %}?category=shorts,tops_t-shirts">Men</a>
-        </nav>
+        <div class="catalog-hero__mark" aria-hidden="true">
+            <span>LF</span>
+            <i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
     </section>
 
-    <div class="products-results">
+    <section class="catalog-controls" aria-label="Find products">
+        <nav class="catalog-categories" aria-label="Shop by category">
+            <a class="catalog-category{% if not request.GET.category %} is-active{% endif %}"
+                href="{% url 'products' %}">All gear</a>
+            <a class="catalog-category{% if request.GET.category == 'bodysuits' %} is-active{% endif %}"
+                href="{% url 'products' %}?category=bodysuits">Bodysuits</a>
+            <a class="catalog-category{% if request.GET.category == 'leggings' %} is-active{% endif %}"
+                href="{% url 'products' %}?category=leggings">Leggings</a>
+            <a class="catalog-category{% if request.GET.category == 'shorts_women' %} is-active{% endif %}"
+                href="{% url 'products' %}?category=shorts_women">Shorts</a>
+            <a class="catalog-category{% if request.GET.category == 'sports_bra' %} is-active{% endif %}"
+                href="{% url 'products' %}?category=sports_bra">Sports bras</a>
+            <a class="catalog-category{% if request.GET.category == 'shorts,tops_t-shirts' %} is-active{% endif %}"
+                href="{% url 'products' %}?category=shorts,tops_t-shirts">Men</a>
+            <a class="catalog-category{% if request.GET.category == 'sports_bra,leggings,shorts_women,bodysuits' %} is-active{% endif %}"
+                href="{% url 'products' %}?category=sports_bra,leggings,shorts_women,bodysuits">Women</a>
+        </nav>
 
-    <!-- Search and sorting -->
-    <div class="row">
-        <div class="product-container col-10 offset-1">
-            <div class="products-toolbar row mt-1 mb-2">
-                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                    <div class="sort-select-wrapper">
-                        <select id="sort-selector"
-                            class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
-                            </option>
-                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
-                                (low to high)</option>
-                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
-                                (high to low)</option>
-                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>
-                                Rating (low to high)</option>
-                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>
-                                Rating (high to low)</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
-                                (A-Z)</option>
-                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
-                                (Z-A)</option>
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
-                                Category (A-Z)</option>
-                            <option value="category_desc"
-                                {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-sm-6 order-md-first">
-                    <p class="text-muted mt-3 text-md-left fs-6 fw-bold secondary-heading">
-                        {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
-                        {% endif %}
-                        {{ products|length }} Products{% if search_term %} found for
-                        <strong>"{{ search_term }}"</strong>{% endif %}
-                    </p>
-                </div>
+        <div class="catalog-tools">
+            <form class="catalog-search" method="get" action="{% url 'products' %}" role="search">
+                {% if request.GET.category %}
+                <input type="hidden" name="category" value="{{ request.GET.category }}">
+                {% endif %}
+                <label class="sr-only" for="catalog-search-input">Search products</label>
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input id="catalog-search-input" type="search" name="q" value="{{ search_term|default:'' }}"
+                    placeholder="Search products" autocomplete="off">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="catalog-listing" aria-labelledby="catalog-listing-title">
+        <div class="catalog-toolbar">
+            <div>
+                <p class="catalog-toolbar__eyebrow">The collection</p>
+                <h2 id="catalog-listing-title">
+                    {% if search_term %}Your search{% elif current_categories %}{% for category in current_categories %}{% if forloop.first %}{{ category.friendly_name }}{% endif %}{% endfor %}{% else %}Made to move{% endif %}
+                </h2>
+                <p class="catalog-count">
+                    <strong>{{ products|length }}</strong>
+                    {% if products|length == 1 %}piece{% else %}pieces{% endif %}
+                    {% if search_term %}found{% endif %}
+                </p>
             </div>
-            <!-- Product cards -->
-            <div class="products-grid row">
-                {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <article class="card product-card h-100">
-                        <div class="product-card__media">
-                        {% if product.image %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid product-card-image{% if product.category.name == 'sports_bra' %} sports-bra-image{% endif %}" src="{{ product.image.url }}" alt="{{ product.name }} in {{ product.colour }}">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid rounded-1 product-card-image" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
-                        </a>
-                        {% endif %}
-                        </div>
-                        <div class="card-body product-card__body">
-                            <div class="product-card__meta">
-                                {% if product.category %}<span>{{ product.category.friendly_name }}</span>{% endif %}
-                                {% if product.rating %}<span><i class="fas fa-star" aria-hidden="true"></i> {{ product.rating }}</span>{% endif %}
-                            </div>
-                            <h2 class="product-card__title">{{ product.name }}</h2>
-                            <p class="product-card__colour">{{ product.colour }}</p>
-                            <div class="product-card__footer">
-                                <strong class="product-card__price">£{{ product.price }}</strong>
-                                <a class="product-card__link" href="{% url 'product_detail' product.id %}">View details <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="card-footer product-card__admin">
-                            <div class="row">
-                                <div class="col">
-                                    {% if request.user.is_superuser %}
-                                    <small class="ml-3">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                    </small>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                {% endfor %}
+            <div class="catalog-toolbar__actions">
+                {% if search_term or request.GET.category or current_sorting != 'None_None' %}
+                <a class="catalog-clear" href="{% url 'products' %}">Clear filters</a>
+                {% endif %}
+                <label for="sort-selector">Sort by</label>
+                <select id="sort-selector" aria-label="Sort products">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Featured</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price: low to high</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price: high to low</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating: low to high</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Top rated</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name: A to Z</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name: Z to A</option>
+                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category: A to Z</option>
+                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category: Z to A</option>
+                </select>
             </div>
         </div>
-    </div>
-</div>
-</div>
-<div class="btt-button shadow-sm rounded-0 border border-black">
-    <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-    </a>
-</div>
+
+        {% if products %}
+        <div class="catalog-grid">
+            {% for product in products %}
+            <article class="catalog-card">
+                <a class="catalog-card__image-link" href="{% url 'product_detail' product.id %}"
+                    aria-label="View {{ product.name }}">
+                    <div class="catalog-card__image-wrap">
+                        {% if product.image %}
+                        <img class="catalog-card__image{% if product.category.name == 'sports_bra' %} sports-bra-image{% endif %}"
+                            src="{{ product.image.url }}"
+                            alt="{{ product.name }}{% if product.colour %} in {{ product.colour }}{% endif %}"
+                            loading="lazy">
+                        {% else %}
+                        <img class="catalog-card__image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"
+                            loading="lazy">
+                        {% endif %}
+                        <span class="catalog-card__view">View piece <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+                <div class="catalog-card__info">
+                    <div class="catalog-card__meta">
+                        {% if product.category %}<span>{{ product.category.friendly_name }}</span>{% endif %}
+                        {% if product.rating %}<span class="catalog-card__rating"><i class="fas fa-star" aria-hidden="true"></i> {{ product.rating }}</span>{% endif %}
+                    </div>
+                    <h3><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h3>
+                    {% if product.colour %}<p class="catalog-card__colour">{{ product.colour }}</p>{% endif %}
+                    <div class="catalog-card__bottom">
+                        <strong>£{{ product.price }}</strong>
+                        <a href="{% url 'product_detail' product.id %}" aria-label="See {{ product.name }} details">
+                            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    {% if request.user.is_superuser %}
+                    <div class="catalog-card__admin">
+                        <a href="{% url 'edit_product' product.id %}">Edit</a>
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="catalog-empty">
+            <span class="catalog-empty__icon"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></span>
+            <p class="catalog-eyebrow">No matches this time</p>
+            <h3>Try another search.</h3>
+            <p>Change your search or browse the full collection to find your next favourite.</p>
+            <a class="catalog-empty__link" href="{% url 'products' %}">Explore all gear <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        {% endif %}
+    </section>
 </main>
 {% endblock %}
 
-
-<!-- Javascript -->
 {% block postloadjs %}
 {{ block.super }}
 <script src="{% static 'products/js/products.js' %}"></script>
