@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html>
+<div class="quantity-control input-group" aria-label="Quantity selector">
+    <button type="button" class="btn btn-sm btn-outline-black rounded-0 decrement-qty" data-qty-action="decrease" aria-label="Decrease quantity">
+        <span><i class="fas fa-minus fa-sm"></i></span>
+    </button>
+    <input class="form-control form-control-sm qty_input text-center"
+        type="number"
+        name="{{ input_name|default:'quantity' }}"
+        value="{{ initial_value|default:1 }}"
+        min="{{ min_value|default:1 }}"
+        max="{{ max_value|default:99 }}"
+        inputmode="numeric"
+        id="{{ input_id|default:'id_qty' }}"
+        aria-label="Quantity" />
+    <button type="button" class="btn btn-sm btn-outline-black rounded-0 increment-qty" data-qty-action="increase" aria-label="Increase quantity">
+        <span><i class="fas fa-plus fa-sm"></i></span>
+    </button>
+</div>
 
-<head>
-    <script data-require="jquery@3.1.1" data-semver="3.1.1"
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-</head>
+<script>
+    document.addEventListener('click', function (event) {
+        const button = event.target.closest('[data-qty-action]');
+        if (!button) return;
 
+        const input = button.closest('.quantity-control')?.querySelector('.qty_input');
+        if (!input) return;
 
-</html>
+        const currentValue = parseInt(input.value || '1', 10);
+        const minValue = parseInt(input.min || '1', 10);
+        const maxValue = parseInt(input.max || '99', 10);
+        const change = button.dataset.qtyAction === 'increase' ? 1 : -1;
+        const nextValue = Math.min(maxValue, Math.max(minValue, currentValue + change));
+
+        input.value = nextValue;
+    });
+</script>

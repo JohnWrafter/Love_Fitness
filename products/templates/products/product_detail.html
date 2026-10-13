@@ -82,8 +82,7 @@
                 {% endif %}
                 <div class="product-showcase__option product-showcase__option--quantity">
                     <label for="id_qty_{{ product.id }}">Quantity</label>
-                    <input id="id_qty_{{ product.id }}" type="number" name="quantity" value="1" min="1" max="99"
-                        inputmode="numeric" required>
+                    {% include 'products/includes/quantity_input.html' with input_id='id_qty_'|add:product.id input_name='quantity' initial_value=1 min_value=1 max_value=99 %}
                 </div>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 <button class="product-showcase__add" type="submit" {% if product.stock_quantity == 0 %}disabled{% endif %}>
