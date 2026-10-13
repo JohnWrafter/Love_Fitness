@@ -2,8 +2,8 @@
 .home-hero {
   align-items: flex-end;
   display: flex;
-  min-height: min(52rem, calc(100svh - 5.5rem));
-  margin-top: 5.5rem;
+  min-height: min(52rem, calc(100svh - 5rem));
+  margin-top: 0;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -323,10 +323,6 @@
   to { transform: scale(1); }
 }
 
-.mt-5 {
-  margin-top: 6.5rem!important;
-}
-
 .product-card-image {
   aspect-ratio: 3 / 4;
   background: #f1f1f1;
@@ -418,8 +414,190 @@
   text-transform: uppercase;
 }
 
+.home-hero__eyebrow,
+.home-hero h1 em,
+.home-hero__link i,
+.home-hero .btn i,
+.train-section__intro .section-eyebrow,
+.train-item i {
+  color: #d8f35b;
+}
+
+.home-hero__eyebrow span,
+.home-hero .btn,
+.promise-strip {
+  background-color: #d8f35b;
+}
+
+.home-hero .btn {
+  border-color: #d8f35b;
+}
+
+.home-hero .btn:hover,
+.home-hero .btn:focus-visible {
+  background-color: #fff;
+  border-color: #fff;
+  color: #171b1a;
+}
+
+.section-eyebrow {
+  color: #176a50;
+}
+
+.product-card__meta i {
+  color: #f15d45;
+}
+
+.products-page {
+  margin: 0 auto 5rem;
+  max-width: 1600px;
+  padding: 2.5rem clamp(1rem, 4vw, 4rem) 0;
+}
+
+.products-heading {
+  align-items: end;
+  border-bottom: 1px solid #dfe4dc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.products-heading__eyebrow {
+  color: #176a50;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: .35rem;
+  text-transform: uppercase;
+}
+
+.products-heading h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.7rem, 5vw, 4rem);
+  line-height: .95;
+  margin: 0;
+}
+
+.products-categories {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.products-categories a {
+  border: 1px solid #dfe4dc;
+  border-radius: 2px;
+  color: #171b1a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .5rem .75rem;
+  text-decoration: none;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+
+.products-categories a:hover,
+.products-categories a:focus-visible {
+  background: #d8f35b;
+  border-color: #d8f35b;
+  color: #171b1a;
+}
+
+.products-results,
+.products-results > .row,
+.products-results .product-container {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.products-toolbar {
+  align-items: center;
+  border-bottom: 1px solid #dfe4dc;
+  margin: 0 0 1.25rem !important;
+  padding: .2rem 0 .8rem;
+}
+
+.products-toolbar p {
+  color: #65706a !important;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem !important;
+  margin: 0 !important;
+}
+
+.products-toolbar .sort-select-wrapper select {
+  background-color: #fff;
+  border: 1px solid #dfe4dc !important;
+  border-radius: 3px !important;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 2.6rem;
+  padding: .4rem .7rem;
+}
+
+.products-grid {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+}
+
+.products-grid > [class*='col-'] {
+  padding: 0;
+  width: auto;
+}
+
+.products-grid .product-card {
+  height: 100%;
+}
+
+.products-grid .product-card__body {
+  padding: 1rem 1.05rem 1.2rem;
+}
+
+@media (max-width: 1050px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .products-page {
+    padding-top: 1.5rem;
+  }
+
+  .products-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .products-grid {
+    gap: .75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .home-hero {
+    min-height: min(52rem, calc(100svh - 4.5rem));
+  }
+}
+
 .product-card__link i {
-  color: #d87900;
+  color: #176a50;
   margin-left: .3rem;
   transition: transform .25s ease;
 }

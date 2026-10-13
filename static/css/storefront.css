@@ -1,0 +1,754 @@
+:root {
+    --lf-ink: #171b1a;
+    --lf-muted: #65706a;
+    --lf-paper: #f5f6f1;
+    --lf-white: #fff;
+    --lf-line: #dfe4dc;
+    --lf-lime: #d8f35b;
+    --lf-coral: #f15d45;
+    --lf-green: #176a50;
+    --lf-display: 'Barlow Condensed', sans-serif;
+    --lf-body: 'DM Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--lf-paper);
+    color: var(--lf-ink);
+    font-family: var(--lf-body);
+    min-height: 100vh;
+    padding-top: 5rem;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--lf-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo-font,
+.display-6 {
+    color: var(--lf-ink);
+    font-family: var(--lf-display);
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+a {
+    color: var(--lf-green);
+}
+
+a:hover {
+    color: var(--lf-coral);
+}
+
+.site-header {
+    box-shadow: 0 8px 28px rgb(23 27 26 / 8%);
+}
+
+.lovefitness-navbar {
+    background: var(--lf-white);
+    border-bottom: 1px solid var(--lf-line);
+}
+
+.lovefitness-navbar__inner {
+    grid-template-columns: auto auto minmax(0, 1fr) minmax(8rem, 12rem) auto;
+    gap: clamp(.5rem, 1.5vw, 1.5rem);
+    max-width: 1600px;
+    min-height: 5rem;
+    padding: .55rem clamp(1rem, 3.5vw, 3.5rem);
+}
+
+.lovefitness-navbar__menu-button {
+    border-color: var(--lf-ink);
+    border-radius: 2px;
+    grid-column: 1;
+}
+
+.lovefitness-navbar__brand {
+    grid-column: 1;
+    justify-self: start;
+}
+
+.lovefitness-navbar__brand .lovefitness-logo {
+    max-width: 180px;
+    width: 180px;
+}
+
+.lovefitness-navbar__desktop-links {
+    gap: clamp(0, .5vw, .5rem);
+    grid-column: 2;
+    white-space: nowrap;
+}
+
+.lovefitness-navbar__link,
+.lovefitness-navbar__action {
+    color: var(--lf-ink);
+    font-family: var(--lf-body);
+    font-size: .73rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    padding: .65rem .55rem;
+}
+
+.lovefitness-navbar__link:hover,
+.lovefitness-navbar__link:focus-visible,
+.lovefitness-navbar__action:hover,
+.lovefitness-navbar__action:focus-visible {
+    background: transparent;
+    color: var(--lf-green);
+}
+
+.lovefitness-navbar__link.dropdown-toggle::after {
+    color: var(--lf-coral);
+}
+
+.lovefitness-navbar__search {
+    border-bottom-color: var(--lf-line);
+    grid-column: 4;
+    margin: 0;
+    max-width: none;
+    width: 100%;
+}
+
+.lovefitness-navbar__search:focus-within {
+    border-bottom-color: var(--lf-green);
+}
+
+.lovefitness-navbar__search input,
+.lovefitness-menu__search input {
+    font-family: var(--lf-body);
+    font-size: .85rem;
+}
+
+.lovefitness-navbar__actions {
+    gap: .2rem;
+    grid-column: 5;
+}
+
+.lovefitness-navbar__action {
+    gap: .35rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
+}
+
+.lovefitness-navbar__action i,
+.lovefitness-menu__secondary i {
+    color: var(--lf-green);
+}
+
+.lovefitness-navbar .dropdown-menu {
+    border: 1px solid var(--lf-line);
+    border-radius: 3px;
+    font-family: var(--lf-body);
+}
+
+.lovefitness-navbar .dropdown-item {
+    font-family: var(--lf-body);
+}
+
+.lovefitness-navbar .dropdown-item:hover,
+.lovefitness-navbar .dropdown-item:focus {
+    background: var(--lf-lime);
+    color: var(--lf-ink);
+}
+
+.lovefitness-menu {
+    background: var(--lf-paper);
+}
+
+.lovefitness-menu .offcanvas-header {
+    border-color: var(--lf-line);
+}
+
+.lovefitness-menu .offcanvas-title {
+    font-family: var(--lf-display);
+    font-size: 1.5rem;
+}
+
+.lovefitness-menu__search {
+    border-color: var(--lf-line);
+}
+
+.lovefitness-menu__links a,
+.lovefitness-menu__secondary a {
+    font-family: var(--lf-body);
+    letter-spacing: 0;
+}
+
+.lovefitness-menu__links a:hover,
+.lovefitness-menu__links a:focus-visible,
+.lovefitness-menu__secondary a:hover,
+.lovefitness-menu__secondary a:focus-visible {
+    color: var(--lf-coral);
+}
+
+.header-container,
+.hdr-container {
+    height: 0;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.container-fluid {
+    --bs-gutter-x: clamp(1.25rem, 4vw, 4rem);
+}
+
+.btn,
+button.btn {
+    border-radius: 3px;
+    font-family: var(--lf-body);
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .035em;
+    padding: .75rem 1.15rem;
+    text-transform: uppercase;
+    transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-warning,
+.btn-success {
+    background: var(--lf-lime);
+    border-color: var(--lf-lime);
+    color: var(--lf-ink);
+}
+
+.btn-warning:hover,
+.btn-success:hover,
+.btn-warning:focus,
+.btn-success:focus {
+    background: var(--lf-ink);
+    border-color: var(--lf-ink);
+    color: var(--lf-white);
+}
+
+.btn-primary,
+.btn-black {
+    background: var(--lf-ink);
+    border-color: var(--lf-ink);
+    color: var(--lf-white);
+}
+
+.btn-primary:hover,
+.btn-black:hover {
+    background: var(--lf-green);
+    border-color: var(--lf-green);
+    color: var(--lf-white);
+}
+
+.btn-outline-black {
+    border-color: var(--lf-ink);
+    border-radius: 3px;
+    color: var(--lf-ink) !important;
+}
+
+.form-control,
+.custom-select,
+select,
+textarea {
+    border: 1px solid #cbd2ca;
+    border-radius: 3px;
+    color: var(--lf-ink);
+    min-height: 2.8rem;
+}
+
+.form-control:focus,
+.custom-select:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--lf-green);
+    box-shadow: 0 0 0 .2rem rgb(23 106 80 / 13%);
+}
+
+.table {
+    --bs-table-bg: transparent;
+    color: var(--lf-ink);
+}
+
+.table thead th {
+    border-bottom: 1px solid var(--lf-ink);
+    font-size: .72rem;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.table td,
+.table th {
+    border-color: var(--lf-line);
+    vertical-align: middle;
+}
+
+.card {
+    border: 1px solid var(--lf-line) !important;
+    border-radius: 3px;
+    box-shadow: 0 8px 24px rgb(23 27 26 / 5%);
+    transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 14px 30px rgb(23 27 26 / 10%);
+    transform: translateY(-2px);
+}
+
+.product-card {
+    border: 0 !important;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+    box-shadow: 0 12px 28px rgb(23 27 26 / 11%);
+    transform: translateY(-3px);
+}
+
+.product-card-image {
+    background: #edf0e9;
+    padding: .75rem;
+}
+
+.product-card__meta i {
+    color: var(--lf-coral);
+}
+
+.product-card__link {
+    color: var(--lf-green);
+}
+
+.product-card__link:hover {
+    color: var(--lf-coral);
+}
+
+.product-detail-page {
+    margin: 2.5rem auto 5rem;
+    max-width: 1300px;
+    padding: 0 clamp(1rem, 4vw, 4rem);
+}
+
+.product-detail-page > .row {
+    align-items: start;
+    display: grid;
+    gap: clamp(2rem, 6vw, 6rem);
+    grid-template-columns: minmax(0, 1.1fr) minmax(19rem, .9fr);
+    margin: 0;
+}
+
+.product-detail-page .product-detail-media,
+.product-detail-page .product-detail-info {
+    margin: 0 !important;
+    padding: 0;
+    width: auto;
+}
+
+.product-detail-page .image-container {
+    background: #e8ece5;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.product-detail-page .product-detail-image {
+    aspect-ratio: 4 / 5;
+    display: block;
+    max-height: 760px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.product-detail-page .product-detail-info {
+    padding-top: clamp(0rem, 4vw, 3rem);
+}
+
+.product-detail-page .product-name {
+    font-family: var(--lf-display);
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: .98;
+    margin-bottom: .75rem;
+}
+
+.product-detail-page .product-price {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.product-detail-page .product-description {
+    color: var(--lf-muted);
+    line-height: 1.75;
+    margin: 1.5rem 0;
+}
+
+.product-detail-page .form {
+    border-top: 1px solid var(--lf-line);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.product-detail-page .form-row > .col-12 {
+    margin-bottom: 1rem;
+}
+
+.product-detail-page .form-control.w-50,
+.product-detail-page .form-group.w-50 {
+    width: min(100%, 18rem) !important;
+}
+
+.product-detail-page .form .d-grid {
+    max-width: 24rem;
+}
+
+.product-detail-page .form .btn-primary {
+    background: transparent;
+    border-color: var(--lf-ink);
+    color: var(--lf-ink);
+}
+
+.product-detail-page .form .btn-primary:hover {
+    background: var(--lf-ink);
+    color: var(--lf-white);
+}
+
+.product-detail-page .form .btn-success {
+    min-height: 3.2rem;
+}
+
+.shop-section {
+    background: var(--lf-paper);
+}
+
+.section-eyebrow {
+    color: var(--lf-green);
+    letter-spacing: .08em;
+}
+
+.home-hero__eyebrow,
+.home-hero h1 em,
+.home-hero__link i,
+.home-hero .btn i {
+    color: var(--lf-lime);
+}
+
+.home-hero__eyebrow span {
+    background: var(--lf-lime);
+}
+
+.home-hero .btn {
+    background: var(--lf-lime);
+    border-color: var(--lf-lime);
+}
+
+.promise-strip {
+    background: var(--lf-lime);
+}
+
+.train-section {
+    background: var(--lf-ink);
+}
+
+.train-section__intro .section-eyebrow,
+.train-item i {
+    color: var(--lf-lime);
+}
+
+.site-footer {
+    background: var(--lf-ink);
+    color: #f4f6f1;
+    padding: 3rem clamp(1.25rem, 6vw, 6rem) 1.25rem;
+}
+
+.site-footer__main,
+.site-footer__bottom {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.site-footer__main {
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+}
+
+.site-footer__brand {
+    align-items: flex-start;
+    color: #f4f6f1;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    text-decoration: none;
+}
+
+.site-footer__brand img {
+    filter: brightness(0) invert(1);
+    height: auto;
+    max-width: 180px;
+}
+
+.site-footer__brand span,
+.site-footer__bottom {
+    color: #b9c1bb;
+    font-size: .8rem;
+}
+
+.site-footer__links {
+    display: flex;
+    gap: clamp(2rem, 7vw, 7rem);
+}
+
+.site-footer__links div {
+    display: flex;
+    flex-direction: column;
+    gap: .55rem;
+}
+
+.site-footer__links strong {
+    color: var(--lf-lime);
+    font-size: .72rem;
+    letter-spacing: .08em;
+    margin-bottom: .25rem;
+    text-transform: uppercase;
+}
+
+.site-footer__links a {
+    color: #f4f6f1;
+    font-size: .88rem;
+    text-decoration: none;
+}
+
+.site-footer__links a:hover {
+    color: var(--lf-lime);
+}
+
+.site-footer__top {
+    align-items: center;
+    border: 1px solid #647069;
+    border-radius: 50%;
+    color: var(--lf-white);
+    display: inline-flex;
+    height: 2.8rem;
+    justify-content: center;
+    text-decoration: none;
+    width: 2.8rem;
+}
+
+.site-footer__top:hover {
+    background: var(--lf-lime);
+    border-color: var(--lf-lime);
+    color: var(--lf-ink);
+}
+
+.site-footer__bottom {
+    border-top: 1px solid #39413c;
+    padding-top: 1rem;
+}
+
+.message-container {
+    right: 1rem;
+    top: 6rem;
+}
+
+.btt-button {
+    background: var(--lf-lime);
+    border: 0 !important;
+    border-radius: 50% !important;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.btt-button i {
+    color: var(--lf-ink) !important;
+}
+
+.allauth-form-inner-content input {
+    border-color: #cbd2ca;
+    border-radius: 3px;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    background: var(--lf-ink);
+    border-color: var(--lf-ink);
+    border-radius: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    background: var(--lf-green);
+    border-color: var(--lf-green);
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .lovefitness-navbar__inner {
+        gap: .45rem;
+        grid-template-columns: auto minmax(0, 1fr) minmax(7rem, 9rem) auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .lovefitness-navbar__brand {
+        grid-column: 1;
+    }
+
+    .lovefitness-navbar__desktop-links {
+        grid-column: 2;
+    }
+
+    .lovefitness-navbar__search {
+        grid-column: 3;
+    }
+
+    .lovefitness-navbar__actions {
+        grid-column: 4;
+    }
+
+    .lovefitness-navbar__action span {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-top: 4.5rem;
+    }
+
+    .lovefitness-navbar__inner {
+        grid-template-columns: 2.7rem 1fr 2.7rem;
+        min-height: 4.5rem;
+    }
+
+    .lovefitness-navbar__brand {
+        grid-column: 2;
+        justify-self: center;
+    }
+
+    .lovefitness-navbar__brand .lovefitness-logo {
+        width: min(175px, 43vw);
+    }
+
+    .lovefitness-navbar__actions {
+        grid-column: 3;
+    }
+
+    .site-footer__main {
+        align-items: flex-start;
+    }
+
+    .product-detail-page > .row {
+        grid-template-columns: minmax(0, 1fr) minmax(17rem, .9fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .promise-strip {
+        grid-template-columns: 1fr;
+        padding: .5rem 1.25rem;
+    }
+
+    .promise-strip__item,
+    .promise-strip__item:first-child,
+    .promise-strip__item:last-child {
+        border-bottom: 1px solid rgb(23 27 26 / 15%);
+        border-right: 0;
+        padding: .8rem 0;
+    }
+
+    .promise-strip__item:last-child {
+        border-bottom: 0;
+    }
+
+    .shop-grid {
+        gap: .7rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .shop-card {
+        min-height: 16rem;
+    }
+
+    .train-section {
+        grid-template-columns: 1fr;
+    }
+
+    .train-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .train-item {
+        border-left: 0;
+        border-top: 1px solid rgb(255 255 255 / 25%);
+        padding: 1rem 0;
+    }
+
+    .train-item i {
+        margin-bottom: .75rem;
+    }
+
+    .product-detail-page {
+        margin-top: 1.25rem;
+    }
+
+    .product-detail-page > .row {
+        gap: 1.5rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .product-detail-page .product-detail-image {
+        aspect-ratio: 1 / 1;
+    }
+
+    .product-detail-page .product-detail-info {
+        padding-top: 0;
+    }
+
+    .site-footer__main {
+        flex-wrap: wrap;
+    }
+
+    .site-footer__brand {
+        width: 100%;
+    }
+
+    .site-footer__links {
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .site-footer__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .4rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
