@@ -14,11 +14,12 @@
 {% block content %}
     <main>
     <section class="home-hero" aria-labelledby="hero-title">
-        <picture class="home-hero__media">
-            <source media="(max-width: 576px)" srcset="{{ MEDIA_URL }}carousel_image_3_small.jpg">
-            <img class="home-hero__image" src="{{ MEDIA_URL }}carousel_image_3_med.jpg"
-                alt="Athlete practising a seated yoga stretch in a bright studio">
-        </picture>
+        <img
+            class="home-hero__image"
+            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1600&q=80"
+            alt="Woman practicing yoga in a calm studio"
+            loading="eager"
+        >
         <div class="home-hero__overlay"></div>
         <div class="home-hero__content">
             <p class="home-hero__eyebrow"><span></span>Made for movement</p>
