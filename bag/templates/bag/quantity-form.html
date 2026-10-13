@@ -9,7 +9,8 @@
             {% endif %}
         </div>
     </div>
-    <!--Update and remove item quantity-->
-      <a class="update-link text-info"><button type="button" class="btn btn-outline-success btn-sm mt-1">Update</button></a>
-      <a class="remove-item text-danger float-end mt-1" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><button type="button" class="btn btn-outline-danger btn-sm">Remove</button></a>
+    <div class="lovefitness-bag-actions">
+        <button type="submit" class="btn btn-sm lovefitness-bag__button lovefitness-bag__button--update update-link">Update</button>
+        <button type="button" class="btn btn-sm lovefitness-bag__button lovefitness-bag__button--remove remove-item" id="remove_{{ item.item_id }}" data-item-id="{{ item.item_id }}" data-product_size="{{ item.size|default:'' }}">Remove</button>
+    </div>
 </form>

@@ -1,8 +1,8 @@
 <div class="quantity-control input-group" aria-label="Quantity selector">
-    <button type="button" class="btn btn-sm btn-outline-black rounded-0 decrement-qty" data-qty-action="decrease" aria-label="Decrease quantity">
+    <button type="button" class="btn btn-sm lovefitness-qty__button decrement-qty" data-qty-action="decrease" aria-label="Decrease quantity">
         <span><i class="fas fa-minus fa-sm"></i></span>
     </button>
-    <input class="form-control form-control-sm qty_input text-center"
+    <input class="form-control form-control-sm qty_input lovefitness-qty__input text-center"
         type="number"
         name="{{ input_name|default:'quantity' }}"
         value="{{ initial_value|default:1 }}"
@@ -11,7 +11,7 @@
         inputmode="numeric"
         id="{{ input_id|default:'id_qty' }}"
         aria-label="Quantity" />
-    <button type="button" class="btn btn-sm btn-outline-black rounded-0 increment-qty" data-qty-action="increase" aria-label="Increase quantity">
+    <button type="button" class="btn btn-sm lovefitness-qty__button increment-qty" data-qty-action="increase" aria-label="Increase quantity">
         <span><i class="fas fa-plus fa-sm"></i></span>
     </button>
 </div>
