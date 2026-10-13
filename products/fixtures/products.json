@@ -10,6 +10,7 @@
     "category": 1,
     "rating": 4.6,
     "image_url": "https://cdn.shopify.com/s/files/1/0580/1077/files/TwistBra_Cocoa_10_f2cfe4ac-0b94-4874-9465-124c26c84563_750x.jpg?v=1687030799",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_1.webp"
   }
 },
@@ -25,6 +26,7 @@
     "category": 1,
     "rating": 4.8,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_2.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_2.webp"
   }
 },
@@ -40,6 +42,7 @@
     "category": 1,
     "rating": 4.3,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_3.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_3.webp"
   }
 },
@@ -55,6 +58,7 @@
     "category": 1,
     "rating": 4.3,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_4.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_4.webp"
   }
 },
@@ -70,6 +74,7 @@
     "category": 1,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_5.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_5.webp"
   }
 },
@@ -85,6 +90,7 @@
     "category": 1,
     "rating": 4.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_6.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_6.webp"
 
   }
@@ -101,6 +107,7 @@
     "category": 1,
     "rating": 3.9,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_7.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_7.webp"
   }
 },
@@ -116,6 +123,7 @@
     "category": 1,
     "rating": 3.9,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_8.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_8.webp"
   }
 },
@@ -131,6 +139,7 @@
     "category": 1,
     "rating": 3.9,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_9.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_9.webp"
   }
 },
@@ -146,6 +155,7 @@
     "category": 1,
     "rating": 3.7,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_10.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_10.webp"
   }
 },
@@ -161,6 +171,7 @@
     "category": 1,
     "rating": 3.8,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_11.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_11.webp"
   }
 },
@@ -176,6 +187,7 @@
     "category": 1,
     "rating": 3.8,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_12.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_12.webp"
   }
 },
@@ -191,6 +203,7 @@
     "category": 1,
     "rating": 4.5,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_13.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_13.webp"
   }
 },
@@ -206,6 +219,7 @@
     "category": 1,
     "rating": 4.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_14.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_14.webp"
   }
 },
@@ -221,6 +235,7 @@
     "category": 1,
     "rating": 4.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_15.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_15.webp"
   }
 },
@@ -236,6 +251,7 @@
     "category": 1,
     "rating": 4.9,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/sportsbra_16.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Sports bras/sportsbra_16.webp"
   }
 },
@@ -251,6 +267,7 @@
     "category": 2,
     "rating": 4.2,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_1.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_1.webp"
   }
 },
@@ -266,6 +283,7 @@
     "category": 2,
     "rating": 4.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_2.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_2.webp"
   }
 },
@@ -281,6 +299,7 @@
     "category": 2,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_3.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_3.webp"
   }
 },
@@ -296,6 +315,7 @@
     "category": 2,
     "rating": 4.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_4.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_4.webp"
   }
 },
@@ -311,6 +331,7 @@
     "category": 2,
     "rating": 4.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_5.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_5.webp"
   }
 },
@@ -326,6 +347,7 @@
     "category": 2,
     "rating": 4.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_6.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_6.webp"
   }
 },
@@ -341,6 +363,7 @@
     "category": 2,
     "rating": 4.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_7.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_7.webp"
   }
 },
@@ -356,6 +379,7 @@
     "category": 2,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_8.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_8.webp"
   }
 },
@@ -371,6 +395,7 @@
     "category": 2,
     "rating": 3.8,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_9.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_9.webp"
   }
 },
@@ -386,6 +411,7 @@
     "category": 2,
     "rating": 3.1,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_10.jpg",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_10.jpg"
   }
 },
@@ -401,6 +427,7 @@
     "category": 2,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_11.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_11.webp"
   }
 },
@@ -416,6 +443,7 @@
     "category": 2,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_12.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_12.webp"
   }
 },
@@ -431,6 +459,7 @@
     "category": 2,
     "rating": 4.7,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_13.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_13.webp"
   }
 },
@@ -446,6 +475,7 @@
     "category": 2,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_14.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_14.webp"
   }
 },
@@ -461,6 +491,7 @@
     "category": 2,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_15.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_15.webp"
   }
 },
@@ -476,6 +507,7 @@
     "category": 2,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/leggings_16.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Leggings/leggings_16.webp"
   }
 },
@@ -490,6 +522,7 @@
     "category": 3,
     "rating": 4.2,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12081396-1994792209042321.jpg",
+    "stock_quantity": 10,
     "image": "12081396-1994792209042321.jpg"
   }
 },
@@ -504,6 +537,7 @@
     "category": 3,
     "rating": 4.3,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/10530911-5884889444360331.jpg",
+    "stock_quantity": 10,
     "image": "10530911-5884889444360331.jpg"
   }
 },
@@ -517,6 +551,7 @@
     "category": 3,
     "rating": 4.0,
     "image_url": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/10530657-1834620650702430.jpg",
+    "stock_quantity": 10,
     "image": "10530657-1834620650702430.jpg"
   }
 },
@@ -530,6 +565,7 @@
     "category": 3,
     "rating": 3.9,
     "image_url": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/10529988-1004620647157420.jpg",
+    "stock_quantity": 10,
     "image": "10529988-1004620647157420.jpg"
   }
 },
@@ -543,6 +579,7 @@
     "category": 3,
     "rating": 3.9,
     "image_url": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/10615587-1624622685922230.jpg",
+    "stock_quantity": 10,
     "image": "10615587-1624622685922230.jpg"
   }
 },
@@ -556,6 +593,7 @@
     "category": 3,
     "rating": 3.0,
     "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/11324199-2954889445905523.jpg",
+    "stock_quantity": 10,
     "image": "11324199-2954889445905523.jpg"
   }
 },
@@ -569,6 +607,7 @@
     "category": 3,
     "rating": 4.5,
     "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/11776868-2774835585006253.jpg",
+    "stock_quantity": 10,
     "image": "11776868-2774835585006253.jpg"
   }
 },
@@ -582,6 +621,7 @@
     "category": 3,
     "rating": 4.3,
     "image_url": "https://ci-ms4-lovefitness-1.s3.eu-west-2.amazonaws.com/media/10529701-1724835571924615.jpg",
+    "stock_quantity": 10,
     "image": "10529701-1724835571924615.jpg"
   }
 },
@@ -595,6 +635,7 @@
     "category": 3,
     "rating": 4.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12729483-6124846435688466.jpg",
+    "stock_quantity": 10,
     "image": "12729483-6124846435688466.jpg"
   }
 },
@@ -608,6 +649,7 @@
     "category": 3,
     "rating": 4.0,
     "image_url": "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11067704-3104620655581660.jpg",
+    "stock_quantity": 10,
     "image": "11067704-3104620655581660.jpg"
   }
 },
@@ -621,6 +663,7 @@
     "category": 3,
     "rating": 4.2,
     "image_url": "https://static.thcdn.com/images/large/webp/productimg/1600/1600/10798909-3844620653172858.jpghttps://static.thcdn.com/images/large/webp/productimg/1600/1600/10798909-3844620653172858.jpg",
+    "stock_quantity": 10,
     "image": "10798909-3844620653172858.jpg"
   }
 },
@@ -634,6 +677,7 @@
     "category": 3,
     "rating": 4.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12918419-1044890236654172.jpg",
+    "stock_quantity": 10,
     "image": "12918419-1044890236654172.jpg"
   }
 },
@@ -647,6 +691,7 @@
     "category": 3,
     "rating": 4.5,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12673037-2664849570455123.jpg",
+    "stock_quantity": 10,
     "image": "12673037-2664849570455123.jpg"
   }
 },
@@ -660,6 +705,7 @@
     "category": 3,
     "rating": 4.4,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12673037-2664849570455123.jpg",
+    "stock_quantity": 10,
     "image": "12673037-2664849570455123.jpg"
   }
 },
@@ -674,6 +720,7 @@
     "category": 4,
     "rating": 4.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12962308-6094896385094394.jpg",
+    "stock_quantity": 10,
     "image": "12962308-6094896385094394.jpg"
   }
 },
@@ -688,6 +735,7 @@
     "category": 4,
     "rating": 4.9,
     "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12761724-5804870012759314.jpg",
+    "stock_quantity": 10,
     "image": "12761724-5804870012759314.jpg"
   }
 },
@@ -702,6 +750,7 @@
     "category": 4,
     "rating": 4.8,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12652770-1224821025900671.jpg",
+    "stock_quantity": 10,
     "image": "12652770-1224821025900671.jpg"
   }
 },
@@ -716,6 +765,7 @@
     "category": 4,
     "rating": 4.8,
     "image_url": "https://static.thcdn.com/images/xsmall/webp//productimg/original/12763434-1004882195190967.jpg",
+    "stock_quantity": 10,
     "image": "12763434-1004882195190967.jpg"
   }
 },
@@ -730,6 +780,7 @@
     "category": 4,
     "rating": 5.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12302891-6434859048447475.jpg",
+    "stock_quantity": 10,
     "image": "12302891-6434859048447475.jpg"
   }
 },
@@ -744,6 +795,7 @@
     "category": 4,
     "rating": 5.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12302891-6434859048447475.jpg",
+    "stock_quantity": 10,
     "image": "12302891-6434859048447475.jpg"
   }
 },
@@ -758,6 +810,7 @@
     "category": 4,
     "rating": 5.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761706-4204870012177860.jpg",
+    "stock_quantity": 10,
     "image": "12761706-4204870012177860.jpg"
   }
 },
@@ -772,6 +825,7 @@
     "category": 4,
     "rating": 4.9,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12652761-6054821025784541.jpg",
+    "stock_quantity": 10,
     "image": "12652761-6054821025784541.jpg"
   }
 },
@@ -786,6 +840,7 @@
     "category": 4,
     "rating": 4.8,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11860140-1294862495724729.jpg",
+    "stock_quantity": 10,
     "image": "11860140-1294862495724729.jpg"
   }
 },
@@ -800,6 +855,7 @@
     "category": 4,
     "rating": 4.7,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12762183-1464882193935686.jpg",
+    "stock_quantity": 10,
     "image": "12762183-1464882193935686.jpg"
   }
 },
@@ -814,6 +870,7 @@
     "category": 4,
     "rating": 4.6,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12517895-3104789621276242.jpg",
+    "stock_quantity": 10,
     "image": "12517895-3104789621276242.jpg"
   }
 },
@@ -828,6 +885,7 @@
     "category": 4,
     "rating": 4.6,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12302884-7624853131660116.jpg",
+    "stock_quantity": 10,
     "image": "12302884-7624853131660116.jpg"
   }
 },
@@ -842,6 +900,7 @@
     "category": 4,
     "rating": 4.9,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12763380-1904864234774398.jpg",
+    "stock_quantity": 10,
     "image": "12763380-1904864234774398.jpg"
   }
 },
@@ -856,6 +915,7 @@
     "category": 4,
     "rating": 5.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761346-3754864232262009.jpg",
+    "stock_quantity": 10,
     "image": "12761346-3754864232262009.jpg"
   }
 },
@@ -870,6 +930,7 @@
     "category": 4,
     "rating": 5.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12768273-1484862506211658.jpg",
+    "stock_quantity": 10,
     "image": "12768273-1484862506211658.jpg"
   }
 },
@@ -884,6 +945,7 @@
     "category": 4,
     "rating": 3.9,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761715-9604870012463856.jpg",
+    "stock_quantity": 10,
     "image": "12761715-9604870012463856.jpg"
   }
 },
@@ -898,6 +960,7 @@
     "category": 4,
     "rating": 3.9,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761715-9604870012463856.jpg",
+    "stock_quantity": 10,
     "image": "12761715-9604870012463856.jpg"
   }
 },
@@ -912,6 +975,7 @@
     "category": 5,
     "rating": 4.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12302898-1064807812204693.jpg",
+    "stock_quantity": 10,
     "image": "12302898-1064807812204693.jpg"
   }
 },
@@ -926,6 +990,7 @@
     "category": 5,
     "rating": 3.8,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12764004-1754853136850314.jpg",
+    "stock_quantity": 10,
     "image": "12764004-1754853136850314.jpg"
   }
 },
@@ -940,6 +1005,7 @@
     "category": 5,
     "rating": 4.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761409-1194887380730378.jpg",
+    "stock_quantity": 10,
     "image": "12761409-1194887380730378.jpg"
   }
 },
@@ -954,6 +1020,7 @@
     "category": 5,
     "rating": 3.9,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761409-1194887380730378.jpg",
+    "stock_quantity": 10,
     "image": "12761409-1194887380730378.jpg"
   }
 },
@@ -968,6 +1035,7 @@
     "category": 5,
     "rating": 5.0,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11871858-5194811885712786.jpg",
+    "stock_quantity": 10,
     "image": "11871858-5194811885712786.jpg"
   }
 },
@@ -982,6 +1050,7 @@
     "category": 5,
     "rating": 4.8,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12762885-3524862504141121.jpg",
+    "stock_quantity": 10,
     "image": "12762885-3524862504141121.jpg"
   }
 },
@@ -996,6 +1065,7 @@
     "category": 5,
     "rating": 4.8,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11871830-8274736778851778.jpg",
+    "stock_quantity": 10,
     "image": "11871830-8274736778851778.jpg"
   }
 },
@@ -1010,6 +1080,7 @@
     "category": 5,
     "rating": 4.9,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761562-2024862501649081.jpg",
+    "stock_quantity": 10,
     "image": "12761562-2024862501649081.jpg"
   }
 },
@@ -1024,6 +1095,7 @@
     "category": 5,
     "rating": 4.7,
     "image_url": "https://static.thcdn.com/images/large/webp/productimg/1600/1600/11871718-7824659517818129.jpg",
+    "stock_quantity": 10,
     "image": "12761562-2024862501649081.jpg"
   }
 },
@@ -1038,6 +1110,7 @@
     "category": 5,
     "rating": 4.5,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761652-5784874667988080.jpg",
+    "stock_quantity": 10,
     "image": "12761652-5784874667988080.jpg"
   }
 },
@@ -1052,6 +1125,7 @@
     "category": 5,
     "rating": 4.5,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/https://static.thcdn.com/images/large/webp//productimg/1600/1600/12962245-3654896383893410.jpg",
+    "stock_quantity": 10,
     "image": "12962245-3654896383893410.jpg"
   }
 },
@@ -1066,6 +1140,7 @@
     "category": 5,
     "rating": 4.6,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12953222-1274891532702361.jpg",
+    "stock_quantity": 10,
     "image": "12953222-1274891532702361.jpg"
   }
 },
@@ -1080,6 +1155,7 @@
     "category": 5,
     "rating": 4.6,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12962254-9084896384118971.jpg",
+    "stock_quantity": 10,
     "image": "12962254-9084896384118971.jpg"
   }
 },
@@ -1094,6 +1170,7 @@
     "category": 5,
     "rating": 4.7,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12761535-1794862500509597.jpg",
+    "stock_quantity": 10,
     "image": "12761535-1794862500509597.jpg"
   }
 },
@@ -1108,6 +1185,7 @@
     "category": 5,
     "rating": 4.7,
     "image_url": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11871578-1094811885390544.jpg",
+    "stock_quantity": 10,
     "image": "11871578-1094811885390544.jpg"
   }
 },
@@ -1121,6 +1199,7 @@
     "category": 6,
     "rating": 4.7,
     "image_url": "https://media.4rgos.it/i/Argos/6069629_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "6069629_R_Z001A.jpg"
   }
 },
@@ -1134,6 +1213,7 @@
     "category": 6,
     "rating": 4.7,
     "image_url": "https://media.4rgos.it/i/Argos/7537789_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "7537789_R_Z001A.jpg"
   }
 },
@@ -1147,6 +1227,7 @@
     "category": 6,
     "rating": 4.7,
     "image_url": "https://media.4rgos.it/i/Argos/1255964_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "1255964_R_Z001A.jpg"
   }
 },
@@ -1160,6 +1241,7 @@
     "category": 6,
     "rating": 4.6,
     "image_url": "https://media.4rgos.it/i/Argos/7855014_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "7855014_R_Z001A.jpg"
   }
 },
@@ -1173,6 +1255,7 @@
     "category": 6,
     "rating": 4.6,
     "image_url": "https://media.4rgos.it/i/Argos/5589124_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "5589124_R_Z001A.jpg"
   }
 },
@@ -1186,6 +1269,7 @@
     "category": 6,
     "rating": 4.2,
     "image_url": "https://media.4rgos.it/i/Argos/6077051_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "6077051_R_Z001A.jpg"
   }
 },
@@ -1199,6 +1283,7 @@
     "category": 6,
     "rating": 4.2,
     "image_url": "https://media.4rgos.it/i/Argos/6790493_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "6790493_R_Z001A.jpg"
   }
 },
@@ -1212,6 +1297,7 @@
     "category": 6,
     "rating": 4.0,
     "image_url": "https://media.4rgos.it/i/Argos/8472317_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "8472317_R_Z001A.jpg"
   }
 },
@@ -1225,6 +1311,7 @@
     "category": 6,
     "rating": 3.9,
     "image_url": "https://media.4rgos.it/i/Argos/5272242_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "5272242_R_Z001A.jpg"
   }
 },
@@ -1238,6 +1325,7 @@
     "category": 6,
     "rating": 3.9,
     "image_url": "https://media.4rgos.it/i/Argos/5314935_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "5314935_R_Z001A.jpg"
   }
 },
@@ -1251,6 +1339,7 @@
     "category": 6,
     "rating": 3.9,
     "image_url": "https://media.4rgos.it/i/Argos/5532607_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "5532607_R_Z001A.jpg"
   }
 },
@@ -1264,6 +1353,7 @@
     "category": 6,
     "rating": 5.0,
     "image_url": "https://media.4rgos.it/i/Argos/5546600_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "5546600_R_Z001A.jpg"
   }
 },
@@ -1277,6 +1367,7 @@
     "category": 6,
     "rating": 4.0,
     "image_url": "https://media.4rgos.it/i/Argos/8219123_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "8219123_R_Z001A.jpg"
   }
 },
@@ -1290,6 +1381,7 @@
     "category": 6,
     "rating": 4.9,
     "image_url": "https://media.4rgos.it/i/Argos/8964739_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+    "stock_quantity": 10,
     "image": "8964739_R_Z001A.jpg"
   }
 },
@@ -1303,6 +1395,7 @@
     "category": 10,
     "rating": 4.9,
     "image_url": "https://www.houseoffraser.co.uk/brand/usa-pro/x-courtney-black-hiit-sports-bra-420979#colcode=42097915",
+    "stock_quantity": 10,
     "image": "42097915_4pl.webp"
   }
 },
@@ -1318,6 +1411,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_16.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_16.webp"
   }
 },
@@ -1333,6 +1427,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_1.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_1.webp"
   }
 },
@@ -1348,6 +1443,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_2.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_2.webp"
   }
 },
@@ -1363,6 +1459,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_3.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_3.webp"
   }
 },
@@ -1378,6 +1475,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_4.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_4.webp"
   }
 },
@@ -1393,6 +1491,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_5.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_5.webp"
   }
 },
@@ -1408,6 +1507,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_6.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_6.webp"
   }
 },
@@ -1423,6 +1523,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_7.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_7.webp"
   }
 },
@@ -1438,6 +1539,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_8.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_8.webp"
   }
 },
@@ -1453,6 +1555,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_15.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_15.webp"
   }
 },
@@ -1468,6 +1571,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_9.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_9.webp"
   }
 },
@@ -1483,6 +1587,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_10.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_10.webp"
   }
 },
@@ -1498,6 +1603,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_11.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_11.webp"
   }
 },
@@ -1513,6 +1619,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_12.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_12.webp"
   }
 },
@@ -1528,6 +1635,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_13.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_13.webp"
   }
 },
@@ -1543,6 +1651,7 @@
     "category": 13,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/bodysuit_14.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Bodysuits/bodysuit_14.webp"
   }
 },
@@ -1558,6 +1667,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_1.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_1.webp"
   }
 },
@@ -1573,6 +1683,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_2.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_2.webp"
   }
 },
@@ -1588,6 +1699,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_3.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_3.webp"
   }
 },
@@ -1603,6 +1715,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_4.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_4.webp"
   }
 },
@@ -1618,6 +1731,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_5.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_5.webp"
   }
 },
@@ -1633,6 +1747,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_6.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_6.webp"
   }
 },
@@ -1648,6 +1763,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_7.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_7.webp"
   }
 },
@@ -1663,6 +1779,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_8.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_8.webp"
   }
 },
@@ -1678,6 +1795,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_9.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_9.webp"
   }
 },
@@ -1693,6 +1811,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_10.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_10.webp"
   }
 },
@@ -1708,6 +1827,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_11.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_11.webp"
   }
 },
@@ -1723,6 +1843,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_12.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_12.webp"
   }
 },
@@ -1738,6 +1859,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_13.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_13.webp"
   }
 },
@@ -1753,6 +1875,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_14.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_14.webp"
   }
 },
@@ -1768,6 +1891,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_15.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_15.webp"
   }
 },
@@ -1783,6 +1907,7 @@
     "category": 14,
     "rating": 4.0,
     "image_url": "https://lovefitness.s3.eu-west-2.amazonaws.com/media/shorts_16.webp",
+    "stock_quantity": 10,
     "image": "Product Images/Shorts/shorts_16.webp"
   }
 }
