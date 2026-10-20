@@ -1,14 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 110" role="img" aria-labelledby="title desc">
   <title id="title">Love Fitness</title>
-  <desc id="desc">Love Fitness heart and motion wordmark</desc>
-  <rect width="420" height="96" fill="#172126"/>
-  <g fill="none" stroke="#ffc107" stroke-linecap="round" stroke-linejoin="round">
-    <path stroke-width="7" d="M20 48h14m-8-15 8 15-8 15m22-30 8 15-8 15"/>
-    <path stroke-width="6" d="M91 35c-8-13-29-8-29 9 0 15 15 24 29 35 14-11 29-20 29-35 0-17-21-22-29-9Z"/>
-    <path stroke-width="7" d="m80 47 8 8 15-17"/>
-    <path stroke-width="7" d="M126 48h16m-8-15 8 15-8 15"/>
-  </g>
-  <text x="164" y="61" fill="#fff" font-family="Exo 2, Arial, sans-serif" font-size="39" font-weight="600" letter-spacing="1">LOVE</text>
-  <text x="290" y="61" fill="#ffc107" font-family="Exo 2, Arial, sans-serif" font-size="39" font-weight="600" letter-spacing="1">FITNESS</text>
-  <path d="M166 76h208" stroke="#ffc107" stroke-width="2"/>
+  <desc id="desc">A lime heart with a fitness pulse beside the Love Fitness wordmark</desc>
+  <path fill="#d7f238" d="M55 93 18 59C-10 33 28-2 55 27 82-2 120 33 92 59Z"/>
+  <path d="M12 57h25l9-18 15 38 13-29 8 9h20" fill="none" stroke="#172126" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+  <text x="133" y="53" fill="#172126" font-family="Exo 2, Arial, sans-serif" font-size="49" font-weight="800" letter-spacing="2">LOVE</text>
+  <text x="135" y="91" fill="#172126" font-family="Exo 2, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="8">FITNESS</text>
+  <path d="M137 101h295" stroke="#d7f238" stroke-linecap="round" stroke-width="5"/>
 </svg>
