@@ -1,7 +1,20 @@
-<div class="continer">
-    <div class="row">
-        <div class="col">
-            <img src="{{ MEDIA_URL }}shopping-trolley.png" alt="" height="200">
-        </div>
+<section class="lovefitness-bag-empty" aria-labelledby="bag-empty-title">
+    <div class="lovefitness-bag-empty__art">
+        <span class="lovefitness-bag-empty__art-ring" aria-hidden="true"></span>
+        <img src="{{ MEDIA_URL }}shopping-trolley.png" alt="Shopping trolley">
+        <span class="lovefitness-bag-empty__spark lovefitness-bag-empty__spark--one" aria-hidden="true"></span>
+        <span class="lovefitness-bag-empty__spark lovefitness-bag-empty__spark--two" aria-hidden="true"></span>
     </div>
-</div>
+    <div class="lovefitness-bag-empty__content">
+        <p class="lovefitness-bag-empty__eyebrow">Ready when you are</p>
+        <h3 id="bag-empty-title">Your bag is taking a breather.</h3>
+        <p class="lovefitness-bag-empty__message">
+            Looks like you haven’t added anything yet. Find the gear that helps you move well and feel stronger.
+        </p>
+        <a href="{% url 'products' %}" class="lovefitness-bag-empty__button">
+            <span>Explore the collection</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <p class="lovefitness-bag-empty__note">Your next favourite is just around the corner.</p>
+    </div>
+</section>
