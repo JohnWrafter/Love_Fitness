@@ -30,6 +30,17 @@ class OrderForm(forms.ModelForm):
             'country',
             'county',
         )
+        labels = {
+            'full_name': 'Full name',
+            'email': 'Email address',
+            'phone_number': 'Phone number',
+            'street_address1': 'Street address',
+            'street_address2': 'Apartment, suite, etc. (optional)',
+            'town_or_city': 'Town or city',
+            'postcode': 'Postal code',
+            'country': 'Country',
+            'county': 'County, state or locality',
+        }
 
     def __init__(self, *args, **kwargs):
         """
@@ -57,4 +68,3 @@ class OrderForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            self.fields[field].label = False

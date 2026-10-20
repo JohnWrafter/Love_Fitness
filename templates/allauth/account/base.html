@@ -1,15 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container-fluid header-container">
-    <div class="overlay"></div>
-    <div class="row">
-        <div class="col">
-            <div class="allauth-form-inner-content mb-4">
-                {% block inner_content %}
-                {% endblock %}
+<main class="lf-form-page lf-account-page">
+    <div class="lf-account-layout">
+        <aside class="lf-account-aside">
+            <div>
+                <p class="lf-form-kicker">Love Fitness / Members</p>
+                <h1>Your next<br>stronger starts here.</h1>
+                <p class="lf-account-aside__copy">A little more room for progress. Keep your details, orders and training essentials together.</p>
             </div>
-        </div>
+            <p class="lf-account-aside__note"><span>01</span> Move well. Feel stronger.</p>
+        </aside>
+        <section class="allauth-form-inner-content lf-account-content">
+            {% block inner_content %}
+            {% endblock %}
+        </section>
     </div>
-</div>
+</main>
 {% endblock %}

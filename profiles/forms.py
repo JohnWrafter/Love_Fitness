@@ -17,6 +17,15 @@ class UserProfileForm(forms.ModelForm):
         """ Config Fields for User Profile form """
         model = UserProfile
         exclude = ('user',)
+        labels = {
+            'default_phone_number': 'Phone number',
+            'default_postcode': 'Postal code',
+            'default_town_or_city': 'Town or city',
+            'default_street_address1': 'Street address',
+            'default_street_address2': 'Apartment, suite, etc. (optional)',
+            'default_county': 'County, state or locality',
+            'default_country': 'Country',
+        }
 
     def __init__(self, *args, **kwargs):
         """
@@ -42,4 +51,3 @@ class UserProfileForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black profile-form-input'
-            self.fields[field].label = False

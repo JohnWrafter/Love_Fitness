@@ -18,137 +18,85 @@
 {% endblock %}
 
 {% block content %}
-<!-- Overlay White Background -->
-<div class="overlay"></div>
-<!-- Main Checkout Container -->
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <hr />
-            <h2 class="logo-font mb-4">Checkout</h2>
-            <hr />
-        </div>
-    </div>
-    <!-- Order summary container -->
-    <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Order Summary ({{ product_count }})</p>
-            <div class="row">
-                <div class="col-7 offset-2">
-                    <p class="mb-1 mt-0 small text-muted">Item</p>
-                </div>
-                <div class="col-3 text-right">
-                    <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                </div>
+<main class="lf-form-page">
+    <section class="lf-checkout-page">
+        <header class="lf-checkout-heading">
+            <div>
+                <p class="lf-form-kicker">Checkout / Secure payment</p>
+                <h1>Complete your order</h1>
             </div>
-            {% for item in bag_items %}
-            <div class="row">
-                <div class="col-2 mb-1">
-                    <a href="{% url 'product_detail' item.product.id %}">
+            <span class="lf-checkout-heading__note"><i class="fas fa-lock" aria-hidden="true"></i> Secure checkout</span>
+        </header>
+        <div class="lf-checkout-layout">
+            <aside class="lf-checkout-summary" aria-labelledby="order-summary-title">
+                <h2 id="order-summary-title">Your order <span>({{ product_count }})</span></h2>
+                <div class="lf-checkout-summary__labels"><span>Items</span><span>Subtotal</span></div>
+                {% for item in bag_items %}
+                <div class="lf-checkout-summary__item">
+                    <a class="lf-checkout-summary__product" href="{% url 'product_detail' item.product.id %}">
                         {% if item.product.image %}
-                        <img class="w-100" src="{{ item.product.image.url }}"  alt="{{ item.product.name }}" />
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
                         {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png"  alt="{{ item.product.name }}"/>
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" />
                         {% endif %}
+                        <span class="lf-checkout-summary__product-copy">
+                            <strong>{{ item.product.name }}</strong>
+                            <small>Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %} · Qty: {{ item.quantity }}</small>
+                        </span>
                     </a>
+                    <span class="lf-checkout-summary__item-price">£{{ item.product.price|calc_subtotal:item.quantity }}</span>
                 </div>
-                <div class="col-7">
-                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                    <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                {% endfor %}
+                <div class="lf-checkout-summary__totals">
+                    <div><span>Items</span><span>£{{ total|floatformat:2 }}</span></div>
+                    <div><span>Delivery</span><span>£{{ delivery|floatformat:2 }}</span></div>
+                    <div class="lf-checkout-summary__grand-total"><span>Total</span><span>£{{ grand_total|floatformat:2 }}</span></div>
                 </div>
-                <div class="col-3 text-right">
-                    <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                </div>
-            </div>
-            {% endfor %}
-            <hr class="my-0" />
-            <div class="row text-black text-right">
-                <div class="col-7 offset-2">
-                    <p class="my-0">Order Total:</p>
-                    <p class="my-0">Delivery:</p>
-                    <p class="my-0">Grand Total:</p>
-                </div>
-                <div class="col-3">
-                    <p class="my-0">£{{ total | floatformat:2 }}</p>
-                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
-                </div>
-            </div>
-        </div>
-        <!-- Order details form -->
-        <div class="col-12 col-lg-6">
-            <p class="text-muted">Please fill out the form below to complete your order</p>
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                    <label for="id_full_name" hidden>Full Name</label>
-                    {{ order_form.full_name | as_crispy_field }} 
-                    <label for="id_email" hidden>Email</label>
-                    {{ order_form.email | as_crispy_field }}
-                </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
-                    <label for="id_phone_number" hidden>Phone Number</label>
-                    {{ order_form.phone_number | as_crispy_field }} 
-                    <label for="id_street_address1" hidden>Street Address 1</label>
-                    {{ order_form.street_address1 | as_crispy_field }}
-                    <label for="id_street_address2" hidden>Street Address 2</label>
-                    {{ order_form.street_address2 | as_crispy_field }} 
-                    <label for="id_town_or_city" hidden>Town or City</label>
-                    {{ order_form.town_or_city | as_crispy_field }}
-                    <label for="id_county" hidden>County</label>
-                    {{ order_form.county | as_crispy_field }}
-                    <label for="id_postcode" hidden>County</label>
-                     {{ order_form.postcode | as_crispy_field }} 
-                    <label for="id_country" hidden>Country</label>
-                     {{ order_form.country | as_crispy_field }}
-                    <div class="form-check form-check-inline float-right mr-0">
-                        {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked />
-                        {% else %}
-                        <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                        </label>
-                        {% endif %}
+            </aside>
+            <section class="lf-checkout-form" aria-label="Delivery and payment details">
+                <p class="lf-checkout-form__intro">Add your delivery details and payment information to place your order.</p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <fieldset>
+                        <legend>Contact details</legend>
+                        {{ order_form.full_name|as_crispy_field }}
+                        {{ order_form.email|as_crispy_field }}
+                        {{ order_form.phone_number|as_crispy_field }}
+                    </fieldset>
+                    <fieldset>
+                        <legend>Delivery address</legend>
+                        {{ order_form.street_address1|as_crispy_field }}
+                        {{ order_form.street_address2|as_crispy_field }}
+                        {{ order_form.town_or_city|as_crispy_field }}
+                        {{ order_form.county|as_crispy_field }}
+                        {{ order_form.postcode|as_crispy_field }}
+                        {{ order_form.country|as_crispy_field }}
+                        <div class="form-check">
+                            {% if user.is_authenticated %}
+                            <input type="checkbox" id="id-save-info" name="save-info" checked />
+                            <label for="id-save-info">Save these delivery details to my profile</label>
+                            {% else %}
+                            <label for="id-save-info"><a href="{% url 'account_signup' %}">Create an account</a> or <a href="{% url 'account_login' %}">sign in</a> to save your details</label>
+                            {% endif %}
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Payment</legend>
+                        <label for="card-element">Card details</label>
+                        <div id="card-element"></div>
+                        <div id="card-errors" role="alert" aria-live="polite"></div>
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret" />
+                    </fieldset>
+                    <div class="lf-checkout-form__actions">
+                        <a href="{% url 'view_bag' %}" class="lf-form-button lf-form-button--secondary">Back to bag</a>
+                        <button id="submit-button" class="lf-form-button" type="submit">Complete order <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                        <p class="lf-checkout-form__charge-note">Your card will be charged £{{ grand_total|floatformat:2 }}.</p>
                     </div>
-                </fieldset>
-                <!-- Stripe Payments -->
-                <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                    <!-- A Stripe card element will go here -->
-                    <div class="mb-3" id="card-element"></div>
-                    <!-- Used to display form errors -->
-                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                    <!-- Pass the client secret to the view so we can get the payment intent id -->
-                    <input type="hidden" value="{{ client_secret }}" name="client_secret" />
-                </fieldset>
-                <div class="submit-button text-right mt-5 mb-2">
-                    <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="font-weight-bold">Adjust Bag</span>
-                    </a>
-                    <button id="submit-button" class="btn btn-black rounded-0">
-                        <span class="font-weight-bold">Complete Order</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </button>
-                    <p class="small text-danger my-0">
-                        <span class="icon">
-                            <i class="fas fa-exclamation-circle"></i>
-                        </span>
-                        <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
-                    </p>
-                </div>
-            </form>
+                </form>
+            </section>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 <div id="loading-overlay">
     <div class="text-light logo-font loading-spinner">
         <span class="icon">
