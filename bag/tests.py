@@ -1,5 +1,6 @@
 from django.contrib.messages.storage.fallback import FallbackStorage
-from django.test import RequestFactory, TestCase
+from django.test import Client, RequestFactory, TestCase
+from django.urls import reverse
 
 from products.models import Category, Product
 from bag.views import add_to_bag
@@ -22,6 +23,7 @@ class BagSessionTests(TestCase):
             price=49.99,
             stock_quantity=12,
         )
+        self.client = Client()
 
     def _make_request(self, path, data):
         request = self.factory.post(path, data=data)
@@ -44,3 +46,57 @@ class BagSessionTests(TestCase):
 
         self.assertEqual(response.status_code, 302)
         self.assertEqual(request.session['bag'][str(self.product.id)]['items_by_size']['m'], 2)
+
+    def test_update_button_posts_quantity_to_adjust_bag(self):
+        session = self.client.session
+        session['bag'] = {
+            str(self.product.id): {'items_by_size': {'m': 1}}
+        }
+        session.save()
+
+        response = self.client.post(
+            reverse('adjust_bag', args=[self.product.id]),
+            {'quantity': '3', 'product_size': 'm'},
+        )
+
+        self.assertRedirects(response, reverse('view_bag'))
+        self.assertEqual(
+            self.client.session['bag'][str(self.product.id)]
+            ['items_by_size']['m'],
+            3,
+        )
+
+    def test_bag_buttons_render_their_matching_form_actions(self):
+        session = self.client.session
+        session['bag'] = {
+            str(self.product.id): {'items_by_size': {'m': 1}}
+        }
+        session.save()
+
+        response = self.client.get(reverse('view_bag'))
+        html = response.content.decode()
+
+        self.assertContains(
+            response,
+            f'action="{reverse("adjust_bag", args=[self.product.id])}"',
+        )
+        self.assertContains(
+            response,
+            f'formaction="{reverse("remove_from_bag", args=[self.product.id])}"',
+        )
+        self.assertIn('name="product_size" value="m"', html)
+
+    def test_remove_button_posts_to_remove_bag_item(self):
+        session = self.client.session
+        session['bag'] = {
+            str(self.product.id): {'items_by_size': {'m': 1}}
+        }
+        session.save()
+
+        response = self.client.post(
+            reverse('remove_from_bag', args=[self.product.id]),
+            {'product_size': 'm'},
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(str(self.product.id), self.client.session['bag'])

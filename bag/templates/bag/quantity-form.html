@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="lovefitness-bag-actions">
-        <button type="submit" class="btn btn-sm lovefitness-bag__button lovefitness-bag__button--update update-link">Update</button>
-        <button type="button" class="btn btn-sm lovefitness-bag__button lovefitness-bag__button--remove remove-item" id="remove_{{ item.item_id }}" data-item-id="{{ item.item_id }}" data-product_size="{{ item.size|default:'' }}">Remove</button>
+        <button type="submit" class="btn btn-sm lovefitness-bag__button lovefitness-bag__button--update">Update</button>
+        <button type="submit" class="btn btn-sm lovefitness-bag__button lovefitness-bag__button--remove" formaction="{% url 'remove_from_bag' item.item_id %}">Remove</button>
     </div>
 </form>
