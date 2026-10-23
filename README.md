@@ -276,6 +276,7 @@ Contact Us Model
 
 # Features
 Love Fitness brings together an activewear and fitness-products store, account tools, fitness articles, and AI-assisted general guidance.
+The screenshots below show the current site; account and order examples use fictional demo data.
 
 ### Navigation and responsive layout
 - The responsive navigation provides links to the home page, product catalogue, exercise and nutrition plan categories, AI Workout Builder, AI Nutrition Planner, Fitness Hub, and account options.
@@ -288,12 +289,14 @@ Love Fitness brings together an activewear and fitness-products store, account t
 - Recent fitness articles are shown on the home page. The Fitness Hub provides the article listing and individual article pages.
 - Signed-in users can create blog posts. Post authors and staff can edit or delete posts.
 > ![Home page](readme/features/features_home.PNG)
+> ![Fitness Hub](readme/features/features_fitness_hub.PNG)
 
 ### Product catalogue and details
 - Visitors can browse products, filter by category, search the catalogue, and sort results.
 - Product cards show key product information and link to a detail page. Product details include the description, price, stock and available purchase options.
 - Signed-in customers can save products to a wishlist and remove them later.
 > ![Product catalogue](readme/features/features_products.PNG)
+> ![Shop category menu](readme/features/features_sort_products_via_nav.PNG)
 > ![Search products](readme/features/features_search.PNG)
 > ![Sort products](readme/features/features_sort_products_via_sort_by.PNG)
 > ![Product details](readme/features/feature_product_details.PNG)
@@ -307,6 +310,7 @@ Love Fitness brings together an activewear and fitness-products store, account t
 ### Accounts, profiles, and orders
 - Visitors can register, sign in, and sign out. Signed-in customers can update their default delivery details and view their order history.
 - Order history is restricted to the account that owns the orders. Guest checkout confirmation is limited to the browser session that placed the order.
+> ![Sign in](readme/features/features_sign_in.PNG)
 > ![Registration](readme/features/feature_register.PNG)
 > ![Profile](readme/features/features_profile.PNG)
 > ![Order history](readme/features/features_order_history.PNG)
@@ -327,12 +331,14 @@ Love Fitness brings together an activewear and fitness-products store, account t
 - Visitors must consent before their answers are sent to OpenAI. Answers are not saved to their Love Fitness account.
 - The page explains that the suggestions are not medical advice and recommends seeking professional guidance for injuries or health concerns.
 - Configure `OPENAI_API_KEY` on the server to enable generation. `OPENAI_MODEL` is optional and defaults to `gpt-4o-mini`.
+> ![AI Workout Builder](readme/features/features_ai_workout_builder.PNG)
 
 ### AI Nutrition Planner
 - Visitors can request general meal ideas based on their goal, dietary preferences, food allergies or restrictions, meals per day, cooking time, and budget.
 - The planner does not provide calorie or macro targets, medical diets, or treatment advice. Visitors must consent before their answers are sent to OpenAI; answers are not saved to their Love Fitness account.
 - Visitors are advised to check ingredients and food labels and to seek qualified professional advice for individualized nutrition needs.
 - The planner uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the AI Workout Builder.
+> ![AI Nutrition Planner](readme/features/features_ai_nutrition_planner.PNG)
 
 ---
 
