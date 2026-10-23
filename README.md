@@ -275,126 +275,64 @@ Contact Us Model
 > * The fields contained within this model are: full_name, subject, email, message
 
 # Features
-## Existing Features
-### Feature 1: Navbar
-- A fully responsive nav bar, that has links to Home, All Products, Shop, Plans, Contact and Special Offer pages. To make it resposive on mobile devices a burger menu replaces the standard nav bar.
-> ![Nav Bar](readme/features/features_nav_bar.PNG)
-> ![Mobile Nav](readme/features/features_mobile_nav.PNG)  
-> User stories feature relates to:
-> * 1.11 A site that is easy and clear to navigate
-> * 1.14 Present the end user with a clear and simple navigaion menu
+Love Fitness brings together an activewear and fitness-products store, account tools, fitness articles, and AI-assisted general guidance.
 
-### Feature 2: Home Page
-- The home page consists of an image carousel with pictures all relating to the products sold on the site.
-> ![Home Page](readme/features/features_home.PNG)
-> User stories feature relates to:
-> * 2.12 A homepage with image carousel.
+### Navigation and responsive layout
+- The responsive navigation provides links to the home page, product catalogue, exercise and nutrition plan categories, AI Workout Builder, AI Nutrition Planner, Fitness Hub, and account options.
+- On smaller screens, navigation is available through a collapsible menu. The site also includes links to the shopping bag, wishlist, and account pages.
+> ![Desktop navigation](readme/features/features_nav_bar.PNG)
+> ![Mobile navigation](readme/features/features_mobile_nav.PNG)
 
-### Feature 3: Shop (Products) Page
-- A search bar is present at the very top of the page allowing users to search for products in the store.
-- To display the products I have used Boostrap 5 cards. Each card diplays product image, product name, price, product categoty and rating.
-- There are two button present (only visible to admins) to delete and or edit products.
-> ![Shop (Products) Page](readme/features/features_products.PNG)
-> User stories feature relates to:
-> * 3.2 View a list of all the products available to purchase.
-> * 3.3 View a single product.
-> * 3.10 To use full CRUD funcitonality to manage products and plans within the store.
+### Home page and fitness hub
+- The home page highlights the store's product categories and links directly to the AI builders and Fitness Hub.
+- Recent fitness articles are shown on the home page. The Fitness Hub provides the article listing and individual article pages.
+- Signed-in users can create blog posts. Post authors and staff can edit or delete posts.
+> ![Home page](readme/features/features_home.PNG)
 
-### Feature 4: Add Products 
-- When logged in with a super user account the store owner / admin can add products.
-- Clicking the Product Manage Option under My Account and form is displayed where products can be added
-> ![Add Products](readme/features/features_add_products.PNG)
-> User stories feature relates to:
-> * 4.10 To use full CRUD funcitonality to manage products and plans within the store.
+### Product catalogue and details
+- Visitors can browse products, filter by category, search the catalogue, and sort results.
+- Product cards show key product information and link to a detail page. Product details include the description, price, stock and available purchase options.
+- Signed-in customers can save products to a wishlist and remove them later.
+> ![Product catalogue](readme/features/features_products.PNG)
+> ![Search products](readme/features/features_search.PNG)
+> ![Sort products](readme/features/features_sort_products_via_sort_by.PNG)
+> ![Product details](readme/features/feature_product_details.PNG)
+> ![Wishlist](readme/features/features_wishlist.PNG)
 
-### Feature 5: Edit Products
-- When logged in with a super user account the owner / admin can edit or delete products
-- There are two buttons present (only visible to admins) on each product card to delete and or edit products.
-> ![Edit Products Page](readme/features/features_edit_product.PNG)
-> User stories feature relates to:
-> * 5.2 View a list of all the products available to purchase.
-> * 5.10 To use full CRUD funcitonality to manage products and plans within the store.
+### Store management
+- Staff can add, edit, and delete catalogue products through protected management pages.
+> ![Add products](readme/features/features_add_products.PNG)
+> ![Edit products](readme/features/features_edit_product.PNG)
 
-### Feature 6: Wish List
-- Users can added or products from their wishlist.
-> ![Wish list](readme/features/features_wishlist.PNG)
-> User stories feature relates to:
-> * 6.4. To be able to add / delete products from a wish list or favourites.
+### Accounts, profiles, and orders
+- Visitors can register, sign in, and sign out. Signed-in customers can update their default delivery details and view their order history.
+- Order history is restricted to the account that owns the orders. Guest checkout confirmation is limited to the browser session that placed the order.
+> ![Registration](readme/features/feature_register.PNG)
+> ![Profile](readme/features/features_profile.PNG)
+> ![Order history](readme/features/features_order_history.PNG)
 
-### Feature 7: Register Page
-- A simple form made up of 5 input fields which are: email-address, email address confirmation, user name, password, confirm password.
-- Each input field is a required element, with form validation not allowing the users to skip a field without first completing it.
-- Finally, two buttons are displayed: one to cancel sign up and one to sign up.
-> ![Register Page](readme/features/feature_register.PNG)
-> * 7.1 To easily register a new account to access the site and all its features.
-
-### Feature 8: Search Products
-- There is a search bar located in the header section (above the main nav) to search for products in the store.
-> ![Search Products](readme/features/features_search.PNG)
-> User stories feature relates to:
-> * 8.2. View a list of all the products available to purchase.
-> * 8.3 View a single product.
-> * 8.5. Option to search for products by name or description.
-
-### Feature 9: Sort Products
-- From the All Produts link on the nav bar products can be sorted by Price, Rating, Category and All Products.
-- From the products page there is a sort by drop down where products can be sorted by Price, Rating, Name, and Category. 
-> ![Sort Products (via nav bar)](readme/features/features_sort_products_via_nav.PNG)
-> ![Sort Products (via sort by drop down)](readme/features/features_sort_products_via_sort_by.PNG)
-> User stories feature relates to:
-> * 9.2. View a list of all the products available to purchase.
-> * 9.5. Option to search for products by name or description.
-> * 9.3 View a single product.
-
-### Feature 10: Contact Page
-- A contact page to allow existing users or potential customers to contact the site owner.
-> ![Contact Page](readme/features/features_contact_us.PNG)
-> User stories feature relates to:
-> * 10.9 A contact page to get in touch with the site owner.
-
-### Feature 11: Profile Page
-- The profile page allows visitors to the store to save default delivery information and view a list of any orders they have made.
-> ![Profile Page](readme/features/features_profile.PNG)
-> User stories feature relates to:
-> * 11.10 A profile page where I can add default delivery address and view orders.
-
-### Feature 12: Bag
-- Any products that are ready to be purachased are displayed in the Shopping Bag.
-- The product quantity can be adjusted up (or down) and updated or the product(s) removed entirely.
-- There is a Keep Shopping button so the can go back to the store or a Secure Checkout button to start the purchase process..
-> ![Bag](readme/features/features_bag.PNG)
-> User stories feature relates to:
-> * 12.10 To be able to complete purchase from shopping bag.
-> * 12.11 Allow users to buy products from the store.
-
-### Feature 13: Checkout
-- On the checkout page a form is displayed where the user can add their delivery address and card payment details.
-- The order summary displays a list of the products about to be purchased.
-- There are two buttons displayed: one to go back and amend the shopping bag and one to complete the order.
+### Shopping bag and checkout
+- Customers can review the items in their bag, change quantities, remove items, or continue shopping.
+- Checkout collects delivery details and processes card payments using Stripe. Customers see an order confirmation after a successful order, and an email confirmation is sent.
+> ![Shopping bag](readme/features/features_bag.PNG)
 > ![Checkout](readme/features/features_checkout.PNG)
-> User stories feature relates to:
-> * 13.10 To be able to complete purchase from shopping bag.
-> * 13.11 Allow users to buy products from the store.
+> ![Checkout success](readme/features/features_checkout_success.PNG)
 
-### Feature 14: Checkout Success
-- There is slight delay while the payment goes through. The last page displays an auto generated order number, a summary of delivery details.
-- A confirmation of the order will be also be emailed to the user.
-> ![Checkout Success](readme/features/features_checkout_success.PNG)
-> User stories feature relates to:
-> * 14.10 A profile page where I can add default delivery address and view orders.
-> * 14.11 Allow users to buy products from the store.
+### Contact
+- Visitors can use the contact form to send a message to the site owner.
+> ![Contact form](readme/features/features_contact_us.PNG)
 
-### Feature 15: AI Workout Builder
-- Visitors can generate a general workout routine based on their goal, experience, weekly availability, session length, equipment, location, and optional physical limitations.
-- The routine is generated by OpenAI. Answers are sent to OpenAI and are not saved to the visitor's Love Fitness account.
-- The page advises visitors that routines are not medical advice and recommends consulting a healthcare professional about injuries or health concerns.
-- Set the `OPENAI_API_KEY` environment variable to enable generation. `OPENAI_MODEL` can optionally select a different OpenAI chat-completions model; it defaults to `gpt-4o-mini`.
+### AI Workout Builder
+- Visitors can request a general workout routine based on their goal, experience, weekly availability, session length, equipment, location, and optional limitations.
+- Visitors must consent before their answers are sent to OpenAI. Answers are not saved to their Love Fitness account.
+- The page explains that the suggestions are not medical advice and recommends seeking professional guidance for injuries or health concerns.
+- Configure `OPENAI_API_KEY` on the server to enable generation. `OPENAI_MODEL` is optional and defaults to `gpt-4o-mini`.
 
-### Feature 16: AI Nutrition Planner
-- Visitors can generate general meal ideas based on a nutrition goal, dietary preferences, food allergies or restrictions, meals per day, cooking time, and budget.
-- The planner does not provide calorie or macro targets, medical diets, or treatment advice. Visitors must consent before answers are sent to OpenAI.
-- Answers are not saved to the visitor's Love Fitness account. Visitors are advised to check ingredients and labels and consult a qualified professional for individualized nutrition needs.
-- Uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the AI Workout Builder.
+### AI Nutrition Planner
+- Visitors can request general meal ideas based on their goal, dietary preferences, food allergies or restrictions, meals per day, cooking time, and budget.
+- The planner does not provide calorie or macro targets, medical diets, or treatment advice. Visitors must consent before their answers are sent to OpenAI; answers are not saved to their Love Fitness account.
+- Visitors are advised to check ingredients and food labels and to seek qualified professional advice for individualized nutrition needs.
+- The planner uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the AI Workout Builder.
 
 ---
 
