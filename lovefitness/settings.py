@@ -13,6 +13,7 @@ import os
 import django_heroku
 import dj_database_url
 import dotenv
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,19 +26,37 @@ if os.path.isfile(dotenv_file):
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
 OPENAI_MODEL = os.environ.get('OPENAI_MODEL', 'gpt-4o-mini')
 
+def env_bool(name, default=False):
+    """Read a boolean setting from the environment."""
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.strip().lower() in ('1', 'true', 'yes', 'on')
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6IQ>Ovd&_1b<DRL6ctOne0yjED'
+DEBUG = env_bool(
+    'DEBUG',
+    default='DATABASE_URL' not in os.environ,
+)
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
+if not SECRET_KEY:
+    if not DEBUG:
+        raise ImproperlyConfigured(
+            'Set SECRET_KEY in the environment when DEBUG is disabled.'
+        )
+    SECRET_KEY = 'django-insecure-local-development-only-key'
 
 ALLOWED_HOSTS = [
-    'localhost',
-    'lovefitness-e64d7a33971f.herokuapp.com',
-    '127.0.0.1',
+    host.strip()
+    for host in os.environ.get(
+        'ALLOWED_HOSTS',
+        'localhost,127.0.0.1,lovefitness-e64d7a33971f.herokuapp.com',
+    ).split(',')
+    if host.strip()
 ]
 
 # Application definition
@@ -140,9 +159,30 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'lovefitness.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-j0hn1975-cims4lovefitne-3p7e7n3q6r6.ws-eu93.gitpod.io',
-    'https://localhost:8000',
+    origin.strip()
+    for origin in os.environ.get(
+        'CSRF_TRUSTED_ORIGINS',
+        'https://8000-j0hn1975-cims4lovefitne-3p7e7n3q6r6.ws-eu93.gitpod.io,'
+        'https://localhost:8000',
+    ).split(',')
+    if origin.strip()
 ]
+
+SECURE_SSL_REDIRECT = env_bool('SECURE_SSL_REDIRECT', default=not DEBUG)
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_HSTS_SECONDS = int(os.environ.get(
+    'SECURE_HSTS_SECONDS',
+    '31536000' if not DEBUG else '0',
+))
+SECURE_HSTS_INCLUDE_SUBDOMAINS = env_bool(
+    'SECURE_HSTS_INCLUDE_SUBDOMAINS',
+    default=False,
+)
+SECURE_HSTS_PRELOAD = env_bool('SECURE_HSTS_PRELOAD', default=False)
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = 'DENY'
 
 
 # Database

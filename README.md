@@ -722,8 +722,8 @@ Deploy site locally
 <br><code>os.environ.setdefault("DATABASE_URL", TO BE ADDED BY USER)</code><br>
 9. Install the relevant packages as per the requirements.txt file
 10. In the settings.py ensure the connection is set to either the Heroku postgres database or the local sqllite database
-11. Ensure debug is set to true in the settings.py file for local development
-12. Add localhost/127.0.0.1 to the ALLOWED_HOSTS variable in settings.py
+11. Set `DEBUG=True` in the local environment for development. Production deployments with `DATABASE_URL` default to `DEBUG=False`; set `DEBUG=False` explicitly for any production deployment.
+12. Configure `ALLOWED_HOSTS` as a comma-separated list of hostnames, without schemes (for example `localhost,127.0.0.1` locally).
 13. Run "python3 manage.py showmigrations" to check the status of the migrations. Run "python3 manage.py migrate" to migrate the database
 14. Run "python3 manage.py createsuperuser" to create a super/admin user
 15. Run "python3 manage.py loaddata categories.json" on the categories file in products/fixtures to create the categories
@@ -747,6 +747,12 @@ Deploy site locally
 11. Go to the dashboard and trigger a deployment
 12. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
 13. If you encounter any issues accessing the build logs is a good way to troubleshoot the 
+
+For production, configure `SECRET_KEY`, `DATABASE_URL`, `ALLOWED_HOSTS`, and
+`CSRF_TRUSTED_ORIGINS` in the deployment environment. Set `DEBUG=False`.
+HTTPS redirects, secure session and CSRF cookies, and one-year HSTS are enabled
+when debug is disabled. Ensure the deployment serves the whole site over HTTPS
+before deploying with debug disabled. Never commit secret values.
 
 ## Stripe
 1. Go to stripe.com and register for an account
