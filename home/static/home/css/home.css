@@ -228,7 +228,7 @@
   min-height: 36rem;
 }
 
-.shop-focus-card:not(.shop-focus-card--feature) {
+.shop-focus-card:not(.shop-focus-card--feature):not(.shop-focus-card--wide) {
   grid-column: span 5;
   min-height: 17.5rem;
 }
@@ -358,9 +358,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .shop-focus-card--feature,
-  .shop-focus-card:not(.shop-focus-card--feature),
-  .shop-focus-card--wide {
+  .shop-focus-card:not(.shop-focus-card--feature):not(.shop-focus-card--wide) {
     grid-column: auto;
     min-height: 22rem;
   }
@@ -368,6 +366,11 @@
   .shop-focus-card--feature {
     grid-column: 1 / -1;
     min-height: 28rem;
+  }
+
+  .shop-focus-card--wide {
+    grid-column: 1 / -1;
+    min-height: 22rem;
   }
 }
 
@@ -405,6 +408,10 @@
   .shop-focus-card--wide {
     min-height: 20rem;
     grid-column: auto;
+  }
+
+  .shop-focus-card:not(.shop-focus-card--feature):not(.shop-focus-card--wide) {
+    min-height: 20rem;
   }
 
   .train-section {
