@@ -6,6 +6,7 @@ Import Render, Redirect, Reverse, Get_Object_or_404, HttpResponse
 # 3rd party:
 from django.shortcuts import render, redirect, reverse, get_object_or_404, \
     HttpResponse
+from django.http import Http404
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -68,6 +69,10 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            if request.user.is_authenticated:
+                order.user_profile, _ = UserProfile.objects.get_or_create(
+                    user=request.user,
+                )
             order.save()
             for item_id, item_data in bag.items():
                 try:
@@ -100,6 +105,7 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
+            request.session['checkout_order_number'] = order.order_number
             return redirect(reverse('checkout_success',
                             args=[order.order_number]))
         else:
@@ -164,10 +170,9 @@ def checkout_success(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the order
-        order.user_profile = profile
-        order.save()
+        profile, _ = UserProfile.objects.get_or_create(user=request.user)
+        if order.user_profile_id != profile.id:
+            raise Http404
 
         # Save the user's info
         if save_info:
@@ -183,6 +188,8 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
+    elif request.session.get('checkout_order_number') != order.order_number:
+        raise Http404
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \

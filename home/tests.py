@@ -85,3 +85,88 @@ class WorkoutRoutineViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'could not generate a routine')
         mock_post.assert_called_once()
+
+
+class NutritionPlanViewTests(TestCase):
+    valid_data = {
+        'goal': 'balanced',
+        'preferences': 'Vegetarian',
+        'restrictions': 'Peanuts',
+        'meals_per_day': '3',
+        'cooking_time': '30 minutes',
+        'budget': 'budget-friendly',
+        'consent': 'on',
+    }
+
+    def test_nutrition_builder_form_is_available(self):
+        response = self.client.get('/nutrition-plan/')
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'AI Nutrition Planner')
+        self.assertContains(response, 'Food allergies or restrictions')
+        self.assertContains(response, 'not medical advice')
+
+    @override_settings(OPENAI_API_KEY='')
+    @patch('home.views.requests.post')
+    def test_missing_api_key_shows_configuration_error(self, mock_post):
+        response = self.client.post('/nutrition-plan/', self.valid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'not configured yet')
+        mock_post.assert_not_called()
+
+    @override_settings(OPENAI_API_KEY='test-key', OPENAI_MODEL='test-model')
+    @patch('home.views.requests.post')
+    def test_valid_form_generates_and_displays_general_meal_ideas(self, mock_post):
+        provider_response = Mock()
+        provider_response.json.return_value = {
+            'choices': [{
+                'message': {
+                    'content': 'Breakfast: overnight oats with berries.',
+                },
+            }],
+        }
+        mock_post.return_value = provider_response
+
+        response = self.client.post('/nutrition-plan/', self.valid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Your meal plan ideas')
+        self.assertContains(response, 'Breakfast: overnight oats with berries.')
+        mock_post.assert_called_once()
+        request_payload = mock_post.call_args.kwargs['json']
+        self.assertEqual(request_payload['model'], 'test-model')
+        self.assertIn('Peanuts', request_payload['messages'][1]['content'])
+        self.assertIn('calorie counts', request_payload['messages'][0]['content'])
+
+    @override_settings(OPENAI_API_KEY='test-key')
+    @patch('home.views.requests.post')
+    def test_provider_is_not_called_without_data_sharing_consent(self, mock_post):
+        data_without_consent = {**self.valid_data, 'consent': ''}
+
+        response = self.client.post('/nutrition-plan/', data_without_consent)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'This field is required')
+        mock_post.assert_not_called()
+
+    @override_settings(OPENAI_API_KEY='test-key')
+    @patch('home.views.requests.post')
+    def test_invalid_form_does_not_call_provider(self, mock_post):
+        invalid_data = {**self.valid_data, 'meals_per_day': '10'}
+
+        response = self.client.post('/nutrition-plan/', invalid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Select a valid choice')
+        mock_post.assert_not_called()
+
+    @override_settings(OPENAI_API_KEY='test-key')
+    @patch('home.views.requests.post', side_effect=RequestException('provider unavailable'))
+    def test_provider_failure_is_reported(self, mock_post):
+        with self.assertLogs('home.views', level='ERROR'):
+            response = self.client.post('/nutrition-plan/', self.valid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'could not generate a meal plan')
+        mock_post.assert_called_once()

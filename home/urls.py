@@ -13,4 +13,5 @@ from . import views
 urlpatterns = [
     path('', views.index, name="home"),
     path('workout-routine/', views.workout_routine, name='workout_routine'),
+    path('nutrition-plan/', views.nutrition_plan, name='nutrition_plan'),
 ]

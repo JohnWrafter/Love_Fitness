@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}AI Nutrition Planner{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" type="text/css" />
+{% endblock %}
+{% block content %}
+<main class="workout-builder container py-5">
+    <header class="mb-4">
+        <p class="section-eyebrow">Everyday fuel, made personal</p>
+        <h1>AI Nutrition Planner</h1>
+        <p>Get general meal ideas shaped around your food preferences, schedule, and budget.</p>
+    </header>
+
+    <div class="alert alert-info" role="note">
+        Your answers are sent to OpenAI to create the meal plan and are not saved to your Love Fitness account.
+        Avoid including your name or other identifying details. This planner provides general meal ideas;
+        it is not medical advice or a substitute for individualized nutrition guidance. If you have a health
+        condition, food allergy, or specific dietary needs, consult a qualified healthcare professional or
+        dietitian. Generated suggestions may be inaccurate; always check ingredients and food labels.
+    </div>
+
+    <form method="post" class="card card-body shadow-sm mb-5">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="{% if field.name == 'consent' %}form-check{% else %}mb-3{% endif %}">
+                {% if field.name == 'consent' %}
+                    {{ field }}
+                    <label for="{{ field.id_for_label }}" class="form-check-label">{{ field.label }}</label>
+                {% else %}
+                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                    {{ field }}
+                {% endif %}
+                {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+                {% for error in field.errors %}<div class="text-danger">{{ error }}</div>{% endfor %}
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-warning text-uppercase align-self-start mt-3">Create my meal plan</button>
+    </form>
+
+    {% if plan %}
+        <section aria-labelledby="plan-title" class="card card-body shadow-sm">
+            <h2 id="plan-title">Your meal plan ideas</h2>
+            <div class="workout-builder__routine">{{ plan }}</div>
+            <p class="small text-muted mt-3 mb-0">Check every ingredient and food label, especially for allergens. AI-generated suggestions can be inaccurate.</p>
+        </section>
+    {% endif %}
+</main>
+{% endblock %}

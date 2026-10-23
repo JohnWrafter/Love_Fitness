@@ -78,3 +78,71 @@ class WorkoutRoutineForm(forms.Form):
         label='I understand my answers will be sent to OpenAI to generate my routine.',
         widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}),
     )
+
+
+class NutritionPlanForm(forms.Form):
+    GOAL_CHOICES = [
+        ('balanced', 'Plan balanced everyday meals'),
+        ('fitness', 'Support my fitness routine'),
+        ('plant_based', 'Explore more plant-based meals'),
+        ('variety', 'Add more variety to my meals'),
+    ]
+    MEALS_CHOICES = [(count, str(count)) for count in range(2, 7)]
+    COOKING_TIME_CHOICES = [
+        ('15 minutes or less', '15 minutes or less'),
+        ('30 minutes', 'About 30 minutes'),
+        ('45 minutes', 'About 45 minutes'),
+        ('no limit', 'No time limit'),
+    ]
+    BUDGET_CHOICES = [
+        ('budget-friendly', 'Budget-friendly'),
+        ('moderate', 'Moderate'),
+        ('flexible', 'Flexible'),
+    ]
+
+    goal = forms.ChoiceField(
+        choices=GOAL_CHOICES,
+        label='Nutrition goal',
+        widget=forms.Select(attrs={'class': 'form-select'}),
+    )
+    preferences = forms.CharField(
+        max_length=200,
+        label='Dietary preferences',
+        help_text='For example: vegetarian, vegan, or no preference.',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Vegetarian, vegan, no preference...',
+        }),
+    )
+    restrictions = forms.CharField(
+        max_length=300,
+        label='Food allergies or restrictions',
+        help_text=(
+            'List foods to exclude, or enter none. Do not include identifying '
+            'or medical details.'
+        ),
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'For example: peanuts, shellfish, gluten...',
+        }),
+    )
+    meals_per_day = forms.TypedChoiceField(
+        choices=MEALS_CHOICES,
+        coerce=int,
+        label='Meals per day',
+        widget=forms.Select(attrs={'class': 'form-select'}),
+    )
+    cooking_time = forms.ChoiceField(
+        choices=COOKING_TIME_CHOICES,
+        label='Cooking time',
+        widget=forms.Select(attrs={'class': 'form-select'}),
+    )
+    budget = forms.ChoiceField(
+        choices=BUDGET_CHOICES,
+        label='Food budget',
+        widget=forms.Select(attrs={'class': 'form-select'}),
+    )
+    consent = forms.BooleanField(
+        label='I understand my answers will be sent to OpenAI to generate my meal plan.',
+        widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+    )

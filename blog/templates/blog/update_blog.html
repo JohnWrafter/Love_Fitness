@@ -23,7 +23,7 @@
             <form method="POST" action="">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <a class="btn btn-success rounded-0" href="{% url 'blog' %}">Update Blog Entry</a>
+                <button class="btn btn-success rounded-0" type="submit">Update Blog Entry</button>
             </div>
         </div>
     </div>

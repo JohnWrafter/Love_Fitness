@@ -17,6 +17,7 @@ from .forms import UserProfileForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+@login_required
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -43,9 +44,15 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
     """ Define order history """
-    order = get_object_or_404(Order, order_number=order_number)
+    profile = get_object_or_404(UserProfile, user=request.user)
+    order = get_object_or_404(
+        Order,
+        order_number=order_number,
+        user_profile=profile,
+    )
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '

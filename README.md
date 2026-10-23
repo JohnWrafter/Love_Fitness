@@ -351,6 +351,12 @@ Contact Us Model
 - The page advises visitors that routines are not medical advice and recommends consulting a healthcare professional about injuries or health concerns.
 - Set the `OPENAI_API_KEY` environment variable to enable generation. `OPENAI_MODEL` can optionally select a different OpenAI chat-completions model; it defaults to `gpt-4o-mini`.
 
+### Feature 16: AI Nutrition Planner
+- Visitors can generate general meal ideas based on a nutrition goal, dietary preferences, food allergies or restrictions, meals per day, cooking time, and budget.
+- The planner does not provide calorie or macro targets, medical diets, or treatment advice. Visitors must consent before answers are sent to OpenAI.
+- Answers are not saved to the visitor's Love Fitness account. Visitors are advised to check ingredients and labels and consult a qualified professional for individualized nutrition needs.
+- Uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the AI Workout Builder.
+
 ---
 
 ## Technolgies Used
