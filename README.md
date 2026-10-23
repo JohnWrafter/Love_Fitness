@@ -78,101 +78,140 @@ The main goal of this site is to present song lyrics on a website that is easy t
 ---
 
 ## Structure
-The website is made up of over 10 pages. Each page is cleary designed, easy to navigate, and with well laid out information. With a mobile first approach in mind I have used bootstrap throughout to make the site respoinsive on mobile devices.
+Love Fitness is a responsive fitness and activewear storefront built with Django and Bootstrap. Its pages are organized around browsing products, getting fitness guidance, and completing purchases. The main navigation is responsive and provides access to shopping, plans, the fitness hub, and account features.
 
-The main pages are listed and descriobed below.
+The main areas of the site are:
 
-> 1. Home Page: An carousel dislays the main products the can be bought on the site.
-> 2. Sign Up Page: Where new users can register for the first time - with a link for existing users to login.
-> 3. Login Page: A page where exiting users can login - with a link to register a new account.
-> 4. Log Out Page: A log out page with an option to sign out completety or a cancel option to stay logged in.
-> 5. Shop (Products) Page: Products subdivded in to Women, Men, Fitness Equipment and Nutrition. Main Image, product name, price, rating and category displayed.
-> 6. Shop (Product Details) Page: Displays larger image, description, price, category, product rating.
-> 7. Product Management Page - Add Products: A page where new products can be added.
-> 8. Product Management Page - Edit Products: A page where existing products can be updated.
-> 9. Product Management Page - Delete Products: A page where existing products can be deleted.
-> 10. Add to wishlist: Users can add products to a wish list. 
-> 10. Wishlist: Clicking on the list icon on the products detail page will add item wish list. Items can be removed from list by clicking on delete.
-> 11. My Profile Page: A profile page where users can update address details.
-> 12. Order history: A list of orders that users have made can be viewed here.
-> 13. Bag: Users can add and view products to the shopping bag, as well as a total price and any applicable delivery charges.
-> 14. Checkout Page: Users can enter payment details and finalise their purchase.
-> 15. Checkout success: A user can view the checkout success after the payment has gone through.
+1. **Home:** Introduces the store and links to product categories, fitness articles, and the AI workout and nutrition builders.
+2. **Account:** Visitors can register, sign in, and sign out. Signed-in customers can update delivery details and view their own order history.
+3. **Shop:** Visitors can browse, search, filter, and sort activewear, fitness equipment, nutrition products, and plans. Product detail pages show product information and provide options such as adding an item to the bag or wishlist.
+4. **Shopping bag:** Displays selected products, quantities, sizes, item subtotals, delivery costs, and the order total. Customers can update quantities, remove items, or continue to checkout.
+5. **Checkout and order confirmation:** Customers enter delivery details and pay by card through Stripe. A successful order has a confirmation page and is included in the signed-in customer's order history.
+6. **Wishlist:** Signed-in customers can save products for later and remove them from their wishlist.
+7. **Fitness hub:** Visitors can read fitness articles and comments. Signed-in authors can create posts; authors and staff can edit or delete posts.
+8. **AI Workout Builder:** Visitors can request a general workout routine based on their goals, experience, schedule, equipment, location, and optional limitations.
+9. **AI Nutrition Planner:** Visitors can request general meal ideas based on their preferences, food restrictions, schedule, cooking time, and budget. It does not provide calorie or macro targets.
+10. **Contact:** Visitors can submit a message to the site owner.
+11. **Store management:** Authorized store administrators can add, edit, and remove products.
+
+The AI builders require an `OPENAI_API_KEY` configured on the server. Visitors must consent before their answers are sent to OpenAI. These tools provide general suggestions, not medical advice.
 ---
 
 ## Skeleton
-To design and develop the wireframes I first used Balsamiq, then used Snipping Tools to create PNG versions. The wireframes images are designed to collaspe.
+The refreshed wireframes below use a Balsamiq-inspired, low-fidelity style and reflect the current site, including the AI builders and account, shopping, and content-management flows. They are SVG illustrations, not native Balsamiq project files. The original Balsamiq PNG exports are preserved in `readme/wireframes/`.
 
 ## Wireframes
->
-### Desktop
-> <details><summary>Bag</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_bag.PNG">
-></details>
->
-> <details><summary>Blog</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_blog.PNG">
-> </details>
-> 
-> <details><summary>Add Blog</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_blog_add_blog.PNG">
-> </details>
->
-> <details><summary>Checkout</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_checkout.PNG">
-> </details>
->
-> <details><summary>Checkout Success</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_checkout_success.PNG">
-> </details>
->
-> <details><summary>Contact Us</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_contact_us.PNG">
-> </details>
->
-> <details><summary>Home</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_home.PNG">
-> </details>
->
-> <details><summary>Order History</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_order_history.PNG">
-></details>
->
-> <details><summary>Products Details</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_product_details.PNG">
-> </details>
->
-> <details><summary>Products</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_products.PNG">
-> </details>
-> 
-> <details><summary>Add Products</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_products_add_products.PNG">
-> </details>
->
-> <details><summary>Edit Products</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_products_edit_products.PNG">
-> </details>
->
-> <details><summary>Profile</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_profile.PNG">
-> </details>
->
-> <details><summary>Register</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_register.PNG">
-> </details>
->
-> <details><summary>Sign In</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_sign_in.PNG">
-> </details>
->
-> <details><summary>Sign Out</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_sign_out.PNG">
-> </details>
->
-> <details><summary>Wishlist</summary>
-> <img src="https://github.com/J0hn1975/CI-MS4-Love_Fitness/blob/main/readme/wireframes/wireframes_wishlist.PNG">
-> </details>
+These desktop layouts are illustrative, not pixel-perfect specifications. Select a page to view its wireframe.
+
+<details>
+<summary>Home</summary>
+<img src="readme/wireframes/wireframe_home.svg" alt="Home wireframe with hero, shop categories, AI builder links, and recent articles">
+</details>
+
+<details>
+<summary>Product catalogue</summary>
+<img src="readme/wireframes/wireframe_products.svg" alt="Product catalogue wireframe with category links, search, sorting, and product cards">
+</details>
+
+<details>
+<summary>Product details</summary>
+<img src="readme/wireframes/wireframe_product_details.svg" alt="Product details wireframe with image, price, options, add-to-bag, and wishlist actions">
+</details>
+
+<details>
+<summary>Shopping bag</summary>
+<img src="readme/wireframes/wireframe_bag.svg" alt="Shopping bag wireframe with product rows, quantity updates, remove buttons, and checkout">
+</details>
+
+<details>
+<summary>Checkout</summary>
+<img src="readme/wireframes/wireframe_checkout.svg" alt="Checkout wireframe with order summary, delivery form, Stripe card element, and order action">
+</details>
+
+<details>
+<summary>Checkout success</summary>
+<img src="readme/wireframes/wireframe_checkout_success.svg" alt="Order confirmation wireframe with reference, order summary, and delivery information">
+</details>
+
+<details>
+<summary>Contact</summary>
+<img src="readme/wireframes/wireframe_contact_us.svg" alt="Contact form wireframe with name, email, subject, message, and send action">
+</details>
+
+<details>
+<summary>Fitness hub</summary>
+<img src="readme/wireframes/wireframe_blog.svg" alt="Fitness hub wireframe with article summaries and post actions">
+</details>
+
+<details>
+<summary>Blog article</summary>
+<img src="readme/wireframes/wireframe_blog_detail.svg" alt="Blog article wireframe with post content and comments">
+</details>
+
+<details>
+<summary>Create blog post</summary>
+<img src="readme/wireframes/wireframe_blog_add_blog.svg" alt="Create blog post wireframe with title, subtitle, body, and publish action">
+</details>
+
+<details>
+<summary>Edit blog post</summary>
+<img src="readme/wireframes/wireframe_blog_edit.svg" alt="Edit blog post wireframe with editable title, subtitle, body, and save action">
+</details>
+
+<details>
+<summary>Delete blog post</summary>
+<img src="readme/wireframes/wireframe_blog_delete.svg" alt="Delete blog post confirmation wireframe with cancel and delete actions">
+</details>
+
+<details>
+<summary>Account profile</summary>
+<img src="readme/wireframes/wireframe_profile.svg" alt="Account profile wireframe with delivery details and order history">
+</details>
+
+<details>
+<summary>Order details</summary>
+<img src="readme/wireframes/wireframe_order_history.svg" alt="Order details wireframe with order reference, purchased items, totals, and delivery address">
+</details>
+
+<details>
+<summary>Wishlist</summary>
+<img src="readme/wireframes/wireframe_wishlist.svg" alt="Wishlist wireframe with saved product rows and remove actions">
+</details>
+
+<details>
+<summary>Add product</summary>
+<img src="readme/wireframes/wireframe_products_add_products.svg" alt="Add product wireframe with catalogue fields and add action">
+</details>
+
+<details>
+<summary>Edit product</summary>
+<img src="readme/wireframes/wireframe_products_edit_products.svg" alt="Edit product wireframe with catalogue fields, save, and delete actions">
+</details>
+
+<details>
+<summary>Register</summary>
+<img src="readme/wireframes/wireframe_register.svg" alt="Registration wireframe with account fields and create-account action">
+</details>
+
+<details>
+<summary>Sign in</summary>
+<img src="readme/wireframes/wireframe_sign_in.svg" alt="Sign-in wireframe with credentials, password recovery, and account link">
+</details>
+
+<details>
+<summary>Sign out</summary>
+<img src="readme/wireframes/wireframe_sign_out.svg" alt="Sign-out confirmation wireframe with cancel and sign-out actions">
+</details>
+
+<details>
+<summary>AI Workout Builder</summary>
+<img src="readme/wireframes/wireframe_ai_workout_builder.svg" alt="AI Workout Builder wireframe showing the privacy notice, workout preference form, consent, and generated routine area">
+</details>
+
+<details>
+<summary>AI Nutrition Planner</summary>
+<img src="readme/wireframes/wireframe_ai_nutrition_builder.svg" alt="AI Nutrition Planner wireframe showing the nutrition notice, meal preference form, allergy field, consent, and generated meal ideas area">
+</details>
 
 ---
 
