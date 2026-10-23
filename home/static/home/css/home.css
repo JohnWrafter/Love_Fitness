@@ -10,6 +10,15 @@
   background: #172126;
 }
 
+.workout-builder {
+  margin-top: 6rem;
+  max-width: 850px;
+}
+
+.workout-builder__routine {
+  white-space: pre-line;
+}
+
 .home-hero__media,
 .home-hero__image,
 .home-hero__overlay {

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}AI Workout Builder{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" type="text/css" />
+{% endblock %}
+{% block content %}
+<main class="workout-builder container py-5">
+    <header class="mb-4">
+        <p class="section-eyebrow">Your training, your way</p>
+        <h1>AI Workout Builder</h1>
+        <p>Tell us what works for you and get a general workout routine tailored to your goals, schedule, and equipment.</p>
+    </header>
+
+    <div class="alert alert-info" role="note">
+        Your answers are sent to OpenAI to create the routine and are not saved to your Love Fitness account.
+        Avoid including your name or other identifying details. This is general fitness information, not
+        medical advice. If you have an injury or health concern, check with a qualified healthcare professional
+        before starting a new routine.
+    </div>
+
+    <form method="post" class="card card-body shadow-sm mb-5">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="{% if field.name == 'consent' %}form-check{% else %}mb-3{% endif %}">
+                {% if field.name == 'consent' %}
+                    {{ field }}
+                    <label for="{{ field.id_for_label }}" class="form-check-label">{{ field.label }}</label>
+                {% else %}
+                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                    {{ field }}
+                {% endif %}
+                {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+                {% for error in field.errors %}<div class="text-danger">{{ error }}</div>{% endfor %}
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-warning text-uppercase align-self-start mt-3">Create my routine</button>
+    </form>
+
+    {% if routine %}
+        <section aria-labelledby="routine-title" class="card card-body shadow-sm">
+            <h2 id="routine-title">Your workout routine</h2>
+            <div class="workout-builder__routine">{{ routine }}</div>
+            <p class="small text-muted mt-3 mb-0">AI-generated suggestions can be inaccurate. Stop if you feel pain and seek professional guidance when needed.</p>
+        </section>
+    {% endif %}
+</main>
+{% endblock %}
