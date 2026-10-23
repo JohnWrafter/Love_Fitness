@@ -216,63 +216,42 @@ These desktop layouts are illustrative, not pixel-perfect specifications. Select
 ---
 
 ## Surface
+
+Love Fitness uses a clean, responsive storefront design with generous spacing, clear page sections, and product photography. Dark headings and body text contrast with light backgrounds, while bright lime accents highlight key actions and links. Product cards, forms, and navigation use consistent borders, spacing, and button styles across desktop and mobile layouts.
+
 ## Colours
-Each page is design with very simple colours and images to showcase the island. The colours I have used are as follows:
-> - For the nav bar and info banners I have used green with white text to add contrast
-> - For the products cards I have used blue for the card headers and light blue for the card body, with contrasting black text
-> - I have used a very light grey for the overlay.
+- **Charcoal / near-black** for strong headings, navigation text, and dark section backgrounds.
+- **Lime green** for primary buttons, active states, and highlights.
+- **Off-white and white** for page backgrounds, cards, and form surfaces.
+- **Muted grey and green** for secondary text, borders, and supporting details.
 
 ## Typography
-For the brand logo I have used Google Font - Lobster, and for the Lyrics (flow-test) I have used Google Font - Roboto Condensed. Everywhere else I have used the default Materialize font.
+The Love Fitness logo uses its supplied SVG artwork. The site uses **Barlow Condensed** for prominent display headings and **DM Sans** for readable body text and form controls. Some home-page and navigation components also use **Exo**, **Exo 2**, and **Montserrat** for headings, labels, and supporting text. The layout scales typography and spacing for smaller screens.
 
 ## Database
-> For the development environment a SQLLite database was used but for product I have used PostGres
+Local development uses SQLite by default. Deployments can use a database URL through the `DATABASE_URL` environment variable; the production deployment is configured with PostgreSQL.
 
 ### Physical database model
 
-Using the conceptual database design I was able to create the physical database model. This physical database model show all the fields stored in each of the database collections.
-![Physical Database Model](readme/misc/database.PNG)
+The diagram shows the current application data models and their relationships. Django and django-allauth also create framework-managed tables for authentication, sessions, email addresses, and related account data; those tables are not expanded here.
 
-Models
-> * The models listed below were created for the Love Fitnss Website
+![Current Love Fitness physical database model](readme/misc/physical_database_model.svg)
 
-User Model
-> * This model contains of the relevant information for the User.
+#### Application models
 
-UserProfile Model
-> * The UserProfile and User model have one-to-one relationship with each other
-> * The fields contained within the User Profile model are: default_phone_number, default_street_address1, default_street_address2 default_town_or_city, default_county, default_postcode and default_country
+| Model | Main fields | Relationships |
+|---|---|---|
+| `User` (Django) | Username, password hash, names, email, staff/active/superuser flags, login and join timestamps | One-to-one with `UserProfile` and `Favourites`; one-to-many with blog posts |
+| `UserProfile` | Default phone number, street addresses, town/city, county, postcode, country | One-to-one with `User`; one-to-many with orders |
+| `Category` | Name, friendly name | One-to-many with products |
+| `Product` | Name, description, gender, colour, size flag, price, stock quantity, rating, image URL, image | Optional many-to-one relationship with `Category`; referenced by order line items and favourites |
+| `Order` | Order number, purchaser profile, customer and delivery details, date, delivery cost, item total, grand total, original bag, Stripe payment-intent ID | Optional many-to-one relationship with `UserProfile`; one-to-many with order line items |
+| `OrderLineItem` | Product size, quantity, line-item total | Many-to-one relationships with `Order` and `Product` |
+| `Favourites` (wishlist) | User, saved products | One-to-one relationship with `User`; many-to-many relationship with `Product` |
+| `Post` | Title, title tag, author, body, post date | Many-to-one relationship with `User` |
+| `Contact` | Full name, subject, email, message | No model relationships |
 
-Order Model
-> * Any information relating to customer orders is stored here.
-> * The fields contained within the Order Model are: order_number, user_profile, full_name, email, phone_number, country, postcode, town_or_city, street_address1 , street_address2, county, date, delivery_cost, order_total, grand_total, original_bag, stripe_pid.
-
-Order LineItem Model
-> * The fields contained within the Order LineITem Model are: order, product, product_size, quantity, lineitem_total.
-> * This model stores information on any order made on the website.
-
-Blog Model
-> * The Blog model contains information on any Blog entries made on the site.
-> * The fields contained within this model are: title, title_tag, author, body, post_date.
-
-Favourites Model - utilised in this project as a Wish List
-> * The Wish List model contains information on any products stored in a users wish list.
-> * The fields contained in this model are: products and username.
-
-Product Model
-> * Category has been added as a Foreign Key
-> * This model contains inforamtion on a product and its repective details.
-> * The fields contained within this model are: category, name, description, has_sizes, price, rating, image_url, image.
-> * The product image is stored in the Image field
-> * And the URL for the image is stored in the Image_URL field. 
-
-Category Model
-> * This model contains infomation about the different categories used within the store.
-> * The field contained within this model are: name, friendly_name
-
-Contact Us Model
-> * This model contains any informaiton sent through the Contact Us form.
-> * The fields contained within this model are: full_name, subject, email, message
+The AI Workout Builder and AI Nutrition Planner do not create database records for generated responses. Visitors must consent before their submitted answers are sent to OpenAI.
 
 # Features
 Love Fitness brings together an activewear and fitness-products store, account tools, fitness articles, and AI-assisted general guidance.

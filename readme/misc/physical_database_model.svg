@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200" role="img" aria-labelledby="title description">
+  <title id="title">Love Fitness physical database model</title>
+  <desc id="description">Current application database entities and relationships for users, profiles, products, categories, orders, wishlists, blog posts, and contact messages.</desc>
+  <defs>
+    <style>
+      .canvas { fill: #f5f6f1; }
+      .panel { fill: #fff; stroke: #dfe4dc; stroke-width: 2; }
+      .heading { fill: #172126; font: 700 20px 'DM Sans', Arial, sans-serif; }
+      .field { fill: #39413c; font: 15px 'DM Sans', Arial, sans-serif; }
+      .key { fill: #176a50; font-weight: 700; }
+      .title { fill: #172126; font: 700 30px 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif; }
+      .subtitle { fill: #596368; font: 15px 'DM Sans', Arial, sans-serif; }
+      .relation { fill: #172126; font: 15px 'DM Sans', Arial, sans-serif; }
+      .relation-head { fill: #176a50; font: 700 18px 'DM Sans', Arial, sans-serif; }
+    </style>
+  </defs>
+  <rect class="canvas" width="1400" height="1200"/>
+  <text class="title" x="40" y="52">LOVE FITNESS — PHYSICAL DATABASE MODEL</text>
+  <text class="subtitle" x="40" y="82">Application-owned models. PK = primary key; FK = foreign key; nullable and many-to-many links are noted.</text>
+
+  <g transform="translate(40 120)">
+    <rect class="panel" width="390" height="280" rx="8"/>
+    <path d="M0 46H390" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">User (Django auth)</text>
+    <text class="field key" x="18" y="73">PK  id</text>
+    <text class="field" x="18" y="99">username, password</text>
+    <text class="field" x="18" y="125">first_name, last_name, email</text>
+    <text class="field" x="18" y="151">is_staff, is_active, is_superuser</text>
+    <text class="field" x="18" y="177">last_login, date_joined</text>
+    <text class="field" x="18" y="221">Related to profile, wishlist, and posts</text>
+  </g>
+
+  <g transform="translate(500 120)">
+    <rect class="panel" width="390" height="280" rx="8"/>
+    <path d="M0 46H390" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">UserProfile</text>
+    <text class="field key" x="18" y="73">PK  id</text>
+    <text class="field key" x="18" y="99">FK  user (unique)</text>
+    <text class="field" x="18" y="125">default_phone_number</text>
+    <text class="field" x="18" y="151">default_street_address1 / address2</text>
+    <text class="field" x="18" y="177">default_town_or_city, default_county</text>
+    <text class="field" x="18" y="203">default_postcode, default_country</text>
+  </g>
+
+  <g transform="translate(970 120)">
+    <rect class="panel" width="390" height="280" rx="8"/>
+    <path d="M0 46H390" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">Favourites (wishlist)</text>
+    <text class="field key" x="18" y="73">PK  id</text>
+    <text class="field key" x="18" y="99">FK  username (User, unique)</text>
+    <text class="field" x="18" y="125">products (many-to-many Product)</text>
+    <text class="field" x="18" y="177">Product links use a Django join table</text>
+  </g>
+
+  <g transform="translate(40 455)">
+    <rect class="panel" width="390" height="250" rx="8"/>
+    <path d="M0 46H390" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">Category</text>
+    <text class="field key" x="18" y="75">PK  id</text>
+    <text class="field" x="18" y="105">name</text>
+    <text class="field" x="18" y="135">friendly_name (optional)</text>
+    <text class="field" x="18" y="190">One category has many products</text>
+  </g>
+
+  <g transform="translate(500 455)">
+    <rect class="panel" width="390" height="250" rx="8"/>
+    <path d="M0 46H390" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">Product</text>
+    <text class="field key" x="18" y="75">PK  id</text>
+    <text class="field key" x="18" y="101">FK  category (optional)</text>
+    <text class="field" x="18" y="127">name, description, gender, colour</text>
+    <text class="field" x="18" y="153">has_sizes, price, stock_quantity, rating</text>
+    <text class="field" x="18" y="179">image_url, image</text>
+    <text class="field" x="18" y="220">Referenced by order items and wishlist</text>
+  </g>
+
+  <g transform="translate(970 455)">
+    <rect class="panel" width="390" height="250" rx="8"/>
+    <path d="M0 46H390" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">Post (Fitness Hub)</text>
+    <text class="field key" x="18" y="75">PK  id</text>
+    <text class="field" x="18" y="101">title, title_tag, body</text>
+    <text class="field key" x="18" y="127">FK  author (User)</text>
+    <text class="field" x="18" y="153">post_date</text>
+    <text class="field" x="18" y="205">One user can author many posts</text>
+  </g>
+
+  <g transform="translate(40 760)">
+    <rect class="panel" width="620" height="280" rx="8"/>
+    <path d="M0 46H620" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">Order</text>
+    <text class="field key" x="18" y="75">PK  id</text>
+    <text class="field" x="18" y="101">order_number, full_name, email, phone_number</text>
+    <text class="field key" x="18" y="127">FK  user_profile (optional)</text>
+    <text class="field" x="18" y="153">country, postcode, town_or_city, address fields</text>
+    <text class="field" x="18" y="179">date, delivery_cost, order_total, grand_total</text>
+    <text class="field" x="18" y="205">original_bag, stripe_pid</text>
+    <text class="field" x="18" y="247">One order has many order line items</text>
+  </g>
+
+  <g transform="translate(750 760)">
+    <rect class="panel" width="330" height="280" rx="8"/>
+    <path d="M0 46H330" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">OrderLineItem</text>
+    <text class="field key" x="18" y="75">PK  id</text>
+    <text class="field key" x="18" y="101">FK  order</text>
+    <text class="field key" x="18" y="127">FK  product</text>
+    <text class="field" x="18" y="153">product_size (optional)</text>
+    <text class="field" x="18" y="179">quantity, lineitem_total</text>
+  </g>
+
+  <g transform="translate(1120 760)">
+    <rect class="panel" width="240" height="280" rx="8"/>
+    <path d="M0 46H240" stroke="#dfe4dc" stroke-width="2"/>
+    <text class="heading" x="18" y="30">Contact</text>
+    <text class="field key" x="18" y="75">PK  id</text>
+    <text class="field" x="18" y="101">full_name</text>
+    <text class="field" x="18" y="127">subject</text>
+    <text class="field" x="18" y="153">email</text>
+    <text class="field" x="18" y="179">message</text>
+  </g>
+
+  <g transform="translate(40 1060)">
+    <rect class="panel" width="1320" height="105" rx="8"/>
+    <text class="relation-head" x="18" y="30">RELATIONSHIPS</text>
+    <text class="relation" x="18" y="58">User 1:1 UserProfile · User 1:1 Favourites · User 1:M Posts · UserProfile 1:M Orders</text>
+    <text class="relation" x="18" y="84">Category 1:M Products · Order 1:M OrderLineItems · Product 1:M OrderLineItems · Favourites M:M Products</text>
+  </g>
+</svg>
