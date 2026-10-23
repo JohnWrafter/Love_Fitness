@@ -1,0 +1,1 @@
+Love Fitness order confirmation: {{ order.order_number }}

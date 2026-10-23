@@ -296,14 +296,14 @@ if 'USE_AWS' in os.environ:
 FREE_DELIVERY_THRESHOLD = 99
 STANDARD_DELIVERY_PERCENTAGE = 10
 
-STRIPE_CURRENCY = 'eur'
+STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 if os.getenv('DEVELOPMENT', '').lower() in ('1', 'true', 'yes'):
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
+    DEFAULT_FROM_EMAIL = 'notifications@lovefitness.local'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
