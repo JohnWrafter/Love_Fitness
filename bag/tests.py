@@ -86,7 +86,7 @@ class BagSessionTests(TestCase):
         )
         self.assertIn('name="product_size" value="m"', html)
 
-    def test_remove_button_posts_to_remove_bag_item(self):
+    def test_remove_button_posts_and_redirects_to_updated_bag(self):
         session = self.client.session
         session['bag'] = {
             str(self.product.id): {'items_by_size': {'m': 1}}
@@ -98,5 +98,30 @@ class BagSessionTests(TestCase):
             {'product_size': 'm'},
         )
 
-        self.assertEqual(response.status_code, 200)
+        self.assertRedirects(response, reverse('view_bag'))
         self.assertNotIn(str(self.product.id), self.client.session['bag'])
+
+    def test_remove_single_size_preserves_other_sizes(self):
+        session = self.client.session
+        session['bag'] = {
+            str(self.product.id): {'items_by_size': {'m': 1, 'l': 2}}
+        }
+        session.save()
+
+        response = self.client.post(
+            reverse('remove_from_bag', args=[self.product.id]),
+            {'product_size': 'm'},
+        )
+
+        self.assertRedirects(response, reverse('view_bag'))
+        self.assertEqual(
+            self.client.session['bag'][str(self.product.id)]['items_by_size'],
+            {'l': 2},
+        )
+
+    def test_remove_endpoint_rejects_get_requests(self):
+        response = self.client.get(
+            reverse('remove_from_bag', args=[self.product.id]),
+        )
+
+        self.assertEqual(response.status_code, 405)

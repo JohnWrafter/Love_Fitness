@@ -4,9 +4,9 @@ Setup views for shopping bag
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import render, redirect, reverse, HttpResponse, \
-     get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.views.decorators.http import require_POST
 
 # Internal
 from products.models import Product
@@ -121,38 +121,32 @@ def adjust_bag(request, item_id):
     return redirect(reverse('view_bag'))
 
 
+@require_POST
 def remove_from_bag(request, item_id):
     """
     Remove the item from the shopping bag
     """
 
-    try:
-        product = get_object_or_404(Product, pk=item_id)
-        size = None
-        if 'product_size' in request.POST:
-            size = request.POST['product_size']
-        bag = request.session.get('bag', {})
-        item_key = str(item_id)
+    product = get_object_or_404(Product, pk=item_id)
+    size = request.POST.get('product_size')
+    bag = request.session.get('bag', {})
+    item_key = str(item_id)
 
-        if size:
-            bag_item = _normalise_bag_item(bag.get(item_key, bag.get(item_id)))
-            bag_item['items_by_size'].pop(size, None)
-            if not bag_item['items_by_size']:
-                bag.pop(item_key, None)
-                bag.pop(item_id, None)
-            else:
-                bag[item_key] = {'items_by_size': bag_item['items_by_size']}
-            messages.success(request,
-                             f'Removed size {size.upper()} '
-                             f'{product.name} from your bag')
-        else:
+    if size:
+        bag_item = _normalise_bag_item(bag.get(item_key, bag.get(item_id)))
+        bag_item['items_by_size'].pop(size, None)
+        if not bag_item['items_by_size']:
             bag.pop(item_key, None)
             bag.pop(item_id, None)
-            messages.success(request, f'Removed {product.name} from your bag')
+        else:
+            bag[item_key] = {'items_by_size': bag_item['items_by_size']}
+        messages.success(request,
+                         f'Removed size {size.upper()} '
+                         f'{product.name} from your bag')
+    else:
+        bag.pop(item_key, None)
+        bag.pop(item_id, None)
+        messages.success(request, f'Removed {product.name} from your bag')
 
-        request.session['bag'] = bag
-        return HttpResponse(status=200)
-
-    except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
-        return HttpResponse(status=500)
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
