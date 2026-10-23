@@ -1,81 +1,16 @@
 # Love Fitness
-![Responsive Mockup](readme/amiresponsive/amiresponsive.PNG)
+![Original project responsive mockup](readme/amiresponsive/amiresponsive.PNG)
 
-[You can visit the live site here](https://ci-ms4-lovefitness.herokuapp.com/)
-
- I have created two user for this site for the accessors to use and the credentials are: 
-> username: ciuser, password: UserPassword
-> username: ciadmin, password: AdminPassword
-
-The account I have used for this project.
-> username: admin, password: Em3w0rth! 
+Love Fitness is a Django fitness storefront with product browsing, shopping and checkout, customer accounts, a Fitness Hub, and optional AI-powered workout and meal-idea builders. A live demo is not currently available.
 
 ## Table of Contents
-> 1. [Target Audience](#target-audience)
-> 2. [Project Goals](#project-goals)
-> 3. [The 5 Planes of UX](#the-5-planes-of-ux)  
-    3.1 [Strategy](#strategy)  
-    3.2 [Scope](#scope)  
-          - i [User Stories](#user-stories)   
-          - ii  [Site Owner Goals](#site-owner-goals)    
-    3.3 [Structure](#structure)  
-    3.4 [Skeleton](#skeleton)  
-          - i [Wireframes](#wireframes)  
-          - ii [Desktop](#desktop)  
-          - iii [Mobile](#mobile)  
-    3.5 [Surface](#surface)  
-          - i [Colours](#colours)  
-          - ii [Typography](#typography)  
-          - iii [Database](#database)
-> 4. [Features](#features)  
-> 5. [Technolgies Used](#technolgies-used)
-> 6. [Testing](#testing)  
->   6.1 [Code Validation](#code-validation)  
-    6.2 [Device Tests](#device-tests)  
-    6.3 [Browser Tests](#browser-tests)  
-    6.4 [User Story Tests](#user-story-tests)  
-> 7. [Bugs Fixes](#bugs)
-> 8. [Deployment](#deployment)
-> 10. [Credits](#credits)
-> 11. [Acknowledgements](#acknowledgements)
+[Target audience](#target-audience) · [Project goals](#project-goals) · [Structure](#structure) · [Wireframes](#wireframes) · [Surface](#surface) · [Database](#database) · [Features](#features) · [Technologies](#technologies-used) · [Testing](#testing) · [Deployment](#deployment) · [Credits](#credits) · [Acknowledgements](#acknowledgements)
 
 ## Target Audience
-The ideal target audience for Love Fitness are for those looking to get to in to fitness for the first time but also for experienced
-gym goers looking further their fitness goals.
+Love Fitness is for people starting or maintaining a fitness routine, from beginners to experienced gym-goers. The store and guidance tools support customers looking for activewear, training equipment, nutrition products, and general fitness inspiration.
 
-# The 5 Planes of UX
-## Strategy
 ## Project Goals
----
-The primary business goals of this site are:
-> * To encourage site visitors to accomplish their fitness goals.
-> * An e-commerce store with a wide range of fitness and nutrition products.
-
-The primary customer goals of this site are:
-> * To be able to purchase fitness and nutrtional products, as well as fitness and nutrition plans.
-> * A community to interact with other users.
-
-## Scope
-## User Stories 
-As a new or returning visitor I would like to see:
-> 1. To easily register a new account to access the site and all its features.
-> 2. View a list of all the products available to purchase.
-> 3. View a single product.
-> 4. To be able to add / delete products from a wish list or favourites.
-> 5. Option to search for products by name or description. 
-> 6. To be able to complete purchase from shopping bag.
-> 7. An error page to show if I have enterted an incorrect URL.
-> 8. Sort the list of products by its category, price and rating.
-> 9. A contact page to get in touch with the site owner.
-> 10. A profile page where I can add default delivery address and view orders.
-
-## Site owner goals
-The main goal of this site is to present song lyrics on a website that is easy to navigate.
-> 11. To use full CRUD funcitonality to manage products and plans within the store.
-> 12. Allow users to buy products from the store.
-> 13. Present the end user with a clear and simple navigation menu.
-> 14. On the 404 page the user shouldn't use the broswer back but instead the nav bar.
----
+The site aims to make fitness products and general training inspiration easy to discover, provide a straightforward purchase flow, and support a fitness community. Store management is restricted to authorized administrators.
 
 ## Structure
 Love Fitness is a responsive fitness and activewear storefront built with Django and Bootstrap. Its pages are organized around browsing products, getting fitness guidance, and completing purchases. The main navigation is responsive and provides access to shopping, plans, the fitness hub, and account features.
@@ -229,7 +164,7 @@ Love Fitness uses a clean, responsive storefront design with generous spacing, c
 The Love Fitness logo uses its supplied SVG artwork. The site uses **Barlow Condensed** for prominent display headings and **DM Sans** for readable body text and form controls. Some home-page and navigation components also use **Exo**, **Exo 2**, and **Montserrat** for headings, labels, and supporting text. The layout scales typography and spacing for smaller screens.
 
 ## Database
-Local development uses SQLite by default. Deployments can use a database URL through the `DATABASE_URL` environment variable; the production deployment is configured with PostgreSQL.
+Local development uses SQLite by default. PostgreSQL can be configured for deployment through the `DATABASE_URL` environment variable.
 
 ### Physical database model
 
@@ -321,18 +256,27 @@ The screenshots below show the current site; account and order examples use fict
 
 ---
 
-## Technolgies Used
-> * HTML5 (https://en.wikipedia.org/wiki/HTML)  
-       - HTML is used throughout the project to build the structure of the web pages.
-> * CSS3 (https://en.wikipedia.org/wiki/CSS)  
-       - CSS is used throughout the site to style the HTML structure of the web pages.
-> * Javascript (https://www.javascript.com/)  
-       - Javascript was used to add the logic and scripting to the site
-> * Python v4.0 (https://www.python.org/)  
-       - Python was used to code the backend of the project
+## Technologies Used
+- **Python 3.10.18** and **Django 5.2.4** for the application backend.
+- **HTML, CSS, and JavaScript** for page structure, styling, and browser interactions.
+- **Bootstrap 5** and Django Crispy Forms for responsive layout and form rendering.
+- **SQLite** for local development by default, with PostgreSQL supported through `DATABASE_URL`.
+- **Stripe** for card-payment processing.
+- **OpenAI API** for the optional workout and nutrition suggestion tools.
+- **Amazon S3** for optional static and media storage; WhiteNoise serves static assets when S3 is not enabled.
 
 ## Testing
+Run the automated Django tests and framework checks from the repository root:
+
+```bash
+python manage.py test
+python manage.py check
+```
+
+The suite completed successfully on 23 October 2026: 35 tests passed, and Django reported no system-check issues. Rerun the checks after making changes.
+
 ## Code Validation
+The screenshots and third-party validation results below are historical project evidence from an earlier version of the interface; they are not a current validation of every page or asset. Rerun the relevant validators against the current deployment before relying on those results.
 ### CSS Validation
 I have used the W3C CSS Validation Service - Jigsaw to check that my CSS is valid
 
@@ -360,14 +304,13 @@ I have used the W3C Markup Validation Service to check my HTML is valid
 |   Confirm Change Password | 0 errors | [View Results](readme/html_validation/html_validation_confirmed_password_changed.PNG) |
 |   Password Reset          | 0 errors | [View Results](readme/html_validation/html_validation_confirmed_password_changed.PNG) |
 |   Checkout                | 0 errors | [View Results](readme/html_validation/html_validation_checkout.PNG)                   |
-|   Contact                 | 0 errors | [View Results](readme/html_validation/html_validation_password_reset.PNG)             |
+|   Contact                 | 0 errors | [View Results](readme/html_validation/html_validation_contact.PNG)                    |
 |   Profile                 | 0 errors | [View Results](readme/html_validation/html_validation_profile.PNG)                    |
 |   Register                | 0 errors | [View Results](readme/html_validation/html_validation_register_account.PNG)           |
 |   Log In                  | 0 errors | [View Results](readme/html_validation/html_validation_login.PNG)                      |
-|   Log Out                 | 0 errors | [View Results](readme/html_validation/html_validation_login.PNG)                      |
+|   Log Out                 | 0 errors | [View Results](readme/html_validation/html_validation_logout.PNG)                     |
 |   Wishlist                | 0 errors | [View Results](readme/html_validation/html_validation_wishlist.PNG)                   |
 |   Verification Emai Sent  | 0 errors | [View Results](readme/html_validation/html_verification_email_sent.PNG)               |
-|   Entire Site             | 0 errors | [View Results](docs/Validation/HTML/Entire_Site.PNG) |
 ---
 
 ### Javascript Validation
@@ -515,266 +458,90 @@ I have used Google Lighthouse (in Google Dev tools) to measure the performance t
 --- 
 
 ### Device Tests
-The site has been tested on the following physical devices
-> - Huawei P30 Pro
-> - HP Envy 17 Laptop
-> - Samsung Galaxy A31
-
-Actual tests:
-> 1. Home, All Products(and dropdown menu), Shop(and drop down menu), Plans (and dropdown menu), Contact us, Special Offers all go to the correct pages. Clicking the Love Fitness brand logo navigates back to the Home page
-> 2. On a mobile device the nav bar collapses to a hamburger button. When clicked a sidenav appears, all links work here too when clicked.
-> 3. The search function on the main header returns searches on each product as intended. A toast notification pops warning user if search button clicked without entering search criteria.
-> 4. The text and images are all clearly displayed.
-> 5. When logged in as admin user products and added, edited and deleted, these are restricted for non-admin users.
-> 6. When a non admin user is logged in only the Fitness Hub, My Profile and Logout options are displayed. An admin users sees all these options and Product Management
-> 7. A 404 error page will be displayed in the event of a incorrect URL being entered. The standard nav can be used to navigate back to the site pages.
-> 8. The three social links for Facebook, Instgram and Twitter all navigate to respective sites home pages and also open in a new tab.
-Overall results:
-> * The above physical tests passed on each device they were tested on.
+Previous manual device-test notes and screenshots describe an earlier version of the site. They have not been re-run against the current interface and should not be treated as current compatibility results.
 
 ### Browser Tests
-> * Firefox Developer Edition - All nav links, features and website work as expected
-> * Google Chrome - All nav links, features and website work as expected
-> * Firefox Developer Edition - All nav links, features and website work as expected
+The repository does not include current cross-browser test results. Re-test the current site in supported browsers before release.
 
 ### User story tests
-> 1. To easily register a new account to access the site and all its features.
-
-|                    Feature                                                |             Test Steps             |           Expected            |       Actual       |
-| :-----------------------------------------------------------------------: | :--------------------------------: | :---------------------------: | :----------------: |
-| To easily register a new account to access the site and all its features. | Click on My Account, Register      |       Sign Up form loads      | Works as expected |
-
-[User story screenshot](readme/testing/user_story_1/register.PNG)  
-
-> 2. View a list of all the products available to purchase.
-
-|        Feature                                          |                          Test Steps                   |    Expected      |      Actual       |
-| :-----------------------------------------------------: | :---------------------------------------------------: | :----------------| :---------------: |
-| View a list of all the products available to purchase.  |  Click on dropdown menus in All Products, Shop, Plans | Products display | Works as expected |  
-
-[User story screen shot](readme/testing/user_story_2/user_story_2.PNG)  
-
-> 3. View a single product.
-
-|        Feature         |         Test Steps                   |    Expected              |      Actual       |
-| :--------------------: | :----------------------------------: | :------------------------| :---------------: |
-| View a single product  |  Enter search criteria in search bar | Single products displays | Works as expected |  
-
-[User story screen shot](readme/testing/user_story_3/user_story_3.PNG)  
-
-> 4. To be able to add / delete products from a wish list or favourites.
-
-|                Feature                                               |   Test Steps                        |      Expected         |      Actual       |
-| :------------------------------------------------------------------: | :---------------------------------: | :-------------------: | :---------------: |
-| To be able to add / delete products from a wish list or favourites.  | Added Product to Wish List          | Product to be added   | Works as expected |
-| To be able to add / delete products from a wish list or favourites.  | On added product clicked on delete  | Product to be deleted | Works as expected |
-
-[User story screen shot](readme/testing/user_story_4/user_story_4.png)
-
-> 5. Option to search for products by name or description.
-
-|                         Feature                       |     Test Steps                                     |           Expected       |      Actual       |
-| :---------------------------------------------------: | :------------------------------------------------: | :----------------------: | :---------------: |
-| Option to search for products by name or description. | Entered search criteria by name or description     |  Product is displayed    | Works as expected |  
-
-[User story screen shot](readme/testing/user_story_5/user_story_5.PNG)  
-
-> 6. To be able to complete a purchase from the shopping bag.
-
-|                         Feature                         |     Test Steps        |           Expected       |      Actual       |
-| :-----------------------------------------------------: | :-------------------: | :----------------------: | :---------------: |
-| To be able to complete a purchase from the shopping bag | Made a test purchase  |  Purchase to complete    | Works as expected |  
-
-[User story screen shot](readme/testing/user_story_6/user_story_6.png)  
-
-> 7. An error page to show if I have enterted an incorrect URL.
-
-|                  Feature                         |   Test Steps                       |               Expected                         |      Actual       |
-| :----------------------------------------------: | :--------------------------------: | :--------------------------------------------: | :---------------: |
-| An error page to show if I have enterted an incorrect URL. | Clicked on delete and edit buttons | Lyrics to be deleted. Edit lyrics page to show | Works as expected |
-
-> 8. Sort the list of products by its category, price and rating.
-
-|                    Feature                                   |    Test Steps                                          |                    Expected               |      Actual       |
-| :----------------------------------------------------------: | :---------------------------------------------------:  | :---------------------------------------: | :---------------: |
-| Sort the list of products by its category, price and rating. | Clicked All Products, By Price, By Rating, By Category |  Products displayed by relevant category  | Works as expected |
-
-[User story screen shot](readme/testing/user_story_8/user_story_8.PNG)  
-
-> 9. A contact page to get in touch with the site owner.
-
-|                   Feature                           |      Test Steps      |             Expected                    |      Actual       |
-| :-------------------------------------------------: | :------------------: | :-------------------------------------: | :---------------: |
-| A contact page to get in touch with the site owner. | Click on Contact Us  | Contact form displayed and message sent | Works as expected |
-
-[User story screen shot](readme/testing/user_story_9/user_story_9.PNG)  
-
-> 10. A profile page where I can add default delivery address and view orders.
-
-|                           Feature                            |                     Test Steps                     |            Expected             |      Actual       |
-| :----------------------------------------------------------: | :------------------------------------------------: | :-----------------------------: | :---------------: |
-| A profile page where I can add default delivery address and view orders. | Loaded site where the nav bar is clearly layed out | Nav bar to display on each page | Works as expected |
-
-[User story screen shot](readme/testing/user_story_10/user_story_10_add_address.png)  
-[User story screen shot](readme/testing/user_story_10/user_story_10_order_history.png)  
-
-> 11. To use full CRUD funcitonality to manage products and plans within the store.
-
-|                   Feature                   |          Test Steps             |                           Expected                           |      Actual       |
-| :-----------------------------------------: | :-----------------------------: | :----------------------------------------------------------: | :---------------: |
-| To use full CRUD funcitonality to manage products and plans within the store. | View site from mobile device | Site is responsive. Nav bar collapses to burger menu. Test each link. | Works as expected |
-
-[User story screen shot](docs/Features/responsive.PNG)  
-
-> 12. Allow users to buy products from the store.
-
-|            Feature                          |     Test Steps      |        Expected      |      Actual       |
-| :-----------------------------------------: | :-----------------: | :------------------: | :---------------: |
-| Allow users to buy products from the store. |  Made test purchase | Purchase to complete | Works as expected | 
-
-[User story screen shot](readme/testing/user_story_12/user_story_12.png)  
-
-> 13. Present the end user with a clear and simple navigation menu.
-
-|                           Feature                            |                     Test Steps                     |            Expected             |      Actual       |
-| :----------------------------------------------------------: | :------------------------------------------------: | :-----------------------------: | :---------------: |
-| Add, edit, delete genre function available for admin users   | Logged in a admin. Tested add, edit, delete genres |    Genre add, edit and delete   | Works as expected |
-
-[User story screen shot](readme/testing/user_story_13/user_story_13_desktop_nav.PNG)  
-[User story screen shot](readme/testing/user_story_13/user_story_13_mobile_nav.PNG)  
-
-> 14. On the 404 page the user shouldn't use the broswer back button but instead the nav bar.
-
-|                       Feature         |    Test Steps   |                   Expected                    |      Actual       |
-| :-----------------------------------: | :-------------: | :-------------------------------------------: | :---------------: |
-| Nav bar displayed on error 404 page   | Loaded 404 page | Weather widget with daily forecast to display | Works as expected |
+The automated Django suite covers core application behavior, including account and order access, blog permissions, checkout validation, and shopping-bag operations. Run `python manage.py test` for the current results. Older user-story screenshots are retained in `readme/testing/` as project history, not as verification of the current UI.
 
 ---
 
-# Bugs
-> **Bug** Navbar drop down menus stopped working
-> **Fix** Changed data-toggle attribute to data-bs-
-
-> **Bug** Footer Info Banner text not centered
-> **Fix** Added Text Center to Span Class 
-
 # Deployment
 
-## Local Deployment
-Deploy site locally
+## Local setup
 
-1. Log in to Github and navigate to main page of repository
-2. Click on **Code** above the list of files
-3. Copy the link under clone to https
-4. Open Git bash
-5. If required change the directory to where you would like repo cloned to
-6. Type git clone and then copy in repo URL
-7. Press enter and repo will go through short cloning process
-8. Create an env.py file(do not commit this file to source control) in the root folder in your project, and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values<br>
-<br><code>import os</code>
-<br><code>os.environ.setdefault("SECRET_KEY", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("STRIPE_PUBLIC_KEY", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("STRIPE_SECRET_KEY", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("STRIPE_WH_SECRET", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("AWS_ACCESS_KEY_ID", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("AWS_SECRET_ACCESS_KEY", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("EMAIL_HOST_USER", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("EMAIL_HOST_PASS", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("USE_AWS", TO BE ADDED BY USER)</code>
-<br><code>os.environ.setdefault("DATABASE_URL", TO BE ADDED BY USER)</code><br>
-9. Install the relevant packages as per the requirements.txt file
-10. In the settings.py ensure the connection is set to either the Heroku postgres database or the local sqllite database
-11. Set `DEBUG=True` in the local environment for development. Production deployments with `DATABASE_URL` default to `DEBUG=False`; set `DEBUG=False` explicitly for any production deployment.
-12. Configure `ALLOWED_HOSTS` as a comma-separated list of hostnames, without schemes (for example `localhost,127.0.0.1` locally).
-13. Run "python3 manage.py showmigrations" to check the status of the migrations. Run "python3 manage.py migrate" to migrate the database
-14. Run "python3 manage.py createsuperuser" to create a super/admin user
-15. Run "python3 manage.py loaddata categories.json" on the categories file in products/fixtures to create the categories
-16. Run "python3 manage.py loaddata products.json" on the products file in products/fixtures to create the products
-17. Run "python3 manage.py loaddata plan_categories.json" on the news file in news/fixtures to create catergories for plan categories
-17. Run "python3 manage.py loaddata plan_products.json" on the news file in news/fixtures to create catergories for plan products
-18. Start the application by running <code>python3 manage.py runserver</code>
-19. Open the application in a web browser, for example: http://127.0.0.1:8000/
+1. Clone the repository and enter the project directory:
 
-## Heroku and PostGres
-1. Create a file called ProcFile in the root directory, and add the line <code>web: python app.py</code> if the file does not already exist
-2. Create a requirements.txt file by running the command <code>pip freeze > requirements.txt</code> in your terminal if the file doesn't already exist
-3. Both the ProcFile and requirements.txt files should be added to your git repo in the root directory
-4. Create an account on heroku.com
-5. Create a new application and give it a unique name
-6. Click on the resources tab, search for and add PostGres as a database for the app.
-7. A URL for the database will be created, make a note of it as it will be required to add to environment variables.
-8. In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
-9. Select the branch for example master and enable automatic deploys if desired. Otherwise, a deployment will be manual
-10. The next step is to set the config variables in the Settings section
-11. Go to the dashboard and trigger a deployment
-12. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
-13. If you encounter any issues accessing the build logs is a good way to troubleshoot the 
+   ```bash
+   git clone https://github.com/JohnWrafter/Love_Fitness.git
+   cd Love_Fitness
+   ```
 
-For production, configure `SECRET_KEY`, `DATABASE_URL`, `ALLOWED_HOSTS`, and
-`CSRF_TRUSTED_ORIGINS` in the deployment environment. Set `DEBUG=False`.
-HTTPS redirects, secure session and CSRF cookies, and one-year HSTS are enabled
-when debug is disabled. Ensure the deployment serves the whole site over HTTPS
-before deploying with debug disabled. Never commit secret values.
+2. Use Python 3.10.18 (the version recorded in `.python-version`) and create and activate a virtual environment.
+3. Install dependencies and apply database migrations:
+
+   ```bash
+   python -m pip install -r requirements.txt
+   python manage.py migrate
+   ```
+
+4. Optionally create an administrator account:
+
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+   Add catalogue products and categories through Django admin. The old product and plan fixtures mentioned in earlier versions of this README are not included in the repository.
+
+5. Start the development server and visit `http://127.0.0.1:8000/`:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+Local development uses SQLite by default and `DEBUG` defaults to true when `DATABASE_URL` is absent. Use environment variables or an ignored local `.env` file for local configuration; never put secrets in tracked files.
+
+## Production deployment
+
+The repository includes a Gunicorn `Procfile`. Configure the following environment variables in the hosting platform as appropriate:
+
+- `SECRET_KEY`: private, unique value required when `DEBUG=False`.
+- `DEBUG=False`.
+- `DATABASE_URL`: production database connection URL; without it, Django uses SQLite.
+- `ALLOWED_HOSTS`: comma-separated hostnames without URL schemes.
+- `CSRF_TRUSTED_ORIGINS`: comma-separated trusted origins including `https://`.
+- `STRIPE_PUBLIC_KEY`, `STRIPE_SECRET_KEY`, and `STRIPE_WH_SECRET` for payments.
+- `OPENAI_API_KEY` to enable the AI builders; `OPENAI_MODEL` is optional and defaults to `gpt-4o-mini`.
+- For SMTP email, configure `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_USE_TLS`, `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD`, and `DEFAULT_FROM_EMAIL`. Set `DEVELOPMENT` truthy to use the console email backend in development.
+
+When `DEBUG=False`, HTTPS redirection, secure session and CSRF cookies, and one-year HSTS are enabled. Configure HTTPS and valid host/origin settings before launch. Run these commands during deployment after configuring the database and static storage:
+
+```bash
+python manage.py migrate
+python manage.py collectstatic --noinput
+```
 
 ## Stripe
-1. Go to stripe.com and register for an account
-2. Once logged in click on the Developers section.
-3. Click on the API Keys
-4. Make a record the values for the publishable and secret keys
-5. In your local environment(env.py) and heroku, create environment variables STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY with the publishable and secret key values
-6. Back in the Developers section of your stripe account click on Webhooks
-7. Create a webhook with the url of your website <url>/checkout/wh/, for example: https://ci-ms4-lovefitness.herokuapp.com/checkout/wh/
-8. Select the payment_intent.payment_failed and payment_intent.succeeded as events to send
-9. Note the key created for this webhook
-10. In your local environment(env.py) and heroku, create environment variable STRIPE_WH_SECRET with the secret values
-11. Feel free to test out the webhook and note the success/fail attempts for troubleshooting
 
-## OpenAI Workout Builder
-1. Create an API key in your OpenAI account.
-2. Set `OPENAI_API_KEY` in your local environment and deployment configuration. Do not commit the key to the repository.
-3. Optionally set `OPENAI_MODEL` to a chat-completions model available to your account; the default is `gpt-4o-mini`.
+Configure Stripe API keys in the environment: `STRIPE_PUBLIC_KEY`, `STRIPE_SECRET_KEY`, and `STRIPE_WH_SECRET`. Set a webhook endpoint at `/checkout/wh/` and subscribe it to `payment_intent.payment_failed` and `payment_intent.succeeded`. Use test-mode keys for local testing and never commit key values.
 
-## Amazon WebServices
-1. Create an account at aws.amazon.com
-2. Open the S3 application and create an S3 bucket named "ci-ms4-rugby-shop"
-3. Uncheck the "Block All Public access setting"
-4. In the Properties section, navigate to the "Static Website Hosting" section and click edit
-5. Enable the setting, and set the index.html and the error.html values
-6. In the Permissions section, click edit on the CORS configuration and set the below configuration
-7. In the permissions section, click edit on the bucket policy and generate and set the below configuration(or similar to your settings)
-8. In the permissions section, click edit on the Access control list(ACL)
-9. Set Read access for the Bucket ACL for Everyone(Public Access)
-10. The bucket is created, the next step is to open the IAM application to set up access
-11. Create a new user group named "ci-ms4-rugby-shop"
-12. Add the "AmazonS3FullAccess" policy permission for the user group
-13. Go to "Policies" and click "Create New Policy"
-14. Click "Import Managed Policy" and select "AmazonS3FullAccess" > Click 'Import'.
-15. In the JSON editor, update the policy "Resource" to the following
-<br><code>"Resource": [</code>
-<br><code>"arn:aws:s3:::ci-ms4-lovefitness",</code>
-<br><code>"arn:aws:s3:::ci-ms4-lovefitness/*"</code>
-<br><code>]</code>
-16. Give the policy a name and click "Create Policy"
-17. Add the newly created policy to the user group
-18. Go to Users and create a new user
-19. Add the user to the user group ci-ms4-rugby-shop
-20. Select "Programmatic access" for the access type
-21. Note the AWS_SECRET_ACCESS_KEY and AWS_ACCESS_KEY_ID variables, they are used in other parts of this README for local deployment and Heroku setup
-22. The user is now created with the correct user group and policy
-23. Note the AWS code in settings.py. Note an environment variable called USE_AWS must be set to use these settings, otherwise it will use local storage
-24. These settings set up a cache policy, set the bucket name, and the environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY that you set in your aws account
-25. The configuration also requires the media/static folders that must be setup in the AWS S3 bucket to store the media and static files 
+## Optional Amazon S3 storage
+
+S3 storage is enabled when `USE_AWS` is present in the environment. The configured bucket is `lovefitness` in the `eu-west-2` region; configure `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` using a secret manager. Grant the IAM identity only the bucket permissions the application requires. Do not enable broad public access or grant full-account permissions. Leave `USE_AWS` unset to use local media storage and WhiteNoise for static files.
+
+## OpenAI
+
+Set `OPENAI_API_KEY` to enable AI generation. `OPENAI_MODEL` can optionally select another chat-completions model available to the account; the default is `gpt-4o-mini`. Do not commit API keys.
 
 ---
 
 ### Credits
 
-## Image Carousel
-> * Image carousel courtesy of Brad Traversy - https://codepen.io/bradtraversy/pen/oVPBaa
-
 ## Images
-> * Main product images  web scraped from My Protein - https://www.myprotein.com/ and Argos - https://www.argos.co.uk/
-> * Carousel images courtesy of Unsplash - https://unsplash.com/
+- Product photography is credited to Myprotein and Argos in the original project assets.
+- The home-page hero image is sourced from Unsplash.
 
 # Acknowledgements
 > * Mo Shami for his internal patience and guidance
