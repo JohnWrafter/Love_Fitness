@@ -37,10 +37,7 @@ def env_bool(name, default=False):
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-DEBUG = env_bool(
-    'DEBUG',
-    default='DATABASE_URL' not in os.environ,
-)
+DEBUG = False
 
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 if not SECRET_KEY:
