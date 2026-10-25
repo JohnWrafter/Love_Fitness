@@ -6,10 +6,10 @@ Views for home page
 # 3rd party:
 import logging
 
-import requests
 from django.conf import settings
 from django.contrib import messages
 from django.shortcuts import render
+from openai import OpenAI, OpenAIError
 
 # Internal:
 from blog.models import Post
@@ -22,30 +22,23 @@ logger = logging.getLogger(__name__)
 def _generate_ai_content(prompt, system_prompt, feature_name):
     """Request generated content from OpenAI and report provider failures."""
     try:
-        response = requests.post(
-            'https://api.openai.com/v1/chat/completions',
-            headers={
-                'Authorization': f'Bearer {settings.OPENAI_API_KEY}',
-                'Content-Type': 'application/json',
-            },
-            json={
-                'model': settings.OPENAI_MODEL,
-                'messages': [
-                    {'role': 'system', 'content': system_prompt},
-                    {'role': 'user', 'content': prompt},
-                ],
-                'max_tokens': 1000,
-            },
-            timeout=30,
+        client = OpenAI(api_key=settings.OPENAI_API_KEY, timeout=30)
+        response = client.responses.create(
+            model=settings.OPENAI_MODEL,
+            input=[
+                {'role': 'system', 'content': system_prompt},
+                {'role': 'user', 'content': prompt},
+            ],
+            max_output_tokens=1000,
+            store=False,
         )
-        response.raise_for_status()
-        content = response.json()['choices'][0]['message']['content'].strip()
+        content = response.output_text.strip()
         if not content:
             raise ValueError('The AI provider returned empty content.')
         return content
-    except requests.RequestException:
+    except OpenAIError:
         logger.exception('OpenAI request failed for %s.', feature_name)
-    except (ValueError, KeyError, IndexError, TypeError, AttributeError):
+    except (ValueError, TypeError, AttributeError):
         logger.exception('OpenAI returned an invalid response for %s.', feature_name)
     return None
 

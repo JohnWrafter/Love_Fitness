@@ -37,7 +37,10 @@ def env_bool(name, default=False):
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-DEBUG = False
+DEBUG = env_bool(
+    'DEBUG',
+    default='DATABASE_URL' not in os.environ,
+)
 
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 if not SECRET_KEY:
@@ -160,7 +163,7 @@ CSRF_TRUSTED_ORIGINS = [
     for origin in os.environ.get(
         'CSRF_TRUSTED_ORIGINS',
         'https://8000-j0hn1975-cims4lovefitne-3p7e7n3q6r6.ws-eu93.gitpod.io,'
-        'https://localhost:8000',
+        'https://localhost:8000,http://localhost:8000',
     ).split(',')
     if origin.strip()
 ]
