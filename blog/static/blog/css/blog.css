@@ -29,3 +29,300 @@
 .form-image{
     width: 100%;
 }
+
+.fitness-hub {
+    max-width: 1120px;
+    padding-top: 2rem !important;
+}
+
+.fitness-hub__header {
+    border-bottom: 1px solid #e5e9e5;
+    margin-bottom: 2rem;
+    padding: 1rem 0 1.75rem;
+}
+
+.fitness-hub__eyebrow {
+    color: #176a50;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .11em;
+    margin-bottom: .55rem;
+    text-transform: uppercase;
+}
+
+.fitness-hub__header h1,
+.article-assistant h2,
+.fitness-hub__articles h2,
+.article-matches h2 {
+    color: #172126;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: .98;
+    margin: 0 0 .7rem;
+}
+
+.fitness-hub__header > p:last-child,
+.article-assistant__intro > p:not(.fitness-hub__eyebrow) {
+    color: #596368;
+    line-height: 1.7;
+    max-width: 46rem;
+}
+
+.article-assistant {
+    background: linear-gradient(130deg, #172126, #263633);
+    border-radius: 1.2rem;
+    box-shadow: 0 1rem 2.5rem rgba(23, 33, 38, .13);
+    color: #fff;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, .8fr);
+    margin-bottom: 3rem;
+    padding: clamp(1.4rem, 4vw, 2.8rem);
+}
+
+.article-assistant .fitness-hub__eyebrow {
+    color: #d8f35b;
+}
+
+.article-assistant h2 {
+    color: #fff;
+}
+
+.article-assistant__intro > p:not(.fitness-hub__eyebrow) {
+    color: rgba(255, 255, 255, .86);
+}
+
+.article-assistant__privacy {
+    border-left: 2px solid #d8f35b;
+    font-size: .79rem;
+    margin: 1.2rem 0 0;
+    padding-left: .75rem;
+}
+
+.article-assistant__form {
+    align-self: center;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: .9rem;
+    padding: 1.2rem;
+}
+
+.article-assistant__form .form-label,
+.article-assistant__form .form-check-label {
+    color: #fff;
+    font-size: .9rem;
+}
+
+.article-assistant__form .form-control {
+    border: 1px solid #d6ddd7;
+    border-radius: .5rem;
+    min-height: 3rem;
+}
+
+.article-assistant__form .form-check {
+    margin: 1rem 0;
+}
+
+.article-assistant__form .form-check-input:checked {
+    background-color: #176a50;
+    border-color: #176a50;
+}
+
+.article-assistant__submit,
+.fitness-hub__add {
+    align-items: center;
+    background: #d8f35b;
+    border: 0;
+    border-radius: 999px;
+    color: #172126;
+    display: inline-flex;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    gap: .65rem;
+    justify-content: center;
+    letter-spacing: .06em;
+    padding: .8rem 1.15rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.article-assistant__submit:hover,
+.article-assistant__submit:focus-visible,
+.fitness-hub__add:hover,
+.fitness-hub__add:focus-visible {
+    background: #fff;
+    color: #172126;
+    transform: translateY(-1px);
+}
+
+.article-matches {
+    margin-bottom: 3rem;
+}
+
+.article-matches__heading {
+    margin-bottom: 1rem;
+}
+
+.article-matches__grid,
+.fitness-hub__article-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.article-match,
+.fitness-article {
+    background: #fff;
+    border: 1px solid #e5e9e5;
+    border-radius: .9rem;
+    box-shadow: 0 .5rem 1.5rem rgba(23, 33, 38, .05);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.25rem;
+}
+
+.article-match__date,
+.fitness-article__date {
+    color: #176a50;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .69rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin: 0 0 .7rem;
+    text-transform: uppercase;
+}
+
+.article-match h3,
+.fitness-article h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 0 0 .55rem;
+}
+
+.article-match h3 a,
+.fitness-article h3 a {
+    color: #172126;
+    text-decoration: none;
+}
+
+.article-match h3 a:hover,
+.article-match h3 a:focus-visible,
+.fitness-article h3 a:hover,
+.fitness-article h3 a:focus-visible {
+    color: #176a50;
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+}
+
+.article-match__subtitle,
+.fitness-article__subtitle {
+    color: #596368;
+    font-size: .88rem;
+    font-weight: 600;
+}
+
+.article-match__reason,
+.fitness-article__excerpt {
+    color: #465151;
+    line-height: 1.65;
+}
+
+.article-match__link,
+.fitness-article__link {
+    align-items: center;
+    color: #176a50;
+    display: inline-flex;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .74rem;
+    font-weight: 700;
+    gap: .45rem;
+    letter-spacing: .06em;
+    margin-top: auto;
+    padding-top: .75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.article-match__link:hover,
+.article-match__link:focus-visible,
+.fitness-article__link:hover,
+.fitness-article__link:focus-visible {
+    color: #172126;
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+}
+
+.fitness-hub__articles {
+    margin-bottom: 3rem;
+}
+
+.fitness-hub__articles-heading {
+    align-items: end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.fitness-hub__articles-heading h2 {
+    margin-bottom: 0;
+}
+
+.fitness-article__author {
+    color: #687171;
+    font-size: .8rem;
+    margin: auto 0 0;
+    padding-top: .5rem;
+}
+
+.fitness-article__manage {
+    border-top: 1px solid #e5e9e5;
+    display: flex;
+    gap: 1rem;
+    margin-top: .9rem;
+    padding-top: .65rem;
+}
+
+.fitness-article__manage a {
+    color: #176a50;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.fitness-hub__empty {
+    background: #fff;
+    border: 1px dashed #bdc8be;
+    border-radius: .9rem;
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+}
+
+.fitness-hub__empty h3 {
+    color: #172126;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.fitness-hub__empty p {
+    color: #596368;
+}
+
+@media (max-width: 720px) {
+    .article-assistant {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .article-assistant__submit,
+    .fitness-hub__add {
+        transition: none;
+    }
+}

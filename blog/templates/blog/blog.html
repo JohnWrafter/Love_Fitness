@@ -1,56 +1,119 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% load static %}
+{% block extra_title %}Fitness Hub{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}" type="text/css" />
+{% endblock %}
 {% block page_header %}
-<div class="container hdr-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
+<div class="container hdr-container" aria-hidden="true"></div>
 {% endblock %}
 
 {% block content %}
-<!-- Overlay white background -->
-<div class="overlay"></div>
-<!-- Main Blog Detail Container -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-6 mx-auto">
-            <hr />
-            <!-- Blog Page Heading -->
-            <h2 class="fw-bold display-6 text-center">Blogs From Other Love Fitness Users</h2>
-            <p class="fw-bold display-6 text-center">Or why not add your own blog?</p>
-            <div class="col text-center">
-            <a href="{% url 'add_blog' %}" class="btn btn-success btn-lg" role="button" aria-disabled="false">Add Blog</a>
+<main class="fitness-hub container py-5">
+    <header class="fitness-hub__header">
+        <p class="fitness-hub__eyebrow">The Love Fitness journal</p>
+        <h1>Fitness Hub</h1>
+        <p>Ideas, experience, and inspiration from the Love Fitness community.</p>
+    </header>
+
+    <section class="article-assistant" id="article-assistant" aria-labelledby="article-assistant-title">
+        <div class="article-assistant__intro">
+            <p class="fitness-hub__eyebrow">Find your next read</p>
+            <h2 id="article-assistant-title">Article assistant</h2>
+            <p>Tell us what you’re curious about and get relevant reads from the articles already in our Fitness Hub.</p>
+            <p class="article-assistant__privacy">
+                Your topic and article excerpts are sent to OpenAI to find matches; they are not saved to your account.
+                Please don’t include personal details. The assistant searches up to 40 of the latest articles.
+            </p>
         </div>
-            {% for post in object_list %}
-            <hr />
-            <!-- Bootstrap card -->
-            <div class="card text-center">
-                <!-- Main card header -->
-                <div class="card-header">
-                    {{ post.title }}
+
+        <form class="article-assistant__form" method="post" action="{% url 'article_assistant' %}">
+            {% csrf_token %}
+            {% for field in assistant_form %}
+                <div class="{% if field.name == 'consent' %}form-check{% else %}mb-3{% endif %}">
+                    {% if field.name == 'consent' %}
+                        {{ field }}
+                        <label class="form-check-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {% else %}
+                        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                    {% endfor %}
                 </div>
-                <!-- Main card body -->
-                <div class="card-body">
-                    <h5 class="card-title">{{ post.title_tag }}</h5>
-                    <p class="card-text">{{ post.body }}</p>
-                    <p class="card-text">{{ post.author.first_name }} {{ post.author.last_name }}</p>
-                    <!-- Edit and Delete Buttons -->
-                    {% if user.is_authenticated %} {% if user.id == post.author.id %}
-                    <div class="ml-3 mb-2 text-center">
-                        <a class="text-secondary text-decoration-none" href="{% url 'update_blog' post.pk %}">Edit</a> |
-                        <a class="text-danger text-decoration-none" data-toggle="modal" data-target="#modal-overlay" href="{% url 'delete_blog' post.pk %}">Delete</a>
-                    </div>
-                    <!-- Card footer displaying blog post date -->
-                    <div class="card-footer text-muted">
-                        {{ post.post_date }}
-                    </div>
-                    {% endif %} {% endif %}
-                </div>
+            {% endfor %}
+            <button class="article-assistant__submit" type="submit">
+                Find articles <span aria-hidden="true">&rarr;</span>
+            </button>
+        </form>
+    </section>
+
+    {% if recommendations %}
+        <section class="article-matches" aria-labelledby="article-matches-title" aria-live="polite">
+            <div class="article-matches__heading">
+                <p class="fitness-hub__eyebrow">From the Fitness Hub</p>
+                <h2 id="article-matches-title">Articles for you</h2>
             </div>
+            <div class="article-matches__grid">
+                {% for recommendation in recommendations %}
+                    <article class="article-match">
+                        <p class="article-match__date">{{ recommendation.post.post_date|date:"M j, Y" }}</p>
+                        <h3>
+                            <a href="{% url 'blog_detail' recommendation.post.pk %}">
+                                {{ recommendation.post.title }}
+                            </a>
+                        </h3>
+                        {% if recommendation.post.title_tag %}
+                            <p class="article-match__subtitle">{{ recommendation.post.title_tag }}</p>
+                        {% endif %}
+                        <p class="article-match__reason">{{ recommendation.reason }}</p>
+                        <a class="article-match__link" href="{% url 'blog_detail' recommendation.post.pk %}">
+                            Read article <span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    <section class="fitness-hub__articles" aria-labelledby="fitness-articles-title">
+        <div class="fitness-hub__articles-heading">
+            <div>
+                <p class="fitness-hub__eyebrow">Community stories</p>
+                <h2 id="fitness-articles-title">Latest articles</h2>
+            </div>
+            <a class="fitness-hub__add" href="{% url 'add_blog' %}">Share your story</a>
+        </div>
+
+        <div class="fitness-hub__article-grid">
+            {% for post in object_list %}
+                <article class="fitness-article">
+                    <p class="fitness-article__date">{{ post.post_date|date:"M j, Y" }}</p>
+                    <h3><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h3>
+                    {% if post.title_tag %}<p class="fitness-article__subtitle">{{ post.title_tag }}</p>{% endif %}
+                    <p class="fitness-article__excerpt">{{ post.body|truncatechars:220 }}</p>
+                    <p class="fitness-article__author">
+                        By {{ post.author.first_name|default:post.author.username }}
+                    </p>
+                    <a class="fitness-article__link" href="{% url 'blog_detail' post.pk %}">
+                        Read article <span aria-hidden="true">&rarr;</span>
+                    </a>
+                    {% if user.is_authenticated and user.id == post.author.id or user.is_staff %}
+                        <div class="fitness-article__manage">
+                            <a href="{% url 'update_blog' post.pk %}">Edit</a>
+                            <a href="{% url 'delete_blog' post.pk %}">Delete</a>
+                        </div>
+                    {% endif %}
+                </article>
+            {% empty %}
+                <div class="fitness-hub__empty">
+                    <h3>Be the first to share a story</h3>
+                    <p>There are no articles yet. Add a post to start the conversation.</p>
+                    <a class="fitness-hub__add" href="{% url 'add_blog' %}">Write an article</a>
+                </div>
             {% endfor %}
         </div>
-    </div>
-</div>
-<br />
+    </section>
+</main>
 {% endblock %}

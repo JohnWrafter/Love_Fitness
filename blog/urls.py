@@ -5,11 +5,12 @@ URL Patterns for blog app
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from django.urls import path
-from .views import (BlogView, BlogDetailView, AddBlogView,
+from .views import (BlogView, article_assistant, BlogDetailView, AddBlogView,
                     UpdateBlogView, DeleteBlogView)
 
 urlpatterns = [
     path('', BlogView.as_view(), name="blog"),
+    path('article-assistant/', article_assistant, name='article_assistant'),
     path('blog_detail/<int:pk>', BlogDetailView.as_view(), name='blog_detail'),
     path('add_blog/', AddBlogView.as_view(), name='add_blog'),
     path('blog_detail/edit/<int:pk>',

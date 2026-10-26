@@ -1,7 +1,7 @@
 # Love Fitness
 ![Original project responsive mockup](readme/amiresponsive/amiresponsive.PNG)
 
-Love Fitness is a Django fitness storefront with product browsing, shopping and checkout, customer accounts, a Fitness Hub, and optional AI-powered product recommendations, workout building, and meal planning. A live demo is not currently available.
+Love Fitness is a Django fitness storefront with product browsing, shopping and checkout, customer accounts, a Fitness Hub, and optional AI-powered article discovery, product recommendations, workout building, and meal planning. A live demo is not currently available.
 
 ## Table of Contents
 [Target audience](#target-audience) · [Project goals](#project-goals) · [Structure](#structure) · [Wireframes](#wireframes) · [Surface](#surface) · [Database](#database) · [Features](#features) · [Technologies](#technologies-used) · [Testing](#testing) · [Deployment](#deployment) · [Credits](#credits) · [Acknowledgements](#acknowledgements)
@@ -23,14 +23,14 @@ The main areas of the site are:
 4. **Shopping bag:** Displays selected products, quantities, sizes, item subtotals, delivery costs, and the order total. Customers can update quantities, remove items, or continue to checkout.
 5. **Checkout and order confirmation:** Customers enter delivery details and pay by card through Stripe. A successful order has a confirmation page and is included in the signed-in customer's order history.
 6. **Wishlist:** Signed-in customers can save products for later and remove them from their wishlist.
-7. **Fitness hub:** Visitors can read fitness articles and comments. Signed-in authors can create posts; authors and staff can edit or delete posts.
+7. **Fitness hub:** Visitors can read fitness articles and comments, and use the optional AI article assistant to find relevant reads. Signed-in authors can create posts; authors and staff can edit or delete posts.
 8. **AI Product Finder:** Visitors can get catalogue-based product suggestions using a description, optional category, and maximum budget.
 9. **AI Workout Builder:** Visitors can request a general workout routine based on their goals, experience, schedule, equipment, location, and optional limitations.
 10. **AI Nutrition Planner:** Visitors can request general meal ideas based on their preferences, food restrictions, schedule, cooking time, and budget. It does not provide calorie or macro targets.
 11. **Contact:** Visitors can submit a message to the site owner.
 12. **Store management:** Authorized store administrators can add, edit, and remove products.
 
-The AI tools require an `OPENAI_API_KEY` configured on the server. Visitors must consent before their requests are sent to OpenAI. The product finder recommends only matching in-stock catalogue items; the workout and nutrition builders provide general suggestions, not medical advice.
+The AI tools require an `OPENAI_API_KEY` configured on the server. Visitors must consent before their requests are sent to OpenAI. The article assistant searches recent public Fitness Hub articles, and the product finder recommends only matching in-stock catalogue items; the workout and nutrition builders provide general suggestions, not medical advice.
 ---
 
 ## Skeleton
@@ -202,6 +202,8 @@ The screenshots below show the current site; account and order examples use fict
 ### Home page and fitness hub
 - The home page highlights the store's product categories and links directly to the AI builders and Fitness Hub.
 - Recent fitness articles are shown on the home page. The Fitness Hub provides the article listing and individual article pages.
+- Visitors can describe a topic to the optional AI article assistant, which recommends relevant reads from up to the 40 latest Fitness Hub articles. Recommendations link to existing posts; the assistant does not create article content.
+- Visitors must consent before their topic and article excerpts are sent to OpenAI. The request is not saved to their Love Fitness account.
 - Signed-in users can create blog posts. Post authors and staff can edit or delete posts.
 > ![Home page](readme/features/features_home.PNG)
 > ![Fitness Hub](readme/features/features_fitness_hub.PNG)
@@ -265,6 +267,11 @@ The screenshots below show the current site; account and order examples use fict
 - Visitors must consent before their request is sent to OpenAI. Requests are not saved to their Love Fitness account. The regular catalogue and checkout do not depend on AI.
 - The finder uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the other AI tools.
 
+### AI Fitness Hub Article Assistant
+- Visitors can describe a topic to find up to three relevant reads from the 40 latest Fitness Hub articles.
+- The assistant sends the topic and public article excerpts to OpenAI only after visitor consent. Recommendations are checked against existing posts and link to their article pages; no article content is generated or saved.
+- The assistant uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the other AI tools.
+
 ---
 
 ## Technologies Used
@@ -273,7 +280,7 @@ The screenshots below show the current site; account and order examples use fict
 - **Bootstrap 5** and Django Crispy Forms for responsive layout and form rendering.
 - **SQLite** for local development by default, with PostgreSQL supported through `DATABASE_URL`.
 - **Stripe** for card-payment processing.
-- **OpenAI API** for the optional product finder, workout builder, and nutrition planner.
+- **OpenAI API** for the optional article assistant, product finder, workout builder, and nutrition planner.
 - **Amazon S3** for optional static and media storage; WhiteNoise serves static assets when S3 is not enabled.
 
 ## Testing

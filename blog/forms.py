@@ -12,6 +12,21 @@ from .models import Post
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+class ArticleAssistantForm(forms.Form):
+    query = forms.CharField(
+        max_length=250,
+        label='What would you like to read about?',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'For example: getting started with strength training',
+        }),
+    )
+    consent = forms.BooleanField(
+        label='I agree to send my request to OpenAI to find relevant articles.',
+        widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+    )
+
+
 class PostForm(forms.ModelForm):
     """
     Blog form for posting blogs

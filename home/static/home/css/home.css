@@ -1564,6 +1564,8 @@ a:focus-visible .sports-bra-image {
   background: #fbfcfa;
   border: 1px solid #e5e9e4;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   overflow: hidden;
 }
@@ -1603,6 +1605,7 @@ a:focus-visible .sports-bra-image {
   bottom: .85rem;
   color: #172126;
   display: flex;
+  justify-content: center;
   font-family: 'Exo 2', sans-serif;
   font-size: .68rem;
   font-weight: 700;
@@ -1615,6 +1618,7 @@ a:focus-visible .sports-bra-image {
   text-transform: uppercase;
   transform: translateY(.35rem);
   transition: opacity .2s ease, transform .2s ease;
+  white-space: nowrap;
 }
 
 .finder-product__image:hover .finder-product__image-action,
@@ -1624,6 +1628,9 @@ a:focus-visible .sports-bra-image {
 }
 
 .finder-product__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 1.2rem;
 }
 
@@ -1670,6 +1677,7 @@ a:focus-visible .sports-bra-image {
   border-top: 1px solid #e5e9e4;
   display: flex;
   justify-content: space-between;
+  margin-top: auto;
   padding-top: .85rem;
 }
 
