@@ -53,7 +53,7 @@
 
         <div class="shop-focus-grid" aria-label="Shop by focus categories">
             <a class="shop-focus-card shop-focus-card--feature" href="{% url 'products' %}?category=shorts,tops_t-shirts,sports_bra,leggings,shorts_women,bodysuits">
-                <img src="{{ MEDIA_URL }}apparel.jpg" alt="Athletic apparel collection">
+                <img src="{% static 'home/images/apparel.jpg' %}" alt="Athletic apparel collection">
                 <div class="shop-focus-card__content">
                     <span class="shop-focus-card__tag">New day essentials</span>
                     <strong>Apparel</strong>
@@ -63,7 +63,7 @@
             </a>
 
             <a class="shop-focus-card" href="{% url 'products' %}?category=fitness_equipment">
-                <img src="{{ MEDIA_URL }}equipment.jpg" alt="Fitness equipment for home training">
+                <img src="{% static 'home/images/equipment.jpg' %}" alt="Fitness equipment for home training">
                 <div class="shop-focus-card__content">
                     <span class="shop-focus-card__tag">Build strength</span>
                     <strong>Equipment</strong>
@@ -72,7 +72,7 @@
             </a>
 
             <a class="shop-focus-card" href="{% url 'products' %}?category=nutrition">
-                <img src="{{ MEDIA_URL }}nutrition.jpg" alt="Nutrition products and supplements">
+                <img src="{% static 'home/images/nutrition.jpg' %}" alt="Nutrition products and supplements">
                 <div class="shop-focus-card__content">
                     <span class="shop-focus-card__tag">Fuel smarter</span>
                     <strong>Nutrition</strong>
@@ -81,7 +81,7 @@
             </a>
 
             <a class="shop-focus-card shop-focus-card--wide" href="{% url 'products' %}?category=exercise">
-                <img src="{{ MEDIA_URL }}exercise.jpg" alt="Exercise plan and training guidance">
+                <img src="{% static 'home/images/exercise.jpg' %}" alt="Exercise plan and training guidance">
                 <div class="shop-focus-card__content">
                     <span class="shop-focus-card__tag">Stay consistent</span>
                     <strong>Plans</strong>
