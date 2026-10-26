@@ -244,6 +244,7 @@ The screenshots below show the current site; account and order examples use fict
 - Visitors can request a general workout routine based on their goal, experience, weekly availability, session length, equipment, location, and optional limitations.
 - Visitors must consent before their answers are sent to OpenAI. Answers are not saved to their Love Fitness account.
 - The page explains that the suggestions are not medical advice and recommends seeking professional guidance for injuries or health concerns.
+- Workout results use structured output and are checked for the requested number of sessions before being displayed.
 - Configure `OPENAI_API_KEY` on the server to enable generation. `OPENAI_MODEL` is optional and defaults to `gpt-4o-mini`.
 > ![AI Workout Builder](readme/features/features_ai_workout_builder.PNG)
 
@@ -251,6 +252,7 @@ The screenshots below show the current site; account and order examples use fict
 - Visitors can request general meal ideas based on their goal, dietary preferences, food allergies or restrictions, meals per day, cooking time, and budget.
 - The planner does not provide calorie or macro targets, medical diets, or treatment advice. Visitors must consent before their answers are sent to OpenAI; answers are not saved to their Love Fitness account.
 - Visitors are advised to check ingredients and food labels and to seek qualified professional advice for individualized nutrition needs.
+- Meal-plan results use structured output and are checked for the requested number of meals before being displayed.
 - The planner uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the AI Workout Builder.
 > ![AI Nutrition Planner](readme/features/features_ai_nutrition_planner.PNG)
 

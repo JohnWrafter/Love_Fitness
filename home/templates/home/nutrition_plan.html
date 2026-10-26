@@ -41,7 +41,23 @@
     {% if plan %}
         <section aria-labelledby="plan-title" class="card card-body shadow-sm">
             <h2 id="plan-title">Your meal plan ideas</h2>
-            <div class="workout-builder__routine">{{ plan }}</div>
+            <h3>{{ plan.title }}</h3>
+            <div class="workout-builder__routine">
+                {% for meal in plan.meals %}
+                    <article class="mb-4">
+                        <h4>Meal {{ meal.meal_number }}: {{ meal.name }}</h4>
+                        <p>{{ meal.description }}</p>
+                        <h5>Ingredients</h5>
+                        <ul>
+                            {% for ingredient in meal.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
+                        </ul>
+                        <h5>Preparation</h5>
+                        <p>{{ meal.preparation }}</p>
+                    </article>
+                {% endfor %}
+                <h4>Note</h4>
+                <p>{{ plan.note }}</p>
+            </div>
             <p class="small text-muted mt-3 mb-0">Check every ingredient and food label, especially for allergens. AI-generated suggestions can be inaccurate.</p>
         </section>
     {% endif %}

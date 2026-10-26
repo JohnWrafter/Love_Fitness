@@ -40,7 +40,30 @@
     {% if routine %}
         <section aria-labelledby="routine-title" class="card card-body shadow-sm">
             <h2 id="routine-title">Your workout routine</h2>
-            <div class="workout-builder__routine">{{ routine }}</div>
+            <h3>{{ routine.title }}</h3>
+            <div class="workout-builder__routine">
+                {% for session in routine.weekly_schedule %}
+                    <article class="mb-4">
+                        <h4>Day {{ session.day }}: {{ session.focus }}</h4>
+                        <h5>Warm-up</h5>
+                        <ul>
+                            {% for item in session.warm_up %}<li>{{ item }}</li>{% endfor %}
+                        </ul>
+                        <h5>Exercises</h5>
+                        <ul>
+                            {% for exercise in session.exercises %}
+                                <li>
+                                    <strong>{{ exercise.name }}</strong>:
+                                    {{ exercise.sets }} sets, {{ exercise.reps_or_duration }};
+                                    rest {{ exercise.rest }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </article>
+                {% endfor %}
+                <h4>Progression</h4>
+                <p>{{ routine.progression }}</p>
+            </div>
             <p class="small text-muted mt-3 mb-0">AI-generated suggestions can be inaccurate. Stop if you feel pain and seek professional guidance when needed.</p>
         </section>
     {% endif %}
