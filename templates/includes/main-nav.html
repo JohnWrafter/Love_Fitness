@@ -31,8 +31,15 @@
                     <li><a href="{% url 'products' %}?category=nutrition" class="dropdown-item">Nutrition</a></li>
                 </ul>
             </div>
-            <a href="{% url 'workout_routine' %}" class="lovefitness-navbar__link">AI Workout Builder</a>
-            <a href="{% url 'nutrition_plan' %}" class="lovefitness-navbar__link">AI Nutrition Planner</a>
+            <div class="dropdown">
+                <button class="lovefitness-navbar__link dropdown-toggle" type="button" id="ai-tools-menu"
+                    data-bs-toggle="dropdown" aria-expanded="false">AI Tools</button>
+                <ul class="dropdown-menu" aria-labelledby="ai-tools-menu">
+                    <li><a href="{% url 'product_finder' %}" class="dropdown-item">AI Product Finder</a></li>
+                    <li><a href="{% url 'workout_routine' %}" class="dropdown-item">AI Workout Builder</a></li>
+                    <li><a href="{% url 'nutrition_plan' %}" class="dropdown-item">AI Nutrition Planner</a></li>
+                </ul>
+            </div>
             <a href="{% url 'blog' %}" class="lovefitness-navbar__link">Fitness Hub</a>
             <a href="{% url 'contact' %}" class="lovefitness-navbar__link">Contact</a>
         </div>
@@ -86,6 +93,7 @@
                 <li><a href="{% url 'products' %}?category=shorts,tops_t-shirts">Men</a></li>
                 <li><a href="{% url 'products' %}?category=sports_bra,leggings,bodysuits,shorts_women">Women</a></li>
                 <li><a href="{% url 'products' %}?category=exercise">Exercise Plans</a></li>
+                <li><a href="{% url 'product_finder' %}">AI Product Finder</a></li>
                 <li><a href="{% url 'workout_routine' %}">AI Workout Builder</a></li>
                 <li><a href="{% url 'nutrition_plan' %}">AI Nutrition Planner</a></li>
                 <li><a href="{% url 'blog' %}">Fitness Hub</a></li>

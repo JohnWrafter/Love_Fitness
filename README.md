@@ -1,7 +1,7 @@
 # Love Fitness
 ![Original project responsive mockup](readme/amiresponsive/amiresponsive.PNG)
 
-Love Fitness is a Django fitness storefront with product browsing, shopping and checkout, customer accounts, a Fitness Hub, and optional AI-powered workout and meal-idea builders. A live demo is not currently available.
+Love Fitness is a Django fitness storefront with product browsing, shopping and checkout, customer accounts, a Fitness Hub, and optional AI-powered product recommendations, workout building, and meal planning. A live demo is not currently available.
 
 ## Table of Contents
 [Target audience](#target-audience) · [Project goals](#project-goals) · [Structure](#structure) · [Wireframes](#wireframes) · [Surface](#surface) · [Database](#database) · [Features](#features) · [Technologies](#technologies-used) · [Testing](#testing) · [Deployment](#deployment) · [Credits](#credits) · [Acknowledgements](#acknowledgements)
@@ -17,19 +17,20 @@ Love Fitness is a responsive fitness and activewear storefront built with Django
 
 The main areas of the site are:
 
-1. **Home:** Introduces the store and links to product categories, fitness articles, and the AI workout and nutrition builders.
+1. **Home:** Introduces the store and links to product categories, fitness articles, and the AI product finder, workout builder, and nutrition planner.
 2. **Account:** Visitors can register, sign in, and sign out. Signed-in customers can update delivery details and view their own order history.
 3. **Shop:** Visitors can browse, search, filter, and sort activewear, fitness equipment, nutrition products, and plans. Product detail pages show product information and provide options such as adding an item to the bag or wishlist.
 4. **Shopping bag:** Displays selected products, quantities, sizes, item subtotals, delivery costs, and the order total. Customers can update quantities, remove items, or continue to checkout.
 5. **Checkout and order confirmation:** Customers enter delivery details and pay by card through Stripe. A successful order has a confirmation page and is included in the signed-in customer's order history.
 6. **Wishlist:** Signed-in customers can save products for later and remove them from their wishlist.
 7. **Fitness hub:** Visitors can read fitness articles and comments. Signed-in authors can create posts; authors and staff can edit or delete posts.
-8. **AI Workout Builder:** Visitors can request a general workout routine based on their goals, experience, schedule, equipment, location, and optional limitations.
-9. **AI Nutrition Planner:** Visitors can request general meal ideas based on their preferences, food restrictions, schedule, cooking time, and budget. It does not provide calorie or macro targets.
-10. **Contact:** Visitors can submit a message to the site owner.
-11. **Store management:** Authorized store administrators can add, edit, and remove products.
+8. **AI Product Finder:** Visitors can get catalogue-based product suggestions using a description, optional category, and maximum budget.
+9. **AI Workout Builder:** Visitors can request a general workout routine based on their goals, experience, schedule, equipment, location, and optional limitations.
+10. **AI Nutrition Planner:** Visitors can request general meal ideas based on their preferences, food restrictions, schedule, cooking time, and budget. It does not provide calorie or macro targets.
+11. **Contact:** Visitors can submit a message to the site owner.
+12. **Store management:** Authorized store administrators can add, edit, and remove products.
 
-The AI builders require an `OPENAI_API_KEY` configured on the server. Visitors must consent before their answers are sent to OpenAI. These tools provide general suggestions, not medical advice.
+The AI tools require an `OPENAI_API_KEY` configured on the server. Visitors must consent before their requests are sent to OpenAI. The product finder recommends only matching in-stock catalogue items; the workout and nutrition builders provide general suggestions, not medical advice.
 ---
 
 ## Skeleton
@@ -193,7 +194,7 @@ Love Fitness brings together an activewear and fitness-products store, account t
 The screenshots below show the current site; account and order examples use fictional demo data.
 
 ### Navigation and responsive layout
-- The responsive navigation provides links to the home page, product catalogue, exercise and nutrition plan categories, AI Workout Builder, AI Nutrition Planner, Fitness Hub, and account options.
+- The responsive navigation provides links to the home page, product catalogue, exercise and nutrition plan categories, AI tools, Fitness Hub, and account options.
 - On smaller screens, navigation is available through a collapsible menu. The site also includes links to the shopping bag, wishlist, and account pages.
 > ![Desktop navigation](readme/features/features_nav_bar.PNG)
 > ![Mobile navigation](readme/features/features_mobile_nav.PNG)
@@ -209,6 +210,8 @@ The screenshots below show the current site; account and order examples use fict
 - Visitors can browse products, filter by category, search the catalogue, and sort results.
 - Product cards show key product information and link to a detail page. Product details include the description, price, stock and available purchase options.
 - Signed-in customers can save products to a wishlist and remove them later.
+- The AI Product Finder can suggest matching products using a shopper's request, optional category, and budget. It considers only in-stock products that match those filters, and displayed product names, prices, images, and links come from the catalogue.
+- Visitors must consent before their request is sent to OpenAI. Requests are not saved to their Love Fitness account; browsing and shopping remain available without using AI.
 > ![Product catalogue](readme/features/features_products.PNG)
 > ![Shop category menu](readme/features/features_sort_products_via_nav.PNG)
 > ![Search products](readme/features/features_search.PNG)
@@ -256,6 +259,12 @@ The screenshots below show the current site; account and order examples use fict
 - The planner uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the AI Workout Builder.
 > ![AI Nutrition Planner](readme/features/features_ai_nutrition_planner.PNG)
 
+### AI Product Finder
+- Visitors can describe what they are looking for and optionally narrow recommendations by catalogue category and maximum budget.
+- The finder sends only matching in-stock catalogue records to OpenAI. It resolves returned recommendations against those records before displaying them, so AI output cannot supply product names, prices, availability, or links.
+- Visitors must consent before their request is sent to OpenAI. Requests are not saved to their Love Fitness account. The regular catalogue and checkout do not depend on AI.
+- The finder uses the same `OPENAI_API_KEY` and optional `OPENAI_MODEL` configuration as the other AI tools.
+
 ---
 
 ## Technologies Used
@@ -264,7 +273,7 @@ The screenshots below show the current site; account and order examples use fict
 - **Bootstrap 5** and Django Crispy Forms for responsive layout and form rendering.
 - **SQLite** for local development by default, with PostgreSQL supported through `DATABASE_URL`.
 - **Stripe** for card-payment processing.
-- **OpenAI API** for the optional workout and nutrition suggestion tools.
+- **OpenAI API** for the optional product finder, workout builder, and nutrition planner.
 - **Amazon S3** for optional static and media storage; WhiteNoise serves static assets when S3 is not enabled.
 
 ## Testing
@@ -515,7 +524,7 @@ The repository includes a Gunicorn `Procfile`. Configure the following environme
 - `ALLOWED_HOSTS`: comma-separated hostnames without URL schemes.
 - `CSRF_TRUSTED_ORIGINS`: comma-separated trusted origins including `https://`.
 - `STRIPE_PUBLIC_KEY`, `STRIPE_SECRET_KEY`, and `STRIPE_WH_SECRET` for payments.
-- `OPENAI_API_KEY` to enable the AI builders; `OPENAI_MODEL` is optional and defaults to `gpt-4o-mini`.
+- `OPENAI_API_KEY` to enable the AI tools; `OPENAI_MODEL` is optional and defaults to `gpt-4o-mini`.
 - For SMTP email, configure `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_USE_TLS`, `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD`, and `DEFAULT_FROM_EMAIL`. Set `DEVELOPMENT` truthy to use the console email backend in development.
 
 When `DEBUG=False`, HTTPS redirection, secure session and CSRF cookies, and one-year HSTS are enabled. Configure HTTPS and valid host/origin settings before launch. Run these commands during deployment after configuring the database and static storage:
@@ -535,7 +544,7 @@ S3 storage is enabled when `USE_AWS` is present in the environment. The configur
 
 ## OpenAI
 
-Set `OPENAI_API_KEY` to enable AI generation. `OPENAI_MODEL` can optionally select another chat-completions model available to the account; the default is `gpt-4o-mini`. Do not commit API keys.
+Set `OPENAI_API_KEY` to enable the AI tools. `OPENAI_MODEL` can optionally select another model available to the account and supported by the OpenAI Responses API; the default is `gpt-4o-mini`. Do not commit API keys.
 
 ---
 

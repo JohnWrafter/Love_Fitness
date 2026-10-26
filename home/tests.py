@@ -4,6 +4,8 @@ from unittest.mock import Mock, patch
 from django.test import TestCase, override_settings
 from openai import OpenAIError
 
+from products.models import Category, Product
+
 
 def workout_output():
     return {
@@ -252,4 +254,197 @@ class NutritionPlanViewTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'could not generate a meal plan')
+        mock_openai.assert_called_once()
+
+
+class ProductFinderViewTests(TestCase):
+    def setUp(self):
+        self.equipment = Category.objects.create(
+            name='fitness_equipment',
+            friendly_name='Fitness Equipment',
+        )
+        self.apparel = Category.objects.create(
+            name='leggings',
+            friendly_name='Leggings',
+        )
+        self.dumbbells = Product.objects.create(
+            category=self.equipment,
+            name='Adjustable Dumbbells',
+            description='Compact adjustable dumbbells for home workouts.',
+            price='34.99',
+            stock_quantity=4,
+            colour='Black',
+        )
+        self.leggings = Product.objects.create(
+            category=self.apparel,
+            name='Training Leggings',
+            description='Stretch fabric leggings for training.',
+            price='24.99',
+            stock_quantity=2,
+        )
+        self.out_of_stock = Product.objects.create(
+            category=self.equipment,
+            name='Out of stock kettlebell',
+            description='A kettlebell for strength training.',
+            price='19.99',
+            stock_quantity=0,
+        )
+        self.valid_data = {
+            'query': 'Home strength training equipment',
+            'category': '',
+            'max_price': '40.00',
+            'consent': 'on',
+        }
+
+    def test_product_finder_form_is_available(self):
+        response = self.client.get('/product-finder/')
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'AI Product Finder')
+        self.assertContains(response, 'in stock')
+        self.assertContains(response, 'sent to OpenAI')
+        self.assertContains(response, 'Fitness Equipment')
+
+    @override_settings(OPENAI_API_KEY='')
+    @patch('home.views.OpenAI')
+    def test_missing_api_key_shows_configuration_error(self, mock_openai):
+        response = self.client.post('/product-finder/', self.valid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'not configured yet')
+        mock_openai.assert_not_called()
+
+    @override_settings(OPENAI_API_KEY='test-key', OPENAI_MODEL='test-model')
+    @patch('home.views.OpenAI')
+    def test_recommendations_resolve_to_available_catalogue_products(
+        self,
+        mock_openai,
+    ):
+        mock_openai.return_value.responses.create.return_value = Mock(
+            output_text=json.dumps({
+                'recommendations': [
+                    {
+                        'product_id': self.dumbbells.pk,
+                        'reason': 'Compact equipment suited to home strength sessions.',
+                    },
+                    {
+                        'product_id': self.out_of_stock.pk,
+                        'reason': 'Should never be displayed.',
+                    },
+                    {
+                        'product_id': 999999,
+                        'reason': 'Should not resolve to a product.',
+                    },
+                ],
+            }),
+        )
+
+        response = self.client.post('/product-finder/', self.valid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Adjustable Dumbbells')
+        self.assertContains(response, '£34.99')
+        self.assertContains(response, 'View product')
+        self.assertNotContains(response, 'Out of stock kettlebell')
+        self.assertNotContains(response, 'Should never be displayed')
+        self.assertNotContains(response, '999999')
+
+        request_payload = mock_openai.return_value.responses.create.call_args.kwargs
+        self.assertEqual(request_payload['model'], 'test-model')
+        self.assertFalse(request_payload['store'])
+        self.assertEqual(
+            request_payload['text']['format']['name'],
+            'product_recommendations',
+        )
+        self.assertTrue(request_payload['text']['format']['strict'])
+        catalogue = json.loads(request_payload['input'][1]['content'])
+        self.assertEqual(
+            catalogue['shopper_request'],
+            self.valid_data['query'],
+        )
+        self.assertEqual(
+            [item['product_id'] for item in catalogue['available_catalogue']],
+            [self.dumbbells.pk, self.leggings.pk],
+        )
+
+    @override_settings(OPENAI_API_KEY='test-key')
+    @patch('home.views.OpenAI')
+    def test_product_sold_during_generation_is_not_recommended(self, mock_openai):
+        provider_response = Mock(
+            output_text=json.dumps({
+                'recommendations': [{
+                    'product_id': self.dumbbells.pk,
+                    'reason': 'Useful for strength sessions.',
+                }],
+            }),
+        )
+
+        def sell_product(**kwargs):
+            Product.objects.filter(pk=self.dumbbells.pk).update(stock_quantity=0)
+            return provider_response
+
+        mock_openai.return_value.responses.create.side_effect = sell_product
+
+        response = self.client.post('/product-finder/', self.valid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'We could not find a close match')
+        self.assertNotContains(response, 'Adjustable Dumbbells')
+
+    @override_settings(OPENAI_API_KEY='test-key')
+    @patch('home.views.OpenAI')
+    def test_category_and_budget_filter_catalogue_before_sending_to_ai(
+        self,
+        mock_openai,
+    ):
+        mock_openai.return_value.responses.create.return_value = Mock(
+            output_text=json.dumps({
+                'recommendations': [{
+                    'product_id': self.dumbbells.pk,
+                    'reason': 'Suitable for strength sessions.',
+                }],
+            }),
+        )
+        data = {
+            **self.valid_data,
+            'category': str(self.equipment.pk),
+            'max_price': '30.00',
+        }
+
+        response = self.client.post('/product-finder/', data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'No matching products in stock')
+        mock_openai.assert_not_called()
+
+    @override_settings(OPENAI_API_KEY='test-key')
+    @patch('home.views.OpenAI')
+    def test_provider_is_not_called_without_consent(self, mock_openai):
+        data_without_consent = {**self.valid_data, 'consent': ''}
+
+        response = self.client.post('/product-finder/', data_without_consent)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'This field is required')
+        mock_openai.assert_not_called()
+
+    @override_settings(OPENAI_API_KEY='test-key')
+    @patch('home.views.OpenAI')
+    def test_invalid_form_does_not_call_provider(self, mock_openai):
+        invalid_data = {**self.valid_data, 'max_price': '-1'}
+
+        response = self.client.post('/product-finder/', invalid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Ensure this value is greater than or equal to 0')
+        mock_openai.assert_not_called()
+
+    @override_settings(OPENAI_API_KEY='test-key')
+    @patch('home.views.OpenAI', side_effect=OpenAIError('provider unavailable'))
+    def test_provider_failure_is_reported(self, mock_openai):
+        with self.assertLogs('home.views', level='ERROR'):
+            response = self.client.post('/product-finder/', self.valid_data)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'could not find product recommendations')
         mock_openai.assert_called_once()

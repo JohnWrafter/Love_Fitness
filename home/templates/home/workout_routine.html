@@ -6,20 +6,24 @@
 {% endblock %}
 {% block content %}
 <main class="workout-builder container py-5">
-    <header class="mb-4">
-        <p class="section-eyebrow">Your training, your way</p>
-        <h1>AI Workout Builder</h1>
-        <p>Tell us what works for you and get a general workout routine tailored to your goals, schedule, and equipment.</p>
+    <header class="planner-hero planner-hero--workout mb-4">
+        <div class="planner-hero__content">
+            <p class="planner-eyebrow">Your training, your way</p>
+            <h1>AI Workout Builder</h1>
+            <p>Build a routine around your goals, your schedule, and the equipment you have.</p>
+        </div>
+        <img class="planner-hero__image" src="{% static 'home/images/exercise.jpg' %}"
+            alt="A small outdoor group warming up together before a workout" fetchpriority="high">
     </header>
 
-    <div class="alert alert-info" role="note">
+    <div class="alert alert-info planner-disclaimer" role="note">
         Your answers are sent to OpenAI to create the routine and are not saved to your Love Fitness account.
         Avoid including your name or other identifying details. This is general fitness information, not
         medical advice. If you have an injury or health concern, check with a qualified healthcare professional
         before starting a new routine.
     </div>
 
-    <form method="post" class="card card-body shadow-sm mb-5">
+    <form method="post" class="card card-body planner-form mb-5">
         {% csrf_token %}
         {% for field in form %}
             <div class="{% if field.name == 'consent' %}form-check{% else %}mb-3{% endif %}">
@@ -38,33 +42,47 @@
     </form>
 
     {% if routine %}
-        <section aria-labelledby="routine-title" class="card card-body shadow-sm">
-            <h2 id="routine-title">Your workout routine</h2>
-            <h3>{{ routine.title }}</h3>
-            <div class="workout-builder__routine">
+        <section aria-labelledby="routine-title" class="planner-result planner-result--workout">
+            <header class="planner-result__header">
+                <p class="planner-eyebrow">Your workout routine</p>
+                <h2 id="routine-title">{{ routine.title }}</h2>
+                <p>A practical weekly structure to help you make steady progress, one session at a time.</p>
+                <div class="planner-result__stat">
+                    <span class="planner-result__stat-value">{{ routine.weekly_schedule|length }}</span>
+                    <span class="planner-result__stat-label">planned sessions</span>
+                </div>
+            </header>
+            <div class="planner-session-grid">
                 {% for session in routine.weekly_schedule %}
-                    <article class="mb-4">
-                        <h4>Day {{ session.day }}: {{ session.focus }}</h4>
-                        <h5>Warm-up</h5>
-                        <ul>
-                            {% for item in session.warm_up %}<li>{{ item }}</li>{% endfor %}
-                        </ul>
-                        <h5>Exercises</h5>
-                        <ul>
+                    <article class="planner-session">
+                        <header class="planner-session__header">
+                            <span class="planner-session__day">Session {{ forloop.counter }}</span>
+                            <h3>Day {{ session.day }}: {{ session.focus }}</h3>
+                        </header>
+                        <div class="planner-session__body">
+                            <h4>Warm-up</h4>
+                            <ul class="planner-list">
+                                {% for item in session.warm_up %}<li>{{ item }}</li>{% endfor %}
+                            </ul>
+                            <h4>Workout</h4>
+                            <ul class="planner-exercise-list">
                             {% for exercise in session.exercises %}
-                                <li>
-                                    <strong>{{ exercise.name }}</strong>:
-                                    {{ exercise.sets }} sets, {{ exercise.reps_or_duration }};
-                                    rest {{ exercise.rest }}
+                                <li class="planner-exercise">
+                                    <strong>{{ exercise.name }}</strong>
+                                    <span>{{ exercise.sets }} sets <span aria-hidden="true">&middot;</span> {{ exercise.reps_or_duration }}</span>
+                                    <small>Rest {{ exercise.rest }}</small>
                                 </li>
                             {% endfor %}
-                        </ul>
+                            </ul>
+                        </div>
                     </article>
                 {% endfor %}
-                <h4>Progression</h4>
-                <p>{{ routine.progression }}</p>
             </div>
-            <p class="small text-muted mt-3 mb-0">AI-generated suggestions can be inaccurate. Stop if you feel pain and seek professional guidance when needed.</p>
+            <aside class="planner-tip">
+                <span class="planner-tip__label">Keep progressing</span>
+                <p>{{ routine.progression }}</p>
+            </aside>
+            <p class="planner-result__note">AI-generated suggestions can be inaccurate. Stop if you feel pain and seek professional guidance when needed.</p>
         </section>
     {% endif %}
 </main>

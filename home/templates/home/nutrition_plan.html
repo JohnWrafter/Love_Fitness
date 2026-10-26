@@ -6,13 +6,17 @@
 {% endblock %}
 {% block content %}
 <main class="workout-builder container py-5">
-    <header class="mb-4">
-        <p class="section-eyebrow">Everyday fuel, made personal</p>
-        <h1>AI Nutrition Planner</h1>
-        <p>Get general meal ideas shaped around your food preferences, schedule, and budget.</p>
+    <header class="planner-hero planner-hero--nutrition mb-4">
+        <div class="planner-hero__content">
+            <p class="planner-eyebrow">Everyday fuel, made personal</p>
+            <h1>AI Nutrition Planner</h1>
+            <p>Find fresh, practical meal ideas that fit your preferences, schedule, and budget.</p>
+        </div>
+        <img class="planner-hero__image" src="{% static 'home/images/nutrition.jpg' %}"
+            alt="A colorful selection of fresh vegetables and ingredients" fetchpriority="high">
     </header>
 
-    <div class="alert alert-info" role="note">
+    <div class="alert alert-info planner-disclaimer" role="note">
         Your answers are sent to OpenAI to create the meal plan and are not saved to your Love Fitness account.
         Avoid including your name or other identifying details. This planner provides general meal ideas;
         it is not medical advice or a substitute for individualized nutrition guidance. If you have a health
@@ -20,7 +24,7 @@
         dietitian. Generated suggestions may be inaccurate; always check ingredients and food labels.
     </div>
 
-    <form method="post" class="card card-body shadow-sm mb-5">
+    <form method="post" class="card card-body planner-form mb-5">
         {% csrf_token %}
         {% for field in form %}
             <div class="{% if field.name == 'consent' %}form-check{% else %}mb-3{% endif %}">
@@ -39,26 +43,43 @@
     </form>
 
     {% if plan %}
-        <section aria-labelledby="plan-title" class="card card-body shadow-sm">
-            <h2 id="plan-title">Your meal plan ideas</h2>
-            <h3>{{ plan.title }}</h3>
-            <div class="workout-builder__routine">
+        <section aria-labelledby="plan-title" class="planner-result planner-result--nutrition">
+            <header class="planner-result__header">
+                <p class="planner-eyebrow">Your meal plan ideas</p>
+                <h2 id="plan-title">{{ plan.title }}</h2>
+                <p>A flexible set of meal ideas to make everyday planning a little easier.</p>
+                <div class="planner-result__stat">
+                    <span class="planner-result__stat-value">{{ plan.meals|length }}</span>
+                    <span class="planner-result__stat-label">meal ideas</span>
+                </div>
+            </header>
+            <div class="planner-meal-grid">
                 {% for meal in plan.meals %}
-                    <article class="mb-4">
-                        <h4>Meal {{ meal.meal_number }}: {{ meal.name }}</h4>
-                        <p>{{ meal.description }}</p>
-                        <h5>Ingredients</h5>
-                        <ul>
-                            {% for ingredient in meal.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
-                        </ul>
-                        <h5>Preparation</h5>
-                        <p>{{ meal.preparation }}</p>
+                    <article class="planner-meal">
+                        <header class="planner-meal__header">
+                            <span class="planner-meal__number">0{{ meal.meal_number }}</span>
+                            <span class="planner-meal__label">Meal idea</span>
+                            <h3>Meal {{ meal.meal_number }}: {{ meal.name }}</h3>
+                            <p>{{ meal.description }}</p>
+                        </header>
+                        <div class="planner-meal__body">
+                            <h4>What you'll need</h4>
+                            <ul class="planner-ingredient-list">
+                                {% for ingredient in meal.ingredients %}<li>{{ ingredient }}</li>{% endfor %}
+                            </ul>
+                            <div class="planner-preparation">
+                                <h4>How to make it</h4>
+                                <p>{{ meal.preparation }}</p>
+                            </div>
+                        </div>
                     </article>
                 {% endfor %}
-                <h4>Note</h4>
-                <p>{{ plan.note }}</p>
             </div>
-            <p class="small text-muted mt-3 mb-0">Check every ingredient and food label, especially for allergens. AI-generated suggestions can be inaccurate.</p>
+            <aside class="planner-tip">
+                <span class="planner-tip__label">A note for you</span>
+                <p>{{ plan.note }}</p>
+            </aside>
+            <p class="planner-result__note">Check every ingredient and food label, especially for allergens. AI-generated suggestions can be inaccurate.</p>
         </section>
     {% endif %}
 </main>

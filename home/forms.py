@@ -1,5 +1,54 @@
 from django import forms
 
+from products.models import Category
+
+
+class CategoryChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, category):
+        return category.friendly_name or category.name
+
+
+class ProductFinderForm(forms.Form):
+    query = forms.CharField(
+        max_length=200,
+        label='What are you looking for?',
+        help_text='Describe the activity, item, or features you have in mind.',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'For example: comfortable leggings for running',
+        }),
+    )
+    category = CategoryChoiceField(
+        queryset=Category.objects.none(),
+        required=False,
+        empty_label='Any category',
+        widget=forms.Select(attrs={'class': 'form-select'}),
+    )
+    max_price = forms.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        min_value=0,
+        required=False,
+        label='Maximum budget (£)',
+        widget=forms.NumberInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'No limit',
+            'min': '0',
+            'step': '0.01',
+        }),
+    )
+    consent = forms.BooleanField(
+        label='I agree to send my request to OpenAI to find matching products.',
+        widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+    )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['category'].queryset = Category.objects.order_by(
+            'friendly_name',
+            'name',
+        )
+
 
 class WorkoutRoutineForm(forms.Form):
     GOAL_CHOICES = [
