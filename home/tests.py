@@ -63,6 +63,12 @@ class WorkoutRoutineViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'AI Workout Builder')
         self.assertContains(response, 'Injuries or physical limitations')
+        self.assertContains(
+            response,
+            '<link rel="stylesheet" href="/static/home/css/home.css" '
+            'type="text/css" />',
+            html=False,
+        )
 
     @override_settings(OPENAI_API_KEY='')
     @patch('home.views.OpenAI')
@@ -169,6 +175,12 @@ class NutritionPlanViewTests(TestCase):
         self.assertContains(response, 'AI Nutrition Planner')
         self.assertContains(response, 'Food allergies or restrictions')
         self.assertContains(response, 'not medical advice')
+        self.assertContains(
+            response,
+            '<link rel="stylesheet" href="/static/home/css/home.css" '
+            'type="text/css" />',
+            html=False,
+        )
 
     @override_settings(OPENAI_API_KEY='')
     @patch('home.views.OpenAI')
