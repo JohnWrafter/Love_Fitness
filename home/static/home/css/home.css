@@ -1569,22 +1569,58 @@ a:focus-visible .sports-bra-image {
 }
 
 .finder-product__image {
-  background: #f1f5ed;
+  aspect-ratio: 4 / 5;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, .98), rgba(245, 247, 241, .96) 58%, #edf0e9);
   display: block;
-  height: 15rem;
   overflow: hidden;
+  position: relative;
 }
 
-.finder-product__image img {
+.finder-product__photo {
+  display: block;
   height: 100%;
-  object-fit: cover;
-  transition: transform .3s ease;
+  object-fit: contain;
+  padding: clamp(.75rem, 2vw, 1.4rem);
+  transition: transform .4s ease;
   width: 100%;
 }
 
-.finder-product__image:hover img,
-.finder-product__image:focus-visible img {
-  transform: scale(1.035);
+.finder-product__photo--placeholder {
+  margin: auto;
+  max-width: 75%;
+  opacity: .6;
+}
+
+.finder-product__image:hover .finder-product__photo:not(.finder-product__photo--placeholder),
+.finder-product__image:focus-visible .finder-product__photo:not(.finder-product__photo--placeholder) {
+  transform: scale(1.025);
+}
+
+.finder-product__image-action {
+  align-items: center;
+  background: #d8f35b;
+  bottom: .85rem;
+  color: #172126;
+  display: flex;
+  font-family: 'Exo 2', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  gap: .5rem;
+  letter-spacing: .06em;
+  opacity: 0;
+  padding: .65rem .8rem;
+  position: absolute;
+  right: .85rem;
+  text-transform: uppercase;
+  transform: translateY(.35rem);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.finder-product__image:hover .finder-product__image-action,
+.finder-product__image:focus-visible .finder-product__image-action {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .finder-product__content {
