@@ -291,7 +291,7 @@ python manage.py test
 python manage.py check
 ```
 
-The suite completed successfully on 23 October 2026: 35 tests passed, and Django reported no system-check issues. Rerun the checks after making changes.
+The suite completed successfully on 27 October 2026: 54 tests passed, and Django reported no system-check issues. Rerun the checks after making changes.
 
 ## Code Validation
 The screenshots and third-party validation results below are historical project evidence from an earlier version of the interface; they are not a current validation of every page or asset. Rerun the relevant validators against the current deployment before relying on those results.
@@ -505,13 +505,14 @@ The automated Django suite covers core application behavior, including account a
    python manage.py migrate
    ```
 
-4. Optionally create an administrator account:
+4. Load the starter catalogue and optionally create an administrator account:
 
    ```bash
+   python manage.py loaddata categories products
    python manage.py createsuperuser
    ```
 
-   Add catalogue products and categories through Django admin. The old product and plan fixtures mentioned in earlier versions of this README are not included in the repository.
+   The category and product fixtures populate the starter catalogue, and their product images are included in `media/`. To manage or add catalogue entries later, sign in to Django admin at `/admin/`.
 
 5. Start the development server and visit `http://127.0.0.1:8000/`:
 
